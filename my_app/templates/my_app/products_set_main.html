@@ -1,0 +1,88 @@
+{% extends 'my_app/base.html' %}
+{% load static %}
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-xl-6 col-md-6 col-sm-12" align="center">
+            <div class="card text-bg-light mb-3 " style="max-width: 32rem;">
+                <div class="card-header" align="center"><b>Добавляем товар в список покупок</b></div>
+                <form method="post">
+                    {% csrf_token %}
+
+                    <div class="card-body">
+                        <h5><label class="form-label" for="{{form.product_name.id_for_label}}">{{form.product_name.label}}:</label>{{form.product_name}}</h5>
+                        <div class="form-error">{{form.product_name.errors}}</div>
+
+                        <h5><label class="form-label" for="{{form.amount.id_for_label}}">{{form.amount.label}}:</label>{{form.amount}}</h5>
+                        <div class="form-error">{{form.amount.errors}}</div>
+
+                        <h5>
+                            <label class="form-label" for="{{form.atb_choice.id_for_label}}">{{form.atb_choice.label}}:</label>{{form.atb_choice}}
+                            <div class="form-error">{{form.atb_choice.errors}}</div>
+
+                            <label class="form-label" for="{{form.eko_choice.id_for_label}}">{{form.eko_choice.label}}:</label>{{form.eko_choice}}
+                            <div class="form-error">{{form.eko_choice.errors}}</div>
+
+                            <label class="form-label" for="{{form.varus_choice.id_for_label}}">{{form.varus_choice.label}}:</label>{{form.varus_choice}}
+                            <div class="form-error">{{form.varus_choice.errors}}</div>
+                        </h5>
+
+                        <h5>
+                            <label class="form-label" for="{{form.silpo_choice.id_for_label}}">{{form.silpo_choice.label}}:</label>{{form.silpo_choice}}
+                            <div class="form-error">{{form.silpo_choice.errors}}</div>
+
+                            <label class="form-label" for="{{form.ashan_choice.id_for_label}}">{{form.ashan_choice.label}}:</label>{{form.ashan_choice}}
+                            <div class="form-error">{{form.ashan_choice.errors}}</div>
+
+                            <label class="form-label" for="{{form.novus_choice.id_for_label}}">{{form.novus_choice.label}}:</label>{{form.novus_choice}}
+                            <div class="form-error">{{form.novus_choice.errors}}</div>
+                        </h5>
+
+                        <h5>
+                            <label class="form-label" for="{{form.metro_choice.id_for_label}}">{{form.metro_choice.label}}:</label>{{form.metro_choice}}
+                            <div class="form-error">{{form.metro_choice.errors}}</div>
+
+                            <label class="form-label" for="{{form.nash_kray_choice.id_for_label}}">{{form.nash_kray_choice.label}}:</label>{{form.nash_kray_choice}}
+                            <div class="form-error">{{form.nash_kray_choice.errors}}</div>
+
+                            <label class="form-label" for="{{form.fozzy_choice.id_for_label}}">{{form.fozzy_choice.label}}:</label>{{form.fozzy_choice}}
+                            <div class="form-error">{{form.fozzy_choice.errors}}</div>
+                        </h5>
+
+
+                        <br>
+                        <h5 align="center">
+                            <button type="submit">добавить товар</button>
+                        </h5>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-xl-6 col-md-6 col-sm-12" align="center">
+            <div class="card text-bg-light mb-3 " style="max-width: 32rem;">
+                <div class="card-header" align="center"><b>Добалено в список</b></div>
+                <table class="table countLines">
+                    {% for info in user_item_info %}
+                    <tbody>
+                    <tr>
+                        <th scope="row"></th>
+                        <td>{{info.product_name}}</td>
+                        <td>{{info.amount}}</td>
+                        {% endfor %}
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h4><a class="btn btn-outline-danger" href="{% url 'resultsofsets' %}" role="button">ПОСЧИТАТЬ СТОИМОСТЬ</a>
+            </h4>
+        </div>
+    </div>
+</div>
+{% endblock %}
