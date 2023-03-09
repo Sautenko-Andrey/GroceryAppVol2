@@ -16,55 +16,46 @@
                     {% csrf_token %}
 
                     <div class="card-body">
-                        <h5><label class="form-label" for="{{form.product_name.id_for_label}}">{{form.product_name.label}}:</label>{{form.product_name}}</h5>
+                        <h5 align="center"><label class="form-label" for="{{form.product_name.id_for_label}}">{{form.product_name.label}}:</label>{{form.product_name}}</h5>
                         <div class="form-error">{{form.product_name.errors}}</div>
-
-                        <h5><label class="form-label" for="{{form.amount.id_for_label}}">{{form.amount.label}}:</label>{{form.amount}}</h5>
+                        <br>
+                        <h5 align="center"><label class="form-label" for="{{form.amount.id_for_label}}">{{form.amount.label}}:</label>{{form.amount}}</h5>
                         <div class="form-error">{{form.amount.errors}}</div>
-
-                        <h5>
-                            <label class="form-label" for="{{form.atb_choice.id_for_label}}">{{form.atb_choice.label}}:</label>{{form.atb_choice}}
-                            <div class="form-error">{{form.atb_choice.errors}}</div>
-
-                            <label class="form-label" for="{{form.eko_choice.id_for_label}}">{{form.eko_choice.label}}:</label>{{form.eko_choice}}
-                            <div class="form-error">{{form.eko_choice.errors}}</div>
-
-                            <label class="form-label" for="{{form.varus_choice.id_for_label}}">{{form.varus_choice.label}}:</label>{{form.varus_choice}}
-                            <div class="form-error">{{form.varus_choice.errors}}</div>
-                        </h5>
-
-                        <h5>
-                            <label class="form-label" for="{{form.silpo_choice.id_for_label}}">{{form.silpo_choice.label}}:</label>{{form.silpo_choice}}
-                            <div class="form-error">{{form.silpo_choice.errors}}</div>
-
-                            <label class="form-label" for="{{form.ashan_choice.id_for_label}}">{{form.ashan_choice.label}}:</label>{{form.ashan_choice}}
-                            <div class="form-error">{{form.ashan_choice.errors}}</div>
-
-                            <label class="form-label" for="{{form.novus_choice.id_for_label}}">{{form.novus_choice.label}}:</label>{{form.novus_choice}}
-                            <div class="form-error">{{form.novus_choice.errors}}</div>
-                        </h5>
-
-                        <h5>
-                            <label class="form-label" for="{{form.metro_choice.id_for_label}}">{{form.metro_choice.label}}:</label>{{form.metro_choice}}
-                            <div class="form-error">{{form.metro_choice.errors}}</div>
-
-                            <label class="form-label" for="{{form.nash_kray_choice.id_for_label}}">{{form.nash_kray_choice.label}}:</label>{{form.nash_kray_choice}}
-                            <div class="form-error">{{form.nash_kray_choice.errors}}</div>
-
-                            <label class="form-label" for="{{form.fozzy_choice.id_for_label}}">{{form.fozzy_choice.label}}:</label>{{form.fozzy_choice}}
-                            <div class="form-error">{{form.fozzy_choice.errors}}</div>
-                        </h5>
-
-
                         <br>
                         <h5 align="center">
-                            <button type="submit">добавить товар</button>
+                            <label class="form-label-set-markets markets-text-color" for="{{form.atb_choice.id_for_label}}">{{form.atb_choice.label}}:&ensp;</label>{{form.atb_choice}}&emsp;
+                            <label class="form-label-set-markets markets-text-color" for="{{form.eko_choice.id_for_label}}">{{form.eko_choice.label}}:&ensp;</label>{{form.eko_choice}}&emsp;
+                            <label class="form-label-set-markets markets-text-color" for="{{form.varus_choice.id_for_label}}">{{form.varus_choice.label}}:&ensp;</label>{{form.varus_choice}}&emsp;
+                            <div class="form-error">{{form.atb_choice.errors}}</div>
+                            <div class="form-error">{{form.eko_choice.errors}}</div>
+                            <div class="form-error">{{form.varus_choice.errors}}</div>
+                        </h5>
+                        <br>
+                        <h5 align="center">
+                            <label class="form-label-set-markets markets-text-color" for="{{form.silpo_choice.id_for_label}}">{{form.silpo_choice.label}}:&ensp;</label>{{form.silpo_choice}}&emsp;
+                            <label class="form-label-set-markets markets-text-color" for="{{form.ashan_choice.id_for_label}}">{{form.ashan_choice.label}}:&ensp;</label>{{form.ashan_choice}}&emsp;
+                            <label class="form-label-set-markets markets-text-color" for="{{form.novus_choice.id_for_label}}">{{form.novus_choice.label}}:&ensp;</label>{{form.novus_choice}}&emsp;
+                            <div class="form-error">{{form.silpo_choice.errors}}</div>
+                            <div class="form-error">{{form.ashan_choice.errors}}</div>
+                            <div class="form-error">{{form.novus_choice.errors}}</div>
+                        </h5>
+                        <br>
+                        <h5>
+                            <label class="form-label-set-markets markets-text-color" for="{{form.metro_choice.id_for_label}}">{{form.metro_choice.label}}:&ensp;</label>{{form.metro_choice}}&emsp;
+                            <label class="form-label-set-markets markets-text-color" for="{{form.nash_kray_choice.id_for_label}}">{{form.nash_kray_choice.label}}:&ensp;</label>{{form.nash_kray_choice}}&emsp;
+                            <label class="form-label-set-markets markets-text-color" for="{{form.fozzy_choice.id_for_label}}">{{form.fozzy_choice.label}}:&ensp;</label>{{form.fozzy_choice}}&emsp;
+                            <div class="form-error">{{form.metro_choice.errors}}</div>
+                            <div class="form-error">{{form.nash_kray_choice.errors}}</div>
+                            <div class="form-error">{{form.fozzy_choice.errors}}</div>
+                        </h5>
+                        <br>
+                        <h5 align="center">
+                            <button type="submit" class="btn btn-outline-info">добавить товар в список</button>
                         </h5>
                     </div>
                 </form>
             </div>
         </div>
-
         <div class="col-xl-6 col-md-6 col-sm-12" align="center">
             <div class="card text-bg-light mb-3 " style="max-width: 32rem;">
                 <div class="card-header" align="center"><b>Добалено в список</b></div>

@@ -8,6 +8,15 @@
 <br>
 <br>
 <h4>Здесь пользователь будет выдан результат подсчетов пользователю</h4>
-<h4>Результат: {{total}}</h4>
+{% for order in user_orders %}
+<h5>{{order.product_name}}</h5>
+<h5>{{order.amount}}</h5>
+<h5>{{order.owner}}</h5>
+{% endfor %}
+<br>
+<h5>Ответ НС:</h5>
+{% for result in nn_answer %}
+<h5>{{result}}</h5>
+{% endfor %}
 <h4><a class="btn btn-outline-danger" href="{% url 'thanks_set' %}" role="button">ЗАВЕРШИТЬ</a></h4>
 {% endblock %}

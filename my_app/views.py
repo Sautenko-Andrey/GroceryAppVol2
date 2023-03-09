@@ -37,7 +37,7 @@ class my_appHome(MutualContext, ListView):
     """Класс-обработчик главной страницы приложения"""
 
     model = MainPage
-    template_name = 'my_app/index2.html'
+    template_name = 'my_app/index.html'
     context_object_name = 'content'
 
     def get_context_data(self, *, object_list=None, **kwargs):
@@ -1453,26 +1453,32 @@ class SetResults(MutualContext, ListView):
     template_name = 'my_app/answer_sets.html'
     success_url = reverse_lazy('home')
     model = SetOfProducts
+    context_object_name = 'user_orders'
 
-    # def get_queryset(self):
-    #     '''В данном методе будет прописана логика удаления загруженного
-    #     пользователем названия товара из БД'''
-    #     # тут удаляем загруженный набор продуктов из БД
-    #     items = SetOfProducts.objects.all()
-    #     return items.delete()
 
     def NN_works(self):
+        '''Подключение НС для текста, которая определяет, какой
+        конкретно продукт пользователь добавил в список (название продукта)'''
         pred = NN_text()
-        user_text = self.get_queryset().user_item_name
-        result = pred.identify_item(user_text)
-        return result
+        user_orders = self.get_queryset()
+        results=[]
+        for order in user_orders:
+            result=pred.identify_item(order.product_name)
+            results.append(result)
+        return results
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context_dict = super().get_context_data(**kwargs)
         context_dict['all_relevant_markets']=get_all_markets
-        context_dict['total'] = 150
+        context_dict['nn_answer']=self.NN_works()
         mutual_context_dict = self.get_user_context(title='Результаты по наборам')
         return dict(list(context_dict.items()) + list(mutual_context_dict.items()))
+
+    def get_queryset(self):
+        '''На странице будем отображать только те записи из БД,
+         которые принадлежат текущему пользователю'''
+
+        return super().get_queryset().filter(owner=self.request.user.id)
 
 class Thanksfull_DELETE_SET(MutualContext, ListView):
     '''Класс для удаления продуктовых наборов из БД и
