@@ -9,14 +9,36 @@
 <br>
 <h4>Здесь пользователь будет выдан результат подсчетов пользователю</h4>
 {% for order in user_orders %}
-<h5>{{order.product_name}}</h5>
-<h5>{{order.amount}}</h5>
-<h5>{{order.owner}}</h5>
+<h5>Продукт: {{order.product_name}}, количество: {{order.amount}} </h5>
 {% endfor %}
 <br>
 <h5>Ответ НС:</h5>
-{% for result in nn_answer %}
-<h5>{{result}}</h5>
-{% endfor %}
-<h4><a class="btn btn-outline-danger" href="{% url 'thanks_set' %}" role="button">ЗАВЕРШИТЬ</a></h4>
-{% endblock %}
+
+<!--{% for item in ordered_products %}
+<h5>Наименование : {{item}},количество: </h5>
+{% endfor %}-->
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-xl-4 col-md-4 col-sm-4" align="center">
+            {% for name in products_names %}
+            <h5>{{name}}</h5>
+            {% endfor %}
+        </div>
+        <div class="col-xl-4 col-md-6 col-sm-4" align="center">
+            {% for count in products_amount %}
+            <h5>{{count}}</h5>
+            {% endfor %}
+        </div>
+        <div class="col-xl-4 col-md-4 col-sm-4" align="center">
+            {% for market in markets %}
+            <h5>{{market}}</h5>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+            <h4><a class="btn btn-outline-danger" href="{% url 'thanks_set' %}" role="button">ЗАВЕРШИТЬ</a></h4>
+            {% endblock %}

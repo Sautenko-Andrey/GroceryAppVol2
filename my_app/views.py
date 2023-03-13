@@ -1435,8 +1435,6 @@ class ProductsSet(MutualContext,CreateView):
         self.object.save()
         return super().form_valid(form)
 
-
-
     def get_context_data(self, *, object_list=None, **kwargs):
         context_dict = super().get_context_data(**kwargs)
         context_dict['user_item_info']=self.compile_all_user_requests()
@@ -1461,16 +1459,43 @@ class SetResults(MutualContext, ListView):
         конкретно продукт пользователь добавил в список (название продукта)'''
         pred = NN_text()
         user_orders = self.get_queryset()
-        results=[]
+        total_product_info=[]
         for order in user_orders:
             result=pred.identify_item(order.product_name)
-            results.append(result)
-        return results
+            total_product_info.append(
+                {result:[
+                    order.amount,order.atb_choice,order.eko_choice,order.varus_choice,
+                    order.silpo_choice,order.ashan_choice,order.novus_choice,order.metro_choice,
+                    order.nash_kray_choice,order.fozzy_choice
+                ]}
+            )
+        return total_product_info
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context_dict = super().get_context_data(**kwargs)
         context_dict['all_relevant_markets']=get_all_markets
-        context_dict['nn_answer']=self.NN_works()
+        #отображение списка кортежей с поной информацией по заказу
+        # context_dict['ordered_products']=self.NN_works()
+        products_order=self.NN_works()
+        names_list=[]
+        amount_list=[]
+        markets_list=[]
+        for order in products_order:
+            for key,value in order.items():
+                names_list.append(key)
+                amount_list.append(value[0])
+                markets_list.append(value[1:])
+        context_dict['products_names']=names_list
+        context_dict['products_amount']=amount_list
+        context_dict['markets']=markets_list
+        #вариант в лоб
+        # ordered_products=self.NN_works()
+        # for each_item in ordered_products:
+        #     for key,value in each_item.items():
+        #         if key=='Пиво "Оболонь Премиум Экстра 1,1 л"':
+        #             if value[1]!=0:
+        #                 context_dict['ordered_product']= 'Цена пива "Оболонь Премиум Экстра 1,1 л" в АТБ: '\
+        #                                                  + store['obolon_premium_1.1_l']['atb']
         mutual_context_dict = self.get_user_context(title='Результаты по наборам')
         return dict(list(context_dict.items()) + list(mutual_context_dict.items()))
 
