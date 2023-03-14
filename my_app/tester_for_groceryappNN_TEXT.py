@@ -85,6 +85,9 @@ class TesterForGroceryAppText:
         LD_blue_text = self.add_new_item('LD_blue.txt')
         kent_silver_text = self.add_new_item('kent_silver.txt')
         kent_navy_blue_new_text = self.add_new_item('kent_navy_blue_new.txt')
+        beer_chernigivske_svitle_05_l_glass_text = self.add_new_item('beer_chernigivske_svitle_05_l_glass.txt')
+        beer_stella_artois_05_l_glass_text = self.add_new_item('beer_stella_artois_05_l_glass.txt')
+        beer_obolon_svitle_05_l_glass_text=self.add_new_item('beer_obolon_svitle_05_l_glass.txt')
 
         # объединям обучающие выборки:
         texts = obolon_premium_extra_11_text+ hetman_sagaydachniy_07_text\
@@ -109,7 +112,9 @@ class TesterForGroceryAppText:
                 + fanta_2l_text + bond_street_blue_selection_text + camel_blue_text + LD_red_text\
                 + marlboro_gold_text + rotmans_demi_blue_exclusive_text + rotmans_demi_click_purple_text\
                 + winston_caster_text + parlament_aqua_blue_text + winston_blue_text\
-                + bond_street_red_selection_text + LD_blue_text + kent_silver_text + kent_navy_blue_new_text
+                + bond_street_red_selection_text + LD_blue_text + kent_silver_text\
+                + kent_navy_blue_new_text + beer_chernigivske_svitle_05_l_glass_text\
+                + beer_stella_artois_05_l_glass_text + beer_obolon_svitle_05_l_glass_text
 
         return texts
 
@@ -133,7 +138,7 @@ class TesterForGroceryAppText:
     def identify_item(self, user_text):
 
         # загружаем обученную модель НС для распознования товара по тексту:
-        model = load_model('/home/andrey/GroceryApp/FBApp/my_app/my_model_text_v56')
+        model = load_model('/home/andrey/GroceryApp/FBApp/my_app/my_model_text_v59')
 
         # переводим пользовательский запрос в нижний регистр:
         user_text = user_text.lower()
@@ -263,6 +268,12 @@ class TesterForGroceryAppText:
             return 'Сигареты Kent Silver'
         elif np.argmax(result) == 53:
             return 'Kent Navy Blue New'
+        elif np.argmax(result) == 54:
+            return 'Пиво "Черниговское Светлое" 0,5 л в стекле'
+        elif np.argmax(result) == 55:
+            return 'Пиво "Stella Artois" 0,5 л в стекле'
+        elif np.argmax(result) == 56:
+            return 'Пиво "Оболонь Светлое" 0,5 л в стекле'
 
 # user_Andrey=TesterForGroceryAppText()
 # user_Andrey.identify_item('Пиво Оболонь Премиум 1 л')

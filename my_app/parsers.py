@@ -2,7 +2,8 @@
 # from bs4 import BeautifulSoup
 import undetected_chromedriver
 from selenium.webdriver.common.by import By
-from .utils import price_updating_data
+from my_app.utils import price_updating_data
+
 
 
 class ProductParserVol2:
@@ -604,6 +605,93 @@ class ProductParserVol2:
     def winston_caster_parser(self):
         '''Парсер для сигарет "Winston Caster"'''
         return self.prices_parsing(['https://atbmarket.com/product/sigareti-winston-caster-29'])
+
+    def parlament_aqua_blue_parser(self):
+        ''' Парсер для сигарет "Parlament Aqua Blue"'''
+        return self.prices_parsing([
+            'https://atbmarket.com/product/sigareti-parliament-aqua-blue-27',
+            'https://eko.zakaz.ua/uk/products/tsigarki-parlament-25g--00000048207775/',
+            'https://varus.ua/cigarki-parliament-aqua',
+            'https://shop.silpo.ua/product/tsygarky-parliament-aqua-blue-908567',
+            'https://auchan.ua/ua/sigarety-parliament-aqua-blue-20-sht-916807/',
+            'https://novus.online/product/cigarki-parliament-aqua-blue',
+            'https://fozzyshop.ua/sigarety/98983-sigarety-parliament-aqua-blue-0250014886941.html'
+        ])
+
+    def winston_blue_parser(self):
+        ''' Парсер для сигарет "Winston Blue"'''
+        return self.prices_parsing([
+            'https://atbmarket.com/product/sigareti-winston-blue-28',
+            'https://eko.zakaz.ua/uk/products/tsigarki-vinston-25g--04820000531351/',
+            'https://varus.ua/cigarki-winston-blue',
+            'https://shop.silpo.ua/product/sygarety-winston-blue-907419',
+            'https://auchan.ua/ua/sigarety-winston-blue-20-sht-1029560/',
+            'https://novus.online/product/cigarki-winston-blue',
+            'https://fozzyshop.ua/sigarety/3227-sigarety-winston-blue-4820000531351.html'
+        ])
+
+    def bond_street_red_selection_parser(self):
+        ''' Парсер для сигарет "Bond Street Red Selection"'''
+        return self.prices_parsing([
+            'https://atbmarket.com/product/sigareti-bond-street-red-selection-23',
+            'https://varus.ua/cigarki-bond-street-red-selection',
+            'https://shop.silpo.ua/product/sygarety-bond-street-red-selection-908566',
+            'https://auchan.ua/ua/sigarety-bond-street-red-selection-20-sht-916702/'
+        ])
+
+    def ld_blue_parser(self):
+        ''' Парсер для сигарет "LD Blue"'''
+        return self.prices_parsing([
+            'https://atbmarket.com/product/sigareti-ld-blue-23',
+            'https://shop.silpo.ua/product/tsygarky-ld-blue-907421',
+            'https://fozzyshop.ua/sigarety/56861-sigarety-ld-blue-4820000534642.html'
+        ])
+
+    def kent_silver_parser(self):
+        ''' Парсер для сигарет "KENT Silver"'''
+        return self.prices_parsing([
+            'https://atbmarket.com/product/sigareti-kent-silver-27',
+            'https://eko.zakaz.ua/uk/products/tsigarki-kent--04820192683340/',
+            'https://varus.ua/cigarki-kent-silver-4-0-4-0-4',
+            'https://auchan.ua/ua/sigarety-kent-silver-20-sht-917283/',
+            'https://novus.online/product/cigarki-kent-siiver-neo-4',
+            'https://fozzyshop.ua/sigarety/98898-sigarety-kent-nd-silver-0250014852106.html'
+        ])
+
+    def kent_navy_blue_new_parser(self):
+        ''' Парсер для сигарет "KENT Navy Blue"'''
+        return self.prices_parsing([
+           'https://atbmarket.com/product/sigareti-kent-navy-blue-new-23',
+            'https://eko.zakaz.ua/uk/products/tsigarki-kent--04820192683364/',
+            'https://varus.ua/cigarki-kent-navy-blue-4-0-8-08',
+            'https://shop.silpo.ua/product/tsygarky-kent-nd-navy-blue-907151',
+            'https://auchan.ua/ua/sigarety-kent-navy-blue-20-sht-917276/',
+            'https://novus.online/product/cigarki-kent-blue-futura-8',
+            'https://fozzyshop.ua/sigarety/98899-sigarety-kent-navy-blue-0250014852113.html'
+        ])
+
+    def beer_chernigivske_svitle_05_l_glass_parser(self):
+        ''' Парсер для пива "Черниговское светлое" 0,5 л в стекле'''
+        return self.prices_parsing([
+           'https://www.atbmarket.com/product/pivo-05l-cernigivske-svitle',
+            'https://shop.silpo.ua/product/pyvo-chernigivske-svitle-10503',
+            'https://auchan.ua/ua/pivo-chernigivs-ke-svetloe-4-8-500-ml-1021029/',
+            'https://novus.online/product/pivo-svitle-cernigivske-48-05l-sklpl',
+            'https://metro.zakaz.ua/uk/products/pivo-chernigivske-500ml-ukrayina--04820034920077/',
+            'https://shop.nashkraj.ua/kovel/product/6883-pivo-chernigivske-0-5l-svitle-sb-4-8',
+            'https://fozzyshop.ua/pivo-svetloe/3001-pivo-chernigivske-svetloe-4820000380065.html'
+        ])
+
+    def beer_stella_artois_05_l_glass_parser(self):
+        ''' Парсер для пива "Stella Artois" 0,5 л в стекле'''
+        return self.prices_parsing([
+           'https://atbmarket.com/product/pivo-05l-stella-artoisut',
+            'https://shop.silpo.ua/product/pyvo-stella-artois-17332',
+            'https://auchan.ua/ua/pivo-stella-artois-svetloe-5-500-ml-1021059/',
+            'https://novus.online/product/pivo-svitle-stella-artois-50-05l-sklpl',
+            'https://metro.zakaz.ua/ru/products/pivo-stella-artua-500ml-belgiia--04820000380348/',
+            'https://fozzyshop.ua/ru/pivo-svetloe/2815-pivo-stella-artois-svetloe-4820034921500.html',
+        ])
 
     # def upgrading_particular_prices(self,products_for_upgrade:dict):
     #     '''Метод,который парсит и меняет конкретные цены в БД,

@@ -302,6 +302,21 @@ def get_kent_navi_blue_new():
     '''Тэг,возвращающий информацию о сигаретах "KENT NAVI BLUE NEW"'''
     return ItemsPicsFromNet.objects.get(pk=54)
 
+@register.simple_tag()
+def get_beer_chernigivske_svitle_05_l_glass():
+    '''Тэг,возвращающий информацию о пиве "Черниговское Светлое 0,5 в стеклянной бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=55)
+
+@register.simple_tag()
+def get_beer_stella_artois_05_l_glass():
+    '''Тэг,возвращающий информацию о пиве "Stella Artois 0,5 в стеклянной бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=56)
+
+@register.simple_tag()
+def get_beer_obolon_svitle_05_l_glass():
+    '''Тэг,возвращающий информацию о пиве "Оболонь Светлое 0,5 в стеклянной бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=57)
+
 
 
 # ТЕГИ ДЛЯ БЛЮД

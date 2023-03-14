@@ -1175,21 +1175,77 @@ class ItemNameAnswerPage(MutualContext, ListView):
 
         elif context_dict['nn_answer'] == 'Сигареты Parlament Aqua Blue':
             context_dict['item_image_for_user'] = get_parlament_aqua_blue
+            context_dict['price_from_site_atb'] = store['parlament_aqua_blue']['atb']
+            context_dict['price_from_site_eko'] = store['parlament_aqua_blue']['eko']
+            context_dict['price_from_site_varus'] = store['parlament_aqua_blue']['varus']
+            context_dict['price_from_site_silpo'] = store['parlament_aqua_blue']['silpo']
+            context_dict['price_from_site_ashan'] = store['parlament_aqua_blue']['ashan']
+            context_dict['price_from_site_novus'] = store['parlament_aqua_blue']['novus']
+            context_dict['price_from_site_fozzy'] = store['parlament_aqua_blue']['fozzy']
 
         elif context_dict['nn_answer'] == 'Сигареты Winston Blue':
             context_dict['item_image_for_user'] = get_winston_blue
+            context_dict['price_from_site_atb'] = store['winston_blue']['atb']
+            context_dict['price_from_site_eko'] = store['winston_blue']['eko']
+            context_dict['price_from_site_varus'] = store['winston_blue']['varus']
+            context_dict['price_from_site_silpo'] = store['winston_blue']['silpo']
+            context_dict['price_from_site_ashan'] = store['winston_blue']['ashan']
+            context_dict['price_from_site_novus'] = store['winston_blue']['novus']
+            context_dict['price_from_site_fozzy'] = store['winston_blue']['fozzy']
 
         elif context_dict['nn_answer'] == 'Сигареты Bond Street Red Selection':
             context_dict['item_image_for_user'] = get_bond_street_red_selection
+            context_dict['price_from_site_atb'] = store['bond_street_red_selection']['atb']
+            context_dict['price_from_site_varus'] = store['bond_street_red_selection']['varus']
+            context_dict['price_from_site_silpo'] = store['bond_street_red_selection']['silpo']
+            context_dict['price_from_site_ashan'] = store['bond_street_red_selection']['ashan']
 
         elif context_dict['nn_answer'] == 'Сигареты LD Blue':
             context_dict['item_image_for_user'] = get_ld_blue
+            context_dict['price_from_site_atb'] = store['ld_blue']['atb']
+            context_dict['price_from_site_silpo'] = store['ld_blue']['silpo']
+            context_dict['price_from_site_fozzy'] = store['ld_blue']['fozzy']
 
         elif context_dict['nn_answer'] == 'Сигареты Kent Silver':
             context_dict['item_image_for_user'] = get_kent_silver
+            context_dict['price_from_site_atb'] = store['kent_silver']['atb']
+            context_dict['price_from_site_eko'] = store['kent_silver']['eko']
+            context_dict['price_from_site_varus'] = store['kent_silver']['varus']
+            context_dict['price_from_site_ashan'] = store['kent_silver']['ashan']
+            context_dict['price_from_site_novus'] = store['kent_silver']['novus']
+            context_dict['price_from_site_fozzy'] = store['kent_silver']['fozzy']
 
         elif context_dict['nn_answer'] == 'Kent Navy Blue New':
             context_dict['item_image_for_user'] = get_kent_navi_blue_new
+            context_dict['price_from_site_atb'] = store['kent_navy_blue']['atb']
+            context_dict['price_from_site_eko'] = store['kent_navy_blue']['eko']
+            context_dict['price_from_site_varus'] = store['kent_navy_blue']['varus']
+            context_dict['price_from_site_silpo'] = store['kent_navy_blue']['silpo']
+            context_dict['price_from_site_ashan'] = store['kent_navy_blue']['ashan']
+            context_dict['price_from_site_novus'] = store['kent_navy_blue']['novus']
+            context_dict['price_from_site_fozzy'] = store['kent_navy_blue']['fozzy']
+
+        elif context_dict['nn_answer'] == 'Пиво "Черниговское Светлое" 0,5 л в стекле':
+            context_dict['item_image_for_user'] = get_beer_chernigivske_svitle_05_l_glass
+            context_dict['price_from_site_atb'] = store['beer_chernigivske_svitle_05_l_glass']['atb']
+            context_dict['price_from_site_silpo'] = store['beer_chernigivske_svitle_05_l_glass']['silpo']
+            context_dict['price_from_site_ashan'] = store['beer_chernigivske_svitle_05_l_glass']['ashan']
+            context_dict['price_from_site_novus'] = store['beer_chernigivske_svitle_05_l_glass']['novus']
+            context_dict['price_from_site_metro'] = store['beer_chernigivske_svitle_05_l_glass']['metro']
+            context_dict['price_from_site_nash_kray'] = store['beer_chernigivske_svitle_05_l_glass']['nash_kray']
+            context_dict['price_from_site_fozzy'] = store['beer_chernigivske_svitle_05_l_glass']['fozzy']
+
+        elif context_dict['nn_answer'] == 'Пиво "Stella Artois" 0,5 л в стекле':
+            context_dict['item_image_for_user'] = get_beer_stella_artois_05_l_glass
+            context_dict['price_from_site_atb'] = store['beer_stella_artois_05_l_glass']['atb']
+            context_dict['price_from_site_silpo'] = store['beer_stella_artois_05_l_glass']['silpo']
+            context_dict['price_from_site_ashan'] = store['beer_stella_artois_05_l_glass']['ashan']
+            context_dict['price_from_site_novus'] = store['beer_stella_artois_05_l_glass']['novus']
+            context_dict['price_from_site_metro'] = store['beer_stella_artois_05_l_glass']['metro']
+            context_dict['price_from_site_fozzy'] = store['beer_stella_artois_05_l_glass']['fozzy']
+
+        elif context_dict['nn_answer'] == 'Пиво "Оболонь Светлое" 0,5 л в стекле':
+            context_dict['item_image_for_user'] = get_beer_obolon_svitle_05_l_glass
 
         else:
             context_dict['item_image_for_user'] = get_apple_golden

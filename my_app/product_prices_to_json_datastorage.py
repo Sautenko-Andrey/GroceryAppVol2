@@ -377,6 +377,69 @@ all_products_names=[
     {'winston_caster':{
         "atb":parser.winston_caster_parser()[0]
 }},
+    {'parlament_aqua_blue':{
+        "atb":parser.parlament_aqua_blue_parser()[0],
+        "eko":parser.parlament_aqua_blue_parser()[1],
+        "varus":parser.parlament_aqua_blue_parser()[2],
+        "silpo":parser.parlament_aqua_blue_parser()[3],
+        "ashan":parser.parlament_aqua_blue_parser()[4],
+        "novus":parser.parlament_aqua_blue_parser()[5],
+        "fozzy":parser.parlament_aqua_blue_parser()[8]
+}},
+    {'winston_blue':{
+        "atb":parser.winston_blue_parser()[0],
+        "eko":parser.winston_blue_parser()[1],
+        "varus":parser.winston_blue_parser()[2],
+        "silpo":parser.winston_blue_parser()[3],
+        "ashan":parser.winston_blue_parser()[4],
+        "novus":parser.winston_blue_parser()[5],
+        "fozzy":parser.winston_blue_parser()[8]
+}},
+    {'bond_street_red_selection':{
+        "atb":parser.bond_street_red_selection_parser()[0],
+        "varus":parser.bond_street_red_selection_parser()[2],
+        "silpo":parser.bond_street_red_selection_parser()[3],
+        "ashan":parser.bond_street_red_selection_parser()[4],
+}},
+    {'ld_blue':{
+        "atb":parser.ld_blue_parser()[0],
+        "silpo":parser.ld_blue_parser()[3],
+        "fozzy":parser.ld_blue_parser()[8]
+}},
+    {'kent_silver':{
+        "atb":parser.kent_silver_parser()[0],
+        "eko":parser.kent_silver_parser()[1],
+        "varus":parser.kent_silver_parser()[2],
+        "ashan":parser.kent_silver_parser()[4],
+        "novus":parser.kent_silver_parser()[5],
+        "fozzy":parser.kent_silver_parser()[8]
+}},
+    {'kent_navy_blue':{
+        "atb":parser.kent_navy_blue_new_parser()[0],
+        "eko":parser.kent_navy_blue_new_parser()[1],
+        "varus":parser.kent_navy_blue_new_parser()[2],
+        "silpo":parser.kent_navy_blue_new_parser()[3],
+        "ashan":parser.kent_navy_blue_new_parser()[4],
+        "novus":parser.kent_navy_blue_new_parser()[5],
+        "fozzy":parser.kent_navy_blue_new_parser()[8]
+}},
+    {'beer_chernigivske_svitle_05_l_glass':{
+        "atb":parser.beer_chernigivske_svitle_05_l_glass_parser()[0],
+        "silpo":parser.beer_chernigivske_svitle_05_l_glass_parser()[3],
+        "ashan":parser.beer_chernigivske_svitle_05_l_glass_parser()[4],
+        "novus":parser.beer_chernigivske_svitle_05_l_glass_parser()[5],
+        "metro":parser.beer_chernigivske_svitle_05_l_glass_parser()[6],
+        "nash_kray":parser.beer_chernigivske_svitle_05_l_glass_parser()[7],
+        "fozzy":parser.beer_chernigivske_svitle_05_l_glass_parser()[8]
+}},
+    {'beer_stella_artois_05_l_glass':{
+        "atb":parser.beer_chernigivske_svitle_05_l_glass_parser()[0],
+        "silpo":parser.beer_chernigivske_svitle_05_l_glass_parser()[3],
+        "ashan":parser.beer_chernigivske_svitle_05_l_glass_parser()[4],
+        "novus":parser.beer_chernigivske_svitle_05_l_glass_parser()[5],
+        "metro":parser.beer_chernigivske_svitle_05_l_glass_parser()[6],
+        "fozzy":parser.beer_chernigivske_svitle_05_l_glass_parser()[8]
+}},
 
 ]
 
@@ -385,7 +448,7 @@ def get_all_prices():
     for item in all_products_names:
         for product,values in item.items():
             to_json[product]=values
-    with open('/home/andrey/GroceryApp/FBApp/my_app/prices_store.json','w') as f:
+    with open('/home/andrey/GroceryAppVol2/FBApp/my_app/prices_store.json','w') as f:
         json.dump(to_json, f, sort_keys=False, indent=len(all_products_names))
         print('Все продукты и их цены добавлены в базу данных!')
 
