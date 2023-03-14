@@ -7,17 +7,20 @@
 <br>
 <br>
 <br>
-<h4>Здесь пользователь будет выдан результат подсчетов пользователю</h4>
-{% for order in user_orders %}
-<h5>Продукт: {{order.product_name}}, количество: {{order.amount}} </h5>
-{% endfor %}
-<br>
-<h5>Ответ НС:</h5>
+<div class="container">
+    <div class="row">
+        <div class="col-xl-4 col-md-4 col-sm-4" align="center">
+            <h5>Наименование</h5>
+        </div>
+        <div class="col-xl-4 col-md-4 col-sm-4" align="center">
+            <h5>Заказано</h5>
+        </div>
+        <div class="col-xl-4 col-md-4 col-sm-4" align="center">
+            <h5>Цены по маркетам</h5>
 
-<!--{% for item in ordered_products %}
-<h5>Наименование : {{item}},количество: </h5>
-{% endfor %}-->
-
+        </div>
+    </div>
+</div>
 
 <div class="container">
     <div class="row">
@@ -39,6 +42,41 @@
     </div>
 </div>
 
+<div class="container" align="center">
+    <div class="row">
+        <div class="col-xl-12 col-md-12 col-sm-12" align="centrer">
+            <h5><b>ВАШ ЗАКАЗ</b></h5>
+            {% for name in products_names %}
+            <div class="card text-bg-light mb-4 " style="max-width: 800px;">
+                <br>
+                <h5><b><i>{{name}}</i></b></h5>
+                <table class="table">
+                    <thead>
+                    <tr align="center">
+                        <th scope="col">АТБ</th>
+                        <th scope="col">ЭКО</th>
+                        <th scope="col">Varus</th>
+                        <th scope="col">Сильпо</th>
+                        <th scope="col">Ашан</th>
+                        <th scope="col">Novus</th>
+                        <th scope="col">Metro</th>
+                        <th scope="col">Наш Край</th>
+                        <th scope="col">Fozzy</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr align="center">
+                        {% for price in all_prices %}
+                        <td>{{price}}</td>
+                        {% endfor %}
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
 
-            <h4><a class="btn btn-outline-danger" href="{% url 'thanks_set' %}" role="button">ЗАВЕРШИТЬ</a></h4>
-            {% endblock %}
+<h4><a class="btn btn-outline-danger" href="{% url 'thanks_set' %}" role="button">ЗАВЕРШИТЬ</a></h4>
+{% endblock %}

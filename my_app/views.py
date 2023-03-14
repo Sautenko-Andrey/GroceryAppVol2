@@ -1480,22 +1480,30 @@ class SetResults(MutualContext, ListView):
         names_list=[]
         amount_list=[]
         markets_list=[]
+        market_names = []
         for order in products_order:
             for key,value in order.items():
                 names_list.append(key)
                 amount_list.append(value[0])
                 markets_list.append(value[1:])
+
+
         context_dict['products_names']=names_list
+        for name in names_list:
+            if name=='Пиво "Оболонь Премиум Экстра 1,1 л"':
+                context_dict['product_prices']=[
+                    store['obolon_premium_1.1_l']['atb'],
+                    store['obolon_premium_1.1_l']['eko']
+                ]
         context_dict['products_amount']=amount_list
-        context_dict['markets']=markets_list
-        #вариант в лоб
-        # ordered_products=self.NN_works()
-        # for each_item in ordered_products:
-        #     for key,value in each_item.items():
-        #         if key=='Пиво "Оболонь Премиум Экстра 1,1 л"':
-        #             if value[1]!=0:
-        #                 context_dict['ordered_product']= 'Цена пива "Оболонь Премиум Экстра 1,1 л" в АТБ: '\
-        #                                                  + store['obolon_premium_1.1_l']['atb']
+        context_dict['markets']=markets_list    # тут у нас True или False для выбранных маркетов
+        context_dict['markets_names']= market_names
+
+        #цифры цен ради эксперимента
+        #цена для продукта
+        context_dict['all_prices']=[10,20,30,40,50,60,70,80,90]
+        context_dict['all_prices2'] = [100, 200, 300, 400, 500, 600, 700, 800, 900]
+
         mutual_context_dict = self.get_user_context(title='Результаты по наборам')
         return dict(list(context_dict.items()) + list(mutual_context_dict.items()))
 
