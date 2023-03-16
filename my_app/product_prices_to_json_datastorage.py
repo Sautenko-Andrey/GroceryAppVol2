@@ -441,6 +441,56 @@ all_products_names=[
         "fozzy":parser.beer_chernigivske_svitle_05_l_glass_parser()[8]
 }},
 
+    {'beer_obolon_svitle_05_l_glass':{
+        "atb":parser.beer_obolon_svitle_05_l_glass_parser()[0],
+        "eko":parser.beer_obolon_svitle_05_l_glass_parser()[1],
+        "varus":parser.beer_obolon_svitle_05_l_glass_parser()[2],
+        "novus":parser.beer_obolon_svitle_05_l_glass_parser()[5],
+        "metro":parser.beer_obolon_svitle_05_l_glass_parser()[6],
+        "nash_kray":parser.beer_obolon_svitle_05_l_glass_parser()[7],
+        "fozzy":parser.beer_obolon_svitle_05_l_glass_parser()[8]
+}},
+    {'beer_jugulivske_svitle_05_l_glass':{
+        "atb":parser.beer_jugulivske_svitle_05_l_glass_parser()[0],
+        "eko":parser.beer_jugulivske_svitle_05_l_glass_parser()[1],
+        "varus":parser.beer_jugulivske_svitle_05_l_glass_parser()[2],
+        "novus":parser.beer_jugulivske_svitle_05_l_glass_parser()[5],
+        "metro":parser.beer_jugulivske_svitle_05_l_glass_parser()[6],
+        "fozzy":parser.beer_jugulivske_svitle_05_l_glass_parser()[8]
+}},
+    {'beer_rogan_tradicionnoe_svitle_05_l_glass':{
+        "atb":parser.beer_rogan_tradicionnoe_svitle_05_l_glass_parser()[0],
+        "silpo":parser.beer_rogan_tradicionnoe_svitle_05_l_glass_parser()[3],
+        "novus":parser.beer_rogan_tradicionnoe_svitle_05_l_glass_parser()[5],
+        "metro":parser.beer_rogan_tradicionnoe_svitle_05_l_glass_parser()[6],
+        "nash_kray":parser.beer_rogan_tradicionnoe_svitle_05_l_glass_parser()[7],
+        "fozzy":parser.beer_rogan_tradicionnoe_svitle_05_l_glass_parser()[8]
+}},
+    {'beer_corona_extra_svitle_033_l_glass':{
+        "atb":parser.beer_corona_extra_svitle_033_l_glass_parser()[0],
+        "eko":parser.beer_corona_extra_svitle_033_l_glass_parser()[1],
+        "varus":parser.beer_corona_extra_svitle_033_l_glass_parser()[2],
+        "silpo":parser.beer_corona_extra_svitle_033_l_glass_parser()[3],
+        "ashan":parser.beer_corona_extra_svitle_033_l_glass_parser()[4],
+        "novus":parser.beer_corona_extra_svitle_033_l_glass_parser()[5],
+        "metro":parser.beer_corona_extra_svitle_033_l_glass_parser()[6],
+        "fozzy":parser.beer_corona_extra_svitle_033_l_glass_parser()[8]
+}},
+    {'beer_chernigibske_bile_nefilter_05_l_glass':{
+        "atb":parser.beer_chernigibske_bile_nefilter_05_l_glass_parser()[0],
+        "silpo":parser.beer_chernigibske_bile_nefilter_05_l_glass_parser()[3],
+        "novus":parser.beer_chernigibske_bile_nefilter_05_l_glass_parser()[5],
+        "metro":parser.beer_chernigibske_bile_nefilter_05_l_glass_parser()[6],
+        "nash_kray":parser.beer_chernigibske_bile_nefilter_05_l_glass_parser()[7],
+        "fozzy":parser.beer_chernigibske_bile_nefilter_05_l_glass_parser()[8]
+}},
+    {'beer_yantar_svitle_05_l_glass':{
+        "atb":parser.beer_yantar_svitle_05_l_glass_parser()[0],
+        "ashan":parser.beer_yantar_svitle_05_l_glass_parser()[4],
+        "metro":parser.beer_yantar_svitle_05_l_glass_parser()[6],
+        "fozzy":parser.beer_yantar_svitle_05_l_glass_parser()[8]
+}},
+
 ]
 
 def get_all_prices():

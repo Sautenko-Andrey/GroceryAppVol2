@@ -29,7 +29,7 @@ class GroceryAppText:
             Embedding(self.MAX_WORDS, 150, input_length=self.MAX_LENGTH_TEXT),
             LSTM(150, return_sequences=True),  # 128
             LSTM(100),  # 64
-            Dense(57, activation='softmax')
+            Dense(62, activation='softmax')
         ])
 
         self.model.compile(optimizer=Adam(0.0001), loss='categorical_crossentropy',
@@ -47,7 +47,7 @@ class GroceryAppText:
         reverse_word_map = dict(map(reversed, self.converted_data()[2].word_index.items()))
 
         # сохраняем модель обученной НС:
-        self.model.save('my_model_text_v59')  # сохранил не как h5!!!
+        self.model.save('my_model_text')  # сохранил не как h5!!!
 
         return history, reverse_word_map
 
@@ -124,6 +124,11 @@ class GroceryAppText:
         beer_chernigivske_svitle_05_l_glass_text=self.add_new_item('beer_chernigivske_svitle_05_l_glass.txt')
         beer_stella_artois_05_l_glass_text = self.add_new_item('beer_stella_artois_05_l_glass.txt')
         beer_obolon_svitle_05_l_glass_text=self.add_new_item('beer_obolon_svitle_05_l_glass.txt')
+        beer_jigulivske_svitle_05_l_glass_text=self.add_new_item('beer_jigulivske_svitle_05_l_glass.txt')
+        beer_rogan_tradiciyne_svitle_05_l_glass_text=self.add_new_item('beer_rogan_tradiciyne_svitle_05_l_glass.txt')
+        beer_corona_extra_svitle_033_l_glass_text=self.add_new_item('beer_corona_extra_svitle_033_l_glass.txt')
+        beer_chernigivske_bile_nefilter_05_l_glass_text=self.add_new_item('beer_chernigivske_bile_nefilter_05_l_glass.txt')
+        beer_yantar_svitle_05_l_glass_text=self.add_new_item('beer_yantar_svitle_05_l_glass.txt')
 
         # объединям обучающие выборки:
         texts = obolon_premium_extra_11_text + hetman_sagaydachniy_07_text \
@@ -148,7 +153,10 @@ class GroceryAppText:
                 + winston_caster_text + parlament_aqua_blue_text + winston_blue_text\
                 + bond_street_red_selection_text + LD_blue_text + kent_silver_text\
                 + kent_navy_blue_new_text + beer_chernigivske_svitle_05_l_glass_text\
-                + beer_stella_artois_05_l_glass_text + beer_obolon_svitle_05_l_glass_text
+                + beer_stella_artois_05_l_glass_text + beer_obolon_svitle_05_l_glass_text\
+                + beer_jigulivske_svitle_05_l_glass_text + beer_rogan_tradiciyne_svitle_05_l_glass_text\
+                + beer_corona_extra_svitle_033_l_glass_text + beer_chernigivske_bile_nefilter_05_l_glass_text\
+                + beer_yantar_svitle_05_l_glass_text
 
         # подсчитываем кол-во выборок
         count_obolon_premium_extra_11_text = len(obolon_premium_extra_11_text)
@@ -209,6 +217,11 @@ class GroceryAppText:
         count_beer_chernigivske_svitle_05_l_glass_text=len(beer_chernigivske_svitle_05_l_glass_text)
         count_beer_stella_artois_05_l_glass_text=len(beer_stella_artois_05_l_glass_text)
         count_beer_obolon_svitle_05_l_glass_text=len(beer_obolon_svitle_05_l_glass_text)
+        count_beer_jigulivske_svitle_05_l_glass_text=len(beer_jigulivske_svitle_05_l_glass_text)
+        count_beer_rogan_tradiciyne_svitle_05_l_glass_text=len(beer_rogan_tradiciyne_svitle_05_l_glass_text)
+        count_beer_corona_extra_svitle_033_l_glass_text=len(beer_corona_extra_svitle_033_l_glass_text)
+        count_beer_chernigivske_bile_nefilter_05_l_glass_text=len(beer_chernigivske_bile_nefilter_05_l_glass_text)
+        count_beer_yantar_svitle_05_l_glass_text=len(beer_yantar_svitle_05_l_glass_text)
 
         return texts, count_obolon_premium_extra_11_text, count_hetman_sagaydachniy_07_text, \
                count_coffee_aroma_gold_classic_100gr_text, count_apple_golden_text, count_coca_cola_2l_text, \
@@ -228,7 +241,10 @@ class GroceryAppText:
                count_winston_caster_text,count_parlament_aqua_blue_text,count_winston_blue_text,\
                count_bond_street_red_selection_text,count_LD_blue_text,count_kent_silver_text,\
                count_kent_navy_blue_new_text,count_beer_chernigivske_svitle_05_l_glass_text,\
-               count_beer_stella_artois_05_l_glass_text,count_beer_obolon_svitle_05_l_glass_text
+               count_beer_stella_artois_05_l_glass_text,count_beer_obolon_svitle_05_l_glass_text,\
+               count_beer_jigulivske_svitle_05_l_glass_text,count_beer_rogan_tradiciyne_svitle_05_l_glass_text,\
+               count_beer_corona_extra_svitle_033_l_glass_text,count_beer_chernigivske_bile_nefilter_05_l_glass_text,\
+               count_beer_yantar_svitle_05_l_glass_text
 
 
     def converted_data(self):
@@ -254,7 +270,7 @@ class GroceryAppText:
 
         # окончательно формируем обучающую выборку:
         TRAIN_SAMPLE = data_pad
-        items = 57
+        items = 62
         TARGET_SAMPLE = np.array(
             make_list(items, 0) *
             self.upload_data()[1] + make_list(items, 1) * self.upload_data()[2] + make_list(items, 2) *
@@ -281,15 +297,16 @@ class GroceryAppText:
             self.upload_data()[43]+ make_list(items, 43) *self.upload_data()[44]+ make_list(items, 44) *
             self.upload_data()[45]+ make_list(items, 45) *self.upload_data()[46]+ make_list(items, 46) *
             self.upload_data()[47] + make_list(items, 47) *self.upload_data()[48]+ make_list(items, 48) *
-            self.upload_data()[49]+ make_list(items, 49) *
-            self.upload_data()[50]+ make_list(items, 50) *
-            self.upload_data()[51]+ make_list(items, 51) *
-            self.upload_data()[52]+ make_list(items, 52) *
-            self.upload_data()[53]+ make_list(items, 53) *
-            self.upload_data()[54]+ make_list(items, 54) *
-            self.upload_data()[55]+ make_list(items, 55) *
-            self.upload_data()[56]+ make_list(items, 56) *
-            self.upload_data()[57])
+            self.upload_data()[49]+ make_list(items, 49) *self.upload_data()[50]+ make_list(items, 50) *
+            self.upload_data()[51]+ make_list(items, 51) *self.upload_data()[52]+ make_list(items, 52) *
+            self.upload_data()[53]+ make_list(items, 53) *self.upload_data()[54]+ make_list(items, 54) *
+            self.upload_data()[55]+ make_list(items, 55) *self.upload_data()[56]+ make_list(items, 56) *
+            self.upload_data()[57]+ make_list(items, 57) *
+            self.upload_data()[58]+ make_list(items, 58) *
+            self.upload_data()[59]+ make_list(items, 59) *
+            self.upload_data()[60]+ make_list(items, 60) *
+            self.upload_data()[61]+ make_list(items, 61) *
+            self.upload_data()[62])
 
         # перемешиваем обучающую выборку для лучшей тренированности НС:
         # создаем рандомные индексы:

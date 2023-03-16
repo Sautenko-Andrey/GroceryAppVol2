@@ -318,6 +318,32 @@ def get_beer_obolon_svitle_05_l_glass():
     return ItemsPicsFromNet.objects.get(pk=57)
 
 
+@register.simple_tag()
+def get_beer_jigulivsle_svitle_05_l_glass():
+    '''Тэг,возвращающий информацию о пиве "Жигулевское Светлое 0,5 в стеклянной бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=58)
+
+@register.simple_tag()
+def get_beer_rogan_tradiciyne_svitle_05_l_glass():
+    '''Тэг,возвращающий информацию о пиве "Рогань традиционное Светлое 0,5 в стеклянной бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=59)
+
+@register.simple_tag()
+def get_beer_corona_extra_svitle_033_l_glass():
+    '''Тэг,возвращающий информацию о пиве "Corona Extra светлое 0,33 в стеклянной бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=60)
+
+@register.simple_tag()
+def get_beer_chernigivske_bile_nefilter_05_l_glass():
+    '''Тэг,возвращающий информацию о пиве "Черниговоское Белое нефильтрованное 0,5 в стеклянной бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=61)
+
+@register.simple_tag()
+def get_beer_yantar_svitle_05_l_glass():
+    '''Тэг,возвращающий информацию о пиве "Янтарь Светлое 0,5 в стеклянной бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=62)
+
+
 
 # ТЕГИ ДЛЯ БЛЮД
 

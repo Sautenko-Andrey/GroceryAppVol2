@@ -693,12 +693,74 @@ class ProductParserVol2:
             'https://fozzyshop.ua/ru/pivo-svetloe/2815-pivo-stella-artois-svetloe-4820034921500.html',
         ])
 
-    # def upgrading_particular_prices(self,products_for_upgrade:dict):
-    #     '''Метод,который парсит и меняет конкретные цены в БД,
-    #      а не все цены на все продукты в БД'''
-    #     for market,product in products_for_upgrade.items():
-    #         if product=="fanta_2l" and market=='eko':
-    #             new_price=self.fanta_2l_parser()
+    def beer_obolon_svitle_05_l_glass_parser(self):
+        ''' Парсер для пива "Оболонь Светлое" 0,5 л в стекле'''
+        return self.prices_parsing([
+           'https://atbmarket.com/product/pivo-05-l-obolon-svitle',
+            'https://eko.zakaz.ua/uk/products/pivo-obolon-500ml-ukrayina--04670001497428/',
+            'https://varus.ua/pivo-0-5l-svitle-obolon-sb',
+            'https://novus.online/product/pivo-svitle-obolon-45-05l-sklpl',
+            'https://metro.zakaz.ua/uk/products/pivo-obolon-500ml-ukrayina--04820000191708/',
+            'https://shop.nashkraj.ua/kovel/product/6759-pivo-obolon-0-5l-svitle-4-5',
+            'https://fozzyshop.ua/ru/pivo-svetloe/2919-pivo-obolon-svitle-svetloe-4820000191708.html'
+        ])
+
+    def beer_jugulivske_svitle_05_l_glass_parser(self):
+        ''' Парсер для пива "Жигулевское светлое" 0,5 л в стекле'''
+        return self.prices_parsing([
+           'https://www.atbmarket.com/product/pivo-05-l-zigulivske-svitle',
+            'https://eko.zakaz.ua/uk/products/pivo-obolon-500ml-ukrayina--04820000195843/',
+            'https://varus.ua/pivo-0-5l-4-2-svitle-zhigulivske-pl',
+            'https://novus.online/product/pivo-svitle-obolon-zigulivske-42-05l-sklpl',
+            'https://metro.zakaz.ua/ru/products/pivo-obolon-500ml-ukrayina--04820000195843/',
+            'https://fozzyshop.ua/ru/pivo-svetloe/2937-pivo-obolon-zhigulivske-svetloe-4820000195843.html',
+        ])
+
+    def beer_rogan_tradicionnoe_svitle_05_l_glass_parser(self):
+        ''' Парсер для пива "Рогань традиционное светлое" 0,5 л в стекле'''
+        return self.prices_parsing([
+            'https://atbmarket.com/product/pivo-05-l-rogan-tradicijne-svitle-skbut',
+            'https://shop.silpo.ua/product/pyvo-rogan-tradytsiine-svitle-36278',
+            'https://novus.online/product/pivo-svitle-rogan-tradicijne-48-05l-sklpl',
+            'https://metro.zakaz.ua/ru/products/pivo-rogan-500ml-ukrayina--04820034921616/',
+            'https://shop.nashkraj.ua/kovel/product/6789-pivo-rogan-0-5l-traditsiyne-svit-sb-4-8',
+            'https://fozzyshop.ua/ru/pivo-svetloe/2988-pivo-rogan-tradicijne-svetloe-4820034921616.html'
+        ])
+
+    def beer_corona_extra_svitle_033_l_glass_parser(self):
+        ''' Парсер для пива "Corona Extra светлое" 0,33 л в стекле'''
+        return self.prices_parsing([
+            'https://atbmarket.com/product/pivo-330-ml-corona-extra-svitle',
+            'https://eko.zakaz.ua/uk/products/pivo-korona-ekstra--ekomarket00000026229294/',
+            'https://varus.ua/pivo-4-5-0-355l-svitle-corona-extra-s-b',
+            'https://shop.silpo.ua/product/pyvo-corona-extra-svitle-839544',
+            'https://auchan.ua/ua/pivo-corona-extra-svetloe-4-5-330-ml-1021862/',
+            'https://novus.online/product/pivo-svitle-corona-extra-45-033-sp',
+            'https://metro.zakaz.ua/ru/products/pivo-korona-ekstra-330ml-meksika--07501064199844/',
+            'https://fozzyshop.ua/ru/pivo-svetloe/81812-pivo-corona-extra-svetloe-7501064199844.html'
+        ])
+
+    def beer_chernigibske_bile_nefilter_05_l_glass_parser(self):
+        ''' Парсер для пива "Черниговское белок нефильтрованное" 0,5 л в стекле'''
+        return self.prices_parsing([
+            'https://atbmarket.com/product/pivo-05l-cernigivske-bile-nefiltrovane',
+            'https://shop.silpo.ua/product/pyvo-chernigivske-bile-18109',
+            'https://novus.online/product/pivo-svitle-nefiltrovane-cernigivske-bile-50-05l-sklpl',
+            'https://metro.zakaz.ua/ru/products/pivo-chernigivske-500ml-ukrayina--04820034920312/',
+            'https://shop.nashkraj.ua/kovel/product/6876-pivo-chernigivske-0-5l-bile-4-8-s-b',
+            'https://fozzyshop.ua/ru/pivo-svetloe/2983-pivo-chernigivske-bile-nefiltrovannoe-4820000750615.html'
+        ])
+
+    def beer_yantar_svitle_05_l_glass_parser(self):
+        ''' Парсер для пива "Янтарь светлое" 0,5 л в стекле'''
+        return self.prices_parsing([
+            'https://atbmarket.com/product/pivo-05l-antar-svitle',
+            'https://auchan.ua/ua/pivo-jantar-svetloe-4-5-500-ml-1021035/',
+            'https://metro.zakaz.ua/ru/products/pivo-iantar-500ml-ukrayina--04820034920602/',
+            'https://fozzyshop.ua/ru/pivo-svetloe/42648-pivo-yantar-svetloe-4820034920602.html'
+        ])
+
+
 
 
 class AllDishParsersVol2(ProductParserVol2):

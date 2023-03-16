@@ -88,6 +88,11 @@ class TesterForGroceryAppText:
         beer_chernigivske_svitle_05_l_glass_text = self.add_new_item('beer_chernigivske_svitle_05_l_glass.txt')
         beer_stella_artois_05_l_glass_text = self.add_new_item('beer_stella_artois_05_l_glass.txt')
         beer_obolon_svitle_05_l_glass_text=self.add_new_item('beer_obolon_svitle_05_l_glass.txt')
+        beer_jigulivske_svitle_05_l_glass_text = self.add_new_item('beer_jigulivske_svitle_05_l_glass.txt')
+        beer_rogan_tradiciyne_svitle_05_l_glass_text = self.add_new_item('beer_rogan_tradiciyne_svitle_05_l_glass.txt')
+        beer_corona_extra_svitle_033_l_glass_text = self.add_new_item('beer_corona_extra_svitle_033_l_glass.txt')
+        beer_chernigivske_bile_nefilter_05_l_glass_text = self.add_new_item('beer_chernigivske_bile_nefilter_05_l_glass.txt')
+        beer_yantar_svitle_05_l_glass_text = self.add_new_item('beer_yantar_svitle_05_l_glass.txt')
 
         # объединям обучающие выборки:
         texts = obolon_premium_extra_11_text+ hetman_sagaydachniy_07_text\
@@ -114,7 +119,10 @@ class TesterForGroceryAppText:
                 + winston_caster_text + parlament_aqua_blue_text + winston_blue_text\
                 + bond_street_red_selection_text + LD_blue_text + kent_silver_text\
                 + kent_navy_blue_new_text + beer_chernigivske_svitle_05_l_glass_text\
-                + beer_stella_artois_05_l_glass_text + beer_obolon_svitle_05_l_glass_text
+                + beer_stella_artois_05_l_glass_text + beer_obolon_svitle_05_l_glass_text\
+                + beer_jigulivske_svitle_05_l_glass_text + beer_rogan_tradiciyne_svitle_05_l_glass_text\
+                + beer_corona_extra_svitle_033_l_glass_text + beer_chernigivske_bile_nefilter_05_l_glass_text\
+                + beer_yantar_svitle_05_l_glass_text
 
         return texts
 
@@ -138,7 +146,7 @@ class TesterForGroceryAppText:
     def identify_item(self, user_text):
 
         # загружаем обученную модель НС для распознования товара по тексту:
-        model = load_model('/home/andrey/GroceryApp/FBApp/my_app/my_model_text_v59')
+        model = load_model('/home/andrey/GroceryApp/FBApp/my_app/my_model_text')
 
         # переводим пользовательский запрос в нижний регистр:
         user_text = user_text.lower()
@@ -274,6 +282,16 @@ class TesterForGroceryAppText:
             return 'Пиво "Stella Artois" 0,5 л в стекле'
         elif np.argmax(result) == 56:
             return 'Пиво "Оболонь Светлое" 0,5 л в стекле'
+        elif np.argmax(result) == 57:
+            return 'Пиво Жигулевское светлое 0,5 л в стекле'
+        elif np.argmax(result) == 58:
+            return 'Пиво Рогань традиционное светлое 0,5 л в стекле'
+        elif np.argmax(result) == 59:
+            return 'Пиво Корона Экстра светлое 0,33 л в стекле'
+        elif np.argmax(result) == 60:
+            return 'Пиво Черниговоское Белое нефильтрованное 0,5 л в стекле'
+        elif np.argmax(result) == 61:
+            return 'Пиво Янтарь светлое 0,5 л в стекле'
 
 # user_Andrey=TesterForGroceryAppText()
 # user_Andrey.identify_item('Пиво Оболонь Премиум 1 л')
