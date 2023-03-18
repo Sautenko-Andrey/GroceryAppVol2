@@ -11,7 +11,7 @@ from django.http import HttpResponseNotFound, HttpResponse
 from django.urls import reverse_lazy
 from rest_framework import generics
 
-from my_app.utils import MutualContext
+from my_app.utils import MutualContext, define_markets_names
 from django.views.generic import ListView, CreateView, DeleteView
 
 from .forms import *
@@ -1300,6 +1300,133 @@ class ItemNameAnswerPage(MutualContext, ListView):
             context_dict['price_from_site_metro'] = store['beer_yantar_svitle_05_l_glass']['metro']
             context_dict['price_from_site_fozzy'] = store['beer_yantar_svitle_05_l_glass']['fozzy']
 
+        elif context_dict['nn_answer'] == 'Пиво Zibert светлое 0,5 л в стекле':
+            context_dict['item_image_for_user'] = get_beer_zibert_svitle_05_l_glass
+            context_dict['price_from_site_atb'] = store['beer_zibert_svitle_05_l_glass']['atb']
+            context_dict['price_from_site_eko'] = store['beer_zibert_svitle_05_l_glass']['eko']
+            context_dict['price_from_site_varus'] = store['beer_zibert_svitle_05_l_glass']['varus']
+            context_dict['price_from_site_novus'] = store['beer_zibert_svitle_05_l_glass']['novus']
+            context_dict['price_from_site_fozzy'] = store['beer_zibert_svitle_05_l_glass']['fozzy']
+
+        elif context_dict['nn_answer'] == 'Пиво Арсенал мицне 0,5 л в стекле':
+            context_dict['item_image_for_user'] = get_beer_arsenal_micne_05_l_glass
+            context_dict['price_from_site_novus'] = store['beer_arsenal_micne_05_l_glass']['novus']
+            context_dict['price_from_site_metro'] = store['beer_arsenal_micne_05_l_glass']['metro']
+            context_dict['price_from_site_nash_kray'] = store['beer_arsenal_micne_05_l_glass']['nash_kray']
+            context_dict['price_from_site_fozzy'] = store['beer_arsenal_micne_05_l_glass']['fozzy']
+
+        elif context_dict['nn_answer'] == 'Пиво Перша Броварня Закарпатське 0,5 л в стекле':
+            context_dict['item_image_for_user'] = get_beer_persha_brovarna_zakarpatske_05_l_glass
+            context_dict['price_from_site_eko'] = store['beer_persha_brovarna_zakarpatske_svitle_05_l_glass']['eko']
+            context_dict['price_from_site_varus'] = store['beer_persha_brovarna_zakarpatske_svitle_05_l_glass']['varus']
+            context_dict['price_from_site_silpo'] = store['beer_persha_brovarna_zakarpatske_svitle_05_l_glass']['silpo']
+            context_dict['price_from_site_ashan'] = store['beer_persha_brovarna_zakarpatske_svitle_05_l_glass']['ashan']
+            context_dict['price_from_site_novus'] = store['beer_persha_brovarna_zakarpatske_svitle_05_l_glass']['novus']
+            context_dict['price_from_site_metro'] = store['beer_persha_brovarna_zakarpatske_svitle_05_l_glass']['metro']
+            context_dict['price_from_site_nash_kray'] = store['beer_persha_brovarna_zakarpatske_svitle_05_l_glass']['nash_kray']
+            context_dict['price_from_site_fozzy'] = store['beer_persha_brovarna_zakarpatske_svitle_05_l_glass']['fozzy']
+
+        elif context_dict['nn_answer'] == 'Пиво Львовское светлое 0,5 л в стекле':
+            context_dict['item_image_for_user'] = get_beer_lvivske_svitle_05_l_glass
+            context_dict['price_from_site_metro'] = store['beer_lvivske_svitle_05_l_glass']['metro']
+            context_dict['price_from_site_nash_kray'] = store['beer_lvivske_svitle_05_l_glass']['nash_kray']
+            context_dict['price_from_site_fozzy'] = store['beer_lvivske_svitle_05_l_glass']['fozzy']
+
+        elif context_dict['nn_answer'] == 'Пиво Львовское 1715 0,5 л в стекле':
+            context_dict['item_image_for_user'] = get_beer_lvivske_1715_05_l_glass
+            context_dict['price_from_site_varus'] = store['beer_lvivske_1715_05_l_glass']['varus']
+            context_dict['price_from_site_silpo'] = store['beer_lvivske_1715_05_l_glass']['silpo']
+            context_dict['price_from_site_ashan'] = store['beer_lvivske_1715_05_l_glass']['ashan']
+            context_dict['price_from_site_metro'] = store['beer_lvivske_1715_05_l_glass']['metro']
+            context_dict['price_from_site_nash_kray'] = store['beer_lvivske_1715_05_l_glass']['nash_kray']
+            context_dict['price_from_site_fozzy'] = store['beer_lvivske_1715_05_l_glass']['fozzy']
+
+        elif context_dict['nn_answer'] == 'Пиво Zlata Praha светлое 0,5 л в стекле':
+            context_dict['item_image_for_user'] = get_beer_zlata_praha_05_l_glass
+            context_dict['price_from_site_eko'] = store['beer_zlata_praha_svitle_05_l_glass']['eko']
+            context_dict['price_from_site_varus'] = store['beer_zlata_praha_svitle_05_l_glass']['varus']
+            context_dict['price_from_site_silpo'] = store['beer_zlata_praha_svitle_05_l_glass']['silpo']
+            context_dict['price_from_site_novus'] = store['beer_zlata_praha_svitle_05_l_glass']['novus']
+            context_dict['price_from_site_fozzy'] = store['beer_zlata_praha_svitle_05_l_glass']['fozzy']
+
+        elif context_dict['nn_answer'] == 'Пиво Tuborg Green 0,5 л в стекле':
+            context_dict['item_image_for_user'] = get_beer_tuborg_green_05_l_glass
+            context_dict['price_from_site_varus'] = store['beer_tuborg_green_05_l_glass']['varus']
+            context_dict['price_from_site_silpo'] = store['beer_tuborg_green_05_l_glass']['silpo']
+            context_dict['price_from_site_ashan'] = store['beer_tuborg_green_05_l_glass']['ashan']
+            context_dict['price_from_site_metro'] = store['beer_tuborg_green_05_l_glass']['metro']
+            context_dict['price_from_site_nash_kray'] = store['beer_tuborg_green_05_l_glass']['nash_kray']
+            context_dict['price_from_site_fozzy'] = store['beer_tuborg_green_05_l_glass']['fozzy']
+
+        elif context_dict['nn_answer'] == 'Пиво Славутич ICE MIX Lime 0,5 л в стекле':
+            context_dict['item_image_for_user'] = get_beer_slavutich_ice_mix_lime_05_l_glass
+            context_dict['price_from_site_varus'] = store['beer_slavutich_ice_mix_lime_05_l_glass']['varus']
+            context_dict['price_from_site_silpo'] = store['beer_slavutich_ice_mix_lime_05_l_glass']['silpo']
+            context_dict['price_from_site_metro'] = store['beer_slavutich_ice_mix_lime_05_l_glass']['metro']
+            context_dict['price_from_site_nash_kray'] = store['beer_slavutich_ice_mix_lime_05_l_glass']['nash_kray']
+
+        elif context_dict['nn_answer'] == 'Пиво Тетерев 0,5 л в стекле':
+            context_dict['item_image_for_user'] = get_beer_teteriv_svitle_05_l_glass
+            context_dict['price_from_site_eko'] = store['beer_teteriv_svitle_05_l_glass']['eko']
+            context_dict['price_from_site_silpo'] = store['beer_teteriv_svitle_05_l_glass']['silpo']
+            context_dict['price_from_site_novus'] = store['beer_teteriv_svitle_05_l_glass']['novus']
+            context_dict['price_from_site_nash_kray'] = store['beer_teteriv_svitle_05_l_glass']['nash_kray']
+            context_dict['price_from_site_fozzy'] = store['beer_teteriv_svitle_05_l_glass']['fozzy']
+
+        elif context_dict['nn_answer'] == 'Пиво Krusovice светлое 0,5 л в стекле':
+            context_dict['item_image_for_user'] = get_beer_krusovice_svitle_05_l_glass
+            context_dict['price_from_site_eko'] = store['beer_krusovice_svitle_05_l_glass']['eko']
+            context_dict['price_from_site_varus'] = store['beer_krusovice_svitle_05_l_glass']['varus']
+            context_dict['price_from_site_silpo'] = store['beer_krusovice_svitle_05_l_glass']['silpo']
+            context_dict['price_from_site_ashan'] = store['beer_krusovice_svitle_05_l_glass']['ashan']
+            context_dict['price_from_site_novus'] = store['beer_krusovice_svitle_05_l_glass']['novus']
+            context_dict['price_from_site_metro'] = store['beer_krusovice_svitle_05_l_glass']['metro']
+            context_dict['price_from_site_nash_kray'] = store['beer_krusovice_svitle_05_l_glass']['nash_kray']
+            context_dict['price_from_site_fozzy'] = store['beer_krusovice_svitle_05_l_glass']['fozzy']
+
+
+        elif context_dict['nn_answer'] == 'Пиво Heineken светлое 0,5 л в стекле':
+            context_dict['item_image_for_user'] = get_beer_heineken_svitle_05_l_glass
+            context_dict['price_from_site_eko'] = store['beer_heineken_svitle_05_l_glass']['eko']
+            context_dict['price_from_site_silpo'] = store['beer_heineken_svitle_05_l_glass']['silpo']
+            context_dict['price_from_site_ashan'] = store['beer_heineken_svitle_05_l_glass']['ashan']
+            context_dict['price_from_site_novus'] = store['beer_heineken_svitle_05_l_glass']['novus']
+            context_dict['price_from_site_metro'] = store['beer_heineken_svitle_05_l_glass']['metro']
+            context_dict['price_from_site_nash_kray'] = store['beer_heineken_svitle_05_l_glass']['nash_kray']
+            context_dict['price_from_site_fozzy'] = store['beer_heineken_svitle_05_l_glass']['fozzy']
+
+        elif context_dict['nn_answer'] == 'Пиво Amstel светлое 0,5 л в стекле':
+            context_dict['item_image_for_user'] = get_beer_amstel_svitle_05_l_glass
+            context_dict['price_from_site_eko'] = store['beer_amstel_svitle_05_l_glass']['eko']
+            context_dict['price_from_site_silpo'] = store['beer_amstel_svitle_05_l_glass']['silpo']
+            context_dict['price_from_site_ashan'] = store['beer_amstel_svitle_05_l_glass']['ashan']
+            context_dict['price_from_site_novus'] = store['beer_amstel_svitle_05_l_glass']['novus']
+            context_dict['price_from_site_metro'] = store['beer_amstel_svitle_05_l_glass']['metro']
+            context_dict['price_from_site_nash_kray'] = store['beer_amstel_svitle_05_l_glass']['nash_kray']
+            context_dict['price_from_site_fozzy'] = store['beer_amstel_svitle_05_l_glass']['fozzy']
+
+        elif context_dict['nn_answer'] == 'Пиво Hike premium светлое 0,5 л в стекле':
+            context_dict['item_image_for_user'] = get_beer_hike_premium_05_l_glass
+            context_dict['price_from_site_eko'] = store['beer_hike_premium_svitle_05_l_glass']['eko']
+            context_dict['price_from_site_varus'] = store['beer_hike_premium_svitle_05_l_glass']['varus']
+            context_dict['price_from_site_silpo'] = store['beer_hike_premium_svitle_05_l_glass']['silpo']
+            context_dict['price_from_site_ashan'] = store['beer_hike_premium_svitle_05_l_glass']['ashan']
+            context_dict['price_from_site_novus'] = store['beer_hike_premium_svitle_05_l_glass']['novus']
+            context_dict['price_from_site_metro'] = store['beer_hike_premium_svitle_05_l_glass']['metro']
+            context_dict['price_from_site_nash_kray'] = store['beer_hike_premium_svitle_05_l_glass']['nash_kray']
+            context_dict['price_from_site_fozzy'] = store['beer_hike_premium_svitle_05_l_glass']['fozzy']
+
+        elif context_dict['nn_answer'] == 'Пиво Бочкове светлое 0,5 л в стекле':
+            context_dict['item_image_for_user'] = get_beer_bochkove_svitle_05_l_glass
+            context_dict['price_from_site_eko'] = store['beer_bochkove_svitle_05_l_glass']['eko']
+            context_dict['price_from_site_varus'] = store['beer_bochkove_svitle_05_l_glass']['varus']
+            context_dict['price_from_site_silpo'] = store['beer_bochkove_svitle_05_l_glass']['silpo']
+            context_dict['price_from_site_ashan'] = store['beer_bochkove_svitle_05_l_glass']['ashan']
+            context_dict['price_from_site_novus'] = store['beer_bochkove_svitle_05_l_glass']['novus']
+            context_dict['price_from_site_metro'] = store['beer_bochkove_svitle_05_l_glass']['metro']
+            context_dict['price_from_site_nash_kray'] = store['beer_bochkove_svitle_05_l_glass']['nash_kray']
+            context_dict['price_from_site_fozzy'] = store['beer_bochkove_svitle_05_l_glass']['fozzy']
+
 
         else:
             context_dict['item_image_for_user'] = get_apple_golden
@@ -1590,7 +1717,6 @@ class SetResults(MutualContext, ListView):
         names_list=[]
         amount_list=[]
         markets_list=[]
-        market_names = []
         for order in products_order:
             for key,value in order.items():
                 names_list.append(key)
@@ -1606,8 +1732,12 @@ class SetResults(MutualContext, ListView):
                     store['obolon_premium_1.1_l']['eko']
                 ]
         context_dict['products_amount']=amount_list
-        context_dict['markets']=markets_list    # тут у нас True или False для выбранных маркетов
-        context_dict['markets_names']= market_names
+        # markets_names = define_markets_names(markets_list)
+        for i in markets_list:
+            define_markets_names(i)
+
+        context_dict['markets']=markets_list  # тут у нас True или False для выбранных маркетов
+
 
         #цифры цен ради эксперимента
         #цена для продукта

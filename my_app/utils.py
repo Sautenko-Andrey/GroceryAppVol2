@@ -20,5 +20,36 @@ def price_updating_data(price):
         price=float(price[:2])
     return price
 
-# result=make_list(10,0)
-# print(result)
+
+def define_markets_names(collection: list):
+    new_collection=[]
+    for index, value in enumerate(collection):
+        if collection[index] == True and index == 0:
+            collection[index] = 'ATB'
+            new_collection.append(collection[index])
+        elif collection[index] == True and index == 1:
+            collection[index] = 'EKO'
+            new_collection.append(collection[index])
+        elif collection[index] == True and index == 2:
+            collection[index] = 'Varus'
+            new_collection.append(collection[index])
+        elif collection[index] == True and index == 3:
+            collection[index] = 'Silpo'
+            new_collection.append(collection[index])
+        elif collection[index] == True and index == 4:
+            collection[index] = 'Ashan'
+            new_collection.append(collection[index])
+        elif collection[index] == True and index == 5:
+            collection[index] = 'Novus'
+            new_collection.append(collection[index])
+        elif collection[index] == True and index == 6:
+            collection[index] = 'Metro'
+            new_collection.append(collection[index])
+        elif collection[index] == True and index == 7:
+            collection[index] = 'Nash Kray'
+            new_collection.append(collection[index])
+        elif collection[index] == True and index == 8:
+            collection[index] = 'Fozzy'
+            new_collection.append(collection[index])
+    print(new_collection)
+    return new_collection

@@ -93,6 +93,20 @@ class TesterForGroceryAppText:
         beer_corona_extra_svitle_033_l_glass_text = self.add_new_item('beer_corona_extra_svitle_033_l_glass.txt')
         beer_chernigivske_bile_nefilter_05_l_glass_text = self.add_new_item('beer_chernigivske_bile_nefilter_05_l_glass.txt')
         beer_yantar_svitle_05_l_glass_text = self.add_new_item('beer_yantar_svitle_05_l_glass.txt')
+        beer_zibert_svitle_05_l_glass_text = self.add_new_item('beer_zibert_svitle_05_l_glass.txt')
+        beer_arsenal_micne_05_l_glass_text = self.add_new_item('beer_arsenal_micne_05_l_glass.txt')
+        beer_persha_brovarnya_zakarpatske_05_l_glass_text = self.add_new_item('beer_persha_brovarnya_zakarpatske_05_l_glass.txt')
+        beer_lvivske_svitle_05_l_glass_text = self.add_new_item('beer_lvivske_svitle_05_l_glass.txt')
+        beer_lvivske_1715_05_l_glass_text = self.add_new_item('beer_lvivske_1715_05_l_glass.txt')
+        beer_zlata_praha_svitle_05_l_glass_text = self.add_new_item('beer_zlata_praha_svitle_05_l_glass.txt')
+        beer_tuborg_green_05_l_glass_text = self.add_new_item('beer_tuborg_green_05_l_glass.txt')
+        beer_slavutich_ice_mix_lime_svitle_05_l_glass_text = self.add_new_item('beer_slavutich_ice_mix_lime_svitle_05_l_glass.txt')
+        beer_teteriv_svitle_05_l_glass_text = self.add_new_item('beer_teteriv_svitle_05_l_glass.txt')
+        beer_krusovice_svitle_05_l_glass_text = self.add_new_item('beer_krusovice_svitle_05_l_glass.txt')
+        beer_heineken_svitle_05_l_glass_text = self.add_new_item('beer_heineken_svitle_05_l_glass.txt')
+        beer_amstel_svitle_05_l_glass_text = self.add_new_item('beer_amstel_svitle_05_l_glass.txt')
+        beer_hike_premium_svitle_05_l_glass_text = self.add_new_item('beer_hike_premium_svitle_05_l_glass.txt')
+        beer_bochkove_svitle_05_l_glass_text = self.add_new_item('beer_bochkove_svitle_05_l_glass.txt')
 
         # объединям обучающие выборки:
         texts = obolon_premium_extra_11_text+ hetman_sagaydachniy_07_text\
@@ -122,7 +136,14 @@ class TesterForGroceryAppText:
                 + beer_stella_artois_05_l_glass_text + beer_obolon_svitle_05_l_glass_text\
                 + beer_jigulivske_svitle_05_l_glass_text + beer_rogan_tradiciyne_svitle_05_l_glass_text\
                 + beer_corona_extra_svitle_033_l_glass_text + beer_chernigivske_bile_nefilter_05_l_glass_text\
-                + beer_yantar_svitle_05_l_glass_text
+                + beer_yantar_svitle_05_l_glass_text + beer_zibert_svitle_05_l_glass_text\
+                + beer_arsenal_micne_05_l_glass_text + beer_persha_brovarnya_zakarpatske_05_l_glass_text\
+                + beer_lvivske_svitle_05_l_glass_text + beer_lvivske_1715_05_l_glass_text\
+                + beer_zlata_praha_svitle_05_l_glass_text + beer_tuborg_green_05_l_glass_text\
+                + beer_slavutich_ice_mix_lime_svitle_05_l_glass_text + beer_teteriv_svitle_05_l_glass_text\
+                + beer_krusovice_svitle_05_l_glass_text + beer_heineken_svitle_05_l_glass_text\
+                + beer_amstel_svitle_05_l_glass_text + beer_hike_premium_svitle_05_l_glass_text\
+                + beer_bochkove_svitle_05_l_glass_text
 
         return texts
 
@@ -134,7 +155,6 @@ class TesterForGroceryAppText:
 
         # пропускаем все нащи тексты через токенайзер:
         tokenizer.fit_on_texts(self.prepearing_data())
-
         return tokenizer
 
     def index_convert_to_text(self, indeces_list):
@@ -146,7 +166,7 @@ class TesterForGroceryAppText:
     def identify_item(self, user_text):
 
         # загружаем обученную модель НС для распознования товара по тексту:
-        model = load_model('/home/andrey/GroceryApp/FBApp/my_app/my_model_text')
+        model = load_model('/home/andrey/GroceryAppVol2/FBApp/my_app/my_model_text')
 
         # переводим пользовательский запрос в нижний регистр:
         user_text = user_text.lower()
@@ -161,10 +181,6 @@ class TesterForGroceryAppText:
         # преобразовываем в вектор нужной длины,
         # дополняя нулями или сокращая до 10 слов в тексте
         data_pad = pad_sequences(data, maxlen=self.MAX_LENGTH_TEXT)
-
-        # получаем прогноз. если переменная argmax принимает значение 0 ( 0 - это первый нейрон,
-        # отвечающий за пиво "Оболонь Премиум Экстра 1,1 л"),то пользователь ищет пиво "Оболонь Премиум Экстра 1,1 л",
-        # если 1 , то пользователь ищет водку "Гетьман Сагайдачный 0,7 л"
 
         result = model.predict(data_pad)
         print(result, np.argmax(result), sep='\n')
@@ -292,6 +308,33 @@ class TesterForGroceryAppText:
             return 'Пиво Черниговоское Белое нефильтрованное 0,5 л в стекле'
         elif np.argmax(result) == 61:
             return 'Пиво Янтарь светлое 0,5 л в стекле'
+        elif np.argmax(result) == 62:
+            return 'Пиво Zibert светлое 0,5 л в стекле'
+        elif np.argmax(result) == 63:
+            return 'Пиво Арсенал мицне 0,5 л в стекле'
+        elif np.argmax(result) == 64:
+            return 'Пиво Перша Броварня Закарпатське 0,5 л в стекле'
+        elif np.argmax(result) == 65:
+            return 'Пиво Львовское светлое 0,5 л в стекле'
+        elif np.argmax(result) == 66:
+            return 'Пиво Львовское 1715 0,5 л в стекле'
+        elif np.argmax(result) == 67:
+            return 'Пиво Zlata Praha светлое 0,5 л в стекле'
+        elif np.argmax(result) == 68:
+            return 'Пиво Tuborg Green 0,5 л в стекле'
+        elif np.argmax(result) == 69:
+            return 'Пиво Славутич ICE MIX Lime 0,5 л в стекле'
+        elif np.argmax(result) == 70:
+            return 'Пиво Тетерев 0,5 л в стекле'
+        elif np.argmax(result) == 71:
+            return 'Пиво Krusovice светлое 0,5 л в стекле'
+        elif np.argmax(result) == 72:
+            return 'Пиво Heineken светлое 0,5 л в стекле'
+        elif np.argmax(result) == 73:
+            return 'Пиво Amstel светлое 0,5 л в стекле'
+        elif np.argmax(result) == 74:
+            return 'Пиво Hike premium светлое 0,5 л в стекле'
+        elif np.argmax(result) == 75:
+            return 'Пиво Бочкове светлое 0,5 л в стекле'
 
-# user_Andrey=TesterForGroceryAppText()
-# user_Andrey.identify_item('Пиво Оболонь Премиум 1 л')
+

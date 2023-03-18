@@ -343,6 +343,76 @@ def get_beer_yantar_svitle_05_l_glass():
     '''Тэг,возвращающий информацию о пиве "Янтарь Светлое 0,5 в стеклянной бутылке"'''
     return ItemsPicsFromNet.objects.get(pk=62)
 
+@register.simple_tag()
+def get_beer_zibert_svitle_05_l_glass():
+    '''Тэг,возвращающий информацию о пиве "Zibert Светлое 0,5 в стеклянной бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=63)
+
+@register.simple_tag()
+def get_beer_arsenal_micne_05_l_glass():
+    '''Тэг,возвращающий информацию о пиве "Арсенал мицне 0,5 в стеклянной бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=64)
+
+@register.simple_tag()
+def get_beer_persha_brovarna_zakarpatske_05_l_glass():
+    '''Тэг,возвращающий информацию о пиве "Перша Броварня Закарпатське 0,5 в стеклянной бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=65)
+
+@register.simple_tag()
+def get_beer_lvivske_svitle_05_l_glass():
+    '''Тэг,возвращающий информацию о пиве "Львовское Светлое 0,5 в стеклянной бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=66)
+
+@register.simple_tag()
+def get_beer_lvivske_1715_05_l_glass():
+    '''Тэг,возвращающий информацию о пиве "Львовское 1715 0,5 в стеклянной бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=67)
+
+@register.simple_tag()
+def get_beer_zlata_praha_05_l_glass():
+    '''Тэг,возвращающий информацию о пиве "Zlata Praha 0,5 в стеклянной бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=68)
+
+@register.simple_tag()
+def get_beer_tuborg_green_05_l_glass():
+    '''Тэг,возвращающий информацию о пиве "Tuborg Green 0,5 в стеклянной бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=69)
+
+@register.simple_tag()
+def get_beer_slavutich_ice_mix_lime_05_l_glass():
+    '''Тэг,возвращающий информацию о пиве "Славутич ICE MIX Lime 0,5 в стеклянной бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=70)
+
+@register.simple_tag()
+def get_beer_teteriv_svitle_05_l_glass():
+    '''Тэг,возвращающий информацию о пиве "Тетерев светлое 0,5 в стеклянной бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=71)
+
+@register.simple_tag()
+def get_beer_krusovice_svitle_05_l_glass():
+    '''Тэг,возвращающий информацию о пиве "Krusovice сетлое 0,5 в стеклянной бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=72)
+
+@register.simple_tag()
+def get_beer_heineken_svitle_05_l_glass():
+    '''Тэг,возвращающий информацию о пиве "Heineken светлое 0,5 в стеклянной бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=73)
+
+@register.simple_tag()
+def get_beer_amstel_svitle_05_l_glass():
+    '''Тэг,возвращающий информацию о пиве "Amstel светлое 0,5 в стеклянной бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=74)
+
+@register.simple_tag()
+def get_beer_hike_premium_05_l_glass():
+    '''Тэг,возвращающий информацию о пиве "Hike premium 0,5 в стеклянной бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=75)
+
+@register.simple_tag()
+def get_beer_bochkove_svitle_05_l_glass():
+    '''Тэг,возвращающий информацию о пиве "Бочкове светлое 0,5 в стеклянной бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=76)
+
 
 
 # ТЕГИ ДЛЯ БЛЮД
