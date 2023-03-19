@@ -26,10 +26,10 @@ class GroceryAppText:
         '''Инициализация модели НС и ее подготовка к обучению'''
 
         self.model = keras.Sequential([
-            Embedding(self.MAX_WORDS, 165, input_length=self.MAX_LENGTH_TEXT),
-            LSTM(165, return_sequences=True),  # 128
-            LSTM(115),  # 64
-            Dense(76, activation='softmax')
+            Embedding(self.MAX_WORDS, 175, input_length=self.MAX_LENGTH_TEXT),
+            LSTM(175, return_sequences=True),  # 128
+            LSTM(125),  # 64
+            Dense(86, activation='softmax')
         ])
 
         self.model.compile(optimizer=Adam(0.0001), loss='categorical_crossentropy',
@@ -143,6 +143,16 @@ class GroceryAppText:
         beer_amstel_svitle_05_l_glass_text=self.add_new_item('beer_amstel_svitle_05_l_glass.txt')
         beer_hike_premium_svitle_05_l_glass_text=self.add_new_item('beer_hike_premium_svitle_05_l_glass.txt')
         beer_bochkove_svitle_05_l_glass_text=self.add_new_item('beer_bochkove_svitle_05_l_glass.txt')
+        beer_kronenbourg_1664_blanc_046_l_glass_text=self.add_new_item('beer_kronenbourg_1664_blanc_046_l_glass.txt')
+        beer_opilla_nepasterizovane_05_l_glass_text=self.add_new_item('beer_opilla_nepasterizovane_05_l_glass.txt')
+        beer_yachminniy_kolos_svitle_05_l_glass_text=self.add_new_item('beer_yachminniy_kolos_svitle_05_l_glass.txt')
+        beer_opilla_korifey_05_l_glass_text=self.add_new_item('beer_opilla_korifey_05_l_glass.txt')
+        beer_chayka_dniprovska_svitle_05_l_glass_text=self.add_new_item('beer_chayka_dniprovska_svitle_05_l_glass.txt')
+        beer_chayka_chernomorska_svitle_05_l_glass_text=self.add_new_item('beer_chayka_chernomorska_svitle_05_l_glass.txt')
+        beer_uman_pivo_waissburg_svitle_1l_plastic_text=self.add_new_item('beer_uman_pivo_waissburg_svitle_1l_plastic.txt')
+        beer_uman_pivo_pshenichnoe_svitle_1l_plastic_text=self.add_new_item('beer_uman_pivo_pshenichnoe_svitle_1l_plastic.txt')
+        beer_berdichevske_hmilne_svitle_1l_plastic_text=self.add_new_item('beer_berdichevske_hmilne_svitle_1l_plastic.txt')
+        beer_berdichevske_lager_svitle_1l_plastic_text=self.add_new_item('beer_berdichevske_lager_svitle_1l_plastic.txt')
 
         # объединям обучающие выборки:
         texts = obolon_premium_extra_11_text + hetman_sagaydachniy_07_text \
@@ -176,7 +186,13 @@ class GroceryAppText:
                 + beer_zlata_praha_svitle_05_l_glass_text + beer_tuborg_green_05_l_glass_text\
                 + beer_slavutich_ice_mix_lime_svitle_05_l_glass_text + beer_teteriv_svitle_05_l_glass_text\
                 + beer_krusovice_svitle_05_l_glass_text + beer_heineken_svitle_05_l_glass_text\
-                + beer_amstel_svitle_05_l_glass_text + beer_hike_premium_svitle_05_l_glass_text + beer_bochkove_svitle_05_l_glass_text
+                + beer_amstel_svitle_05_l_glass_text + beer_hike_premium_svitle_05_l_glass_text\
+                + beer_bochkove_svitle_05_l_glass_text + beer_kronenbourg_1664_blanc_046_l_glass_text\
+                + beer_opilla_nepasterizovane_05_l_glass_text + beer_yachminniy_kolos_svitle_05_l_glass_text\
+                + beer_opilla_korifey_05_l_glass_text + beer_chayka_dniprovska_svitle_05_l_glass_text\
+                + beer_chayka_chernomorska_svitle_05_l_glass_text + beer_uman_pivo_waissburg_svitle_1l_plastic_text\
+                + beer_uman_pivo_pshenichnoe_svitle_1l_plastic_text + beer_berdichevske_hmilne_svitle_1l_plastic_text\
+                + beer_berdichevske_lager_svitle_1l_plastic_text
 
         # подсчитываем кол-во выборок
         count_obolon_premium_extra_11_text = len(obolon_premium_extra_11_text)
@@ -256,7 +272,16 @@ class GroceryAppText:
         count_beer_amstel_svitle_05_l_glass_text=len(beer_amstel_svitle_05_l_glass_text)
         count_beer_hike_premium_svitle_05_l_glass_text=len(beer_hike_premium_svitle_05_l_glass_text)
         count_beer_bochkove_svitle_05_l_glass_text=len(beer_bochkove_svitle_05_l_glass_text)
-
+        count_beer_kronenbourg_1664_blanc_046_l_glass_text=len(beer_kronenbourg_1664_blanc_046_l_glass_text)
+        count_beer_opilla_nepasterizovane_05_l_glass_text=len(beer_opilla_nepasterizovane_05_l_glass_text)
+        count_beer_yachminniy_kolos_svitle_05_l_glass_text=len(beer_yachminniy_kolos_svitle_05_l_glass_text)
+        count_beer_opilla_korifey_05_l_glass_text=len(beer_opilla_korifey_05_l_glass_text)
+        count_beer_chayka_dniprovska_svitle_05_l_glass_text=len(beer_chayka_dniprovska_svitle_05_l_glass_text)
+        count_beer_chayka_chernomorska_svitle_05_l_glass_text=len(beer_chayka_chernomorska_svitle_05_l_glass_text)
+        count_beer_uman_pivo_waissburg_svitle_1l_plastic_text=len(beer_uman_pivo_waissburg_svitle_1l_plastic_text)
+        count_beer_uman_pivo_pshenichnoe_svitle_1l_plastic_text=len(beer_uman_pivo_pshenichnoe_svitle_1l_plastic_text)
+        count_beer_berdichevske_hmilne_svitle_1l_plastic_text=len(beer_berdichevske_hmilne_svitle_1l_plastic_text)
+        count_beer_berdichevske_lager_svitle_1l_plastic_text=len(beer_berdichevske_lager_svitle_1l_plastic_text)
 
         return texts, count_obolon_premium_extra_11_text, count_hetman_sagaydachniy_07_text, \
                count_coffee_aroma_gold_classic_100gr_text, count_apple_golden_text, count_coca_cola_2l_text, \
@@ -285,7 +310,12 @@ class GroceryAppText:
                count_beer_tuborg_green_05_l_glass_text,count_beer_slavutich_ice_mix_lime_svitle_05_l_glass_text,\
                count_beer_teteriv_svitle_05_l_glass_text,count_beer_krusovice_svitle_05_l_glass_text,\
                count_beer_heineken_svitle_05_l_glass_text,count_beer_amstel_svitle_05_l_glass_text,\
-               count_beer_hike_premium_svitle_05_l_glass_text,count_beer_bochkove_svitle_05_l_glass_text
+               count_beer_hike_premium_svitle_05_l_glass_text,count_beer_bochkove_svitle_05_l_glass_text,\
+               count_beer_kronenbourg_1664_blanc_046_l_glass_text,count_beer_opilla_nepasterizovane_05_l_glass_text,\
+               count_beer_yachminniy_kolos_svitle_05_l_glass_text,count_beer_opilla_korifey_05_l_glass_text,\
+               count_beer_chayka_dniprovska_svitle_05_l_glass_text,count_beer_chayka_chernomorska_svitle_05_l_glass_text,\
+               count_beer_uman_pivo_waissburg_svitle_1l_plastic_text,count_beer_uman_pivo_pshenichnoe_svitle_1l_plastic_text,\
+               count_beer_berdichevske_hmilne_svitle_1l_plastic_text,count_beer_berdichevske_lager_svitle_1l_plastic_text
 
 
     def converted_data(self):
@@ -311,7 +341,7 @@ class GroceryAppText:
 
         # окончательно формируем обучающую выборку:
         TRAIN_SAMPLE = data_pad
-        items = 76
+        items = 86
         TARGET_SAMPLE = np.array(
             make_list(items, 0) *
             self.upload_data()[1] + make_list(items, 1) * self.upload_data()[2] + make_list(items, 2) *
@@ -351,7 +381,13 @@ class GroceryAppText:
             self.upload_data()[69]+ make_list(items, 69) *self.upload_data()[70]+ make_list(items, 70) *
             self.upload_data()[71]+ make_list(items, 71) *self.upload_data()[72]+ make_list(items, 72) *
             self.upload_data()[73]+ make_list(items, 73) *self.upload_data()[74]+ make_list(items, 74) *
-            self.upload_data()[75]+ make_list(items, 75) *self.upload_data()[76])
+            self.upload_data()[75]+ make_list(items, 75) *self.upload_data()[76]+ make_list(items, 76) *
+            self.upload_data()[77]+ make_list(items, 77) *self.upload_data()[78]+ make_list(items, 78) *
+            self.upload_data()[79]+ make_list(items, 79) *self.upload_data()[80]+ make_list(items, 80) *
+            self.upload_data()[81]+ make_list(items, 81) *self.upload_data()[82]+ make_list(items, 82) *
+            self.upload_data()[83]+ make_list(items, 83) *self.upload_data()[84]+ make_list(items, 84) *
+            self.upload_data()[85]+ make_list(items, 85) *
+            self.upload_data()[86])
 
         # перемешиваем обучающую выборку для лучшей тренированности НС:
         # создаем рандомные индексы:

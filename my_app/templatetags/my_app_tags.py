@@ -413,6 +413,55 @@ def get_beer_bochkove_svitle_05_l_glass():
     '''Тэг,возвращающий информацию о пиве "Бочкове светлое 0,5 в стеклянной бутылке"'''
     return ItemsPicsFromNet.objects.get(pk=76)
 
+@register.simple_tag()
+def get_beer_kronenbourg_1664_blanc_svitle_05_l_glass():
+    '''Тэг,возвращающий информацию о пиве "Kronenbourg 1664 Blanc светлое 0,5 в стеклянной бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=77)
+
+@register.simple_tag()
+def get_beer_opilla_nepasterizovane_svitle_05_l_glass():
+    '''Тэг,возвращающий информацию о пиве "Опилля непастеризоване  светлое 0,5 в стеклянной бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=78)
+
+@register.simple_tag()
+def get_beer_yachmenniy_kolos_svitle_05_l_glass():
+    '''Тэг,возвращающий информацию о пиве "Ячменный Колос светлое 0,5 в стеклянной бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=79)
+
+@register.simple_tag()
+def get_beer_opilla_korifey_svitle_05_l_glass():
+    '''Тэг,возвращающий информацию о пиве "Опилля Корифей светлое 0,5 в стеклянной бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=80)
+
+@register.simple_tag()
+def get_beer_chaika_dneprovskaya_svitle_05_l_glass():
+    '''Тэг,возвращающий информацию о пиве "Чайка Днепроская светлое 0,5 в стеклянной бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=81)
+
+@register.simple_tag()
+def get_beer_chaika_chernomorskaya_svitle_05_l_glass():
+    '''Тэг,возвращающий информацию о пиве "Чайка Черноморская светлое 0,5 в стеклянной бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=82)
+
+@register.simple_tag()
+def get_beer_uman_waissburg_svitle_1_l_plastic():
+    '''Тэг,возвращающий информацию о пиве "Умань пиво Waissburg светлое 1 л в пластиковой бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=83)
+
+@register.simple_tag()
+def get_beer_uman_pshenichnoe_svitle_1_l_plastic():
+    '''Тэг,возвращающий информацию о пиве "Умань пиво пшеничное светлое 1 л в пластиковой бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=84)
+
+@register.simple_tag()
+def get_beer_berdichevskoe_hmelnoye_svitle_1_l_plastic():
+    '''Тэг,возвращающий информацию о пиве "Бердичевское хмельное пиво светлое 1 л в пластиковой бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=85)
+
+@register.simple_tag()
+def get_beer_berdichevskoe_lager_svitle_1_l_plastic():
+    '''Тэг,возвращающий информацию о пиве "Бердичевское лагер светлое 1 л в пластиковой бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=86)
 
 
 # ТЕГИ ДЛЯ БЛЮД

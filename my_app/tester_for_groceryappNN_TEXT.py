@@ -107,6 +107,16 @@ class TesterForGroceryAppText:
         beer_amstel_svitle_05_l_glass_text = self.add_new_item('beer_amstel_svitle_05_l_glass.txt')
         beer_hike_premium_svitle_05_l_glass_text = self.add_new_item('beer_hike_premium_svitle_05_l_glass.txt')
         beer_bochkove_svitle_05_l_glass_text = self.add_new_item('beer_bochkove_svitle_05_l_glass.txt')
+        beer_kronenbourg_1664_blanc_046_l_glass_text = self.add_new_item('beer_kronenbourg_1664_blanc_046_l_glass.txt')
+        beer_opilla_nepasterizovane_05_l_glass_text = self.add_new_item('beer_opilla_nepasterizovane_05_l_glass.txt')
+        beer_yachminniy_kolos_svitle_05_l_glass_text = self.add_new_item('beer_yachminniy_kolos_svitle_05_l_glass.txt')
+        beer_opilla_korifey_05_l_glass_text = self.add_new_item('beer_opilla_korifey_05_l_glass.txt')
+        beer_chayka_dniprovska_svitle_05_l_glass_text = self.add_new_item('beer_chayka_dniprovska_svitle_05_l_glass.txt')
+        beer_chayka_chernomorska_svitle_05_l_glass_text = self.add_new_item('beer_chayka_chernomorska_svitle_05_l_glass.txt')
+        beer_uman_pivo_waissburg_svitle_1l_plastic_text = self.add_new_item('beer_uman_pivo_waissburg_svitle_1l_plastic.txt')
+        beer_uman_pivo_pshenichnoe_svitle_1l_plastic_text = self.add_new_item('beer_uman_pivo_pshenichnoe_svitle_1l_plastic.txt')
+        beer_berdichevske_hmilne_svitle_1l_plastic_text = self.add_new_item('beer_berdichevske_hmilne_svitle_1l_plastic.txt')
+        beer_berdichevske_lager_svitle_1l_plastic_text = self.add_new_item('beer_berdichevske_lager_svitle_1l_plastic.txt')
 
         # объединям обучающие выборки:
         texts = obolon_premium_extra_11_text+ hetman_sagaydachniy_07_text\
@@ -143,7 +153,12 @@ class TesterForGroceryAppText:
                 + beer_slavutich_ice_mix_lime_svitle_05_l_glass_text + beer_teteriv_svitle_05_l_glass_text\
                 + beer_krusovice_svitle_05_l_glass_text + beer_heineken_svitle_05_l_glass_text\
                 + beer_amstel_svitle_05_l_glass_text + beer_hike_premium_svitle_05_l_glass_text\
-                + beer_bochkove_svitle_05_l_glass_text
+                + beer_bochkove_svitle_05_l_glass_text + beer_kronenbourg_1664_blanc_046_l_glass_text\
+                + beer_opilla_nepasterizovane_05_l_glass_text + beer_yachminniy_kolos_svitle_05_l_glass_text\
+                + beer_opilla_korifey_05_l_glass_text + beer_chayka_dniprovska_svitle_05_l_glass_text\
+                + beer_chayka_chernomorska_svitle_05_l_glass_text + beer_uman_pivo_waissburg_svitle_1l_plastic_text\
+                + beer_uman_pivo_pshenichnoe_svitle_1l_plastic_text + beer_berdichevske_hmilne_svitle_1l_plastic_text\
+                + beer_berdichevske_lager_svitle_1l_plastic_text
 
         return texts
 
@@ -336,5 +351,25 @@ class TesterForGroceryAppText:
             return 'Пиво Hike premium светлое 0,5 л в стекле'
         elif np.argmax(result) == 75:
             return 'Пиво Бочкове светлое 0,5 л в стекле'
+        elif np.argmax(result) == 76:
+            return 'Пиво Kronenbourg 1664 Blanc светлое 0,5 л в стекле'
+        elif np.argmax(result) == 77:
+            return 'Пиво Опилля Фирменное непастеризоване светлое 0,5 л в стекле'
+        elif np.argmax(result) == 78:
+            return 'Пиво Ячменный Колос светлое 0,5 л в стекле'
+        elif np.argmax(result) == 79:
+            return 'Пиво "Опилля Корифей" светлое 0,5 в стекле'
+        elif np.argmax(result) == 80:
+            return 'Пиво "Чайка Днепровская" 0,5 л в стекле'
+        elif np.argmax(result) == 81:
+            return 'Пиво "Чайка Черноморская" светлое 0,5 л в стекле'
+        elif np.argmax(result) == 82:
+            return 'Пиво Умань Waissburg светлое 1 литр'
+        elif np.argmax(result) == 83:
+            return 'Пиво Умань Пшеничное светлое 1 литр'
+        elif np.argmax(result) == 84:
+            return 'Пиво Бердичевское Хмельное светлое 1 литр'
+        elif np.argmax(result) == 85:
+            return 'Пиво Бердичевское Лагер светлое 1 литр'
 
 

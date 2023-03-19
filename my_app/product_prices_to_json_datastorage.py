@@ -602,6 +602,45 @@ all_products_names=[
         "nash_kray":parser.beer_bochkove_svitle_05_l_glass_parser()[7],
         "fozzy":parser.beer_bochkove_svitle_05_l_glass_parser()[8]
 }},
+    {'beer_kronenbourg_1664_blanc_svitle_05_l_glass':{
+        "varus":parser.beer_kronenbourg_1664_blanc_svitle_05_l_glass_parser()[2],
+        "silpo":parser.beer_kronenbourg_1664_blanc_svitle_05_l_glass_parser()[3],
+        "ashan":parser.beer_kronenbourg_1664_blanc_svitle_05_l_glass_parser()[4],
+        "metro":parser.beer_kronenbourg_1664_blanc_svitle_05_l_glass_parser()[6],
+        "nash_kray":parser.beer_kronenbourg_1664_blanc_svitle_05_l_glass_parser()[7],
+        "fozzy":parser.beer_kronenbourg_1664_blanc_svitle_05_l_glass_parser()[8]
+}},
+
+    {'beer_opilla_firmove_nepasterizovane_svitle_05_l_glass':{
+        "ashan":parser.beer_opilla_firmove_nepasterizovane_svitle_05_l_glass_parser()[4],
+        "novus":parser.beer_opilla_firmove_nepasterizovane_svitle_05_l_glass_parser()[5],
+        "metro":parser.beer_opilla_firmove_nepasterizovane_svitle_05_l_glass_parser()[6],
+        "fozzy":parser.beer_opilla_firmove_nepasterizovane_svitle_05_l_glass_parser()[8]
+}},
+    {'beer_yachmenniy_kolos_svitle_05_l_glass':{
+        "fozzy":parser.beer_yachmenniy_kolos_svitle_05_l_glass_parser()[8]
+}},
+    {'beer_opilla_korifey_svitle_05_l_glass':{
+        "varus":parser.beer_opilla_korifey_svitle_05_l_glass_parser()[2],
+        "ashan":parser.beer_opilla_korifey_svitle_05_l_glass_parser()[4],
+        "novus":parser.beer_opilla_korifey_svitle_05_l_glass_parser()[5],
+        "metro":parser.beer_opilla_korifey_svitle_05_l_glass_parser()[6],
+        "fozzy":parser.beer_opilla_korifey_svitle_05_l_glass_parser()[8]
+}},
+    {'beer_chaika_dniprovska_svitle_05_l_glass':{
+        "eko":parser.beer_chaika_dniprovskaya_svitle_05_l_glass_parser()[1],
+        "silpo":parser.beer_chaika_dniprovskaya_svitle_05_l_glass_parser()[3],
+        "novus":parser.beer_chaika_dniprovskaya_svitle_05_l_glass_parser()[5],
+        "metro":parser.beer_chaika_dniprovskaya_svitle_05_l_glass_parser()[6],
+        "fozzy":parser.beer_chaika_dniprovskaya_svitle_05_l_glass_parser()[8]
+}},
+    {'beer_chaika_chernomorskaya_svitle_05_l_glass':{
+        "eko":parser.beer_chaika_chernomorskaya_svitle_05_l_glass_parser()[1],
+        "silpo":parser.beer_chaika_chernomorskaya_svitle_05_l_glass_parser()[3],
+        "novus":parser.beer_chaika_chernomorskaya_svitle_05_l_glass_parser()[5],
+        "metro":parser.beer_chaika_chernomorskaya_svitle_05_l_glass_parser()[6],
+        "fozzy":parser.beer_chaika_chernomorskaya_svitle_05_l_glass_parser()[8]
+}},
 
 ]
 

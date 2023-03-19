@@ -914,6 +914,64 @@ class ProductParserVol2:
             'https://fozzyshop.ua/ru/pivo-svetloe/2923-pivo-ppb-bochkovoe-svetloe-4820046960740.html'
         ])
 
+    def beer_kronenbourg_1664_blanc_svitle_05_l_glass_parser(self):
+        ''' Парсер для пива "Пиво Kronenbourg 1664 Blanc" светлое 0,5 л в стекле'''
+        return self.prices_parsing([
+            'https://varus.ua/pivo-spec-0-46l-blanc-kronenbourg-1664',
+            'https://shop.silpo.ua/product/pyvo-kronenbourg-blanc-609226',
+            'https://auchan.ua/ua/pivo-kronenbourg-1664-blanc-svetloe-4-8-0-46-l-1031953/',
+            'https://metro.zakaz.ua/uk/products/pivo-kronenborg-460ml-ukrayina--04820000455855/',
+            'https://shop.nashkraj.ua/kovel/product/215127-pivo-kronenburg-0-46l-1664-blank-4-8',
+            'https://fozzyshop.ua/ru/pivo-svetloe/26966-pivo-kronenbourg-1664-blanc-4820000455855.html'
+        ])
+
+    def beer_opilla_firmove_nepasterizovane_svitle_05_l_glass_parser(self):
+        ''' Парсер для пива "Пиво Опилля Фирменное непастеризованное" светлое 0,5 л в стекле'''
+        return self.prices_parsing([
+            'https://auchan.ua/ua/pivo-opillja-firmennoe-svetloe-5-7-500-ml-1020689/',
+            'https://novus.online/product/pivo-svitle-opilla-firmove-65-05l-sklpl',
+            'https://metro.zakaz.ua/uk/products/pivo-opillia-500ml-ukrayina--04820158670056/',
+            'https://fozzyshop.ua/ru/pivo-svetloe/37967-pivo-opillya-nepasterizovannoe-4820158670056.html'
+        ])
+
+    def beer_yachmenniy_kolos_svitle_05_l_glass_parser(self):
+        ''' Парсер для пива "Пиво Ячменный Колос светлое 0,5 л в стекле'''
+        return self.prices_parsing([
+            'https://fozzyshop.ua/ru/pivo-svetloe/2949-pivo-poltavpivo-yachminnij-kolos-svetloe-4820009362543.html'
+        ])
+
+    def beer_opilla_korifey_svitle_05_l_glass_parser(self):
+        ''' Парсер для пива "Пиво Опилля Корифей светлое 0,5 л в стекле'''
+        return self.prices_parsing([
+            'https://varus.ua/pivo-0-5l-3-7-svitle-opillya-korifey-pl',
+            'https://auchan.ua/ua/pivo-opillja-korifej-3-7-500-ml-1020677/',
+            'https://novus.online/product/pivo-svitle-opilla-korifej-42-05l-sklpl',
+            'https://metro.zakaz.ua/uk/products/pivo-opillia-500ml-ukrayina--04820158670018/',
+            'https://fozzyshop.ua/ru/pivo-svetloe/37966-pivo-opillya-korifej-4820158670018.html'
+        ])
+
+    def beer_chaika_dniprovskaya_svitle_05_l_glass_parser(self):
+        ''' Парсер для пива "Пиво Чайка Днепровская светлое 0,5 л в стекле'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-chaika-500ml-ukrayina--04820046964380/',
+            'https://shop.silpo.ua/product/pyvo-chaika-dniprovska-svitle-866176',
+            'https://novus.online/product/pyvo-svitle-chayka-dniprovska-48-045l-spl',
+            'https://metro.zakaz.ua/uk/products/pivo-chaika-500ml-ukrayina--04820046964380/',
+            'https://fozzyshop.ua/ru/pivo-svetloe/88457-pivo-chajka-dniprovska-svetloe-4820046964380.html',
+        ])
+
+    def beer_chaika_chernomorskaya_svitle_05_l_glass_parser(self):
+        ''' Парсер для пива "Пиво Чайка Черноморская светлое 0,5 л в стекле'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-persha-privatna-brovarnia-450ml--04820046964403/',
+            'https://shop.silpo.ua/product/pyvo-chaika-chornomorska-svitle-866177',
+            'https://novus.online/product/pyvo-svitle-chayka-chornomorska-45-045l-spl',
+            'https://metro.zakaz.ua/uk/products/pivo-persha-privatna-brovarnia-450ml--04820046964403/',
+            'https://fozzyshop.ua/ru/pivo-svetloe/88461-pivo-chajka-chornomorska-svetloe-4820046964403.html'
+        ])
+
+
+
 
 
 
