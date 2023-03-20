@@ -642,6 +642,30 @@ all_products_names=[
         "fozzy":parser.beer_chaika_chernomorskaya_svitle_05_l_glass_parser()[8]
 }},
 
+    {'beer_uman_waissburg_1_l_svitle_plastic':{
+        "varus":parser.beer_uman_waissburg_svitle_1l_plastic_parser()[2],
+        "ashan":parser.beer_uman_waissburg_svitle_1l_plastic_parser()[4],
+        "novus":parser.beer_uman_waissburg_svitle_1l_plastic_parser()[5],
+        "fozzy":parser.beer_uman_waissburg_svitle_1l_plastic_parser()[8]
+
+}},
+
+    {'beer_uman_pshenichnoe_1_l_svitle_plastic':{
+        "novus":parser.beer_uman_pshenichnoe_svitle_1l_plastic_parser()[5],
+        "fozzy":parser.beer_uman_pshenichnoe_svitle_1l_plastic_parser()[8]
+
+}},
+    {'beer_berdichevske_hmilne_1_l_svitle_plastic':{
+        "silpo":parser.beer_berdichevske_hmilne_svitle_1l_plastic_parser()[3],
+        "novus":parser.beer_berdichevske_hmilne_svitle_1l_plastic_parser()[5],
+        "fozzy":parser.beer_berdichevske_hmilne_svitle_1l_plastic_parser()[8]
+}},
+    {'beer_berdichevske_lager_1_l_svitle_plastic':{
+        "silpo":parser.beer_berdichevske_lager_svitle_1l_plastic_parser()[3],
+        "metro":parser.beer_berdichevske_lager_svitle_1l_plastic_parser()[6],
+        "fozzy":parser.beer_berdichevske_lager_svitle_1l_plastic_parser()[8]
+}},
+
 ]
 
 def get_all_prices():

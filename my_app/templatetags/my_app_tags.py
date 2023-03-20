@@ -463,6 +463,31 @@ def get_beer_berdichevskoe_lager_svitle_1_l_plastic():
     '''Тэг,возвращающий информацию о пиве "Бердичевское лагер светлое 1 л в пластиковой бутылке"'''
     return ItemsPicsFromNet.objects.get(pk=86)
 
+@register.simple_tag()
+def get_beer_opilla_korifey_11_l_plastic():
+    '''Тэг,возвращающий информацию о пиве "Опилля Корифей 1.1 л в пластиковой бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=87)
+
+@register.simple_tag()
+def get_beer_obolon_jigulivske_eksport_15_l_plastic():
+    '''Тэг,возвращающий информацию о пиве "Оболонь жигулевское экспортное 1,5 л в пластиковой бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=88)
+
+@register.simple_tag()
+def get_beer_yantar_svitle_12_l_plastic():
+    '''Тэг,возвращающий информацию о пиве "Янтарь светлое 1,2 л в пластиковой бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=89)
+
+@register.simple_tag()
+def get_beer_jashkovskoe_pshenicnoe_nefilter_1_l_plastic():
+    '''Тэг,возвращающий информацию о пиве "Жашковское пшеничное нефильтрованное 1 л в пластиковой бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=90)
+
+@register.simple_tag()
+def get_beer_jashkovskoe_svitle_nefilter_1_l_plastic():
+    '''Тэг,возвращающий информацию о пиве "Жашковское светлое нефильтрованное 1 л в пластиковой бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=91)
+
 
 # ТЕГИ ДЛЯ БЛЮД
 

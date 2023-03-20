@@ -1472,16 +1472,43 @@ class ItemNameAnswerPage(MutualContext, ListView):
             context_dict['price_from_site_fozzy'] = store['beer_chaika_chernomorskaya_svitle_05_l_glass']['fozzy']
 
         elif context_dict['nn_answer'] == 'Пиво Умань Waissburg светлое 1 литр':
-            context_dict['item_image_for_user'] = get_beer_
+            context_dict['item_image_for_user'] = get_beer_uman_waissburg_svitle_1_l_plastic
+            context_dict['price_from_site_varus'] = store['beer_uman_waissburg_1_l_svitle_plastic']['varus']
+            context_dict['price_from_site_ashan'] = store['beer_uman_waissburg_1_l_svitle_plastic']['ashan']
+            context_dict['price_from_site_novus'] = store['beer_uman_waissburg_1_l_svitle_plastic']['novus']
+            context_dict['price_from_site_fozzy'] = store['beer_uman_waissburg_1_l_svitle_plastic']['fozzy']
 
-        elif context_dict['nn_answer'] == 'Пиво "Чайка Черноморская" светлое 0,5 л в стекле':
-            context_dict['item_image_for_user'] = get_beer_chaika_chernomorskaya_svitle_05_l_glass
+        elif context_dict['nn_answer'] == 'Пиво Умань Пшеничное светлое 1 литр':
+            context_dict['item_image_for_user'] = get_beer_uman_pshenichnoe_svitle_1_l_plastic
+            context_dict['price_from_site_novus'] = store['beer_uman_pshenichnoe_1_l_svitle_plastic']['novus']
+            context_dict['price_from_site_fozzy'] = store['beer_uman_pshenichnoe_1_l_svitle_plastic']['fozzy']
 
-        elif context_dict['nn_answer'] == 'Пиво "Чайка Черноморская" светлое 0,5 л в стекле':
-            context_dict['item_image_for_user'] = get_beer_chaika_chernomorskaya_svitle_05_l_glass
+        elif context_dict['nn_answer'] == 'Пиво Бердичевское Хмельное светлое 1 литр':
+            context_dict['item_image_for_user'] = get_beer_berdichevskoe_hmelnoye_svitle_1_l_plastic
+            context_dict['price_from_site_silpo'] = store['beer_berdichevske_hmilne_1_l_svitle_plastic']['silpo']
+            context_dict['price_from_site_novus'] = store['beer_berdichevske_hmilne_1_l_svitle_plastic']['novus']
+            context_dict['price_from_site_fozzy'] = store['beer_berdichevske_hmilne_1_l_svitle_plastic']['fozzy']
 
-        elif context_dict['nn_answer'] == 'Пиво "Чайка Черноморская" светлое 0,5 л в стекле':
-            context_dict['item_image_for_user'] = get_beer_chaika_chernomorskaya_svitle_05_l_glass
+        elif context_dict['nn_answer'] == 'Пиво Бердичевское Лагер светлое 1 литр':
+            context_dict['item_image_for_user'] = get_beer_berdichevskoe_lager_svitle_1_l_plastic
+            context_dict['price_from_site_silpo'] = store['beer_berdichevske_lager_1_l_svitle_plastic']['silpo']
+            context_dict['price_from_site_metro'] = store['beer_berdichevske_lager_1_l_svitle_plastic']['metro']
+            context_dict['price_from_site_fozzy'] = store['beer_berdichevske_lager_1_l_svitle_plastic']['fozzy']
+
+        elif context_dict['nn_answer'] == 'Пиво Опилля Корифей 1.1 литра':
+            context_dict['item_image_for_user'] = get_beer_opilla_korifey_11_l_plastic
+
+        elif context_dict['nn_answer'] == 'Пиво Оболонь жигулевское экспортное 1.5 литра':
+            context_dict['item_image_for_user'] = get_beer_obolon_jigulivske_eksport_15_l_plastic
+
+        elif context_dict['nn_answer'] == 'Пиво Янтарь светлое 1,2 литра':
+            context_dict['item_image_for_user'] = get_beer_yantar_svitle_12_l_plastic
+
+        elif context_dict['nn_answer'] == 'Пиво Жашковское пшеничное нефильтрованное 1 литр':
+            context_dict['item_image_for_user'] = get_beer_jashkovskoe_pshenicnoe_nefilter_1_l_plastic
+
+        elif context_dict['nn_answer'] == 'Пиво Жашковское светлое нефильтрованное 1 литр':
+            context_dict['item_image_for_user'] = get_beer_jashkovskoe_svitle_nefilter_1_l_plastic
 
         else:
             context_dict['item_image_for_user'] = get_apple_golden

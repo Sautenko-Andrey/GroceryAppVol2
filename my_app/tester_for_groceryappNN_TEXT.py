@@ -117,6 +117,13 @@ class TesterForGroceryAppText:
         beer_uman_pivo_pshenichnoe_svitle_1l_plastic_text = self.add_new_item('beer_uman_pivo_pshenichnoe_svitle_1l_plastic.txt')
         beer_berdichevske_hmilne_svitle_1l_plastic_text = self.add_new_item('beer_berdichevske_hmilne_svitle_1l_plastic.txt')
         beer_berdichevske_lager_svitle_1l_plastic_text = self.add_new_item('beer_berdichevske_lager_svitle_1l_plastic.txt')
+        beer_opilla_korifey_svitle_11l_plastic_text = self.add_new_item('beer_opilla_korifey_svitle_11l_plastic.txt')
+        beer_obolon_jigulivske_exportne_svitle_1l_plastic_text = self.add_new_item('beer_obolon_jigulivske_exportne_svitle_1l_plastic.txt')
+        beer_yantar_svitle_12l_plastic_text = self.add_new_item('beer_yantar_svitle_12l_plastic.txt')
+        beer_jashkivske_pshenichne_nefilter_1l_plastic_text = self.add_new_item('beer_jashkivske_pshenichne_nefilter_1l_plastic.txt')
+        beer_jashkivske_svitle_nefilter_1l_plastic_text = self.add_new_item('beer_jashkivske_svitle_nefilter_1l_plastic.txt')
+
+
 
         # объединям обучающие выборки:
         texts = obolon_premium_extra_11_text+ hetman_sagaydachniy_07_text\
@@ -158,7 +165,9 @@ class TesterForGroceryAppText:
                 + beer_opilla_korifey_05_l_glass_text + beer_chayka_dniprovska_svitle_05_l_glass_text\
                 + beer_chayka_chernomorska_svitle_05_l_glass_text + beer_uman_pivo_waissburg_svitle_1l_plastic_text\
                 + beer_uman_pivo_pshenichnoe_svitle_1l_plastic_text + beer_berdichevske_hmilne_svitle_1l_plastic_text\
-                + beer_berdichevske_lager_svitle_1l_plastic_text
+                + beer_berdichevske_lager_svitle_1l_plastic_text + beer_opilla_korifey_svitle_11l_plastic_text\
+                + beer_obolon_jigulivske_exportne_svitle_1l_plastic_text + beer_yantar_svitle_12l_plastic_text\
+                + beer_jashkivske_pshenichne_nefilter_1l_plastic_text + beer_jashkivske_svitle_nefilter_1l_plastic_text
 
         return texts
 
@@ -371,5 +380,15 @@ class TesterForGroceryAppText:
             return 'Пиво Бердичевское Хмельное светлое 1 литр'
         elif np.argmax(result) == 85:
             return 'Пиво Бердичевское Лагер светлое 1 литр'
+        elif np.argmax(result) == 86:
+            return 'Пиво Опилля Корифей 1.1 литра'
+        elif np.argmax(result) == 87:
+            return 'Пиво Оболонь жигулевское экспортное 1.5 литра'
+        elif np.argmax(result) == 88:
+            return 'Пиво Янтарь светлое 1,2 литра'
+        elif np.argmax(result) == 89:
+            return 'Пиво Жашковское пшеничное нефильтрованное 1 литр'
+        elif np.argmax(result) == 90:
+            return 'Пиво Жашковское светлое нефильтрованное 1 литр'
 
 

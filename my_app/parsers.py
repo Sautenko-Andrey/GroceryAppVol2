@@ -970,6 +970,38 @@ class ProductParserVol2:
             'https://fozzyshop.ua/ru/pivo-svetloe/88461-pivo-chajka-chornomorska-svetloe-4820046964403.html'
         ])
 
+    def beer_uman_waissburg_svitle_1l_plastic_parser(self):
+        ''' Парсер для пива "Пиво Умань Waissburg светлое 1 л в пластике'''
+        return self.prices_parsing([
+            'https://varus.ua/pivo-umanpivo-waissburg-lager-svetloe-filtrovannoe-4-7-1-l',
+            'https://auchan.ua/ua/pivo-waissburg-lager-4-7-1-l-1021005/',
+            'https://novus.online/product/pivo-svitle-vajsburg-uman-pet1l',
+            'https://fozzyshop.ua/ru/pivo-svetloe/2993-pivo-umanpivo-waissburg-svetloe-4820009940376.html'
+        ])
+
+    def beer_uman_pshenichnoe_svitle_1l_plastic_parser(self):
+        ''' Парсер для пива "Пиво Умань пшеничное светлое 1 л в пластике'''
+        return self.prices_parsing([
+            'https://novus.online/product/pivo-1l-44-umanske-psenicne-svitle-pet',
+            'https://fozzyshop.ua/ru/pivo-svetloe/50286-pivo-umanpivo-pshenichnoe-svetloe-4820009940383.html'
+        ])
+
+    def beer_berdichevske_hmilne_svitle_1l_plastic_parser(self):
+        ''' Парсер для пива "Пиво Бердичевское хмельное светлое 1 л в пластике'''
+        return self.prices_parsing([
+            'https://shop.silpo.ua/product/pyvo-berdychivske-khmilne-348650',
+            'https://novus.online/product/pivo-svitle-hmilne-berdiciv-pet1l',
+            'https://fozzyshop.ua/ru/pivo-svetloe/37953-pivo-berdichivske-khmelnoe-4820003210383.html'
+        ])
+
+    def beer_berdichevske_lager_svitle_1l_plastic_parser(self):
+        ''' Парсер для пива "Пиво Бердичевское хмельное светлое 1 л в пластике'''
+        return self.prices_parsing([
+            'https://shop.silpo.ua/product/pyvo-berdychivske-lager-svitle-425212',
+            'https://metro.zakaz.ua/uk/products/pivo-berdichivske-1000ml-ukrayina--04820003210567/',
+            'https://fozzyshop.ua/ru/pivo-svetloe/37948-pivo-berdichivske-lager-svetloe-4820003210567.html'
+        ])
+
 
 
 
