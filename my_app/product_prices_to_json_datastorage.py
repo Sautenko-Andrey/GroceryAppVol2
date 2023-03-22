@@ -665,6 +665,43 @@ all_products_names=[
         "metro":parser.beer_berdichevske_lager_svitle_1l_plastic_parser()[6],
         "fozzy":parser.beer_berdichevske_lager_svitle_1l_plastic_parser()[8]
 }},
+    {'beer_opilla_korifey_11_l_plastic':{
+        "atb":parser.beer_opilla_korifey_11l_plastic_parser()[0],
+        "novus":parser.beer_opilla_korifey_11l_plastic_parser()[5],
+        "metro":parser.beer_opilla_korifey_11l_plastic_parser()[6]
+}},
+    {'beer_obolon_jigulivske_eksportne_15_l_plastic':{
+        "atb":parser.beer_obolon_jigulivske_eksportne_15l_plastic_parser()[0]
+}},
+    {'beer_yantar_svitle_12_l_plastic':{
+        "atb":parser.beer_yantar_svitle_12l_plastic_parser()[0],
+        "ashan":parser.beer_yantar_svitle_12l_plastic_parser()[4],
+        "novus":parser.beer_yantar_svitle_12l_plastic_parser()[5],
+        "metro":parser.beer_yantar_svitle_12l_plastic_parser()[6],
+        "fozzy":parser.beer_yantar_svitle_12l_plastic_parser()[8]
+
+}},
+    {'beer_jashkovske_pshenichne_nefiltr_1_l_plastic':{
+        "eko":parser.beer_jashkovske_pshenichne_1l_plastic_parser()[1],
+        "novus":parser.beer_jashkovske_pshenichne_1l_plastic_parser()[5]
+}},
+    {'beer_jashkovske_svitle_nefiltr_1_l_plastic':{
+        "eko":parser.beer_jashkovske_svitle_1l_plastic_parser()[1],
+        "novus":parser.beer_jashkovske_svitle_1l_plastic_parser()[5]
+}},
+    {'beer_jashkovske_jigulivske_nefiltr_1_l_plastic':{
+        "eko":parser.beer_jashkovske_jigulivske_nefilter_1l_plastic_parser()[1],
+        "silpo":parser.beer_jashkovske_jigulivske_nefilter_1l_plastic_parser()[3],
+        "novus":parser.beer_jashkovske_jigulivske_nefilter_1l_plastic_parser()[5]
+}},
+    {'beer_persha_privatna_brovarnya_bochkove_1_l_plastic':{
+        "eko":parser.beer_persha_privatna_brovarnya_bochkove_1l_plastic_parser()[1],
+        "novus":parser.beer_persha_privatna_brovarnya_bochkove_1l_plastic_parser()[5]
+}},
+    {'beer_chayka_dniprovska_1_l_plastic':{
+        "eko":parser.beer_chayka_dniprovska_1l_plastic_parser()[1],
+        "silpo":parser.beer_chayka_dniprovska_1l_plastic_parser()[3]
+}},
 
 ]
 

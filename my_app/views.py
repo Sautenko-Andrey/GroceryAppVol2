@@ -1497,18 +1497,48 @@ class ItemNameAnswerPage(MutualContext, ListView):
 
         elif context_dict['nn_answer'] == 'Пиво Опилля Корифей 1.1 литра':
             context_dict['item_image_for_user'] = get_beer_opilla_korifey_11_l_plastic
+            context_dict['price_from_site_atb'] = store['beer_opilla_korifey_11_l_plastic']['atb']
+            context_dict['price_from_site_novus'] = store['beer_opilla_korifey_11_l_plastic']['novus']
+            context_dict['price_from_site_metro'] = store['beer_opilla_korifey_11_l_plastic']['metro']
 
         elif context_dict['nn_answer'] == 'Пиво Оболонь жигулевское экспортное 1.5 литра':
             context_dict['item_image_for_user'] = get_beer_obolon_jigulivske_eksport_15_l_plastic
+            context_dict['price_from_site_atb'] = store['beer_obolon_jigulivske_eksportne_15_l_plastic']['atb']
 
         elif context_dict['nn_answer'] == 'Пиво Янтарь светлое 1,2 литра':
             context_dict['item_image_for_user'] = get_beer_yantar_svitle_12_l_plastic
+            context_dict['price_from_site_atb'] = store['beer_yantar_svitle_12_l_plastic']['atb']
+            context_dict['price_from_site_ashan'] = store['beer_yantar_svitle_12_l_plastic']['ashan']
+            context_dict['price_from_site_novus'] = store['beer_yantar_svitle_12_l_plastic']['novus']
+            context_dict['price_from_site_metro'] = store['beer_yantar_svitle_12_l_plastic']['metro']
+            context_dict['price_from_site_fozzy'] = store['beer_yantar_svitle_12_l_plastic']['fozzy']
+
 
         elif context_dict['nn_answer'] == 'Пиво Жашковское пшеничное нефильтрованное 1 литр':
             context_dict['item_image_for_user'] = get_beer_jashkovskoe_pshenicnoe_nefilter_1_l_plastic
+            context_dict['price_from_site_eko'] = store['beer_jashkovske_pshenichne_nefiltr_1_l_plastic']['eko']
+            context_dict['price_from_site_novus'] = store['beer_jashkovske_pshenichne_nefiltr_1_l_plastic']['novus']
 
         elif context_dict['nn_answer'] == 'Пиво Жашковское светлое нефильтрованное 1 литр':
             context_dict['item_image_for_user'] = get_beer_jashkovskoe_svitle_nefilter_1_l_plastic
+            context_dict['price_from_site_eko'] = store['beer_jashkovske_svitle_nefiltr_1_l_plastic']['eko']
+            context_dict['price_from_site_novus'] = store['beer_jashkovske_svitle_nefiltr_1_l_plastic']['novus']
+
+        elif context_dict['nn_answer'] == 'Пиво Жашковское жигулевское нефильтрованное 1 литр':
+            context_dict['item_image_for_user'] = get_beer_jashkovskoe_jigulivske_nefilter_1_l_plastic
+            context_dict['price_from_site_eko'] = store['beer_jashkovske_jigulivske_nefiltr_1_l_plastic']['eko']
+            context_dict['price_from_site_silpo'] = store['beer_jashkovske_jigulivske_nefiltr_1_l_plastic']['silpo']
+            context_dict['price_from_site_novus'] = store['beer_jashkovske_jigulivske_nefiltr_1_l_plastic']['novus']
+
+        elif context_dict['nn_answer'] == 'Пиво Перша приватна броварня бочкове 1 литр':
+            context_dict['item_image_for_user'] = get_beer_persha_privatna_brovarnya_bochkove_1_l_plastic
+            context_dict['price_from_site_eko'] = store['beer_persha_privatna_brovarnya_bochkove_1_l_plastic']['eko']
+            context_dict['price_from_site_novus'] = store['beer_persha_privatna_brovarnya_bochkove_1_l_plastic']['novus']
+
+        elif context_dict['nn_answer'] == 'Пиво Чайка днипровська 1 литр':
+            context_dict['item_image_for_user'] = get_beer_chayka_dniprovska_1_l_plastic
+            context_dict['price_from_site_eko'] = store['beer_chayka_dniprovska_1_l_plastic']['eko']
+            context_dict['price_from_site_silpo'] = store['beer_chayka_dniprovska_1_l_plastic']['silpo']
 
         else:
             context_dict['item_image_for_user'] = get_apple_golden

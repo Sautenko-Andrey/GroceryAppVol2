@@ -122,7 +122,9 @@ class TesterForGroceryAppText:
         beer_yantar_svitle_12l_plastic_text = self.add_new_item('beer_yantar_svitle_12l_plastic.txt')
         beer_jashkivske_pshenichne_nefilter_1l_plastic_text = self.add_new_item('beer_jashkivske_pshenichne_nefilter_1l_plastic.txt')
         beer_jashkivske_svitle_nefilter_1l_plastic_text = self.add_new_item('beer_jashkivske_svitle_nefilter_1l_plastic.txt')
-
+        beer_jashkivske_jigulivske_nefilter_1l_plastic_text = self.add_new_item('beer_jashkivske_jigulivske_nefilter_1l_plastic.txt')
+        beer_persha_privatna_brovarnya_bochkove_svitle_1l_plastic_text = self.add_new_item('beer_persha_privatna_brovarnya_bochkove_svitle_1l_plastic.txt')
+        beer_chayka_dniprovska_svitle_1l_plastic_text = self.add_new_item('beer_chayka_dniprovska_svitle_1l_plastic.txt')
 
 
         # объединям обучающие выборки:
@@ -167,7 +169,9 @@ class TesterForGroceryAppText:
                 + beer_uman_pivo_pshenichnoe_svitle_1l_plastic_text + beer_berdichevske_hmilne_svitle_1l_plastic_text\
                 + beer_berdichevske_lager_svitle_1l_plastic_text + beer_opilla_korifey_svitle_11l_plastic_text\
                 + beer_obolon_jigulivske_exportne_svitle_1l_plastic_text + beer_yantar_svitle_12l_plastic_text\
-                + beer_jashkivske_pshenichne_nefilter_1l_plastic_text + beer_jashkivske_svitle_nefilter_1l_plastic_text
+                + beer_jashkivske_pshenichne_nefilter_1l_plastic_text + beer_jashkivske_svitle_nefilter_1l_plastic_text\
+                + beer_jashkivske_jigulivske_nefilter_1l_plastic_text + beer_persha_privatna_brovarnya_bochkove_svitle_1l_plastic_text\
+                + beer_chayka_dniprovska_svitle_1l_plastic_text
 
         return texts
 
@@ -390,5 +394,11 @@ class TesterForGroceryAppText:
             return 'Пиво Жашковское пшеничное нефильтрованное 1 литр'
         elif np.argmax(result) == 90:
             return 'Пиво Жашковское светлое нефильтрованное 1 литр'
+        elif np.argmax(result) == 91:
+            return 'Пиво Жашковское жигулевское нефильтрованное 1 литр'
+        elif np.argmax(result) == 92:
+            return 'Пиво Перша приватна броварня бочкове 1 литр'
+        elif np.argmax(result) == 93:
+            return 'Пиво Чайка днипровська 1 литр'
 
 

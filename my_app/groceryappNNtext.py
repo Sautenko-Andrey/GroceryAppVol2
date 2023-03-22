@@ -29,7 +29,7 @@ class GroceryAppText:
             Embedding(self.MAX_WORDS, 175, input_length=self.MAX_LENGTH_TEXT),
             LSTM(175, return_sequences=True),  # 128
             LSTM(125),  # 64
-            Dense(91, activation='softmax')
+            Dense(94, activation='softmax')
         ])
 
         self.model.compile(optimizer=Adam(0.0001), loss='categorical_crossentropy',
@@ -158,6 +158,10 @@ class GroceryAppText:
         beer_yantar_svitle_12l_plastic_text=self.add_new_item('beer_yantar_svitle_12l_plastic.txt')
         beer_jashkivske_pshenichne_nefilter_1l_plastic_text=self.add_new_item('beer_jashkivske_pshenichne_nefilter_1l_plastic.txt')
         beer_jashkivske_svitle_nefilter_1l_plastic_text=self.add_new_item('beer_jashkivske_svitle_nefilter_1l_plastic.txt')
+        beer_jashkivske_jigulivske_nefilter_1l_plastic_text=self.add_new_item('beer_jashkivske_jigulivske_nefilter_1l_plastic.txt')
+        beer_persha_privatna_brovarnya_bochkove_svitle_1l_plastic_text=self.add_new_item('beer_persha_privatna_brovarnya_bochkove_svitle_1l_plastic.txt')
+        beer_chayka_dniprovska_svitle_1l_plastic_text=self.add_new_item('beer_chayka_dniprovska_svitle_1l_plastic.txt')
+
 
         # объединям обучающие выборки:
         texts = obolon_premium_extra_11_text + hetman_sagaydachniy_07_text \
@@ -199,7 +203,9 @@ class GroceryAppText:
                 + beer_uman_pivo_pshenichnoe_svitle_1l_plastic_text + beer_berdichevske_hmilne_svitle_1l_plastic_text\
                 + beer_berdichevske_lager_svitle_1l_plastic_text + beer_opilla_korifey_svitle_11l_plastic_text\
                 + beer_obolon_jigulivske_exportne_svitle_1l_plastic_text + beer_yantar_svitle_12l_plastic_text\
-                + beer_jashkivske_pshenichne_nefilter_1l_plastic_text + beer_jashkivske_svitle_nefilter_1l_plastic_text
+                + beer_jashkivske_pshenichne_nefilter_1l_plastic_text + beer_jashkivske_svitle_nefilter_1l_plastic_text\
+                + beer_jashkivske_jigulivske_nefilter_1l_plastic_text + beer_persha_privatna_brovarnya_bochkove_svitle_1l_plastic_text\
+                + beer_chayka_dniprovska_svitle_1l_plastic_text
 
         # подсчитываем кол-во выборок
         count_obolon_premium_extra_11_text = len(obolon_premium_extra_11_text)
@@ -294,6 +300,9 @@ class GroceryAppText:
         count_beer_yantar_svitle_12l_plastic_text=len(beer_yantar_svitle_12l_plastic_text)
         count_beer_jashkivske_pshenichne_nefilter_1l_plastic_text=len(beer_jashkivske_pshenichne_nefilter_1l_plastic_text)
         count_beer_jashkivske_svitle_nefilter_1l_plastic_text=len(beer_jashkivske_svitle_nefilter_1l_plastic_text)
+        count_beer_jashkivske_jigulivske_nefilter_1l_plastic_text=len(beer_jashkivske_jigulivske_nefilter_1l_plastic_text)
+        count_beer_persha_privatna_brovarnya_bochkove_svitle_1l_plastic_text=len(beer_persha_privatna_brovarnya_bochkove_svitle_1l_plastic_text)
+        count_beer_chayka_dniprovska_svitle_1l_plastic_text=len(beer_chayka_dniprovska_svitle_1l_plastic_text)
 
         return texts, count_obolon_premium_extra_11_text, count_hetman_sagaydachniy_07_text, \
                count_coffee_aroma_gold_classic_100gr_text, count_apple_golden_text, count_coca_cola_2l_text, \
@@ -330,7 +339,8 @@ class GroceryAppText:
                count_beer_berdichevske_hmilne_svitle_1l_plastic_text,count_beer_berdichevske_lager_svitle_1l_plastic_text,\
                count_beer_opilla_korifey_svitle_11l_plastic_text,count_beer_obolon_jigulivske_exportne_svitle_1l_plastic_text,\
                count_beer_yantar_svitle_12l_plastic_text,count_beer_jashkivske_pshenichne_nefilter_1l_plastic_text,\
-               count_beer_jashkivske_svitle_nefilter_1l_plastic_text
+               count_beer_jashkivske_svitle_nefilter_1l_plastic_text,count_beer_jashkivske_jigulivske_nefilter_1l_plastic_text,\
+               count_beer_persha_privatna_brovarnya_bochkove_svitle_1l_plastic_text,count_beer_chayka_dniprovska_svitle_1l_plastic_text
 
 
     def converted_data(self):
@@ -356,7 +366,7 @@ class GroceryAppText:
 
         # окончательно формируем обучающую выборку:
         TRAIN_SAMPLE = data_pad
-        items = 91
+        items = 94
         TARGET_SAMPLE = np.array(
             make_list(items, 0) *
             self.upload_data()[1] + make_list(items, 1) * self.upload_data()[2] + make_list(items, 2) *
@@ -407,7 +417,10 @@ class GroceryAppText:
             self.upload_data()[88]+ make_list(items, 88) *
             self.upload_data()[89]+ make_list(items, 89) *
             self.upload_data()[90]+ make_list(items, 90) *
-            self.upload_data()[91])
+            self.upload_data()[91]+ make_list(items, 91) *
+            self.upload_data()[92]+ make_list(items, 92) *
+            self.upload_data()[93]+ make_list(items, 93) *
+            self.upload_data()[94])
 
         # перемешиваем обучающую выборку для лучшей тренированности НС:
         # создаем рандомные индексы:

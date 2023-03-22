@@ -1002,7 +1002,65 @@ class ProductParserVol2:
             'https://fozzyshop.ua/ru/pivo-svetloe/37948-pivo-berdichivske-lager-svetloe-4820003210567.html'
         ])
 
+    def beer_opilla_korifey_11l_plastic_parser(self):
+        ''' Парсер для пива "Пиво Опилля Корифей 1.1 л в пластике'''
+        return self.prices_parsing([
+            'https://atbmarket.com/product/pivo-11-l-opilla-korifej-svitle',
+            'https://novus.online/product/pivo-svitle-opilla-korifej-42-1l-pet',
+            'https://metro.zakaz.ua/uk/products/pivo-opillia-1000ml-ukrayina--04820001586725/'
+        ])
 
+    def beer_obolon_jigulivske_eksportne_15l_plastic_parser(self):
+        ''' Парсер для пива "Пиво Оболонь Жигулевское экспортное 1.5 л в пластике'''
+        return self.prices_parsing([
+            'https://atbmarket.com/product/pivo-15l-obolon-zigulivske-eksportone-svitle'
+        ])
+
+    def beer_yantar_svitle_12l_plastic_parser(self):
+        ''' Парсер для пива "Пиво Янтарь светлое 1.2 л в пластике'''
+        return self.prices_parsing([
+            'https://atbmarket.com/product/pivo-12l-antar-svitle',
+            'https://auchan.ua/ua/pivo-jantar-svetloe-4-5-1-2-l-1021245/',
+            'https://novus.online/product/pivo-svitle-antar-45-1l-pet',
+            'https://metro.zakaz.ua/uk/products/pivo-iantar-1000ml-ukrayina--04820034921746/',
+            'https://fozzyshop.ua/ru/pivo-svetloe/42649-pivo-yantar-svetloe-4820034921746.html'
+        ])
+
+    def beer_jashkovske_pshenichne_1l_plastic_parser(self):
+        ''' Парсер для пива "Пиво Жашковское пшеничное нефильтрованное 1.0 л в пластике'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-zhashkivske-1000ml--04820097899396/',
+            'https://novus.online/product/pyvo-svitle-zhashkivske-pshenychne-47-pet-1l'
+        ])
+
+    def beer_jashkovske_svitle_1l_plastic_parser(self):
+        ''' Парсер для пива "Пиво Жашковское светлое нефильтрованное 1.0 л в пластике'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-1000ml--04820097899389/',
+            'https://novus.online/product/pyvo-svitle-zhashkivske-svitle-45-pet-1l'
+        ])
+
+    def beer_jashkovske_jigulivske_nefilter_1l_plastic_parser(self):
+        ''' Парсер для пива "Пиво Жашковское игулевское нефильтрованное 1.0 л в пластике'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-1000ml--04820097899372/',
+            'https://shop.silpo.ua/product/pyvo-zhashkivske-zhygulivske-svitle-nefiltrovane-851784',
+            'https://novus.online/product/pyvo-svitle-zhashkivske-zhyhulivske-42-pet-1l'
+        ])
+
+    def beer_persha_privatna_brovarnya_bochkove_1l_plastic_parser(self):
+        ''' Парсер для пива "Пиво Перша приватна броварня Бочкове 1.0 л в пластике'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-persha-privatna-brovarnia-1000ml-ukrayina--04820046960733/',
+            'https://novus.online/product/pivo-svitle-ppbrovarna-bockove-45-petplaska-1l'
+        ])
+
+    def beer_chayka_dniprovska_1l_plastic_parser(self):
+        ''' Парсер для пива "Пиво Чайка днипровська 1.0 л в пластике'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-ukrayina--04820046964724/',
+            'https://shop.silpo.ua/product/pyvo-chaika-dniprovska-svitle-874997'
+        ])
 
 
 

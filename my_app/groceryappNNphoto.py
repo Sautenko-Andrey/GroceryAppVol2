@@ -83,7 +83,7 @@ class GroceryAppPhoto:
             self.conv_base,
             Flatten(),
             Dense(512, activation='relu'),      #было 256 слоев
-            Dense(41, activation='softmax')
+            Dense(44, activation='softmax')
         ])
 
         # заморозим сверточную базу:
@@ -119,7 +119,7 @@ class GroceryAppPhoto:
         )
 
         #сохраняем модель обученной НС:
-        self.model.save('my_model_photo_v16')           #сохранил не как h5!!!
+        self.model.save('my_model_photo')           #сохранил не как h5!!!
 
     def model_value(self):
         '''Метод, выводящий на экран точность и потери НС на тестовых данных'''

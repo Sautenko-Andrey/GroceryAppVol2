@@ -488,6 +488,21 @@ def get_beer_jashkovskoe_svitle_nefilter_1_l_plastic():
     '''Тэг,возвращающий информацию о пиве "Жашковское светлое нефильтрованное 1 л в пластиковой бутылке"'''
     return ItemsPicsFromNet.objects.get(pk=91)
 
+@register.simple_tag()
+def get_beer_jashkovskoe_jigulivske_nefilter_1_l_plastic():
+    '''Тэг,возвращающий информацию о пиве "Жашковское жигулевское нефильтрованное 1 л в пластиковой бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=92)
+
+@register.simple_tag()
+def get_beer_persha_privatna_brovarnya_bochkove_1_l_plastic():
+    '''Тэг,возвращающий информацию о пиве "Перша приватна броварня бочкове 1 л в пластиковой бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=93)
+
+@register.simple_tag()
+def get_beer_chayka_dniprovska_1_l_plastic():
+    '''Тэг,возвращающий информацию о пиве "Чайка днипровська 1 л в пластиковой бутылке"'''
+    return ItemsPicsFromNet.objects.get(pk=94)
+
 
 # ТЕГИ ДЛЯ БЛЮД
 

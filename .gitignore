@@ -31,6 +31,7 @@ coverage.xml
 *.csv
 *.cfg
 *.pb
+my_app/my_model_photo
 my_app/my_model_photo_v16
 my_app/my_model_text_v56
 my_app/my_model_text_v57

@@ -14,7 +14,7 @@ class TesterForGroceryAppPhoto:
         Повторяет все тоже без процесса обучения (заново).'''
 
         #загружаем мою обученную модель НС:
-        model = load_model('/home/andrey/GroceryApp/FBApp/my_app/my_model_photo_v16')
+        model = load_model('/home/andrey/GroceryApp/FBApp/my_app/my_model_photo')
 
         # создадим генератор и преобразовываем изображение в нужный тензор
         user_pic_datagen = ImageDataGenerator(rescale=1. / 255)
@@ -115,6 +115,12 @@ class TesterForGroceryAppPhoto:
             return 'Чай Мономах Цейлон черный'
         elif np.argmax(result) == 40:
             return 'Туалетная бумага "Киев" 63 м'
+        elif np.argmax(result) == 41:
+            return 'Кетчуп Торчин с чесноком 270 гр'
+        elif np.argmax(result) == 42:
+            return 'Майонез Королевский Смак королевский 67 % 300 гр'
+        elif np.argmax(result) == 43:
+            return 'Мука ЗОЛОТЕ ЗЕРНЯТКО пшеничное 2 кг'
 
 
 # user_Andrey = TesterForGroceryAppPhoto()

@@ -41,42 +41,56 @@
         </div>
     </div>
 </div>
-
-<div class="container" align="center">
+<div class="container">
     <div class="row">
-        <div class="col-xl-12 col-md-12 col-sm-12" align="centrer">
+        <div class="col-xl-12 col-md-12 col-sm-12" align="center">
             <h5><b>ВАШ ЗАКАЗ</b></h5>
-            {% for name in products_names %}
-            <div class="card text-bg-light mb-4 " style="max-width: 800px;">
-                <br>
-                <h5><b><i>{{name}}</i></b></h5>
-                <table class="table">
-                    <thead>
-                    <tr align="center">
-                        <th scope="col">АТБ</th>
-                        <th scope="col">ЭКО</th>
-                        <th scope="col">Varus</th>
-                        <th scope="col">Сильпо</th>
-                        <th scope="col">Ашан</th>
-                        <th scope="col">Novus</th>
-                        <th scope="col">Metro</th>
-                        <th scope="col">Наш Край</th>
-                        <th scope="col">Fozzy</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr align="center">
-                        {% for price in all_prices %}
-                        <td>{{price}}</td>
-                        {% endfor %}
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            {% endfor %}
         </div>
     </div>
 </div>
+<div class="container">
+    <div class="row">
+        <div class="col-xl-2 col-md-2 col-sm-2" align="center">
+            <h5><i>Продукт</i></h5>
+            {% for item in products_names %}
+            <h5>{{item}}</h5>
+            {% endfor %}
+        </div>
+        <div class="col-xl-1 col-md-1 col-sm-1" align="center">
+            <h5><i>Кол-во</i></h5>
+            {% for item in products_amount %}
+            <h5>{{item}}</h5>
+            {% endfor %}
+        </div>
+        <div class="col-xl-1 col-md-1 col-sm-1" align="center">
+            <h5><i>АТБ</i></h5>
+        </div>
+        <div class="col-xl-1 col-md-1 col-sm-1" align="center">
+            <h5><i>ЭКО</i></h5>
+        </div>
+        <div class="col-xl-1 col-md-1 col-sm-1" align="center">
+            <h5><i>Varus</i></h5>
+        </div>
+        <div class="col-xl-1 col-md-1 col-sm-1" align="center">
+            <h5><i>Сильпо</i></h5>
+        </div>
+        <div class="col-xl-1 col-md-1 col-sm-1" align="center">
+            <h5><i>Ашан</i></h5>
+        </div>
+        <div class="col-xl-1 col-md-1 col-sm-1" align="center">
+            <h5><i>Novus</i></h5>
+        </div>
+        <div class="col-xl-1 col-md-1 col-sm-1" align="center">
+            <h5><i>Metro</i></h5>
+        </div>
+        <div class="col-xl-1 col-md-1 col-sm-1" align="center">
+            <h5><i>Наш Край</i></h5>
+        </div>
+        <div class="col-xl-1 col-md-1 col-sm-1" align="center">
+            <h5><i>Fozzy</i></h5>
+        </div>
+
+
 
 <h4><a class="btn btn-outline-danger" href="{% url 'thanks_set' %}" role="button">ЗАВЕРШИТЬ</a></h4>
 {% endblock %}
