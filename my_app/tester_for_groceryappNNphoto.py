@@ -14,7 +14,7 @@ class TesterForGroceryAppPhoto:
         Повторяет все тоже без процесса обучения (заново).'''
 
         #загружаем мою обученную модель НС:
-        model = load_model('/home/andrey/GroceryApp/FBApp/my_app/my_model_photo')
+        model = load_model('/home/andrey/GroceryAppVol2/FBApp/my_app/my_model_photo')
 
         # создадим генератор и преобразовываем изображение в нужный тензор
         user_pic_datagen = ImageDataGenerator(rescale=1. / 255)
@@ -74,7 +74,7 @@ class TesterForGroceryAppPhoto:
         elif np.argmax(result)==19:
             return 'Напиток Fanta 2 литра'
         elif np.argmax(result)==20:
-            return 'Чеснок, кг'
+            return 'Капуста белокачанная, кг'
         elif np.argmax(result)==21:
             return 'Дезодорант Garnier Магний мужской'
         elif np.argmax(result)==22:
@@ -82,45 +82,45 @@ class TesterForGroceryAppPhoto:
         elif np.argmax(result)==23:
             return 'Горчица Верес украинска мицна 120 грамм'
         elif np.argmax(result) == 24:
-            return 'Капуста белокачанная, кг'
+            return 'Чеснок, кг'
         elif np.argmax(result) == 25:
             return 'Сигареты "Kent 8"'
         elif np.argmax(result) == 26:
-            return 'Лимон, кг'
-        elif np.argmax(result) == 27:
-            return 'Сигареты Marlboro red'
-        elif np.argmax(result) == 28:
-            return 'Майонез домашний детский "Щедро" 67%'
-        elif np.argmax(result) == 29:
-            return 'Масло подсолнечное "Олейна" нерафинированное, 850 гр'
-        elif np.argmax(result) == 30:
-            return 'Лук, 1 кг'
-        elif np.argmax(result) == 31:
-            return 'Дезодорант "Rexona Aloe Vera" женский'
-        elif np.argmax(result) == 32:
-            return 'Сметана Галичанская 15% 370 грамм'
-        elif np.argmax(result) == 33:
-            return 'Сметана Столица Смаку 400 гр 15% жирности'
-        elif np.argmax(result) == 34:
-            return 'Сметана "Столица Смаку" 20% 400 гр'
-        elif np.argmax(result) == 35:
-            return 'Напиток Sprite 2 литра'
-        elif np.argmax(result) == 36:
-            return 'Чай черный "Мономах Кения", 90 гр'
-        elif np.argmax(result) == 37:
-            return 'Чай "Минутка" черный, 40 пакетиков'
-        elif np.argmax(result) == 38:
-            return 'Чай Мономах 100% Цейлон Original черный крупнолистовой'
-        elif np.argmax(result) == 39:
-            return 'Чай Мономах Цейлон черный'
-        elif np.argmax(result) == 40:
-            return 'Туалетная бумага "Киев" 63 м'
-        elif np.argmax(result) == 41:
             return 'Кетчуп Торчин с чесноком 270 гр'
-        elif np.argmax(result) == 42:
+        elif np.argmax(result) == 27:
+            return 'Лимон, кг'
+        elif np.argmax(result) == 28:
+            return 'Сигареты Marlboro red'
+        elif np.argmax(result) == 29:
             return 'Майонез Королевский Смак королевский 67 % 300 гр'
-        elif np.argmax(result) == 43:
+        elif np.argmax(result) == 30:
+            return 'Майонез домашний детский "Щедро" 67%'
+        elif np.argmax(result) == 31:
             return 'Мука ЗОЛОТЕ ЗЕРНЯТКО пшеничное 2 кг'
+        elif np.argmax(result) == 32:
+            return 'Масло подсолнечное "Олейна" нерафинированное, 850 гр'
+        elif np.argmax(result) == 33:
+            return 'Лук, 1 кг'
+        elif np.argmax(result) == 34:
+            return 'Дезодорант "Rexona Aloe Vera" женский'
+        elif np.argmax(result) == 35:
+            return 'Сметана Галичанская 15% 370 грамм'
+        elif np.argmax(result) == 36:
+            return 'Сметана Столица Смаку 400 гр 15% жирности'
+        elif np.argmax(result) == 37:
+            return 'Сметана "Столица Смаку" 20% 400 гр'
+        elif np.argmax(result) == 38:
+            return 'Напиток Sprite 2 литра'
+        elif np.argmax(result) == 39:
+            return 'Чай черный "Мономах Кения", 90 гр'
+        elif np.argmax(result) == 40:
+            return 'Чай "Минутка" черный, 40 пакетиков'
+        elif np.argmax(result) == 41:
+            return 'Чай Мономах 100% Цейлон Original черный крупнолистовой'
+        elif np.argmax(result) == 42:
+            return 'Чай Мономах Цейлон черный'
+        elif np.argmax(result) == 43:
+            return 'Туалетная бумага "Киев" 63 м'
 
 
 # user_Andrey = TesterForGroceryAppPhoto()

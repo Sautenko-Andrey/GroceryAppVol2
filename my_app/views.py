@@ -62,7 +62,7 @@ class PhotoAnswerPage(MutualContext, ListView):
     def NN_works(self):
         '''Метод, загружающий фото пользователя и пропускающий его через НС'''
 
-        user_image = '/home/andrey/GroceryApp/FBApp/media/photos'
+        user_image = '/home/andrey/GroceryAppVol2/FBApp/media/photos'
         pred = NN()
         result = pred.identify_item(user_image)
         return result
@@ -598,6 +598,19 @@ class PhotoAnswerPage(MutualContext, ListView):
             context_dict['price_from_site_metro'] = store['fanta_2l']['metro']
             context_dict['price_from_site_nash_kray'] = store['fanta_2l']['nash_kray']
             context_dict['price_from_site_fozzy'] = store['fanta_2l']['fozzy']
+
+        elif context_dict['nn_answer'] == 'Кетчуп Торчин с чесноком 270 гр':
+            context_dict['item_image_for_user'] = get_ketchup_torchin_s_chesnokom
+            context_dict['price_from_site_eko'] = store['ketchup_torchin_s_chasnikom_270gr']['eko']
+            context_dict['price_from_site_varus'] = store['ketchup_torchin_s_chasnikom_270gr']['varus']
+            context_dict['price_from_site_metro'] = store['ketchup_torchin_s_chasnikom_270gr']['metro']
+            context_dict['price_from_site_fozzy'] = store['ketchup_torchin_s_chasnikom_270gr']['fozzy']
+
+        elif context_dict['nn_answer'] == 'Майонез Королевский Смак королевский 67 % 300 гр':
+            context_dict['item_image_for_user'] = get_mayonez_korolivkiy_smak_korolivskiy_67_300gr
+
+        elif context_dict['nn_answer'] == 'Мука ЗОЛОТЕ ЗЕРНЯТКО пшеничное 2 кг':
+            context_dict['item_image_for_user'] = get_muka_zolote_zernyatko_pshenichne_2kg
 
         else:
             context_dict['item_image_for_user'] = get_tea_minutka_black_40_b
@@ -1540,6 +1553,19 @@ class ItemNameAnswerPage(MutualContext, ListView):
             context_dict['price_from_site_eko'] = store['beer_chayka_dniprovska_1_l_plastic']['eko']
             context_dict['price_from_site_silpo'] = store['beer_chayka_dniprovska_1_l_plastic']['silpo']
 
+        elif context_dict['nn_answer'] == 'Кетчуп Торчин с чесноком 270 гр':
+            context_dict['item_image_for_user'] = get_ketchup_torchin_s_chesnokom
+            context_dict['price_from_site_eko'] = store['ketchup_torchin_s_chasnikom_270gr']['eko']
+            context_dict['price_from_site_varus'] = store['ketchup_torchin_s_chasnikom_270gr']['varus']
+            context_dict['price_from_site_metro'] = store['ketchup_torchin_s_chasnikom_270gr']['metro']
+            context_dict['price_from_site_fozzy'] = store['ketchup_torchin_s_chasnikom_270gr']['fozzy']
+
+        elif context_dict['nn_answer'] == 'Майонез Королевский Смак королевский 67 % 300 гр':
+            context_dict['item_image_for_user'] = get_mayonez_korolivkiy_smak_korolivskiy_67_300gr
+
+        elif context_dict['nn_answer'] == 'Мука ЗОЛОТЕ ЗЕРНЯТКО пшеничное 2 кг':
+            context_dict['item_image_for_user'] = get_muka_zolote_zernyatko_pshenichne_2kg
+
         else:
             context_dict['item_image_for_user'] = get_apple_golden
             context_dict['price_from_site_atb'] = store['apple_golden']['atb']
@@ -1647,7 +1673,7 @@ class Thanksfull(MutualContext, ListView):
         пользователем изображения из БД и самого проекта.'''
 
         # вот тут можно удалить фото из папки
-        for file in glob.glob("/home/andrey/GroceryApp/FBApp/media/photos/user/*"):
+        for file in glob.glob("/home/andrey/GroceryAppVol2/FBApp/media/photos/user/*"):
             os.remove(file)
 
         # тут удаляем загруженное фото из БД

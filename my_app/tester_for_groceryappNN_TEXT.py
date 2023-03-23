@@ -125,7 +125,9 @@ class TesterForGroceryAppText:
         beer_jashkivske_jigulivske_nefilter_1l_plastic_text = self.add_new_item('beer_jashkivske_jigulivske_nefilter_1l_plastic.txt')
         beer_persha_privatna_brovarnya_bochkove_svitle_1l_plastic_text = self.add_new_item('beer_persha_privatna_brovarnya_bochkove_svitle_1l_plastic.txt')
         beer_chayka_dniprovska_svitle_1l_plastic_text = self.add_new_item('beer_chayka_dniprovska_svitle_1l_plastic.txt')
-
+        ketchup_torchin_chasnik_270gr_text = self.add_new_item('ketchup_torchin_chasnik_270gr.txt')
+        muka_zolote_zernyatko_pshen_2kg_text = self.add_new_item('muka_zolote_zernyatko_pshen_2kg.txt')
+        mayonez_korolivskiy_smak_kororlivskiy_67_300gr_text = self.add_new_item('mayonez_korolivskiy_smak_kororlivskiy_67_300gr.txt')
 
         # объединям обучающие выборки:
         texts = obolon_premium_extra_11_text+ hetman_sagaydachniy_07_text\
@@ -171,7 +173,8 @@ class TesterForGroceryAppText:
                 + beer_obolon_jigulivske_exportne_svitle_1l_plastic_text + beer_yantar_svitle_12l_plastic_text\
                 + beer_jashkivske_pshenichne_nefilter_1l_plastic_text + beer_jashkivske_svitle_nefilter_1l_plastic_text\
                 + beer_jashkivske_jigulivske_nefilter_1l_plastic_text + beer_persha_privatna_brovarnya_bochkove_svitle_1l_plastic_text\
-                + beer_chayka_dniprovska_svitle_1l_plastic_text
+                + beer_chayka_dniprovska_svitle_1l_plastic_text + ketchup_torchin_chasnik_270gr_text\
+                + muka_zolote_zernyatko_pshen_2kg_text + mayonez_korolivskiy_smak_kororlivskiy_67_300gr_text
 
         return texts
 
@@ -400,5 +403,11 @@ class TesterForGroceryAppText:
             return 'Пиво Перша приватна броварня бочкове 1 литр'
         elif np.argmax(result) == 93:
             return 'Пиво Чайка днипровська 1 литр'
+        elif np.argmax(result) == 94:
+            return 'Кетчуп Торчин с чесноком 270 гр'
+        elif np.argmax(result) == 95:
+            return 'Мука ЗОЛОТЕ ЗЕРНЯТКО пшеничное 2 кг'
+        elif np.argmax(result) == 96:
+            return 'Майонез Королевский Смак королевский 67 % 300 гр'
 
 

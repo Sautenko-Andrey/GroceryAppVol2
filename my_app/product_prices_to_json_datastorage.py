@@ -702,6 +702,12 @@ all_products_names=[
         "eko":parser.beer_chayka_dniprovska_1l_plastic_parser()[1],
         "silpo":parser.beer_chayka_dniprovska_1l_plastic_parser()[3]
 }},
+    {'ketchup_torchin_s_chasnikom_270gr':{
+        "eko":parser.beer_ketchup_torchin_s_chasnikom_parser()[1],
+        "varus":parser.beer_ketchup_torchin_s_chasnikom_parser()[2],
+        "metro":parser.beer_ketchup_torchin_s_chasnikom_parser()[6],
+        "fozzy":parser.beer_ketchup_torchin_s_chasnikom_parser()[8]
+}},
 
 ]
 

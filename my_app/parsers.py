@@ -1062,6 +1062,16 @@ class ProductParserVol2:
             'https://shop.silpo.ua/product/pyvo-chaika-dniprovska-svitle-874997'
         ])
 
+    def beer_ketchup_torchin_s_chasnikom_parser(self):
+        ''' Парсер для кетчупа "Торчин с чесноком 270 грамм'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/ketchup-torchin-270g--07613036162388/',
+            'https://varus.ua/ketchup-torchin-z-chasnikom-270-g',
+            'https://metro.zakaz.ua/uk/products/ketchup-torchin-270g--07613036162388/',
+            'https://fozzyshop.ua/ru/ketchup/56876-ketchup-torchin-s-chesnokom-d-p-7613036162388.html'
+        ])
+
+
 
 
 

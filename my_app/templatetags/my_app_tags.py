@@ -503,6 +503,21 @@ def get_beer_chayka_dniprovska_1_l_plastic():
     '''Тэг,возвращающий информацию о пиве "Чайка днипровська 1 л в пластиковой бутылке"'''
     return ItemsPicsFromNet.objects.get(pk=94)
 
+@register.simple_tag()
+def get_ketchup_torchin_s_chesnokom():
+    '''Тэг,возвращающий информацию о "Кетчуп Торчин с чесноком 270 гр"'''
+    return ItemsPicsFromNet.objects.get(pk=95)
+
+@register.simple_tag()
+def get_mayonez_korolivkiy_smak_korolivskiy_67_300gr():
+    '''Тэг,возвращающий информацию о "Майонез Королевский смак королевский 300 гр"'''
+    return ItemsPicsFromNet.objects.get(pk=96)
+
+@register.simple_tag()
+def get_muka_zolote_zernyatko_pshenichne_2kg():
+    '''Тэг,возвращающий информацию о "Мука ЗОЛОТЕ ЗЕРНЯТКО пшеничное 2 кг"'''
+    return ItemsPicsFromNet.objects.get(pk=97)
+
 
 # ТЕГИ ДЛЯ БЛЮД
 
