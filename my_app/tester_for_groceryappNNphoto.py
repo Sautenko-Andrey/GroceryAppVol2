@@ -121,6 +121,12 @@ class TesterForGroceryAppPhoto:
             return 'Чай Мономах Цейлон черный'
         elif np.argmax(result) == 43:
             return 'Туалетная бумага "Киев" 63 м'
+        elif np.argmax(result) == 44:
+            return 'Соус Чумак чесночный 200 грамм'
+        elif np.argmax(result) == 45:
+            return 'Жвачка Orbit полуниця-банан'
+        elif np.argmax(result) == 46:
+            return 'Сигареты LM красные'
 
 
 # user_Andrey = TesterForGroceryAppPhoto()

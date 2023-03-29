@@ -518,6 +518,36 @@ def get_muka_zolote_zernyatko_pshenichne_2kg():
     '''Тэг,возвращающий информацию о "Мука ЗОЛОТЕ ЗЕРНЯТКО пшеничное 2 кг"'''
     return ItemsPicsFromNet.objects.get(pk=97)
 
+@register.simple_tag()
+def get_beer_chernigivske_bile_1l_plastic():
+    '''Тэг,возвращающий информацию о "Пиво Черниговское Белое 1 литр в пластике"'''
+    return ItemsPicsFromNet.objects.get(pk=98)
+
+@register.simple_tag()
+def get_beer_obolon_svitle_1l_plastic():
+    '''Тэг,возвращающий информацию о "Пиво Оболонь светлое 1 литр в пластике"'''
+    return ItemsPicsFromNet.objects.get(pk=99)
+
+@register.simple_tag()
+def get_beer_rogan_tradiciyne_svitle_1l_plastic():
+    '''Тэг,возвращающий информацию о "Пиво Рогань традиционное светлое 1 литр в пластике"'''
+    return ItemsPicsFromNet.objects.get(pk=100)
+
+@register.simple_tag()
+def get_sous_torchin_chesnochniy_200gr():
+    '''Тэг,возвращающий информацию о "Соус Торчин чесночный 200 грамм"'''
+    return ItemsPicsFromNet.objects.get(pk=101)
+
+@register.simple_tag()
+def get_jvachka_orbit_clubnika_banan():
+    '''Тэг,возвращающий информацию о "Орбит клубника-банан"'''
+    return ItemsPicsFromNet.objects.get(pk=102)
+
+@register.simple_tag()
+def get_sigarets_LM_red():
+    '''Тэг,возвращающий информацию о "Сигареты LM красные"'''
+    return ItemsPicsFromNet.objects.get(pk=103)
+
 
 # ТЕГИ ДЛЯ БЛЮД
 

@@ -1071,6 +1071,72 @@ class ProductParserVol2:
             'https://fozzyshop.ua/ru/ketchup/56876-ketchup-torchin-s-chesnokom-d-p-7613036162388.html'
         ])
 
+    def mayonez_korolivskiy_smak_korolivskiy_67_300gr_parser(self):
+        ''' Парсер для кетчупа Майонез Королевский Смак королевский 67 % 300 гр'''
+        return self.prices_parsing([
+            'https://atbmarket.com/product/majonez-300-g-korolivskij-smak-korolivskij-67',
+            'https://eko.zakaz.ua/uk/products/maionez-korolivskii-smak-300g--04820175669682/',
+            'https://varus.ua/majonez-korolivskij-smak-korolevskij-67-300-g',
+            'https://novus.online/product/majoneznyj-sous-korolevskij-vkus-korolevskij-67-300g',
+            'https://metro.zakaz.ua/uk/products/maionez-korolivskii-smak-380g-ukrayina--04820044096946/',
+            'https://fozzyshop.ua/ru/majonez/94730-majonez-korolivskij-smak-korolevskij-67-d-p-4820175669699.html'
+        ])
+
+    def sous_chumak_chesnochniy_200gr_parser(self):
+        ''' Парсер для кетчупа Соус Чумак чесночный 200 грамм'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/sous-priprava-chumak-200g--04823096002125/',
+            'https://varus.ua/sous-chasnikoviy-chumak-dp-200g',
+            'https://novus.online/product/cumak-sous-casnikovij-dp-200g'
+        ])
+
+    def orbit_banan_polunica_parser(self):
+        ''' Парсер для жвачки Orbit банан-полуниця'''
+        return self.prices_parsing([
+            'https://atbmarket.com/product/zuvalna-gumka-14g-wrigleys-orbit-polunica-banan',
+            'https://eko.zakaz.ua/uk/products/gumka-orbit-14g--00000042306740/',
+            'https://varus.ua/zhuvalna-gumka-polunicya-banan-rigli-orbit-13-6g',
+            'https://auchan.ua/ua/zhevatelnaja-rezinka-orbit-klubnika-banan-14-g-611121/',
+            'https://novus.online/product/gumka-zuvalna-orbit-polunicabanan-14g',
+            'https://metro.zakaz.ua/uk/products/gumka-orbit-14g--metro00000042306740/',
+            'https://shop.nashkraj.ua/kovel/product/149165-zhuv-gumka-orbit-14g-polunitsya-banan',
+            'https://fozzyshop.ua/ru/zhevatelnye-rezinki/43850-rezinka-zhevatelnaya-orbit-klubnika-banan-42306740.html'
+        ])
+
+    def sigarets_lm_red_parser(self):
+        ''' Парсер для сигарет LM красные'''
+        return self.prices_parsing([
+            'https://auchan.ua/ua/sigarety-l-m-red-label-20-sht-916744/',
+            'https://novus.online/product/cigarki-lm-red',
+            'https://fozzyshop.ua/ru/sigarety/98991-sigarety-lm-red-label-0250014950994.html'
+        ])
+
+    def beer_chernigivske_bile_nefilter_1l_parser(self):
+        ''' Парсер для пива Черниговское Белое нефильтрованное 1 литр'''
+        return self.prices_parsing([
+            'https://novus.online/product/pyvo-svitle-chernihivske-bile-nefiltrovane-48-pet-09l',
+            'https://metro.zakaz.ua/uk/products/pivo-chernigivske-1000ml-ukrayina--04820034920329/',
+            'https://fozzyshop.ua/ru/pivo-svetloe/100322-pivo-chernigivske-beloe-svetloe-nefiltrovannoe-250015036314.html'
+        ])
+
+    def beer_obolon_svitle_1l_parser(self):
+        ''' Парсер для пива Оболонь светлое 1 литр'''
+        return self.prices_parsing([
+            'https://varus.ua/pivo-svitle-obolon-1-1l-ukraina',
+            'https://novus.online/product/pyvo-svitle-obolon-45-11l-pet'
+        ])
+
+    def beer_rogan_tradiciyne_svitle_1l_parser(self):
+        ''' Парсер для пива Рогань традиционное светлое 1 литр'''
+        return self.prices_parsing([
+            'https://atbmarket.com/product/pivo-1-l-rogan-tradicijne-svitle-pet',
+            'https://auchan.ua/ua/pivo-rogan-tradicionnoe-svetloe-4-8-1-l-1021239/',
+            'https://novus.online/product/pivo-svitle-rogan-tradicijne-48-1l-pet',
+            'https://metro.zakaz.ua/uk/products/pivo-rogan-1000ml-ukrayina--04820034921609/',
+            'https://shop.nashkraj.ua/kovel/product/6795-pivo-rogan-1l-traditsiyne-svitle-pet4-8',
+            'https://fozzyshop.ua/ru/pivo-svetloe/20248-pivo-rogan-tradicijne-svetloe-4820034921609.html'
+        ])
+
 
 
 

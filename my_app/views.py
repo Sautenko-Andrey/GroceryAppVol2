@@ -11,7 +11,7 @@ from django.http import HttpResponseNotFound, HttpResponse
 from django.urls import reverse_lazy
 from rest_framework import generics
 
-from my_app.utils import MutualContext, define_markets_names
+from my_app.utils import MutualContext, define_markets_names, get_prices_for_set
 from django.views.generic import ListView, CreateView, DeleteView
 
 from .forms import *
@@ -608,9 +608,38 @@ class PhotoAnswerPage(MutualContext, ListView):
 
         elif context_dict['nn_answer'] == 'Майонез Королевский Смак королевский 67 % 300 гр':
             context_dict['item_image_for_user'] = get_mayonez_korolivkiy_smak_korolivskiy_67_300gr
+            context_dict['price_from_site_atb'] = store['mayonez_korolivskiy_smak_korolivskiy_67_300gr']['atb']
+            context_dict['price_from_site_eko'] = store['mayonez_korolivskiy_smak_korolivskiy_67_300gr']['eko']
+            context_dict['price_from_site_varus'] = store['mayonez_korolivskiy_smak_korolivskiy_67_300gr']['varus']
+            context_dict['price_from_site_novus'] = store['mayonez_korolivskiy_smak_korolivskiy_67_300gr']['novus']
+            context_dict['price_from_site_metro'] = store['mayonez_korolivskiy_smak_korolivskiy_67_300gr']['metro']
+            context_dict['price_from_site_fozzy'] = store['mayonez_korolivskiy_smak_korolivskiy_67_300gr']['fozzy']
 
         elif context_dict['nn_answer'] == 'Мука ЗОЛОТЕ ЗЕРНЯТКО пшеничное 2 кг':
             context_dict['item_image_for_user'] = get_muka_zolote_zernyatko_pshenichne_2kg
+
+        elif context_dict['nn_answer'] == 'Соус Чумак чесночный 200 грамм':
+            context_dict['item_image_for_user'] = get_sous_torchin_chesnochniy_200gr
+            context_dict['price_from_site_eko'] = store['sous_chumak_chesnochniy_200gr']['eko']
+            context_dict['price_from_site_varus'] = store['sous_chumak_chesnochniy_200gr']['varus']
+            context_dict['price_from_site_novus'] = store['sous_chumak_chesnochniy_200gr']['novus']
+
+        elif context_dict['nn_answer'] == 'Жвачка Orbit полуниця-банан':
+            context_dict['item_image_for_user'] = get_jvachka_orbit_clubnika_banan
+            context_dict['price_from_site_atb'] = store['orbit_polunica_banan']['atb']
+            context_dict['price_from_site_eko'] = store['orbit_polunica_banan']['eko']
+            context_dict['price_from_site_varus'] = store['orbit_polunica_banan']['varus']
+            context_dict['price_from_site_ashan'] = store['orbit_polunica_banan']['ashan']
+            context_dict['price_from_site_novus'] = store['orbit_polunica_banan']['novus']
+            context_dict['price_from_site_metro'] = store['orbit_polunica_banan']['metro']
+            context_dict['price_from_site_nash_kray'] = store['orbit_polunica_banan']['nash_kray']
+            context_dict['price_from_site_fozzy'] = store['orbit_polunica_banan']['fozzy']
+
+        elif context_dict['nn_answer'] == 'Сигареты LM красные':
+            context_dict['item_image_for_user'] = get_sigarets_LM_red
+            context_dict['price_from_site_ashan'] = store['sigarets_lm_red']['ashan']
+            context_dict['price_from_site_novus'] = store['sigarets_lm_red']['novus']
+            context_dict['price_from_site_fozzy'] = store['sigarets_lm_red']['fozzy']
 
         else:
             context_dict['item_image_for_user'] = get_tea_minutka_black_40_b
@@ -1562,9 +1591,58 @@ class ItemNameAnswerPage(MutualContext, ListView):
 
         elif context_dict['nn_answer'] == 'Майонез Королевский Смак королевский 67 % 300 гр':
             context_dict['item_image_for_user'] = get_mayonez_korolivkiy_smak_korolivskiy_67_300gr
+            context_dict['price_from_site_atb'] = store['mayonez_korolivskiy_smak_korolivskiy_67_300gr']['atb']
+            context_dict['price_from_site_eko'] = store['mayonez_korolivskiy_smak_korolivskiy_67_300gr']['eko']
+            context_dict['price_from_site_varus'] = store['mayonez_korolivskiy_smak_korolivskiy_67_300gr']['varus']
+            context_dict['price_from_site_novus'] = store['mayonez_korolivskiy_smak_korolivskiy_67_300gr']['novus']
+            context_dict['price_from_site_metro'] = store['mayonez_korolivskiy_smak_korolivskiy_67_300gr']['metro']
+            context_dict['price_from_site_fozzy'] = store['mayonez_korolivskiy_smak_korolivskiy_67_300gr']['fozzy']
 
         elif context_dict['nn_answer'] == 'Мука ЗОЛОТЕ ЗЕРНЯТКО пшеничное 2 кг':
             context_dict['item_image_for_user'] = get_muka_zolote_zernyatko_pshenichne_2kg
+            
+        elif context_dict['nn_answer'] == 'Пиво Черниговское Белое нефильтрованное 1 л':
+            context_dict['item_image_for_user'] = get_beer_chernigivske_bile_1l_plastic
+            context_dict['price_from_site_novus'] = store['beer_chernigivske_bile_nefilter_1l']['novus']
+            context_dict['price_from_site_metro'] = store['beer_chernigivske_bile_nefilter_1l']['metro']
+            context_dict['price_from_site_fozzy'] = store['beer_chernigivske_bile_nefilter_1l']['fozzy']
+            
+        elif context_dict['nn_answer'] == 'Пиво Оболонь светлое 1 л':
+            context_dict['item_image_for_user'] = get_beer_obolon_svitle_1l_plastic
+            context_dict['price_from_site_varus'] = store['beer_obolon_svitle_1l']['varus']
+            context_dict['price_from_site_novus'] = store['beer_obolon_svitle_1l']['novus']
+            
+        elif context_dict['nn_answer'] == 'Пиво Рогань традиционное светлое 1 л':
+            context_dict['item_image_for_user'] = get_beer_rogan_tradiciyne_svitle_1l_plastic
+            context_dict['price_from_site_atb'] = store['beer_rogan_tradiciyne_svitle_1l']['atb']
+            context_dict['price_from_site_ashan'] = store['beer_rogan_tradiciyne_svitle_1l']['ashan']
+            context_dict['price_from_site_novus'] = store['beer_rogan_tradiciyne_svitle_1l']['novus']
+            context_dict['price_from_site_metro'] = store['beer_rogan_tradiciyne_svitle_1l']['metro']
+            context_dict['price_from_site_nash_kray'] = store['beer_rogan_tradiciyne_svitle_1l']['nash_kray']
+            context_dict['price_from_site_fozzy'] = store['beer_rogan_tradiciyne_svitle_1l']['fozzy']
+
+        elif context_dict['nn_answer'] == 'Соус Чумак чесночный 200 грамм':
+            context_dict['item_image_for_user'] = get_sous_torchin_chesnochniy_200gr
+            context_dict['price_from_site_eko'] = store['sous_chumak_chesnochniy_200gr']['eko']
+            context_dict['price_from_site_varus'] = store['sous_chumak_chesnochniy_200gr']['varus']
+            context_dict['price_from_site_novus'] = store['sous_chumak_chesnochniy_200gr']['novus']
+
+        elif context_dict['nn_answer'] == 'Жвачка Orbit полуниця-банан':
+            context_dict['item_image_for_user'] = get_jvachka_orbit_clubnika_banan
+            context_dict['price_from_site_atb'] = store['orbit_polunica_banan']['atb']
+            context_dict['price_from_site_eko'] = store['orbit_polunica_banan']['eko']
+            context_dict['price_from_site_varus'] = store['orbit_polunica_banan']['varus']
+            context_dict['price_from_site_ashan'] = store['orbit_polunica_banan']['ashan']
+            context_dict['price_from_site_novus'] = store['orbit_polunica_banan']['novus']
+            context_dict['price_from_site_metro'] = store['orbit_polunica_banan']['metro']
+            context_dict['price_from_site_nash_kray'] = store['orbit_polunica_banan']['nash_kray']
+            context_dict['price_from_site_fozzy'] = store['orbit_polunica_banan']['fozzy']
+
+        elif context_dict['nn_answer'] == 'Сигареты LM красные':
+            context_dict['item_image_for_user'] = get_sigarets_LM_red
+            context_dict['price_from_site_ashan'] = store['sigarets_lm_red']['ashan']
+            context_dict['price_from_site_novus'] = store['sigarets_lm_red']['novus']
+            context_dict['price_from_site_fozzy'] = store['sigarets_lm_red']['fozzy']
 
         else:
             context_dict['item_image_for_user'] = get_apple_golden
@@ -1861,26 +1939,26 @@ class SetResults(MutualContext, ListView):
                 amount_list.append(value[0])
                 markets_list.append(value[1:])
 
-
         context_dict['products_names']=names_list
-        for name in names_list:
-            if name=='Пиво "Оболонь Премиум Экстра 1,1 л"':
-                context_dict['product_prices']=[
-                    store['obolon_premium_1.1_l']['atb'],
-                    store['obolon_premium_1.1_l']['eko']
-                ]
+        #собираем цены в списки и передаем эти списки на фронтенд
+        atb_price,eko_price,varus_price,silpo_price,ashan_price,novus_price,\
+        metro_price,nash_kray_price,fozzy_price=get_prices_for_set(names_list)
+
+        context_dict['atb_prices'] = atb_price
+        context_dict['eko_prices'] = eko_price
+        context_dict['varus_prices'] = varus_price
+        context_dict['silpo_prices'] = silpo_price
+        context_dict['ashan_prices'] = ashan_price
+        context_dict['novus_prices'] = novus_price
+        context_dict['metro_prices'] = metro_price
+        context_dict['nash_kray_prices'] = nash_kray_price
+        context_dict['fozzy_prices'] = fozzy_price
         context_dict['products_amount']=amount_list
         # markets_names = define_markets_names(markets_list)
         for i in markets_list:
             define_markets_names(i)
 
         context_dict['markets']=markets_list  # тут у нас True или False для выбранных маркетов
-
-
-        #цифры цен ради эксперимента
-        #цена для продукта
-        context_dict['all_prices']=[10,20,30,40,50,60,70,80,90]
-        context_dict['all_prices2'] = [100, 200, 300, 400, 500, 600, 700, 800, 900]
 
         mutual_context_dict = self.get_user_context(title='Результаты по наборам')
         return dict(list(context_dict.items()) + list(mutual_context_dict.items()))

@@ -708,6 +708,52 @@ all_products_names=[
         "metro":parser.beer_ketchup_torchin_s_chasnikom_parser()[6],
         "fozzy":parser.beer_ketchup_torchin_s_chasnikom_parser()[8]
 }},
+    {'mayonez_korolivskiy_smak_korolivskiy_67_300gr':{
+        "atb":parser.mayonez_korolivskiy_smak_korolivskiy_67_300gr_parser()[0],
+        "eko":parser.mayonez_korolivskiy_smak_korolivskiy_67_300gr_parser()[1],
+        "varus":parser.mayonez_korolivskiy_smak_korolivskiy_67_300gr_parser()[2],
+        "novus":parser.mayonez_korolivskiy_smak_korolivskiy_67_300gr_parser()[5],
+        "metro":parser.mayonez_korolivskiy_smak_korolivskiy_67_300gr_parser()[6],
+        "fozzy":parser.mayonez_korolivskiy_smak_korolivskiy_67_300gr_parser()[8]
+}},
+    {'sous_chumak_chesnochniy_200gr':{
+        "eko":parser.sous_chumak_chesnochniy_200gr_parser()[1],
+        "varus":parser.sous_chumak_chesnochniy_200gr_parser()[2],
+        "novus":parser.sous_chumak_chesnochniy_200gr_parser()[5]
+}},
+
+    {'orbit_polunica_banan':{
+        "atb":parser.orbit_banan_polunica_parser()[0],
+        "eko":parser.orbit_banan_polunica_parser()[1],
+        "varus":parser.orbit_banan_polunica_parser()[2],
+        "ashan":parser.orbit_banan_polunica_parser()[4],
+        "novus":parser.orbit_banan_polunica_parser()[5],
+        "metro":parser.orbit_banan_polunica_parser()[6],
+        "nash_kray":parser.orbit_banan_polunica_parser()[7],
+        "fozzy":parser.orbit_banan_polunica_parser()[8]
+}},
+    {'sigarets_lm_red':{
+        "ashan":parser.sigarets_lm_red_parser()[4],
+        "novus":parser.sigarets_lm_red_parser()[5],
+        "fozzy":parser.sigarets_lm_red_parser()[8]
+}},
+    {'beer_chernigivske_bile_nefilter_1l':{
+        "novus":parser.beer_chernigivske_bile_nefilter_1l_parser()[5],
+        "metro":parser.beer_chernigivske_bile_nefilter_1l_parser()[6],
+        "fozzy":parser.beer_chernigivske_bile_nefilter_1l_parser()[8]
+}},
+    {'beer_obolon_svitle_1l':{
+        "varus":parser.beer_obolon_svitle_1l_parser()[2],
+        "novus":parser.beer_obolon_svitle_1l_parser()[5],
+}},
+    {'beer_rogan_tradiciyne_svitle_1l':{
+        "atb":parser.beer_rogan_tradiciyne_svitle_1l_parser()[0],
+        "ashan":parser.beer_rogan_tradiciyne_svitle_1l_parser()[4],
+        "novus":parser.beer_rogan_tradiciyne_svitle_1l_parser()[5],
+        "metro":parser.beer_rogan_tradiciyne_svitle_1l_parser()[6],
+        "nash_kray":parser.beer_rogan_tradiciyne_svitle_1l_parser()[7],
+        "fozzy":parser.beer_rogan_tradiciyne_svitle_1l_parser()[8]
+}},
 
 ]
 

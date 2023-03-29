@@ -128,6 +128,16 @@ class TesterForGroceryAppText:
         ketchup_torchin_chasnik_270gr_text = self.add_new_item('ketchup_torchin_chasnik_270gr.txt')
         muka_zolote_zernyatko_pshen_2kg_text = self.add_new_item('muka_zolote_zernyatko_pshen_2kg.txt')
         mayonez_korolivskiy_smak_kororlivskiy_67_300gr_text = self.add_new_item('mayonez_korolivskiy_smak_kororlivskiy_67_300gr.txt')
+        beer_chernigivske_bile_nefilter_1l_plastic_text = self.add_new_item('beer_chernigivske_bile_nefilter_1l_plastic.txt')
+        beer_obolon_svitle_1l_plastic_text = self.add_new_item('beer_obolon_svitle_1l_plastic.txt')
+        beer_rogan_svitle_tradiciyne_1l_plastic_text = self.add_new_item('beer_rogan_svitle_tradiciyne_1l_plastic.txt')
+        sous_chumak_chesnochniy_200gr_text = self.add_new_item('sous_chumak_chesnochniy_200gr.txt')
+        jvachka_orbit_clubnika_banan_text = self.add_new_item('jvachka_orbit_clubnika_banan.txt')
+        LM_red_text = self.add_new_item('LM_red.txt')
+        beer_jigulivske_svitle_2_l_plastic_text = self.add_new_item('beer_jigulivske_svitle_2_l_plastic.txt')
+        beer_chayka_dniprovska_svitle_2l_plastic_text = self.add_new_item('beer_chayka_dniprovska_svitle_2l_plastic.txt')
+        beer_piwny_kubek_svitle_2l_plastic_text = self.add_new_item('beer_piwny_kubek_svitle_2l_plastic.txt')
+
 
         # объединям обучающие выборки:
         texts = obolon_premium_extra_11_text+ hetman_sagaydachniy_07_text\
@@ -174,7 +184,10 @@ class TesterForGroceryAppText:
                 + beer_jashkivske_pshenichne_nefilter_1l_plastic_text + beer_jashkivske_svitle_nefilter_1l_plastic_text\
                 + beer_jashkivske_jigulivske_nefilter_1l_plastic_text + beer_persha_privatna_brovarnya_bochkove_svitle_1l_plastic_text\
                 + beer_chayka_dniprovska_svitle_1l_plastic_text + ketchup_torchin_chasnik_270gr_text\
-                + muka_zolote_zernyatko_pshen_2kg_text + mayonez_korolivskiy_smak_kororlivskiy_67_300gr_text
+                + muka_zolote_zernyatko_pshen_2kg_text + mayonez_korolivskiy_smak_kororlivskiy_67_300gr_text\
+                + beer_chernigivske_bile_nefilter_1l_plastic_text + beer_obolon_svitle_1l_plastic_text\
+                + beer_rogan_svitle_tradiciyne_1l_plastic_text + sous_chumak_chesnochniy_200gr_text + jvachka_orbit_clubnika_banan_text\
+                + LM_red_text + beer_jigulivske_svitle_2_l_plastic_text + beer_chayka_dniprovska_svitle_2l_plastic_text + beer_piwny_kubek_svitle_2l_plastic_text
 
         return texts
 
@@ -409,5 +422,23 @@ class TesterForGroceryAppText:
             return 'Мука ЗОЛОТЕ ЗЕРНЯТКО пшеничное 2 кг'
         elif np.argmax(result) == 96:
             return 'Майонез Королевский Смак королевский 67 % 300 гр'
+        elif np.argmax(result) == 97:
+            return 'Пиво Черниговское Белое нефильтрованное 1 л'
+        elif np.argmax(result) == 98:
+            return 'Пиво Оболонь светлое 1 л'
+        elif np.argmax(result) == 99:
+            return 'Пиво Рогань традиционное светлое 1 л'
+        elif np.argmax(result) == 100:
+            return 'Соус Чумак чесночный 200 грамм'
+        elif np.argmax(result) == 101:
+            return 'Жвачка Orbit полуниця-банан'
+        elif np.argmax(result) == 102:
+            return 'Сигареты LM красные'
+        elif np.argmax(result) == 103:
+            return ' Жигулевское светлое 2 литра'
+        elif np.argmax(result) == 104:
+            return 'Пиво Чайка Днепровская 2 литра'
+        elif np.argmax(result) == 105:
+            return 'Пиво Piwny Kebek 2 литра'
 
 
