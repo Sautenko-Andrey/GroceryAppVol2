@@ -1927,8 +1927,10 @@ class SetResults(MutualContext, ListView):
     def get_context_data(self, *, object_list=None, **kwargs):
         context_dict = super().get_context_data(**kwargs)
         context_dict['all_relevant_markets']=get_all_markets
-        #отображение списка кортежей с поной информацией по заказу
-        # context_dict['ordered_products']=self.NN_works()
+        #отображение списка кортежей с полной информацией по заказу
+        context_dict['products_set']=self.NN_works()
+
+        #старая логика:
         products_order=self.NN_works()
         names_list=[]
         amount_list=[]

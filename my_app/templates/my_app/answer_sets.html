@@ -212,6 +212,67 @@
     </div>
 </div>
 
+<div class="container">
+    <div class="row">
+        {% for product in products_set %}
+        <div class="col-xl-4 col-md-4 col-sm-4" align="center">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    {% for key,value in product.items %}
+                    <h5 class="card-title">{{key}}</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Количество: {{value.0}}</li>
+                    {% if value.1 %}
+                    <li class="list-group-item">АТБ</li>
+                    {% else %}
+                    {% endif %}
+                    {% if value.2 %}
+                    <li class="list-group-item">ЭКО</li>
+                    {% else %}
+                    {% endif %}
+                    {% if value.3 %}
+                    <li class="list-group-item">Varus</li>
+                    {% else %}
+                    {% endif %}
+                    {% if value.4 %}
+                    <li class="list-group-item">Стльпо</li>
+                    {% else %}
+                    {% endif %}
+                    {% if value.5 %}
+                    <li class="list-group-item">Ашан</li>
+                    {% else %}
+                    {% endif %}
+                    {% if value.6 %}
+                    <li class="list-group-item">Novus</li>
+                    {% else %}
+                    {% endif %}
+                    {% if value.7 %}
+                    <li class="list-group-item">Metro</li>
+                    {% else %}
+                    {% endif %}
+                    {% if value.8 %}
+                    <li class="list-group-item">Наш Край</li>
+                    {% else %}
+                    {% endif %}
+                    {% if value.9 %}
+                    <li class="list-group-item">Fozzy</li>
+                    {% else %}
+                    {% endif %}
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+                <br>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
 
 <h4><a class="btn btn-outline-danger" href="{% url 'thanks_set' %}" role="button">ЗАВЕРШИТЬ</a></h4>
 

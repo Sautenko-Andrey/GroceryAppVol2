@@ -102,6 +102,9 @@ def get_prices_for_set(names_list: list):
     return atb_list,eko_list,varus_list,silpo_list,ashan_list,\
            novus_list,metro_list,nash_kray_list,fozzy_list
 
+def get_product_price():
+    pass
+
 
 
 
