@@ -33,6 +33,7 @@ from django.shortcuts import redirect
 with open('/home/andrey/GroceryAppVol2/FBApp/my_app/prices_store.json') as f:
     store = json.load(f)
 
+
 class my_appHome(MutualContext, ListView):
     """Класс-обработчик главной страницы приложения"""
 
@@ -74,10 +75,10 @@ class PhotoAnswerPage(MutualContext, ListView):
         # подключение тэгов для отображние изображений товара:
         if context_dict['nn_answer'] == 'Пиво "Оболонь Премиум Экстра 1.1 л"':
             context_dict['item_image_for_user'] = get_obolon_premium
-            #метод подключения к собственной базе данных цен
-            context_dict['price_from_site_atb']=store['obolon_premium_1.1_l']['atb']
+            # метод подключения к собственной базе данных цен
+            context_dict['price_from_site_atb'] = store['obolon_premium_1.1_l']['atb']
             context_dict['price_from_site_eko'] = store['obolon_premium_1.1_l']['eko']
-            #метод подключения парсеров в режиме online
+            # метод подключения парсеров в режиме online
             # parser = ProductParserVol2()
             # res_atb = parser.obolon_premium_parser()[0]
             # context_dict['price_from_site_atb'] = res_atb
@@ -288,7 +289,7 @@ class PhotoAnswerPage(MutualContext, ListView):
 
         elif context_dict['nn_answer'] == 'Горчица "Колос"':
             context_dict['item_image_for_user'] = get_gorchica_kolos
-            #нет на сайтах
+            # нет на сайтах
 
         elif context_dict['nn_answer'] == 'Лимон, кг':
             context_dict['item_image_for_user'] = get_limon
@@ -324,7 +325,7 @@ class PhotoAnswerPage(MutualContext, ListView):
 
         elif context_dict['nn_answer'] == 'Дрожжи "Харьковские", 100 гр':
             context_dict['item_image_for_user'] = get_drojji_hark
-            #out of stock
+            # out of stock
 
         elif context_dict['nn_answer'] == 'Чай черный "Мономах Кения", 90 гр':
             context_dict['item_image_for_user'] = get_tea_monomah_kenya
@@ -522,7 +523,7 @@ class PhotoAnswerPage(MutualContext, ListView):
             # context_dict['price_from_site_varus'] = res_varus
 
         elif context_dict['nn_answer'] == 'Дезодорант Garnier Магний мужской':
-            context_dict['item_image_for_user'] =get_dezodorant_garnier_magniy_m
+            context_dict['item_image_for_user'] = get_dezodorant_garnier_magniy_m
             context_dict['price_from_site_silpo'] = store['desodorant_garnier_man']['silpo']
             context_dict['price_from_site_fozzy'] = store['desodorant_garnier_man']['fozzy']
             # parser = ProductParserVol2()
@@ -1365,7 +1366,8 @@ class ItemNameAnswerPage(MutualContext, ListView):
             context_dict['price_from_site_ashan'] = store['beer_persha_brovarna_zakarpatske_svitle_05_l_glass']['ashan']
             context_dict['price_from_site_novus'] = store['beer_persha_brovarna_zakarpatske_svitle_05_l_glass']['novus']
             context_dict['price_from_site_metro'] = store['beer_persha_brovarna_zakarpatske_svitle_05_l_glass']['metro']
-            context_dict['price_from_site_nash_kray'] = store['beer_persha_brovarna_zakarpatske_svitle_05_l_glass']['nash_kray']
+            context_dict['price_from_site_nash_kray'] = store['beer_persha_brovarna_zakarpatske_svitle_05_l_glass'][
+                'nash_kray']
             context_dict['price_from_site_fozzy'] = store['beer_persha_brovarna_zakarpatske_svitle_05_l_glass']['fozzy']
 
         elif context_dict['nn_answer'] == 'Пиво Львовское светлое 0,5 л в стекле':
@@ -1475,15 +1477,20 @@ class ItemNameAnswerPage(MutualContext, ListView):
             context_dict['price_from_site_silpo'] = store['beer_kronenbourg_1664_blanc_svitle_05_l_glass']['silpo']
             context_dict['price_from_site_ashan'] = store['beer_kronenbourg_1664_blanc_svitle_05_l_glass']['ashan']
             context_dict['price_from_site_metro'] = store['beer_kronenbourg_1664_blanc_svitle_05_l_glass']['metro']
-            context_dict['price_from_site_nash_kray'] = store['beer_kronenbourg_1664_blanc_svitle_05_l_glass']['nash_kray']
+            context_dict['price_from_site_nash_kray'] = store['beer_kronenbourg_1664_blanc_svitle_05_l_glass'][
+                'nash_kray']
             context_dict['price_from_site_fozzy'] = store['beer_kronenbourg_1664_blanc_svitle_05_l_glass']['fozzy']
 
         elif context_dict['nn_answer'] == 'Пиво Опилля Фирменное непастеризоване светлое 0,5 л в стекле':
             context_dict['item_image_for_user'] = get_beer_opilla_nepasterizovane_svitle_05_l_glass
-            context_dict['price_from_site_ashan'] = store['beer_opilla_firmove_nepasterizovane_svitle_05_l_glass']['ashan']
-            context_dict['price_from_site_novus'] = store['beer_opilla_firmove_nepasterizovane_svitle_05_l_glass']['novus']
-            context_dict['price_from_site_metro'] = store['beer_opilla_firmove_nepasterizovane_svitle_05_l_glass']['metro']
-            context_dict['price_from_site_fozzy'] = store['beer_opilla_firmove_nepasterizovane_svitle_05_l_glass']['fozzy']
+            context_dict['price_from_site_ashan'] = store['beer_opilla_firmove_nepasterizovane_svitle_05_l_glass'][
+                'ashan']
+            context_dict['price_from_site_novus'] = store['beer_opilla_firmove_nepasterizovane_svitle_05_l_glass'][
+                'novus']
+            context_dict['price_from_site_metro'] = store['beer_opilla_firmove_nepasterizovane_svitle_05_l_glass'][
+                'metro']
+            context_dict['price_from_site_fozzy'] = store['beer_opilla_firmove_nepasterizovane_svitle_05_l_glass'][
+                'fozzy']
 
         elif context_dict['nn_answer'] == 'Пиво Ячменный Колос светлое 0,5 л в стекле':
             context_dict['item_image_for_user'] = get_beer_yachmenniy_kolos_svitle_05_l_glass
@@ -1575,7 +1582,8 @@ class ItemNameAnswerPage(MutualContext, ListView):
         elif context_dict['nn_answer'] == 'Пиво Перша приватна броварня бочкове 1 литр':
             context_dict['item_image_for_user'] = get_beer_persha_privatna_brovarnya_bochkove_1_l_plastic
             context_dict['price_from_site_eko'] = store['beer_persha_privatna_brovarnya_bochkove_1_l_plastic']['eko']
-            context_dict['price_from_site_novus'] = store['beer_persha_privatna_brovarnya_bochkove_1_l_plastic']['novus']
+            context_dict['price_from_site_novus'] = store['beer_persha_privatna_brovarnya_bochkove_1_l_plastic'][
+                'novus']
 
         elif context_dict['nn_answer'] == 'Пиво Чайка днипровська 1 литр':
             context_dict['item_image_for_user'] = get_beer_chayka_dniprovska_1_l_plastic
@@ -1600,18 +1608,18 @@ class ItemNameAnswerPage(MutualContext, ListView):
 
         elif context_dict['nn_answer'] == 'Мука ЗОЛОТЕ ЗЕРНЯТКО пшеничное 2 кг':
             context_dict['item_image_for_user'] = get_muka_zolote_zernyatko_pshenichne_2kg
-            
+
         elif context_dict['nn_answer'] == 'Пиво Черниговское Белое нефильтрованное 1 л':
             context_dict['item_image_for_user'] = get_beer_chernigivske_bile_1l_plastic
             context_dict['price_from_site_novus'] = store['beer_chernigivske_bile_nefilter_1l']['novus']
             context_dict['price_from_site_metro'] = store['beer_chernigivske_bile_nefilter_1l']['metro']
             context_dict['price_from_site_fozzy'] = store['beer_chernigivske_bile_nefilter_1l']['fozzy']
-            
+
         elif context_dict['nn_answer'] == 'Пиво Оболонь светлое 1 л':
             context_dict['item_image_for_user'] = get_beer_obolon_svitle_1l_plastic
             context_dict['price_from_site_varus'] = store['beer_obolon_svitle_1l']['varus']
             context_dict['price_from_site_novus'] = store['beer_obolon_svitle_1l']['novus']
-            
+
         elif context_dict['nn_answer'] == 'Пиво Рогань традиционное светлое 1 л':
             context_dict['item_image_for_user'] = get_beer_rogan_tradiciyne_svitle_1l_plastic
             context_dict['price_from_site_atb'] = store['beer_rogan_tradiciyne_svitle_1l']['atb']
@@ -1799,13 +1807,12 @@ class DishesResult(MutualContext, ListView):
     template_name = 'my_app/dishes_result.html'
     context_object_name = 'info'
 
-    def calculate_dish_value(self,count_people,parser):
+    def calculate_dish_value(self, count_people, parser):
         '''Метод для упрощения кода.Выноисм подсчет стоимости блюда в отельную функцию.'''
-        self.value_atb=round(parser*int(count_people),2)
-        self.value_eko = round(parser * int(count_people),2)
-        self.value_varus = round(parser * int(count_people),2)
-        return self.value_atb,self.value_eko,self.value_varus
-
+        self.value_atb = round(parser * int(count_people), 2)
+        self.value_eko = round(parser * int(count_people), 2)
+        self.value_varus = round(parser * int(count_people), 2)
+        return self.value_atb, self.value_eko, self.value_varus
 
     def what_dish(self):
         user_dish = self.get_queryset().dish_name
@@ -1821,11 +1828,11 @@ class DishesResult(MutualContext, ListView):
             self.value_varus = dish_parser.dish_vareniki_s_kartoshkoy_parser()[2] * int(user_count)
         elif user_dish == 'Вареники с капустой':
             self.value_atb = dish_parser.dish_vareniki_s_kapustoy_parser()[0] * int(user_count)
-            self.value_eko= dish_parser.dish_vareniki_s_kapustoy_parser()[1] * int(user_count)
-            self.value_varus=dish_parser.dish_vareniki_s_kapustoy_parser()[2] * int(user_count)
+            self.value_eko = dish_parser.dish_vareniki_s_kapustoy_parser()[1] * int(user_count)
+            self.value_varus = dish_parser.dish_vareniki_s_kapustoy_parser()[2] * int(user_count)
 
-        result_atb =self.value_atb
-        result_eko=self.value_eko
+        result_atb = self.value_atb
+        result_eko = self.value_eko
         result_varus = self.value_varus
         return user_dish, user_count, result_atb, result_eko, result_varus
 
@@ -1852,7 +1859,8 @@ class DishesResult(MutualContext, ListView):
             context_dict['value_result_atb'] = self.what_dish()[2]
             context_dict['value_result_eko'] = self.what_dish()[3]
             context_dict['value_result_varus'] = self.what_dish()[4]
-            context_dict['dish_pic'] = get_vareniki_s_kartoshkoy_info  # картинка одинакова для вареников с картошкой и капустой
+            context_dict[
+                'dish_pic'] = get_vareniki_s_kartoshkoy_info  # картинка одинакова для вареников с картошкой и капустой
 
         mutual_context_dict = self.get_user_context(title='Запрашиваемое блюдо')
         return dict(list(context_dict.items()) + list(mutual_context_dict.items()))
@@ -1863,7 +1871,8 @@ class DishesResult(MutualContext, ListView):
 
         return Dishes.objects.latest('time_create')
 
-class ProductsSet(MutualContext,CreateView):
+
+class ProductsSet(MutualContext, CreateView):
     '''Класс-обработчик для страницы , на которой пользователь
     может собирать продуктовые наборы, вручную написав их в форме заполнения'''
     form_class = AssembleProductSet
@@ -1871,7 +1880,7 @@ class ProductsSet(MutualContext,CreateView):
     success_url = reverse_lazy('items_set')
 
     def compile_all_user_requests(self):
-        self.product_order_info=get_product_set_from_data_base
+        self.product_order_info = get_product_set_from_data_base
         return self.product_order_info
 
     def post(self, request, *args, **kwargs):
@@ -1883,18 +1892,17 @@ class ProductsSet(MutualContext,CreateView):
 
     def form_valid(self, form):
         self.object = form.save(commit=False)
-        #получаем id владельца, кто собирает продуктовый набор(зарегестрированный пользователь)
+        # получаем id владельца, кто собирает продуктовый набор(зарегестрированный пользователь)
         self.object.owner = self.request.user.id
         self.object.save()
         return super().form_valid(form)
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context_dict = super().get_context_data(**kwargs)
-        context_dict['user_item_info']=self.compile_all_user_requests()
-        context_dict['all_markets']=get_all_markets
+        context_dict['user_item_info'] = self.compile_all_user_requests()
+        context_dict['all_markets'] = get_all_markets
         mutual_context_dict = self.get_user_context(title='Продуктовый набор')
         return dict(list(context_dict.items()) + list(mutual_context_dict.items()))
-
 
 
 class SetResults(MutualContext, ListView):
@@ -1906,45 +1914,101 @@ class SetResults(MutualContext, ListView):
     model = SetOfProducts
     context_object_name = 'user_orders'
 
-
     def NN_works(self):
         '''Подключение НС для текста, которая определяет, какой
         конкретно продукт пользователь добавил в список (название продукта)'''
         pred = NN_text()
         user_orders = self.get_queryset()
-        total_product_info=[]
+        total_product_info = []
+
         for order in user_orders:
-            result=pred.identify_item(order.product_name)
+            result = pred.identify_item(order.product_name)
+            # добавим цены из БД цен
+            out_of_stoke = 'нет в наличии'
+            global atb_price, eko_price, varus_price, silpo_price
+
+            if result == 'Пиво "Оболонь Премиум Экстра 1,1 л"':
+                atb_price = store['obolon_premium_1.1_l']['atb']
+                eko_price = store['obolon_premium_1.1_l']['eko']
+                varus_price = out_of_stoke
+                silpo_price = out_of_stoke
+                ashan_price = out_of_stoke
+                novus_price = out_of_stoke
+                metro_price = out_of_stoke
+                nash_kray_price = out_of_stoke
+                fozzy_price = out_of_stoke
+
+            elif result == 'Водка "Гетьман ICE 0,7 л"':
+                atb_price = store['vodka_hetman_ice_07']['atb']
+                eko_price = out_of_stoke
+                varus_price = out_of_stoke
+                silpo_price = out_of_stoke
+                ashan_price = out_of_stoke
+                novus_price = out_of_stoke
+                metro_price = out_of_stoke
+                nash_kray_price = out_of_stoke
+                fozzy_price = out_of_stoke
+            elif result == 'Напиток Sprite 2 литра':
+                atb_price = out_of_stoke
+                eko_price = store['sprite_2l']['eko']
+                varus_price=store['sprite_2l']['varus']
+            #     silpo_price=store['sprite_2l']['silpo']
+            #     ashan_price=store['sprite_2l']['ashan']
+            #     novus_price=store['sprite_2l']['novus']
+            #     metro_price=store['sprite_2l']['metro']
+            #     nash_kray_price=store['sprite_2l']['nash_kray']
+            #     fozzy_price=store['sprite_2l']['fozzy']
+            elif result == 'Сигареты Kent Silver':
+                atb_price=store['kent_silver']['atb']
+                eko_price=store['kent_silver']['eko']
+                varus_price=store['kent_silver']['varus']
+                # silpo_price = out_of_stoke
+                # ashan_price=store['kent_silver']['ashan']
+                # novus_price=store['kent_silver']['novus']
+                # metro_price=out_of_stoke
+                # nash_kray_price=out_of_stoke
+                # fozzy_price=store['kent_silver']['fozzy']
+            elif result == 'Кофе "Арома Голд Классик 100 гр"':
+                atb_price=out_of_stoke
+                eko_price=store['coffee_aroma_gold']['eko']
+                varus_price=out_of_stoke
+                # silpo_price=out_of_stoke
+                # ashan_price=out_of_stoke
+                # novus_price=out_of_stoke
+                # metro_price=out_of_stoke
+                # nash_kray_price=out_of_stoke
+                # fozzy_price=store['coffee_aroma_gold']['fozzy']
+
             total_product_info.append(
-                {result:[
-                    order.amount,order.atb_choice,order.eko_choice,order.varus_choice,
-                    order.silpo_choice,order.ashan_choice,order.novus_choice,order.metro_choice,
-                    order.nash_kray_choice,order.fozzy_choice
+                {result: [
+                    order.amount, order.atb_choice, order.eko_choice, order.varus_choice,
+                    order.silpo_choice, order.ashan_choice, order.novus_choice, order.metro_choice,
+                    order.nash_kray_choice, order.fozzy_choice, atb_price, eko_price, varus_price, silpo_price
                 ]}
             )
         return total_product_info
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context_dict = super().get_context_data(**kwargs)
-        context_dict['all_relevant_markets']=get_all_markets
-        #отображение списка кортежей с полной информацией по заказу
-        context_dict['products_set']=self.NN_works()
+        context_dict['all_relevant_markets'] = get_all_markets
+        # отображение списка кортежей с полной информацией по заказу
+        context_dict['products_set'] = self.NN_works()
 
-        #старая логика:
-        products_order=self.NN_works()
-        names_list=[]
-        amount_list=[]
-        markets_list=[]
+        # старая логика:
+        products_order = self.NN_works()
+        names_list = []
+        amount_list = []
+        markets_list = []
         for order in products_order:
-            for key,value in order.items():
+            for key, value in order.items():
                 names_list.append(key)
                 amount_list.append(value[0])
                 markets_list.append(value[1:])
 
-        context_dict['products_names']=names_list
-        #собираем цены в списки и передаем эти списки на фронтенд
-        atb_price,eko_price,varus_price,silpo_price,ashan_price,novus_price,\
-        metro_price,nash_kray_price,fozzy_price=get_prices_for_set(names_list)
+        context_dict['products_names'] = names_list
+        # собираем цены в списки и передаем эти списки на фронтенд
+        atb_price, eko_price, varus_price, silpo_price, ashan_price, novus_price, \
+        metro_price, nash_kray_price, fozzy_price = get_prices_for_set(names_list)
 
         context_dict['atb_prices'] = atb_price
         context_dict['eko_prices'] = eko_price
@@ -1955,12 +2019,12 @@ class SetResults(MutualContext, ListView):
         context_dict['metro_prices'] = metro_price
         context_dict['nash_kray_prices'] = nash_kray_price
         context_dict['fozzy_prices'] = fozzy_price
-        context_dict['products_amount']=amount_list
+        context_dict['products_amount'] = amount_list
         # markets_names = define_markets_names(markets_list)
         for i in markets_list:
             define_markets_names(i)
 
-        context_dict['markets']=markets_list  # тут у нас True или False для выбранных маркетов
+        context_dict['markets'] = markets_list  # тут у нас True или False для выбранных маркетов
 
         mutual_context_dict = self.get_user_context(title='Результаты по наборам')
         return dict(list(context_dict.items()) + list(mutual_context_dict.items()))
@@ -1971,6 +2035,7 @@ class SetResults(MutualContext, ListView):
 
         return super().get_queryset().filter(owner=self.request.user.id)
 
+
 class Thanksfull_DELETE_SET(MutualContext, ListView):
     '''Класс для удаления продуктовых наборов из БД и
     по совместительству страница благодарностей.'''
@@ -1979,17 +2044,16 @@ class Thanksfull_DELETE_SET(MutualContext, ListView):
     success_url = reverse_lazy('home')
     model = SetOfProducts
 
-
     def get_queryset(self):
         '''В данном методе будет прописана логика удаления загруженного
         пользователем названия товара из БД'''
 
         # тут удаляем загруженное название из БД айдишнюку текущего пользователя
-        user_id=super().get_queryset().filter(owner=self.request.user.id)
+        user_id = super().get_queryset().filter(owner=self.request.user.id)
         return user_id.delete()
 
 
-class UserRegistration(MutualContext,CreateView):
+class UserRegistration(MutualContext, CreateView):
     '''Класс для регистрации пользователей на сайте'''
     form_class = UserRegisterForm
     template_name = 'my_app/user_registration.html'
@@ -2015,10 +2079,9 @@ class LoginUser(LoginView):
     form_class = LoginForm
     template_name = 'my_app/login.html'
 
-
-    def get_context_data(self,*,object_list=None,**kwargs):
+    def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title']='Авторизация'
+        context['title'] = 'Авторизация'
         return context
 
     def get_success_url(self):

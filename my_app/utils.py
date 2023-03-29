@@ -88,6 +88,7 @@ def get_prices_for_set(names_list: list):
             nash_kray_list.append(out_of_stoke)
             fozzy_list.append(store['kent_silver']['fozzy'])
 
+
         elif name == 'Кофе "Арома Голд Классик 100 гр"':
             atb_list.append(out_of_stoke)
             eko_list.append(store['coffee_aroma_gold']['eko'])
@@ -102,8 +103,7 @@ def get_prices_for_set(names_list: list):
     return atb_list,eko_list,varus_list,silpo_list,ashan_list,\
            novus_list,metro_list,nash_kray_list,fozzy_list
 
-def get_product_price():
-    pass
+
 
 
 

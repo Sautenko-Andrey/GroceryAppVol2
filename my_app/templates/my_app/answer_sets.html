@@ -215,8 +215,8 @@
 <div class="container">
     <div class="row">
         {% for product in products_set %}
-        <div class="col-xl-4 col-md-4 col-sm-4" align="center">
-            <div class="card" style="width: 18rem;">
+        <div class="col-xl-3 col-md-3 col-sm-3" align="center">
+            <div class="card" style="width: 15rem;">
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
                     {% for key,value in product.items %}
@@ -225,46 +225,42 @@
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">Количество: {{value.0}}</li>
                     {% if value.1 %}
-                    <li class="list-group-item">АТБ</li>
+                    <li class="list-group-item">АТБ: {{value.10}}</li>
                     {% else %}
                     {% endif %}
                     {% if value.2 %}
-                    <li class="list-group-item">ЭКО</li>
+                    <li class="list-group-item">ЭКО: {{value.11}}</li>
                     {% else %}
                     {% endif %}
                     {% if value.3 %}
-                    <li class="list-group-item">Varus</li>
+                    <li class="list-group-item">Varus: {{value.12}}</li>
                     {% else %}
                     {% endif %}
                     {% if value.4 %}
-                    <li class="list-group-item">Стльпо</li>
+                    <li class="list-group-item">Сильпо: {{value.13}}</li>
                     {% else %}
                     {% endif %}
                     {% if value.5 %}
-                    <li class="list-group-item">Ашан</li>
+                    <li class="list-group-item">Ашан: {{value.14}}</li>
                     {% else %}
                     {% endif %}
                     {% if value.6 %}
-                    <li class="list-group-item">Novus</li>
+                    <li class="list-group-item">Novus: {{value.15}}</li>
                     {% else %}
                     {% endif %}
                     {% if value.7 %}
-                    <li class="list-group-item">Metro</li>
+                    <li class="list-group-item">Metro: {{value.16}}</li>
                     {% else %}
                     {% endif %}
                     {% if value.8 %}
-                    <li class="list-group-item">Наш Край</li>
+                    <li class="list-group-item">Наш Край: {{value.17}}</li>
                     {% else %}
                     {% endif %}
                     {% if value.9 %}
-                    <li class="list-group-item">Fozzy</li>
+                    <li class="list-group-item">Fozzy: {{value.18}}</li>
                     {% else %}
                     {% endif %}
                 </ul>
-                <div class="card-body">
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                </div>
                 <br>
                 {% endfor %}
             </div>
