@@ -7,12 +7,12 @@ from django.contrib.auth.views import LoginView
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
-from django.http import HttpResponseNotFound, HttpResponse
+from django.http import HttpResponseNotFound
 from django.urls import reverse_lazy
 from rest_framework import generics
 
-from my_app.utils import MutualContext, define_markets_names, get_prices_for_set
-from django.views.generic import ListView, CreateView, DeleteView
+from my_app.utils import MutualContext, get_products_prices, best_price_identify
+from django.views.generic import ListView, CreateView
 
 from .forms import *
 
@@ -641,6 +641,18 @@ class PhotoAnswerPage(MutualContext, ListView):
             context_dict['price_from_site_ashan'] = store['sigarets_lm_red']['ashan']
             context_dict['price_from_site_novus'] = store['sigarets_lm_red']['novus']
             context_dict['price_from_site_fozzy'] = store['sigarets_lm_red']['fozzy']
+
+        elif context_dict['nn_answer'] == 'Кетчуп Торчин до шашлику 270 грамм':
+            context_dict['item_image_for_user'] = get_ketchup_torchin_do_shasliky_270gr
+
+        elif context_dict['nn_answer'] == 'Майонез Чумак аппетитный 50% 300 грамм':
+            context_dict['item_image_for_user'] = get_mayonez_chumak_appetitniy_50_300gr
+
+        elif context_dict['nn_answer'] == 'Колбаса Перша Столиця Салями Фирменная высший сорт':
+            context_dict['item_image_for_user'] = get_kolbasa_persha_stolica_salyami_firmova_vs
+
+        elif context_dict['nn_answer'] == 'Кофе Чорна Карта GOLD 50 грамм':
+            context_dict['item_image_for_user'] = get_cofee_chorna_karta_gold_50gr
 
         else:
             context_dict['item_image_for_user'] = get_tea_minutka_black_40_b
@@ -1652,6 +1664,47 @@ class ItemNameAnswerPage(MutualContext, ListView):
             context_dict['price_from_site_novus'] = store['sigarets_lm_red']['novus']
             context_dict['price_from_site_fozzy'] = store['sigarets_lm_red']['fozzy']
 
+        elif context_dict['nn_answer'] == 'Жигулевское светлое 2 литра':
+            context_dict['item_image_for_user'] = get_beer_jigulivske_2l_plastic
+
+        elif context_dict['nn_answer'] == 'Пиво Чайка Днепровская 2 литра':
+            context_dict['item_image_for_user'] = get_beer_chayka_dniprovskaya_2l_plastic
+
+        elif context_dict['nn_answer'] == 'Пиво Piwny Kebek 2 литра':
+            context_dict['item_image_for_user'] = get_beer_piwny_kubek_2l_plastic
+
+        elif context_dict['nn_answer'] == 'Кетчуп Торчин до шашлику 270 грамм':
+            context_dict['item_image_for_user'] = get_ketchup_torchin_do_shasliky_270gr
+
+        elif context_dict['nn_answer'] == 'Майонез Чумак аппетитный 50% 300 грамм':
+            context_dict['item_image_for_user'] = get_mayonez_chumak_appetitniy_50_300gr
+
+        elif context_dict['nn_answer'] == 'Колбаса Перша Столиця Салями Фирменная высший сорт':
+            context_dict['item_image_for_user'] = get_kolbasa_persha_stolica_salyami_firmova_vs
+
+        elif context_dict['nn_answer'] == 'Кофе Чорна Карта GOLD 50 грамм':
+            context_dict['item_image_for_user'] = get_cofee_chorna_karta_gold_50gr
+
+        elif context_dict['nn_answer'] == 'Пиво Арсенал "Міцне" світле, 2л':
+            context_dict['item_image_for_user'] = get_beer_arsenal_micne_svitle_2l_plastic
+
+        elif context_dict['nn_answer'] == 'Пиво "ППБ Бочкове" світле, 2л':
+            context_dict['item_image_for_user'] = get_beer_persha_privatna_brovarnya_bochkove_svitle_2l_plastic
+
+        elif context_dict['nn_answer'] == 'Пиво "ППБ Закарпатське оригінальне" світле, 2л':
+            context_dict['item_image_for_user'] = get_beer_persha_privatna_brovarnya_zakarpatske_svitle_2l_plastic
+
+        elif context_dict['nn_answer'] == 'Пиво Zibert светлое 0,5 л в банке':
+            context_dict['item_image_for_user'] = get_beer_zibert_svitle_05_l_banochnoe
+
+        elif context_dict['nn_answer'] == 'Йогурт Фанни 240 грамм 1.5% лесовые ягоды':
+            context_dict['item_image_for_user'] = get_yogurt_fanni_lisovi_yagodi_1_5_240gr
+
+        elif context_dict['nn_answer'] == 'Кефир Славия 2,5% 850 грамм':
+            context_dict['item_image_for_user'] = get_kefir_slaviya_2_5_850gr
+
+
+
         else:
             context_dict['item_image_for_user'] = get_apple_golden
             context_dict['price_from_site_atb'] = store['apple_golden']['atb']
@@ -1924,66 +1977,18 @@ class SetResults(MutualContext, ListView):
         for order in user_orders:
             result = pred.identify_item(order.product_name)
             # добавим цены из БД цен
-            out_of_stoke = 'нет в наличии'
-            global atb_price, eko_price, varus_price, silpo_price
-
-            if result == 'Пиво "Оболонь Премиум Экстра 1,1 л"':
-                atb_price = store['obolon_premium_1.1_l']['atb']
-                eko_price = store['obolon_premium_1.1_l']['eko']
-                varus_price = out_of_stoke
-                silpo_price = out_of_stoke
-                ashan_price = out_of_stoke
-                novus_price = out_of_stoke
-                metro_price = out_of_stoke
-                nash_kray_price = out_of_stoke
-                fozzy_price = out_of_stoke
-
-            elif result == 'Водка "Гетьман ICE 0,7 л"':
-                atb_price = store['vodka_hetman_ice_07']['atb']
-                eko_price = out_of_stoke
-                varus_price = out_of_stoke
-                silpo_price = out_of_stoke
-                ashan_price = out_of_stoke
-                novus_price = out_of_stoke
-                metro_price = out_of_stoke
-                nash_kray_price = out_of_stoke
-                fozzy_price = out_of_stoke
-            elif result == 'Напиток Sprite 2 литра':
-                atb_price = out_of_stoke
-                eko_price = store['sprite_2l']['eko']
-                varus_price=store['sprite_2l']['varus']
-            #     silpo_price=store['sprite_2l']['silpo']
-            #     ashan_price=store['sprite_2l']['ashan']
-            #     novus_price=store['sprite_2l']['novus']
-            #     metro_price=store['sprite_2l']['metro']
-            #     nash_kray_price=store['sprite_2l']['nash_kray']
-            #     fozzy_price=store['sprite_2l']['fozzy']
-            elif result == 'Сигареты Kent Silver':
-                atb_price=store['kent_silver']['atb']
-                eko_price=store['kent_silver']['eko']
-                varus_price=store['kent_silver']['varus']
-                # silpo_price = out_of_stoke
-                # ashan_price=store['kent_silver']['ashan']
-                # novus_price=store['kent_silver']['novus']
-                # metro_price=out_of_stoke
-                # nash_kray_price=out_of_stoke
-                # fozzy_price=store['kent_silver']['fozzy']
-            elif result == 'Кофе "Арома Голд Классик 100 гр"':
-                atb_price=out_of_stoke
-                eko_price=store['coffee_aroma_gold']['eko']
-                varus_price=out_of_stoke
-                # silpo_price=out_of_stoke
-                # ashan_price=out_of_stoke
-                # novus_price=out_of_stoke
-                # metro_price=out_of_stoke
-                # nash_kray_price=out_of_stoke
-                # fozzy_price=store['coffee_aroma_gold']['fozzy']
+            atb_price, eko_price, varus_price, silpo_price,ashan_price,\
+            novus_price,metro_price,nash_kray_price,fozzy_price,picture=get_products_prices(result)
+            #определяем лучшую цену:
+            best_price=best_price_identify([atb_price, eko_price, varus_price, silpo_price,ashan_price,
+            novus_price,metro_price,nash_kray_price,fozzy_price,picture])
 
             total_product_info.append(
                 {result: [
                     order.amount, order.atb_choice, order.eko_choice, order.varus_choice,
                     order.silpo_choice, order.ashan_choice, order.novus_choice, order.metro_choice,
-                    order.nash_kray_choice, order.fozzy_choice, atb_price, eko_price, varus_price, silpo_price
+                    order.nash_kray_choice, order.fozzy_choice, atb_price, eko_price, varus_price, silpo_price,
+                    ashan_price,novus_price,metro_price,nash_kray_price,fozzy_price,picture,best_price
                 ]}
             )
         return total_product_info
@@ -1993,39 +1998,6 @@ class SetResults(MutualContext, ListView):
         context_dict['all_relevant_markets'] = get_all_markets
         # отображение списка кортежей с полной информацией по заказу
         context_dict['products_set'] = self.NN_works()
-
-        # старая логика:
-        products_order = self.NN_works()
-        names_list = []
-        amount_list = []
-        markets_list = []
-        for order in products_order:
-            for key, value in order.items():
-                names_list.append(key)
-                amount_list.append(value[0])
-                markets_list.append(value[1:])
-
-        context_dict['products_names'] = names_list
-        # собираем цены в списки и передаем эти списки на фронтенд
-        atb_price, eko_price, varus_price, silpo_price, ashan_price, novus_price, \
-        metro_price, nash_kray_price, fozzy_price = get_prices_for_set(names_list)
-
-        context_dict['atb_prices'] = atb_price
-        context_dict['eko_prices'] = eko_price
-        context_dict['varus_prices'] = varus_price
-        context_dict['silpo_prices'] = silpo_price
-        context_dict['ashan_prices'] = ashan_price
-        context_dict['novus_prices'] = novus_price
-        context_dict['metro_prices'] = metro_price
-        context_dict['nash_kray_prices'] = nash_kray_price
-        context_dict['fozzy_prices'] = fozzy_price
-        context_dict['products_amount'] = amount_list
-        # markets_names = define_markets_names(markets_list)
-        for i in markets_list:
-            define_markets_names(i)
-
-        context_dict['markets'] = markets_list  # тут у нас True или False для выбранных маркетов
-
         mutual_context_dict = self.get_user_context(title='Результаты по наборам')
         return dict(list(context_dict.items()) + list(mutual_context_dict.items()))
 

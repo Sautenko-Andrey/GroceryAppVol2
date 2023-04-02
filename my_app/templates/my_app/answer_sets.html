@@ -4,223 +4,31 @@
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<div class="container">
-    <div class="row">
-        <div class="col-xl-4 col-md-4 col-sm-4" align="center">
-            <h5>Наименование</h5>
-        </div>
-        <div class="col-xl-4 col-md-4 col-sm-4" align="center">
-            <h5>Заказано</h5>
-        </div>
-        <div class="col-xl-4 col-md-4 col-sm-4" align="center">
-            <h5>Цены по маркетам</h5>
-
-        </div>
-    </div>
-</div>
-
-<div class="container">
-    <div class="row">
-        <div class="col-xl-4 col-md-4 col-sm-4" align="center">
-            {% for name in products_names %}
-            <h5>{{name}}</h5>
-            {% endfor %}
-        </div>
-        <div class="col-xl-4 col-md-6 col-sm-4" align="center">
-            {% for count in products_amount %}
-            <h5>{{count}}</h5>
-            {% endfor %}
-        </div>
-        <div class="col-xl-4 col-md-4 col-sm-4" align="center">
-            {% for market in markets %}
-            <h5>{{market}}</h5>
-            {% endfor %}
-        </div>
-    </div>
-</div>
 <div class="container">
     <div class="row">
         <div class="col-xl-12 col-md-12 col-sm-12" align="center">
-            <h5><b>ВАШ ЗАКАЗ</b></h5>
+            <h4><b>Ваш набор:</b></h4>
+            <br>
         </div>
     </div>
 </div>
-<div class="container">
-    <div class="row">
-        <div class="col-xl-3 col-md-3 col-sm-3" align="center">
-            <h5><i>Продукт</i></h5>
-            <br>
-            {% for item in products_names %}
-            <h5>{{item}}</h5>
-            <br>
-            {% endfor %}
-        </div>
-        <!--<div class="col-xl-1 col-md-1 col-sm-1" align="center">
-            <h5><i>Кол-во</i></h5>
-            {% for item in products_amount %}
-            <h5>{{item}}</h5>
-            {% endfor %}
-        </div>-->
-        <div class="col-xl-1 col-md-1 col-sm-1" align="center">
-            <h5><i>АТБ</i></h5>
-            <br>
-            {% for price in atb_prices %}
-            <h5>{{price}}</h5>
-            <br>
-            {% endfor %}
-        </div>
-        <div class="col-xl-1 col-md-1 col-sm-1" align="center">
-            <h5><i>ЭКО</i></h5>
-            <br>
-            {% for price in eko_prices %}
-            <h5>{{price}}</h5>
-            <br>
-            {% endfor %}
-        </div>
-        <div class="col-xl-1 col-md-1 col-sm-1" align="center">
-            <h5><i>Varus</i></h5>
-            <br>
-            {% for price in varus_prices %}
-            <h5>{{price}}</h5>
-            <br>
-            {% endfor %}
-        </div>
-        <div class="col-xl-1 col-md-1 col-sm-1" align="center">
-            <h5><i>Сильпо</i></h5>
-            <br>
-            {% for price in silpo_prices %}
-            <h5>{{price}}</h5>
-            <br>
-            {% endfor %}
-        </div>
-        <div class="col-xl-1 col-md-1 col-sm-1" align="center">
-            <h5><i>Ашан</i></h5>
-            <br>
-            {% for price in ashan_prices %}
-            <h5>{{price}}</h5>
-            <br>
-            {% endfor %}
-        </div>
-        <div class="col-xl-1 col-md-1 col-sm-1" align="center">
-            <h5><i>Novus</i></h5>
-            <br>
-            {% for price in novus_prices %}
-            <h5>{{price}}</h5>
-            <br>
-            {% endfor %}
-        </div>
-        <div class="col-xl-1 col-md-1 col-sm-1" align="center">
-            <h5><i>Metro</i></h5>
-            <br>
-            {% for price in metro_prices %}
-            <h5>{{price}}</h5>
-            <br>
-            {% endfor %}
-        </div>
-        <div class="col-xl-1 col-md-1 col-sm-1" align="center">
-            <h5><i>НК</i></h5>
-            <br>
-            {% for price in nash_kray_prices %}
-            <h5>{{price}}</h5>
-            <br>
-            {% endfor %}
-        </div>
-        <div class="col-xl-1 col-md-1 col-sm-1" align="center">
-            <h5><i>Fozzy</i></h5>
-            <br>
-            {% for price in fozzy_prices %}
-            <h5>{{price}}</h5>
-            <br>
-            {% endfor %}
-        </div>
-    </div>
-</div>
-
-<div class="container">
-    <div class="row">
-        <div class="col-xl-12 col-md-12 col-sm-12" align="center">
-            <table class="table table-bordered">
-                <tbody>
-                <tr>
-                    <th scope="row">МАРКЕТЫ</th>
-                    {% for item in products_names %}
-                    <td>{{item}}</td>
-                    {% endfor %}
-
-                </tr>
-                <tr align="center">
-                    <th scope="row">АТБ</th>
-                    {% for price in atb_prices %}
-                    <td>{{price}}</td>
-                    {% endfor %}
-
-                </tr>
-                <tr align="center">
-                    <th scope="row">ЭКО</th>
-                    {% for price in eko_prices %}
-                    <td>{{price}}</td>
-                    {% endfor %}
-                </tr>
-                <tr align="center">
-                    <th scope="row">Varus</th>
-                    {% for price in varus_prices %}
-                    <td>{{price}}</td>
-                    {% endfor %}
-                </tr>
-                <tr align="center">
-                    <th scope="row">Сильпо</th>
-                    {% for price in silpo_prices %}
-                    <td>{{price}}</td>
-                    {% endfor %}
-                </tr>
-                <tr align="center">
-                    <th scope="row">Ашан</th>
-                    {% for price in ashan_prices %}
-                    <td>{{price}}</td>
-                    {% endfor %}
-                </tr>
-                <tr align="center">
-                    <th scope="row">Novus</th>
-                    {% for price in novus_prices %}
-                    <td>{{price}}</td>
-                    {% endfor %}
-                </tr>
-                <tr align="center">
-                    <th scope="row">Metro</th>
-                    {% for price in metro_prices %}
-                    <td>{{price}}</td>
-                    {% endfor %}
-                </tr>
-                <tr align="center">
-                    <th scope="row">Наш Край</th>
-                    {% for price in nash_kray_prices %}
-                    <td>{{price}}</td>
-                    {% endfor %}
-                </tr>
-                <tr align="center">
-                    <th scope="row">Fozzy</th>
-                    {% for price in fozzy_prices %}
-                    <td>{{price}}</td>
-                    {% endfor %}
-                </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
-
 <div class="container">
     <div class="row">
         {% for product in products_set %}
+        {% if products_set|length == 1 %}
+        <div class="col-xl-12 col-md-12 col-sm-12" align="center">
+        {% elif products_set|length == 2 %}
+        <div class="col-xl-6 col-md-6 col-sm-6" align="center">
+        {% elif products_set|length == 3 %}
+        <div class="col-xl-4 col-md-4 col-sm-4" align="center">
+        {% elif products_set|length > 3 %}
         <div class="col-xl-3 col-md-3 col-sm-3" align="center">
-            <div class="card" style="width: 15rem;">
-                <img src="..." class="card-img-top" alt="...">
+        {% endif %}
+            <div class="card" style="width: 16rem;">
                 <div class="card-body">
                     {% for key,value in product.items %}
                     <h5 class="card-title">{{key}}</h5>
+                    <img src="{{value.19.picture.url}}" class="card-img-top" alt="Error">
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">Количество: {{value.0}}</li>
@@ -260,6 +68,13 @@
                     <li class="list-group-item">Fozzy: {{value.18}}</li>
                     {% else %}
                     {% endif %}
+                    <!--определяем лучшую цену!!!НУЖНО ФИКСИТЬ!!!!!-->
+                    {% if value.1 or value.2 %}
+                    <li class="list-group-item">Лучшая цена в : {{value.20}}</li>
+                    {% else %}
+                    {% endif %}
+
+
                 </ul>
                 <br>
                 {% endfor %}

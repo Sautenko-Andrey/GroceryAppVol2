@@ -548,6 +548,78 @@ def get_sigarets_LM_red():
     '''Тэг,возвращающий информацию о "Сигареты LM красные"'''
     return ItemsPicsFromNet.objects.get(pk=103)
 
+@register.simple_tag()
+def get_beer_jigulivske_2l_plastic():
+    '''Тэг,возвращающий информацию о "Пиво Жигулевское 2л в пластике"'''
+    return ItemsPicsFromNet.objects.get(pk=104)
+
+@register.simple_tag()
+def get_beer_chayka_dniprovskaya_2l_plastic():
+    '''Тэг,возвращающий информацию о "Пиво Чайка днипровская 2л в пластике"'''
+    return ItemsPicsFromNet.objects.get(pk=105)
+
+@register.simple_tag()
+def get_beer_piwny_kubek_2l_plastic():
+    '''Тэг,возвращающий информацию о "Пиво Piwny Kubek  2л в пластике"'''
+    return ItemsPicsFromNet.objects.get(pk=106)
+
+@register.simple_tag()
+def get_ketchup_torchin_do_shasliky_270gr():
+    '''Тэг,возвращающий информацию о "Кетчуп Торчин до шашлику 270 грамм"'''
+    return ItemsPicsFromNet.objects.get(pk=107)
+
+@register.simple_tag()
+def get_mayonez_chumak_appetitniy_50_300gr():
+    '''Тэг,возвращающий информацию о "Майонез Чумак аппетитный 50% 300 грамм"'''
+    return ItemsPicsFromNet.objects.get(pk=108)
+
+@register.simple_tag()
+def get_kolbasa_persha_stolica_salyami_firmova_vs():
+    '''Тэг,возвращающий информацию о "Колбаса Перша Столиця Салями Фирменная высший сорт"'''
+    return ItemsPicsFromNet.objects.get(pk=109)
+
+@register.simple_tag()
+def get_cofee_chorna_karta_gold_50gr():
+    '''Тэг,возвращающий информацию о "Кофе Чорна Карта GOLD 50 грамм"'''
+    return ItemsPicsFromNet.objects.get(pk=110)
+
+@register.simple_tag()
+def get_beer_arsenal_micne_svitle_2l_plastic():
+    '''Тэг,возвращающий информацию о "Пиво Арсенал "Міцне" світле, 2л"'''
+    return ItemsPicsFromNet.objects.get(pk=111)
+
+@register.simple_tag()
+def get_beer_arsenal_micne_svitle_2l_plastic():
+    '''Тэг,возвращающий информацию о "Пиво Арсенал "Міцне" світле, 2л"'''
+    return ItemsPicsFromNet.objects.get(pk=112)
+
+@register.simple_tag()
+def get_beer_persha_privatna_brovarnya_bochkove_svitle_2l_plastic():
+    '''Тэг,возвращающий информацию о "Пиво "ППБ Бочкове" світле, 2л"'''
+    return ItemsPicsFromNet.objects.get(pk=112)
+
+@register.simple_tag()
+def get_beer_persha_privatna_brovarnya_zakarpatske_svitle_2l_plastic():
+    '''Тэг,возвращающий информацию о "Пиво "ППБ Закарпатське оригінальне" світле, 2л"'''
+    return ItemsPicsFromNet.objects.get(pk=113)
+
+@register.simple_tag()
+def get_beer_zibert_svitle_05_l_banochnoe():
+    '''Тэг,возвращающий информацию о "Пиво Zibert сетлое 0,5 л в банке"'''
+    return ItemsPicsFromNet.objects.get(pk=114)
+
+@register.simple_tag()
+def get_yogurt_fanni_lisovi_yagodi_1_5_240gr():
+    '''Тэг,возвращающий информацию о "Йогурт Фанни лесные ягоды 1,5% 240 грамм"'''
+    return ItemsPicsFromNet.objects.get(pk=115)
+
+@register.simple_tag()
+def get_kefir_slaviya_2_5_850gr():
+    '''Тэг,возвращающий информацию о "Кефир Славия 2,5 % 850 грамм"'''
+    return ItemsPicsFromNet.objects.get(pk=116)
+
+
+
 
 # ТЕГИ ДЛЯ БЛЮД
 

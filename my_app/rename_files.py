@@ -3,10 +3,10 @@ import random
 
 '''Для переименования фотографий продуктов папках, которые используются для обучения НС'''
 
-item_name='sous_chumak_chesnochniy_200gr'
+item_name='kefir_slaviya_2_5_850gr_v_pakete'
 file_extension = "jpg"
 
-path = '/home/andrey/grocery_data/train/sous_chumak_chesnochniy_200gr'
+path = '/home/andrey/grocery_data/train/kefir_slaviya_2_5_850gr_v_pakete'
 for file in os.listdir(path):
     if file.endswith(file_extension):
         i = random.randint(1, 999999)

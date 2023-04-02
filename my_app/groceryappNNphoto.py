@@ -83,7 +83,7 @@ class GroceryAppPhoto:
             self.conv_base,
             Flatten(),
             Dense(512, activation='relu'),      #было 256 слоев
-            Dense(47, activation='softmax')
+            Dense(54, activation='softmax')
         ])
 
         # заморозим сверточную базу:

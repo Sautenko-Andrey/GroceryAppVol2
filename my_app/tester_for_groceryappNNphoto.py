@@ -127,6 +127,20 @@ class TesterForGroceryAppPhoto:
             return 'Жвачка Orbit полуниця-банан'
         elif np.argmax(result) == 46:
             return 'Сигареты LM красные'
+        elif np.argmax(result) == 47:
+            return 'Кетчуп Торчин до шашлику 270 грамм'
+        elif np.argmax(result) == 48:
+            return 'Майонез Чумак аппетитный 50% 300 грамм'
+        elif np.argmax(result) == 49:
+            return 'Колбаса Перша Столиця Салями Фирменная высший сорт'
+        elif np.argmax(result) == 50:
+            return 'Кофе Чорна Карта GOLD 50 грамм'
+        elif np.argmax(result) == 51:
+            return 'Пиво Zibert светлое 0,5 л в банке'
+        elif np.argmax(result) == 52:
+            return 'Йогурт Фанни 240 грамм 1.5% лесовые ягоды'
+        elif np.argmax(result) == 53:
+            return 'Кефир Славия 2,5% 850 грамм'
 
 
 # user_Andrey = TesterForGroceryAppPhoto()

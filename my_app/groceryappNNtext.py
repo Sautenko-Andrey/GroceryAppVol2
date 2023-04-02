@@ -1,6 +1,14 @@
 import os
 
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "FBApp.settings")
+
+import django
+django.setup()
+
+from django.core.management import call_command
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+
 
 import numpy as np
 
@@ -26,10 +34,10 @@ class GroceryAppText:
         '''Инициализация модели НС и ее подготовка к обучению'''
 
         self.model = keras.Sequential([
-            Embedding(self.MAX_WORDS, 185, input_length=self.MAX_LENGTH_TEXT),
-            LSTM(185, return_sequences=True),  # 128
-            LSTM(135),  # 64
-            Dense(106, activation='softmax')
+            Embedding(self.MAX_WORDS, 128, input_length=self.MAX_LENGTH_TEXT),
+            LSTM(128, return_sequences=True),  # 128
+            LSTM(64),  # 64
+            Dense(116, activation='softmax')
         ])
 
         self.model.compile(optimizer=Adam(0.0001), loss='categorical_crossentropy',
@@ -42,7 +50,7 @@ class GroceryAppText:
         TRAIN_DATA, TARGET_DATA, tokenizer = self.converted_data()
 
         # запускаем тренировку:
-        history = self.model.fit(TRAIN_DATA, TARGET_DATA, batch_size=50, epochs=150)
+        history = self.model.fit(TRAIN_DATA, TARGET_DATA, batch_size=50, epochs=50)
 
         reverse_word_map = dict(map(reversed, self.converted_data()[2].word_index.items()))
 
@@ -174,6 +182,16 @@ class GroceryAppText:
         beer_jigulivske_svitle_2_l_plastic_text=self.add_new_item('beer_jigulivske_svitle_2_l_plastic.txt')
         beer_chayka_dniprovska_svitle_2l_plastic_text=self.add_new_item('beer_chayka_dniprovska_svitle_2l_plastic.txt')
         beer_piwny_kubek_svitle_2l_plastic_text=self.add_new_item('beer_piwny_kubek_svitle_2l_plastic.txt')
+        ketchup_torchin_do_shasliky_270gr_test=self.add_new_item('ketchup_torchin_do_shasliky_270gr.txt')
+        mayonez_chumak_appetitniy_50_300gr_text=self.add_new_item('mayonez_chumak_appetitniy_50_300gr.txt')
+        kolbasa_persha_stolica_salyami_firmennaya_vs_text=self.add_new_item('kolbasa_persha_stolica_salyami_firmennaya_vs.txt')
+        coffee_chorna_karta_gold_50gr_text=self.add_new_item('coffee_chorna_karta_gold_50gr.txt')
+        beer_arsenal_micne_svitle_2l_plastic_text=self.add_new_item('beer_arsenal_micne_svitle_2l_plastic.txt')
+        beer_ppb_bochkove_svitle_2l_plastic_text=self.add_new_item('beer_ppb_bochkove_svitle_2l_plastic.txt')
+        beer_ppb_zakarpatske_originalne_svitle_2l_plastic_text=self.add_new_item('beer_ppb_zakarpatske_originalne_svitle_2l_plastic.txt')
+        beer_zibert_svitle_05_l_banochnoe_text=self.add_new_item('beer_zibert_svitle_05_l_banochnoe.txt')
+        yogurt_fanni_1_5_240gr_v_banke_text=self.add_new_item('yogurt_fanni_1_5_240gr_v_banke.txt')
+        kefir_slviya_2_5_850gr_v_pakete_text=self.add_new_item('kefir_slviya_2_5_850gr_v_pakete.txt')
 
         # объединям обучающие выборки:
         texts = obolon_premium_extra_11_text + hetman_sagaydachniy_07_text \
@@ -222,7 +240,12 @@ class GroceryAppText:
                 + beer_chernigivske_bile_nefilter_1l_plastic_text + beer_obolon_svitle_1l_plastic_text\
                 + beer_rogan_svitle_tradiciyne_1l_plastic_text + sous_chumak_chesnochniy_200gr_text\
                 + jvachka_orbit_clubnika_banan_text + LM_red_text + beer_jigulivske_svitle_2_l_plastic_text\
-                + beer_chayka_dniprovska_svitle_2l_plastic_text + beer_piwny_kubek_svitle_2l_plastic_text
+                + beer_chayka_dniprovska_svitle_2l_plastic_text + beer_piwny_kubek_svitle_2l_plastic_text\
+                + ketchup_torchin_do_shasliky_270gr_test + mayonez_chumak_appetitniy_50_300gr_text\
+                + kolbasa_persha_stolica_salyami_firmennaya_vs_text + coffee_chorna_karta_gold_50gr_text\
+                + beer_arsenal_micne_svitle_2l_plastic_text + beer_ppb_bochkove_svitle_2l_plastic_text\
+                + beer_ppb_zakarpatske_originalne_svitle_2l_plastic_text + beer_zibert_svitle_05_l_banochnoe_text\
+                + yogurt_fanni_1_5_240gr_v_banke_text + kefir_slviya_2_5_850gr_v_pakete_text
 
         # подсчитываем кол-во выборок
         count_obolon_premium_extra_11_text = len(obolon_premium_extra_11_text)
@@ -331,6 +354,16 @@ class GroceryAppText:
         count_beer_jigulivske_svitle_2_l_plastic_text=len(beer_jigulivske_svitle_2_l_plastic_text)
         count_beer_chayka_dniprovska_svitle_2l_plastic_text=len(beer_chayka_dniprovska_svitle_2l_plastic_text)
         count_beer_piwny_kubek_svitle_2l_plastic_text=len(beer_piwny_kubek_svitle_2l_plastic_text)
+        count_ketchup_torchin_do_shasliky_270gr_test=len(ketchup_torchin_do_shasliky_270gr_test)
+        count_mayonez_chumak_appetitniy_50_300gr_text=len(mayonez_chumak_appetitniy_50_300gr_text)
+        count_kolbasa_persha_stolica_salyami_firmennaya_vs_text=len(kolbasa_persha_stolica_salyami_firmennaya_vs_text)
+        count_coffee_chorna_karta_gold_50gr_text=len(coffee_chorna_karta_gold_50gr_text)
+        count_beer_arsenal_micne_svitle_2l_plastic_text=len(beer_arsenal_micne_svitle_2l_plastic_text)
+        count_beer_ppb_bochkove_svitle_2l_plastic_text=len(beer_ppb_bochkove_svitle_2l_plastic_text)
+        count_beer_ppb_zakarpatske_originalne_svitle_2l_plastic_text=len(beer_ppb_zakarpatske_originalne_svitle_2l_plastic_text)
+        count_beer_zibert_svitle_05_l_banochnoe_text=len(beer_zibert_svitle_05_l_banochnoe_text)
+        count_yogurt_fanni_1_5_240gr_v_banke_text=len(yogurt_fanni_1_5_240gr_v_banke_text)
+        count_kefir_slviya_2_5_850gr_v_pakete_text=len(kefir_slviya_2_5_850gr_v_pakete_text)
 
         return texts, count_obolon_premium_extra_11_text, count_hetman_sagaydachniy_07_text, \
                count_coffee_aroma_gold_classic_100gr_text, count_apple_golden_text, count_coca_cola_2l_text, \
@@ -373,7 +406,12 @@ class GroceryAppText:
                count_mayonez_korolivskiy_smak_kororlivskiy_67_300gr_text,count_beer_chernigivske_bile_nefilter_1l_plastic_text,\
                count_beer_obolon_svitle_1l_plastic_text,count_beer_rogan_svitle_tradiciyne_1l_plastic_text,count_sous_chumak_chesnochniy_200gr_text,\
                count_jvachka_orbit_clubnika_banan_text,count_LM_red_text,count_beer_jigulivske_svitle_2_l_plastic_text,\
-               count_beer_chayka_dniprovska_svitle_2l_plastic_text,count_beer_piwny_kubek_svitle_2l_plastic_text
+               count_beer_chayka_dniprovska_svitle_2l_plastic_text,count_beer_piwny_kubek_svitle_2l_plastic_text,\
+               count_ketchup_torchin_do_shasliky_270gr_test,count_mayonez_chumak_appetitniy_50_300gr_text,\
+               count_kolbasa_persha_stolica_salyami_firmennaya_vs_text,count_coffee_chorna_karta_gold_50gr_text,\
+               count_beer_arsenal_micne_svitle_2l_plastic_text,count_beer_ppb_bochkove_svitle_2l_plastic_text,\
+               count_beer_ppb_zakarpatske_originalne_svitle_2l_plastic_text,count_beer_zibert_svitle_05_l_banochnoe_text,\
+               count_yogurt_fanni_1_5_240gr_v_banke_text,count_kefir_slviya_2_5_850gr_v_pakete_text
 
 
     def converted_data(self):
@@ -399,7 +437,7 @@ class GroceryAppText:
 
         # окончательно формируем обучающую выборку:
         TRAIN_SAMPLE = data_pad
-        items = 106
+        items = 116
         TARGET_SAMPLE = np.array(
             make_list(items, 0) *
             self.upload_data()[1] + make_list(items, 1) * self.upload_data()[2] + make_list(items, 2) *
@@ -455,7 +493,17 @@ class GroceryAppText:
             self.upload_data()[101]+ make_list(items, 101) *self.upload_data()[102]+ make_list(items, 102) *
             self.upload_data()[103]+ make_list(items, 103) *self.upload_data()[104]+ make_list(items, 104) *
             self.upload_data()[105]+ make_list(items, 105) *
-            self.upload_data()[106])
+            self.upload_data()[106]+ make_list(items, 106) *
+            self.upload_data()[107]+ make_list(items, 107) *
+            self.upload_data()[108]+ make_list(items, 108) *
+            self.upload_data()[109]+ make_list(items, 109) *
+            self.upload_data()[110]+ make_list(items, 110) *
+            self.upload_data()[111]+ make_list(items, 111) *
+            self.upload_data()[112]+ make_list(items, 112) *
+            self.upload_data()[113]+ make_list(items, 113) *
+            self.upload_data()[114]+ make_list(items, 114) *
+            self.upload_data()[115]+ make_list(items, 115) *
+            self.upload_data()[116])
 
         # перемешиваем обучающую выборку для лучшей тренированности НС:
         # создаем рандомные индексы:

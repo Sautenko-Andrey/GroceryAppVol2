@@ -137,7 +137,16 @@ class TesterForGroceryAppText:
         beer_jigulivske_svitle_2_l_plastic_text = self.add_new_item('beer_jigulivske_svitle_2_l_plastic.txt')
         beer_chayka_dniprovska_svitle_2l_plastic_text = self.add_new_item('beer_chayka_dniprovska_svitle_2l_plastic.txt')
         beer_piwny_kubek_svitle_2l_plastic_text = self.add_new_item('beer_piwny_kubek_svitle_2l_plastic.txt')
-
+        ketchup_torchin_do_shasliky_270gr_test = self.add_new_item('ketchup_torchin_do_shasliky_270gr.txt')
+        mayonez_chumak_appetitniy_50_300gr_text = self.add_new_item('mayonez_chumak_appetitniy_50_300gr.txt')
+        kolbasa_persha_stolica_salyami_firmennaya_vs_text = self.add_new_item('kolbasa_persha_stolica_salyami_firmennaya_vs.txt')
+        coffee_chorna_karta_gold_50gr_text = self.add_new_item('coffee_chorna_karta_gold_50gr.txt')
+        beer_arsenal_micne_svitle_2l_plastic_text = self.add_new_item('beer_arsenal_micne_svitle_2l_plastic.txt')
+        beer_ppb_bochkove_svitle_2l_plastic_text = self.add_new_item('beer_ppb_bochkove_svitle_2l_plastic.txt')
+        beer_ppb_zakarpatske_originalne_svitle_2l_plastic_text = self.add_new_item('beer_ppb_zakarpatske_originalne_svitle_2l_plastic.txt')
+        beer_zibert_svitle_05_l_banochnoe_text = self.add_new_item('beer_zibert_svitle_05_l_banochnoe.txt')
+        yogurt_fanni_1_5_240gr_v_banke_text = self.add_new_item('yogurt_fanni_1_5_240gr_v_banke.txt')
+        kefir_slviya_2_5_850gr_v_pakete_text = self.add_new_item('kefir_slviya_2_5_850gr_v_pakete.txt')
 
         # объединям обучающие выборки:
         texts = obolon_premium_extra_11_text+ hetman_sagaydachniy_07_text\
@@ -187,7 +196,12 @@ class TesterForGroceryAppText:
                 + muka_zolote_zernyatko_pshen_2kg_text + mayonez_korolivskiy_smak_kororlivskiy_67_300gr_text\
                 + beer_chernigivske_bile_nefilter_1l_plastic_text + beer_obolon_svitle_1l_plastic_text\
                 + beer_rogan_svitle_tradiciyne_1l_plastic_text + sous_chumak_chesnochniy_200gr_text + jvachka_orbit_clubnika_banan_text\
-                + LM_red_text + beer_jigulivske_svitle_2_l_plastic_text + beer_chayka_dniprovska_svitle_2l_plastic_text + beer_piwny_kubek_svitle_2l_plastic_text
+                + LM_red_text + beer_jigulivske_svitle_2_l_plastic_text + beer_chayka_dniprovska_svitle_2l_plastic_text\
+                + beer_piwny_kubek_svitle_2l_plastic_text + ketchup_torchin_do_shasliky_270gr_test\
+                + mayonez_chumak_appetitniy_50_300gr_text + kolbasa_persha_stolica_salyami_firmennaya_vs_text\
+                + coffee_chorna_karta_gold_50gr_text + beer_arsenal_micne_svitle_2l_plastic_text\
+                + beer_ppb_bochkove_svitle_2l_plastic_text + beer_ppb_zakarpatske_originalne_svitle_2l_plastic_text\
+                + beer_zibert_svitle_05_l_banochnoe_text + yogurt_fanni_1_5_240gr_v_banke_text + kefir_slviya_2_5_850gr_v_pakete_text
 
         return texts
 
@@ -435,10 +449,30 @@ class TesterForGroceryAppText:
         elif np.argmax(result) == 102:
             return 'Сигареты LM красные'
         elif np.argmax(result) == 103:
-            return ' Жигулевское светлое 2 литра'
+            return 'Жигулевское светлое 2 литра'
         elif np.argmax(result) == 104:
             return 'Пиво Чайка Днепровская 2 литра'
         elif np.argmax(result) == 105:
             return 'Пиво Piwny Kebek 2 литра'
+        elif np.argmax(result) == 106:
+            return 'Кетчуп Торчин до шашлику 270 грамм'
+        elif np.argmax(result) == 107:
+            return 'Майонез Чумак аппетитный 50% 300 грамм'
+        elif np.argmax(result) == 108:
+            return 'Колбаса Перша Столиця Салями Фирменная высший сорт'
+        elif np.argmax(result) == 109:
+            return 'Кофе Чорна Карта GOLD 50 грамм'
+        elif np.argmax(result) == 110:
+            return 'Пиво Арсенал "Міцне" світле, 2л'
+        elif np.argmax(result) == 111:
+            return 'Пиво "ППБ Бочкове" світле, 2л'
+        elif np.argmax(result) == 112:
+            return 'Пиво "ППБ Закарпатське оригінальне" світле, 2л'
+        elif np.argmax(result) == 113:
+            return 'Пиво Zibert светлое 0,5 л в банке'
+        elif np.argmax(result) == 114:
+            return 'Йогурт Фанни 240 грамм 1.5% лесовые ягоды'
+        elif np.argmax(result) == 115:
+            return 'Кефир Славия 2,5% 850 грамм'
 
 
