@@ -1137,6 +1137,176 @@ class ProductParserVol2:
             'https://fozzyshop.ua/ru/pivo-svetloe/20248-pivo-rogan-tradicijne-svetloe-4820034921609.html'
         ])
 
+    def beer_jigulivske_svitle_2l_plastic_parser(self):
+        ''' Парсер для пива Жигулевское светлое 2 литра в пластике'''
+        return self.prices_parsing([
+            'https://varus.ua/pivo-zhigulivske-obolon-2-4l',
+        ])
+
+    def beer_chayka_dniprovska_2l_plastic_parser(self):
+        ''' Парсер для пива Чайка днепровская светлое 2 литра в пластике'''
+        return self.prices_parsing([
+            'https://shop.silpo.ua/product/pyvo-chaika-dniprovska-svitle-832996',
+            'https://novus.online/product/pivo-svitle-cajka-dniprovska-48-2l-pet',
+            'https://metro.zakaz.ua/uk/products/pivo-chaika-2000ml--04820046964076/',
+            'https://fozzyshop.ua/ru/pivo-svetloe/92485-pivo-chajka-dneprovskaya-svetloe-4820046964083.html'
+        ])
+
+    def beer_piwny_kebek_svitle_2l_plastic_parser(self):
+        ''' Парсер для пива Piwny Kebek светлое 2 литра в пластике'''
+        return self.prices_parsing([
+            'https://varus.ua/pivo-piwny-kubek-2l',
+        ])
+
+    def ketchup_torchin_do_shashliky_270gr_parser(self):
+        ''' Парсер для кетчупа Торчин до шашлику 270 грамм'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/ketchup-torchin-270g--07613036160728/',
+            'https://varus.ua/ketchup-torchin-do-shashliku-400-g',
+            'https://shop.silpo.ua/product/ketchup-torchyn-do-shashlyku-767757',
+            'https://auchan.ua/ua/ketchup-chumak-k-shashlyku-doj-pak-270-g-274436/',
+            'https://novus.online/product/ketcup-do-sasliku-torcin-dp-270g',
+            'https://fozzyshop.ua/ru/ketchup/56869-ketchup-torchin-k-shashlyku-d-p-7613036160728.html'
+        ])
+
+    def mayonez_chumak_appetitniy_50_300gr_parser(self):
+        ''' Парсер для майонеза Чумак аппетитный 50% 300 грамм'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/maionez-chumak-300g--04823096003412/',
+            'https://varus.ua/mayonez-apetitniy-50-chumak-300g-dp',
+            'https://shop.silpo.ua/product/maionez-chumak-apetytnyi-50-819161',
+            'https://novus.online/product/majonez-apetitnij-50-cumak-dp-300g',
+            'https://metro.zakaz.ua/uk/products/maionez-chumak-300g--04823096003412/'
+        ])
+
+    def coffee_chorna_karta_50gr_parser(self):
+        ''' Парсер для кофе Черная карта 50 грамм'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/kava-chorna-karta--08719325020113/'
+        ])
+
+    def beer_arsenal_micne_2l_plastic_parser(self):
+        ''' Парсер для пива Арсенал мицне 2 литра в пластике'''
+        return self.prices_parsing([
+            'https://metro.zakaz.ua/uk/products/pivo-arsenal-ukrayina--04820250940842/',
+            'https://shop.nashkraj.ua/kovel/product/33436-pivo-arsenal-2l-mitsne-8',
+            'https://fozzyshop.ua/ru/pivo-svetloe/2846-pivo-arsenal-micne-svetloe-4820000451444.html'
+        ])
+
+    def beer_ppb_bochkove_svitle_2l_plastic_parser(self):
+        ''' Парсер для пива ППБ Бочкове свитле 2 литра в пластике'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-persha-privatna-brovarnia-2000ml-ukrayina--04820046960856/',
+            'https://shop.silpo.ua/product/pyvo-persha-pryvatna-brovarnia-bochkove-svitle-474835',
+            'https://novus.online/product/pivo-svitle-bockove-ppb-2l',
+            'https://metro.zakaz.ua/uk/products/pivo-persha-privatna-brovarnia-2000ml-ukrayina--04820046960856/'
+        ])
+
+    def beer_ppb_zakarpatske_svitle_2l_plastic_parser(self):
+        ''' Парсер для пива ППБ Закарпатське свитле 2 литра в пластике'''
+        return self.prices_parsing([
+           'https://shop.silpo.ua/product/pyvo-persha-pryvatna-brovarnia-zakarpatske-oryginalne-svitle-660939',
+            'https://novus.online/product/pivo-2l-zakarpatskoe-ppb-pet',
+            'https://metro.zakaz.ua/uk/products/pivo-persha-privatna-brovarnia-2000ml--04820046961266/'
+        ])
+
+    def beer_zibert_svitle_05l_v_banke_parser(self):
+        ''' Парсер для пива Зиберт светлое 0,5 л в банке'''
+        return self.prices_parsing([
+            'https://atbmarket.com/product/pivo-05l-zibert-lager-beer-svitle-zb',
+            'https://eko.zakaz.ua/uk/products/pivo-zibert-500ml--04820193030303/',
+            'https://varus.ua/pivo-zibert-svitle-filtrovane-4-4-0-5-l',
+            'https://novus.online/product/pyvo-svitle-zibert-44-05l-zb',
+            'https://metro.zakaz.ua/uk/products/pivo-zibert-500ml--04820193030303/'
+        ])
+
+    def yogurt_fanni_lisovi_yagodi_1_5_240gr_stakan_parser(self):
+        ''' Парсер для пива Зиберт светлое 0,5 л в банке'''
+        return self.prices_parsing([
+            'https://varus.ua/yogurt-lisyagoda-1-5-fanni-240g-stakan',
+            'https://shop.silpo.ua/product/yogurt-fanni-lisova-iagoda-1-5-stakan-854431'
+        ])
+
+    def beer_obolon_kievskoe_razlivnoe_svetloe_195l_parser(self):
+        ''' Парсер для пива Оболонь Киевское розливное светлое 1,95 литра в пластике'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-obolon-1950ml-ukrayina--04820193032284/',
+            'https://varus.ua/pivo-1-95l-3-8-svitle-pasterizovane-kiivske-rozlivne-obolon-ppl',
+            'https://novus.online/product/pivo-svitle-obolon-kiivske-rozlivne-38-195l-pet',
+            'https://metro.zakaz.ua/uk/products/pivo-obolon-1950ml-ukrayina--04820193032284/'
+        ])
+
+    def beer_chernigivske_light_svitle_2l_plastic_parser(self):
+        ''' Парсер для Пиво Черниговское light светлое 2,0 л в пластике'''
+        return self.prices_parsing([
+            'https://atbmarket.com/product/pivo-2-l-cernigivske-light-svitle-pet',
+            'https://shop.silpo.ua/product/pyvo-chernigivske-light-svitle-921796',
+            'https://metro.zakaz.ua/uk/products/ukrayina--04820034925898/'
+        ])
+
+    def beer_opilla_korifey_svitle_2l_plastic_parser(self):
+        ''' Парсер для Пиво Опилля Корифей светлое 2,0 л в пластике'''
+        return self.prices_parsing([
+            'https://auchan.ua/ua/pivo-opillja-korifej-3-7-2-l-1020713/',
+            'https://novus.online/product/pyvo-svitle-opillya-koryfey-42-2l-plastykova-plyashka',
+            'https://metro.zakaz.ua/uk/products/pivo-opillia-2000ml-ukrayina--04820158671565/'
+        ])
+
+    def beer_yantar_svitle_2l_plastic_parser(self):
+        ''' Парсер для Пиво Янтарь светлое 2,0 л в пластике'''
+        return self.prices_parsing([
+            'https://metro.zakaz.ua/uk/products/pivo-iantar-2000ml-ukrayina--04820034920626/'
+        ])
+
+    def beer_tuborg_green_svitle_4_banki_05l_parser(self):
+        ''' Парсер для Пиво Tuborg Green 4 банки х 0,5 л'''
+        return self.prices_parsing([
+            'https://shop.silpo.ua/product/pyvo-tuborg-green-svitle-z-b-224869',
+            'https://auchan.ua/ua/upakovka-piva-tuborg-green-svetloe-fil-trovannoe-4-6-4-sht-h0-5-l-1031988/',
+            'https://metro.zakaz.ua/uk/products/pivo-tuborg-2000ml-ukrayina--04820000452687/',
+            'https://fozzyshop.ua/ru/pivo-svetloe/2689-pivo-tuborg-green-svetloe-multipak-4820000452687.html'
+        ])
+
+    def beer_ppb_zakarpatske_svitle_4_banki_05l_parser(self):
+        ''' Парсер для Пиво ППБ Закарпатське 4 банки х 0,5 л'''
+        return self.prices_parsing([
+            'https://shop.silpo.ua/product/pyvo-persha-pryvatna-brovarnia-zakarpatske-oryginalne-svitle-z-b-825769',
+            'https://auchan.ua/ua/pivo-persha-privatna-brovarnja-zakarpats-ke-svetloe-4-1-4-sht-h-0-5-l-1031698/',
+            'https://novus.online/product/pivo-svitle-ppb-zakarpatske-originalne-44-05l4-zb',
+            'https://metro.zakaz.ua/uk/products/pivo-persha-privatna-brovarnia-2000ml-ukrayina--04820046963918/'
+        ])
+
+    def beer_ppb_bochkove_svitle_4_banki_05l_parser(self):
+        ''' Парсер для Пиво ППБ Бочкове 4 банки х 0,5 л'''
+        return self.prices_parsing([
+            'https://shop.silpo.ua/product/pyvo-persha-pryvatna-brovarnia-bochkove-svitle-z-b-810145',
+            'https://novus.online/product/pivo-svitle-ppb-bockove-48-05l4-zb',
+            'https://metro.zakaz.ua/uk/products/pivo-persha-privatna-brovarnia-2000ml--04820046963741/'
+        ])
+
+    def beer_budweiser_budvar_svitle_05l_parser(self):
+        ''' Парсер для Пиво Budweiser Budvar светлое 0,5 л в стекле'''
+        return self.prices_parsing([
+            'https://varus.ua/pivo-0-5l-5-sv-budweiser-budvar-borig',
+            'https://auchan.ua/ua/pivo-budweiser-budvar-svetloe-fil-trovannoe-5-0-5-l-577071-1031543/',
+            'https://novus.online/product/pivo-svitle-budweiser-budvar-5-05l-sklpl',
+            'https://metro.zakaz.ua/uk/products/pivo-budvaizer-budvar-500ml-chekhiia--08594403110111/'
+        ])
+
+    def beer_pilsner_urquell_05l_glass_parser(self):
+        ''' Парсер для Пиво Pilsner Urquell светлое 0,5 л в стекле'''
+        return self.prices_parsing([
+            'https://metro.zakaz.ua/uk/products/pivo-budvaizer-budvar-500ml-chekhiia--08594403110111/'
+        ])
+
+    def beer_robert_doms_belgiyskiy_svitle_nefilter_05l_glass_parser(self):
+        ''' Парсер для Пиво Robert Doms бельгийский светлое нефильтрованное 0,5 л в стекле'''
+        return self.prices_parsing([
+            'https://varus.ua/pivo-spec-0-5l-belgiyskiy-robert-doms',
+            'https://shop.silpo.ua/product/pyvo-robert-doms-belgiiske-svitle-nefiltrovane-666610',
+            'https://metro.zakaz.ua/uk/products/pivo-lvivske-500ml--04820000456401/'
+        ])
+
 
 
 

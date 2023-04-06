@@ -147,6 +147,7 @@ class TesterForGroceryAppText:
         beer_zibert_svitle_05_l_banochnoe_text = self.add_new_item('beer_zibert_svitle_05_l_banochnoe.txt')
         yogurt_fanni_1_5_240gr_v_banke_text = self.add_new_item('yogurt_fanni_1_5_240gr_v_banke.txt')
         kefir_slviya_2_5_850gr_v_pakete_text = self.add_new_item('kefir_slviya_2_5_850gr_v_pakete.txt')
+        beer_obolon_kievske_rozlivne_svitle_195l_plastic_text = self.add_new_item('beer_obolon_kievske_rozlivne_svitle_195l_plastic.txt')
 
         # объединям обучающие выборки:
         texts = obolon_premium_extra_11_text+ hetman_sagaydachniy_07_text\
@@ -201,7 +202,8 @@ class TesterForGroceryAppText:
                 + mayonez_chumak_appetitniy_50_300gr_text + kolbasa_persha_stolica_salyami_firmennaya_vs_text\
                 + coffee_chorna_karta_gold_50gr_text + beer_arsenal_micne_svitle_2l_plastic_text\
                 + beer_ppb_bochkove_svitle_2l_plastic_text + beer_ppb_zakarpatske_originalne_svitle_2l_plastic_text\
-                + beer_zibert_svitle_05_l_banochnoe_text + yogurt_fanni_1_5_240gr_v_banke_text + kefir_slviya_2_5_850gr_v_pakete_text
+                + beer_zibert_svitle_05_l_banochnoe_text + yogurt_fanni_1_5_240gr_v_banke_text\
+                + kefir_slviya_2_5_850gr_v_pakete_text + beer_obolon_kievske_rozlivne_svitle_195l_plastic_text
 
         return texts
 
@@ -474,5 +476,25 @@ class TesterForGroceryAppText:
             return 'Йогурт Фанни 240 грамм 1.5% лесовые ягоды'
         elif np.argmax(result) == 115:
             return 'Кефир Славия 2,5% 850 грамм'
+        elif np.argmax(result) == 116:
+            return 'Пиво Оболонь Киевское розливное светлое 1,95 литра в пластике'
+        elif np.argmax(result) == 117:
+            return 'Пиво Черниговское light светлое 2,0 л в пластике'
+        elif np.argmax(result) == 118:
+            return 'Пиво Опилля Корифей светлое 2,0 л в пластике'
+        elif np.argmax(result) == 119:
+            return 'Пиво Янтарь светлое 2,0 л в пластике'
+        elif np.argmax(result) == 120:
+            return 'Пиво Tuborg Green 4 банки х 0,5 л'
+        elif np.argmax(result) == 121:
+            return 'Пиво ППБ Закарпатське 4 банки х 0,5 л'
+        elif np.argmax(result) == 122:
+            return 'Пиво ППБ Бочкове 4 банки х 0,5 л'
+        elif np.argmax(result) == 123:
+            return 'Пиво Budweiser Budvar светлое 0,5 л в стекле'
+        elif np.argmax(result) == 124:
+            return 'Пиво Pilsner Urquell светлое 0,5 л в стекле'
+        elif np.argmax(result) == 125:
+            return 'Пиво Robert Doms бельгийский светлое нефильтрованное 0,5 л в стекле'
 
 

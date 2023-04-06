@@ -1,25 +1,25 @@
 {
   "obolon_premium_1.1_l": {
-    "atb": 51.4,
-    "eko": 32.9
+    "atb": 49.5,
+    "eko": 47.9
   },
   "vodka_hetman_ice_07": {
     "atb": 147.6
   },
   "coca_cola_2l": {
-    "atb": 42.6,
-    "eko": 42.5,
+    "atb": 44.9,
+    "eko": 39.9,
     "varus": 42.5,
-    "silpo": 39.78,
+    "silpo": 40.39,
     "ashan": 42.5,
     "novus": 42.19,
-    "metro": 42.5,
-    "nash_kray": 42.99,
-    "fozzy": 42.5
+    "metro": 41.9,
+    "nash_kray": 43.99,
+    "fozzy": 39.0
   },
   "garlik": {
     "atb": 103.9,
-    "eko": 119.0,
+    "eko": 109.0,
     "varus": 103.9,
     "silpo": 10.2,
     "novus": 102.0,
@@ -27,17 +27,17 @@
     "fozzy": 101.9
   },
   "tea_minutka": {
-    "atb": 28.9,
+    "atb": 24.4,
     "eko": 26.9,
     "metro": 28.51
   },
   "apple_golden": {
-    "atb": 21.95,
-    "eko": 19.9,
-    "varus": 22.9,
+    "atb": 22.95,
+    "eko": 25.9,
+    "varus": 23.9,
     "silpo": 2.1,
     "metro": 22.78,
-    "nash_kray": 16.99,
+    "nash_kray": 19.99,
     "fozzy": 21.9
   },
   "sigarets_kent_8": {
@@ -45,62 +45,62 @@
     "eko": 87.99,
     "varus": 86.0,
     "silpo": 87.94,
-    "ashan": 85.9,
+    "ashan": 87.9,
     "novus": 83.8,
     "fozzy": 85.94
   },
   "coffee_aroma_gold": {
-    "eko": 109.9,
+    "eko": 149.9,
     "fozzy": 0
   },
   "oil_shedriy_dar_raf_850": {
-    "atb": 65.88,
-    "eko": 67.9,
+    "atb": 62.58,
+    "eko": 72.39,
     "varus": 0,
     "silpo": 67.99,
     "ashan": 65.8,
     "novus": 67.19,
-    "metro": 69.85,
+    "metro": 65.9,
     "fozzy": 68.9
   },
   "fairy_limon_500": {
-    "atb": 60.2,
+    "atb": 58.9,
     "eko": 79.9,
-    "varus": 129.0,
-    "silpo": 55.99,
-    "novus": 73.59,
+    "varus": 79.9,
+    "silpo": 66.99,
+    "novus": 59.49,
     "metro": 78.41,
     "fozzy": 52.9
   },
   "onion": {
-    "atb": 51.65,
-    "eko": 52.9,
+    "atb": 50.59,
+    "eko": 45.9,
     "varus": 50.5,
-    "silpo": 5.1,
-    "novus": 50.99,
-    "metro": 62.3,
+    "silpo": 5.4,
+    "novus": 52.39,
+    "metro": 60.22,
     "nash_kray": 62.99,
-    "fozzy": 59.9
+    "fozzy": 60.9
   },
   "apple_black_prince": {
-    "atb": 25.95,
+    "atb": 26.95,
     "eko": 16.99,
-    "varus": 21.9,
+    "varus": 54.5,
     "silpo": 2.4,
-    "metro": 27.98,
+    "metro": 23.82,
     "fozzy": 25.9
   },
   "smetana_stol_smaky_20%": {
     "varus": 36.9
   },
   "limon": {
-    "atb": 49.95,
-    "eko": 62.9,
-    "varus": 0,
+    "atb": 47.95,
+    "eko": 49.9,
+    "varus": 54.5,
     "silpo": 5.5,
     "novus": 0,
     "metro": 57.1,
-    "nash_kray": 62.99,
+    "nash_kray": 61.99,
     "fozzy": 42.9
   },
   "oil_oleyna_neraf_850": {
@@ -111,59 +111,59 @@
     "eko": 76.09
   },
   "arko_cool_200": {
-    "atb": 68.9,
+    "atb": 78.9,
     "eko": 94.19,
     "varus": 67.9,
-    "silpo": 78.99,
+    "silpo": 79.99,
     "ashan": 75.4,
     "novus": 97.99,
-    "metro": 60.37,
+    "metro": 91.8,
     "fozzy": 55.4
   },
   "arko_sensitive_200": {
-    "atb": 68.9,
+    "atb": 78.9,
     "eko": 94.19,
     "varus": 64.8,
-    "silpo": 71.99,
-    "ashan": 75.4,
+    "silpo": 79.99,
+    "ashan": 86.7,
     "novus": 97.99,
-    "metro": 60.37,
-    "nash_kray": 96.8,
+    "metro": 91.8,
+    "nash_kray": 106.6,
     "fozzy": 55.9
   },
   "carrot": {
-    "atb": 43.95,
+    "atb": 39.95,
     "eko": 44.9,
     "varus": 43.9,
     "silpo": 4.6,
-    "novus": 39.69,
-    "metro": 43.58,
-    "nash_kray": 40.99,
+    "novus": 39.99,
+    "metro": 41.18,
+    "nash_kray": 41.99,
     "fozzy": 43.9
   },
   "cabbage": {
     "atb": 23.95,
-    "eko": 21.8,
-    "varus": 23.9,
+    "eko": 23.9,
+    "varus": 24.9,
     "silpo": 2.19,
     "novus": 21.89,
-    "metro": 22.67,
-    "nash_kray": 28.99,
-    "fozzy": 23.9
+    "metro": 20.9,
+    "nash_kray": 26.99,
+    "fozzy": 24.9
   },
   "eggs": {
-    "atb": 57.5,
+    "atb": 57.9,
     "eko": 4.99,
     "varus": 5.79,
     "silpo": 63.49,
     "ashan": 96.9,
     "novus": 63.49,
-    "metro": 70.2,
+    "metro": 67.5,
     "nash_kray": 67.99,
-    "fozzy": 5.93
+    "fozzy": 5.79
   },
   "mayonez_detsk_shedro_67%": {
-    "atb": 33.3,
+    "atb": 28.9,
     "eko": 40.15,
     "varus": 32.1,
     "silpo": 33.79,
@@ -179,7 +179,7 @@
     "eko": 85.0,
     "varus": 85.0,
     "silpo": 84.94,
-    "ashan": 85.0,
+    "ashan": 72.9,
     "novus": 80.95,
     "fozzy": 84.94
   },
@@ -190,44 +190,44 @@
     "fozzy": 78.99
   },
   "smetana_stol_smaky_15%": {
-    "varus": 32.9
+    "varus": 0
   },
   "water_in_bottle_6l": {
-    "atb": 43.9,
-    "eko": 48.9,
-    "varus": 29.9,
+    "atb": 46.5,
+    "eko": 57.69,
+    "varus": 34.4,
     "novus": 34.99,
     "nash_kray": 66.5,
     "fozzy": 35.89
   },
   "pork_lopatka": {
-    "atb": 143.9,
-    "eko": 164.9,
-    "varus": 175.9,
+    "atb": 159.9,
+    "eko": 172.9,
+    "varus": 165.9,
     "novus": 159.0,
-    "metro": 166.9,
-    "fozzy": 147.9
+    "metro": 179.1,
+    "fozzy": 154.9
   },
   "potato": {
-    "atb": 7.59,
-    "eko": 7.5,
-    "varus": 8.4,
+    "atb": 6.99,
+    "eko": 8.3,
+    "varus": 8.1,
     "novus": 12.99,
-    "metro": 9.26,
+    "metro": 7.7,
     "fozzy": 8.9
   },
   "beet": {
-    "atb": 8.95,
-    "eko": 9.2,
-    "varus": 8.2,
-    "silpo": 0.77,
-    "novus": 0,
-    "metro": 10.3,
+    "atb": 6.95,
+    "eko": 5.9,
+    "varus": 7.8,
+    "silpo": 0.72,
+    "novus": 6.99,
+    "metro": 7.12,
     "fozzy": 9.9
   },
   "four": {
     "atb": 20.9,
-    "eko": 20.8,
+    "eko": 22.69,
     "varus": 14.9,
     "novus": 16.29,
     "metro": 26.8,
@@ -235,8 +235,8 @@
     "fozzy": 15.44
   },
   "oil_for_dish": {
-    "atb": 64.68,
-    "eko": 58.9,
+    "atb": 48.9,
+    "eko": 64.9,
     "varus": 64.6,
     "novus": 61.99,
     "metro": 51.5,
@@ -245,19 +245,19 @@
   },
   "smetana_for_dish": {
     "atb": 36.8,
-    "eko": 36.19,
-    "varus": 33.3,
-    "novus": 36.99,
-    "metro": 35.26,
-    "fozzy": 0
+    "eko": 36.2,
+    "varus": 35.3,
+    "novus": 36.19,
+    "metro": 34.74,
+    "fozzy": 25.9
   },
   "desodorant_garnier_man": {
-    "silpo": 104.0,
-    "fozzy": 0
+    "silpo": 114.0,
+    "fozzy": 25.9
   },
   "cofee_aroma_gold_freeze_dried_70g": {
-    "eko": 109.9,
-    "silpo": 139.0,
+    "eko": 87.9,
+    "silpo": 109.0,
     "nash_kray": 90.0
   },
   "gorchica_veres_ukrainska_micna_120g": {
@@ -267,24 +267,24 @@
   },
   "sir_plavlenniy_komo_paprikash": {
     "novus": 21.99,
-    "metro": 20.41,
+    "metro": 21.28,
     "nash_kray": 21.4,
     "fozzy": 18.9
   },
   "apple_gala": {
-    "atb": 17.95,
+    "atb": 18.95,
     "eko": 17.9,
-    "varus": 69.9,
-    "silpo": 1.8,
-    "novus": 18.69,
+    "varus": 0,
+    "silpo": 1.9,
+    "novus": 19.69,
     "metro": 25.9,
     "fozzy": 20.9
   },
   "smetana_galichanska_15_370gr": {
-    "atb": 33.7,
-    "eko": 32.99,
+    "atb": 36.7,
+    "eko": 36.95,
     "novus": 39.99,
-    "metro": 37.02,
+    "metro": 38.27,
     "fozzy": 35.5
   },
   "desodorant_garnier_spring_spirit": {
@@ -302,8 +302,8 @@
     "varus": 49.9,
     "silpo": 37.86,
     "ashan": 41.9,
-    "novus": 39.99,
-    "metro": 44.41,
+    "novus": 42.29,
+    "metro": 43.35,
     "nash_kray": 58.3,
     "fozzy": 37.6
   },
@@ -312,8 +312,8 @@
     "varus": 49.9,
     "silpo": 36.25,
     "ashan": 41.9,
-    "novus": 41.19,
-    "metro": 44.41,
+    "novus": 42.29,
+    "metro": 43.35,
     "nash_kray": 58.3,
     "fozzy": 37.6
   },
@@ -322,15 +322,15 @@
     "eko": 67.0,
     "varus": 69.0,
     "silpo": 68.94,
-    "ashan": 67.0,
+    "ashan": 69.0,
     "novus": 65.71,
     "fozzy": 68.94
   },
   "camel_blue": {
     "atb": 85.0,
     "eko": 85.01,
-    "varus": 85.0,
-    "silpo": 85.0,
+    "varus": 81.0,
+    "silpo": 87.0,
     "ashan": 85.0,
     "novus": 80.96,
     "fozzy": 85.0
@@ -338,7 +338,7 @@
   "ld_red": {
     "atb": 85.0,
     "eko": 85.01,
-    "silpo": 85.0,
+    "silpo": 87.0,
     "fozzy": 85.0
   },
   "marlboro_gold": {
@@ -369,10 +369,10 @@
   "parlament_aqua_blue": {
     "atb": 89.95,
     "eko": 90.0,
-    "varus": 0,
+    "varus": 90.0,
     "silpo": 89.94,
     "ashan": 90.0,
-    "novus": 0,
+    "novus": 85.71,
     "fozzy": 89.94
   },
   "winston_blue": {
@@ -380,7 +380,7 @@
     "eko": 79.0,
     "varus": 74.0,
     "silpo": 74.0,
-    "ashan": 74.0,
+    "ashan": 79.0,
     "novus": 75.24,
     "fozzy": 70.0
   },
@@ -399,7 +399,7 @@
     "atb": 87.95,
     "eko": 87.99,
     "varus": 87.9,
-    "ashan": 86.0,
+    "ashan": 88.0,
     "novus": 83.8,
     "fozzy": 85.94
   },
@@ -413,30 +413,30 @@
     "fozzy": 85.94
   },
   "beer_chernigivske_svitle_05_l_glass": {
-    "atb": 26.9,
-    "silpo": 25.49,
-    "ashan": 24.2,
-    "novus": 25.49,
+    "atb": 29.3,
+    "silpo": 26.79,
+    "ashan": 26.7,
+    "novus": 26.99,
     "metro": 26.36,
     "nash_kray": 33.1,
-    "fozzy": 30.41
+    "fozzy": 26.6
   },
   "beer_stella_artois_05_l_glass": {
-    "atb": 26.9,
-    "silpo": 25.49,
-    "ashan": 24.2,
-    "novus": 25.49,
+    "atb": 29.3,
+    "silpo": 26.79,
+    "ashan": 26.7,
+    "novus": 26.99,
     "metro": 26.36,
-    "fozzy": 30.41
+    "fozzy": 26.6
   },
   "beer_obolon_svitle_05_l_glass": {
     "atb": 26.9,
     "eko": 29.55,
     "varus": 25.9,
     "novus": 27.99,
-    "metro": 27.98,
+    "metro": 29.05,
     "nash_kray": 30.8,
-    "fozzy": 27.79
+    "fozzy": 24.99
   },
   "beer_jugulivske_svitle_05_l_glass": {
     "atb": 26.9,
@@ -447,8 +447,8 @@
     "fozzy": 24.8
   },
   "beer_rogan_tradicionnoe_svitle_05_l_glass": {
-    "atb": 24.7,
-    "silpo": 22.99,
+    "atb": 25.8,
+    "silpo": 24.59,
     "novus": 26.99,
     "metro": 27.96,
     "nash_kray": 29.1,
@@ -456,21 +456,21 @@
   },
   "beer_corona_extra_svitle_033_l_glass": {
     "atb": 55.2,
-    "eko": 53.2,
-    "varus": 59.9,
-    "silpo": 29.99,
+    "eko": 54.4,
+    "varus": 52.9,
+    "silpo": 53.49,
     "ashan": 49.0,
-    "novus": 44.99,
-    "metro": 41.9,
-    "fozzy": 52.0
+    "novus": 39.99,
+    "metro": 52.5,
+    "fozzy": 49.0
   },
   "beer_chernigibske_bile_nefilter_05_l_glass": {
     "atb": 29.4,
     "silpo": 29.49,
     "novus": 26.99,
     "metro": 31.75,
-    "nash_kray": 29.99,
-    "fozzy": 35.56
+    "nash_kray": 38.7,
+    "fozzy": 26.9
   },
   "beer_yantar_svitle_05_l_glass": {
     "atb": 24.9,
@@ -487,7 +487,7 @@
   },
   "beer_zibert_svitle_05_l_glass": {
     "atb": 24.7,
-    "eko": 23.9,
+    "eko": 22.9,
     "varus": 23.8,
     "novus": 26.99,
     "fozzy": 24.39
@@ -499,19 +499,19 @@
     "fozzy": 30.4
   },
   "beer_persha_brovarna_zakarpatske_svitle_05_l_glass": {
-    "eko": 23.9,
-    "varus": 42.8,
+    "eko": 26.85,
+    "varus": 27.7,
     "silpo": 27.99,
     "ashan": 26.8,
     "novus": 27.99,
-    "metro": 24.74,
-    "nash_kray": 29.6,
+    "metro": 28.84,
+    "nash_kray": 31.7,
     "fozzy": 19.9
   },
   "beer_lvivske_svitle_05_l_glass": {
     "metro": 27.76,
     "nash_kray": 30.5,
-    "fozzy": 27.79
+    "fozzy": 25.6
   },
   "beer_lvivske_1715_05_l_glass": {
     "varus": 33.1,
@@ -526,43 +526,43 @@
     "silpo": 34.99,
     "ashan": 33.0,
     "metro": 32.29,
-    "nash_kray": 25.9,
+    "nash_kray": 36.3,
     "fozzy": 29.99
   },
   "beer_slavutich_ice_mix_lime_05_l_glass": {
     "varus": 37.4,
     "silpo": 37.49,
     "metro": 37.69,
-    "nash_kray": 39.5
+    "nash_kray": 39.45
   },
   "beer_teteriv_svitle_05_l_glass": {
     "eko": 38.95,
-    "silpo": 25.99,
+    "silpo": 33.59,
     "novus": 33.99,
-    "nash_kray": 36.1,
+    "nash_kray": 38.9,
     "fozzy": 33.39
   },
   "beer_krusovice_svitle_05_l_glass": {
-    "eko": 45.85,
+    "eko": 34.9,
     "varus": 38.5,
     "silpo": 29.99,
     "ashan": 36.9,
     "novus": 39.99,
-    "metro": 39.86,
-    "nash_kray": 41.9,
+    "metro": 36.91,
+    "nash_kray": 41.5,
     "fozzy": 36.99
   },
   "beer_heineken_svitle_05_l_glass": {
-    "eko": 60.19,
-    "silpo": 51.49,
+    "eko": 45.9,
+    "silpo": 36.99,
     "ashan": 43.0,
-    "novus": 48.99,
+    "novus": 51.49,
     "metro": 49.57,
-    "nash_kray": 53.7,
+    "nash_kray": 53.6,
     "fozzy": 43.0
   },
   "beer_amstel_svitle_05_l_glass": {
-    "eko": 44.09,
+    "eko": 29.9,
     "silpo": 37.99,
     "ashan": 32.0,
     "novus": 37.99,
@@ -571,38 +571,38 @@
     "fozzy": 29.45
   },
   "beer_hike_premium_svitle_05_l_glass": {
-    "eko": 22.9,
+    "eko": 24.9,
     "varus": 28.3,
-    "silpo": 19.99,
-    "ashan": 27.9,
+    "silpo": 29.19,
+    "ashan": 24.9,
     "novus": 31.99,
     "metro": 31.1,
     "nash_kray": 33.7,
-    "fozzy": 27.9
+    "fozzy": 24.8
   },
   "beer_bochkove_svitle_05_l_glass": {
-    "eko": 24.9,
-    "varus": 38.9,
+    "eko": 36.89,
+    "varus": 29.9,
     "silpo": 28.79,
     "ashan": 27.9,
-    "novus": 24.99,
-    "metro": 27.9,
-    "nash_kray": 33.9,
+    "novus": 22.99,
+    "metro": 0,
+    "nash_kray": 36.5,
     "fozzy": 21.99
   },
   "beer_kronenbourg_1664_blanc_svitle_05_l_glass": {
-    "varus": 38.5,
+    "varus": 49.9,
     "silpo": 51.49,
     "ashan": 46.5,
     "metro": 51.74,
-    "nash_kray": 53.4,
+    "nash_kray": 53.42,
     "fozzy": 46.59
   },
   "beer_opilla_firmove_nepasterizovane_svitle_05_l_glass": {
     "ashan": 37.5,
     "novus": 41.99,
     "metro": 40.5,
-    "fozzy": 0
+    "fozzy": 37.5
   },
   "beer_yachmenniy_kolos_svitle_05_l_glass": {
     "fozzy": 23.9
@@ -625,7 +625,7 @@
     "eko": 34.65,
     "silpo": 26.59,
     "novus": 29.99,
-    "metro": 23.9,
+    "metro": 0,
     "fozzy": 23.8
   },
   "beer_uman_waissburg_1_l_svitle_plastic": {
@@ -649,7 +649,7 @@
     "fozzy": 47.81
   },
   "beer_opilla_korifey_11_l_plastic": {
-    "atb": 48.9,
+    "atb": 47.2,
     "novus": 48.79,
     "metro": 53.89
   },
@@ -658,27 +658,27 @@
   },
   "beer_yantar_svitle_12_l_plastic": {
     "atb": 43.9,
-    "ashan": 47.2,
+    "ashan": 41.5,
     "novus": 53.99,
     "metro": 50.98,
     "fozzy": 41.1
   },
   "beer_jashkovske_pshenichne_nefiltr_1_l_plastic": {
-    "eko": 39.9,
+    "eko": 52.65,
     "novus": 46.99
   },
   "beer_jashkovske_svitle_nefiltr_1_l_plastic": {
-    "eko": 39.9,
+    "eko": 52.65,
     "novus": 46.99
   },
   "beer_jashkovske_jigulivske_nefiltr_1_l_plastic": {
-    "eko": 39.9,
-    "silpo": 34.99,
+    "eko": 52.65,
+    "silpo": 44.99,
     "novus": 46.99
   },
   "beer_persha_privatna_brovarnya_bochkove_1_l_plastic": {
     "eko": 58.85,
-    "novus": 51.99
+    "novus": 0
   },
   "beer_chayka_dniprovska_1_l_plastic": {
     "eko": 58.39,
@@ -692,34 +692,34 @@
   },
   "mayonez_korolivskiy_smak_korolivskiy_67_300gr": {
     "atb": 43.7,
-    "eko": 46.85,
-    "varus": 42.9,
+    "eko": 32.9,
+    "varus": 39.7,
     "novus": 44.99,
     "metro": 46.33,
     "fozzy": 42.6
   },
   "sous_chumak_chesnochniy_200gr": {
-    "eko": 34.95,
-    "varus": 29.5,
+    "eko": 25.9,
+    "varus": 27.6,
     "novus": 31.99
   },
   "orbit_polunica_banan": {
     "atb": 14.9,
     "eko": 16.99,
     "varus": 14.4,
-    "ashan": 14.5,
+    "ashan": 12.9,
     "novus": 14.99,
     "metro": 16.09,
     "nash_kray": 18.1,
     "fozzy": 13.6
   },
   "sigarets_lm_red": {
-    "ashan": 66.0,
+    "ashan": 70.0,
     "novus": 71.43,
     "fozzy": 75.0
   },
   "beer_chernigivske_bile_nefilter_1l": {
-    "novus": 48.99,
+    "novus": 49.99,
     "metro": 53.89,
     "fozzy": 46.59
   },
@@ -732,7 +732,114 @@
     "ashan": 46.9,
     "novus": 45.99,
     "metro": 50.65,
-    "nash_kray": 49.1,
+    "nash_kray": 39.5,
     "fozzy": 38.5
+  },
+  "beer_jigulivske_svitle_2l_plastic": {
+    "varus": 71.5
+  },
+  "beer_chayka_dniprovska_2l_plastic": {
+    "silpo": 76.99,
+    "novus": 76.99,
+    "metro": 74.41,
+    "fozzy": 0
+  },
+  "beer_piwny_kebek_svitle_2l_plastic": {
+    "varus": 52.9
+  },
+  "ketchup_torchin_do_shashliky_270gr": {
+    "eko": 26.19,
+    "varus": 33.1,
+    "silpo": 25.99,
+    "ashan": 25.5,
+    "novus": 25.99,
+    "fozzy": 25.5
+  },
+  "mayonez_chumak_appetitniy_50_300gr": {
+    "eko": 47.59,
+    "varus": 41.1,
+    "silpo": 42.39,
+    "novus": 42.99,
+    "metro": 44.93
+  },
+  "coffee_chorna_karta_50gr": {
+    "eko": 89.79
+  },
+  "beer_arsenal_micne_2l_plastic": {
+    "metro": 97.09,
+    "nash_kray": 94.7,
+    "fozzy": 90.0
+  },
+  "beer_ppb_bochkove_svitle_2l_plastic": {
+    "eko": 75.9,
+    "silpo": 75.99,
+    "novus": 64.99,
+    "metro": 81.97
+  },
+  "beer_ppb_zakarpatske_svitle_2l_plastic": {
+    "silpo": 63.99,
+    "novus": 85.99,
+    "metro": 84.14
+  },
+  "beer_zibert_svitle_05l_v_banke": {
+    "atb": 19.7,
+    "eko": 20.9,
+    "varus": 24.5,
+    "novus": 23.99,
+    "metro": 26.89
+  },
+  "yogurt_fanni_lisovi_yagodi_1_5_240gr_stakan": {
+    "varus": 25.6,
+    "silpo": 25.69
+  },
+  "beer_obolon_kievskoe_razlivnoe_svetloe_195l": {
+    "eko": 49.9,
+    "varus": 62.0,
+    "novus": 59.99,
+    "metro": 62.32
+  },
+  "beer_chernigivske_light_svitle_2l_plastic": {
+    "atb": 72.9,
+    "silpo": 80.99,
+    "metro": 78.59
+  },
+  "beer_opilla_korifey_svitle_2l_plastic": {
+    "ashan": 71.5,
+    "novus": 89.99,
+    "metro": 97.09
+  },
+  "beer_yantar_svitle_2l_plastic": {
+    "metro": 81.54
+  },
+  "beer_tuborg_green_svitle_4_banki_05l": {
+    "silpo": 125.4,
+    "ashan": 115.0,
+    "metro": 124.0,
+    "fozzy": 114.8
+  },
+  "beer_ppb_zakarpatske_svitle_4_banki_05l": {
+    "silpo": 99.0,
+    "ashan": 127.1,
+    "novus": 99.0,
+    "metro": 109.6
+  },
+  "beer_ppb_bochkove_svitle_4_banki_05l": {
+    "silpo": 113.0,
+    "novus": 114.0,
+    "metro": 118.6
+  },
+  "beer_budweiser_budvar_svitle_05l": {
+    "varus": 63.4,
+    "ashan": 64.9,
+    "novus": 63.99,
+    "metro": 70.09
+  },
+  "beer_pilsner_urquell_svitle_05l": {
+    "metro": 70.09
+  },
+  "beer_robert_doms_belgiyskiy_svitle_nefilter_05l_glass": {
+    "varus": 39.4,
+    "silpo": 39.49,
+    "metro": 40.28
   }
 }

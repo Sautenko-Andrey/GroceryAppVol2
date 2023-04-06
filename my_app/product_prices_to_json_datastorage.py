@@ -1,3 +1,11 @@
+import os
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "FBApp.settings")
+
+import django
+django.setup()
+
+from django.core.management import call_command
+
 import json
 from parsers import ProductParserVol2
 
@@ -754,6 +762,114 @@ all_products_names=[
         "nash_kray":parser.beer_rogan_tradiciyne_svitle_1l_parser()[7],
         "fozzy":parser.beer_rogan_tradiciyne_svitle_1l_parser()[8]
 }},
+    {'beer_jigulivske_svitle_2l_plastic':{
+        "varus":parser.beer_jigulivske_svitle_2l_plastic_parser()[2]
+}},
+    {'beer_chayka_dniprovska_2l_plastic':{
+        "silpo":parser.beer_chayka_dniprovska_2l_plastic_parser()[3],
+        "novus":parser.beer_chayka_dniprovska_2l_plastic_parser()[5],
+        "metro":parser.beer_chayka_dniprovska_2l_plastic_parser()[6],
+        "fozzy":parser.beer_chayka_dniprovska_2l_plastic_parser()[8]
+}},
+    {'beer_piwny_kebek_svitle_2l_plastic':{
+        "varus":parser.beer_piwny_kebek_svitle_2l_plastic_parser()[2]
+}},
+    {'ketchup_torchin_do_shashliky_270gr':{
+        "eko":parser.ketchup_torchin_do_shashliky_270gr_parser()[1],
+        "varus":parser.ketchup_torchin_do_shashliky_270gr_parser()[2],
+        "silpo":parser.ketchup_torchin_do_shashliky_270gr_parser()[3],
+        "ashan":parser.ketchup_torchin_do_shashliky_270gr_parser()[4],
+        "novus":parser.ketchup_torchin_do_shashliky_270gr_parser()[5],
+        "fozzy":parser.ketchup_torchin_do_shashliky_270gr_parser()[8]
+}},
+    {'mayonez_chumak_appetitniy_50_300gr':{
+        "eko":parser.mayonez_chumak_appetitniy_50_300gr_parser()[1],
+        "varus":parser.mayonez_chumak_appetitniy_50_300gr_parser()[2],
+        "silpo":parser.mayonez_chumak_appetitniy_50_300gr_parser()[3],
+        "novus":parser.mayonez_chumak_appetitniy_50_300gr_parser()[5],
+        "metro":parser.mayonez_chumak_appetitniy_50_300gr_parser()[6]
+}},
+    {'coffee_chorna_karta_50gr':{
+        "eko":parser.coffee_chorna_karta_50gr_parser()[1]
+}},
+    {'beer_arsenal_micne_2l_plastic':{
+        "metro":parser.beer_arsenal_micne_2l_plastic_parser()[6],
+        "nash_kray":parser.beer_arsenal_micne_2l_plastic_parser()[7],
+        "fozzy":parser.beer_arsenal_micne_2l_plastic_parser()[8]
+}},
+    {'beer_ppb_bochkove_svitle_2l_plastic':{
+        "eko":parser.beer_ppb_bochkove_svitle_2l_plastic_parser()[1],
+        "silpo":parser.beer_ppb_bochkove_svitle_2l_plastic_parser()[3],
+        "novus":parser.beer_ppb_bochkove_svitle_2l_plastic_parser()[5],
+        "metro":parser.beer_ppb_bochkove_svitle_2l_plastic_parser()[6]
+}},
+    {'beer_ppb_zakarpatske_svitle_2l_plastic':{
+        "silpo":parser.beer_ppb_zakarpatske_svitle_2l_plastic_parser()[3],
+        "novus":parser.beer_ppb_zakarpatske_svitle_2l_plastic_parser()[5],
+        "metro":parser.beer_ppb_zakarpatske_svitle_2l_plastic_parser()[6]
+}},
+    {'beer_zibert_svitle_05l_v_banke':{
+        "atb":parser.beer_zibert_svitle_05l_v_banke_parser()[0],
+        "eko":parser.beer_zibert_svitle_05l_v_banke_parser()[1],
+        "varus":parser.beer_zibert_svitle_05l_v_banke_parser()[2],
+        "novus":parser.beer_zibert_svitle_05l_v_banke_parser()[5],
+        "metro":parser.beer_zibert_svitle_05l_v_banke_parser()[6]
+}},
+    {'yogurt_fanni_lisovi_yagodi_1_5_240gr_stakan':{
+        "varus":parser.yogurt_fanni_lisovi_yagodi_1_5_240gr_stakan_parser()[2],
+        "silpo":parser.yogurt_fanni_lisovi_yagodi_1_5_240gr_stakan_parser()[3]
+
+}},
+    {'beer_obolon_kievskoe_razlivnoe_svetloe_195l':{
+        "eko":parser.beer_obolon_kievskoe_razlivnoe_svetloe_195l_parser()[1],
+        "varus":parser.beer_obolon_kievskoe_razlivnoe_svetloe_195l_parser()[2],
+        "novus":parser.beer_obolon_kievskoe_razlivnoe_svetloe_195l_parser()[5],
+        "metro":parser.beer_obolon_kievskoe_razlivnoe_svetloe_195l_parser()[6]
+}},
+    {'beer_chernigivske_light_svitle_2l_plastic':{
+        "atb":parser.beer_chernigivske_light_svitle_2l_plastic_parser()[0],
+        "silpo":parser.beer_chernigivske_light_svitle_2l_plastic_parser()[3],
+        "metro":parser.beer_chernigivske_light_svitle_2l_plastic_parser()[6]
+}},
+    {'beer_opilla_korifey_svitle_2l_plastic':{
+        "ashan":parser.beer_opilla_korifey_svitle_2l_plastic_parser()[4],
+        "novus":parser.beer_opilla_korifey_svitle_2l_plastic_parser()[5],
+        "metro":parser.beer_opilla_korifey_svitle_2l_plastic_parser()[6]
+}},
+    {'beer_yantar_svitle_2l_plastic':{
+        "metro":parser.beer_yantar_svitle_2l_plastic_parser()[6]
+}},
+    {'beer_tuborg_green_svitle_4_banki_05l':{
+        "silpo":parser.beer_tuborg_green_svitle_4_banki_05l_parser()[3],
+        "ashan":parser.beer_tuborg_green_svitle_4_banki_05l_parser()[4],
+        "metro":parser.beer_tuborg_green_svitle_4_banki_05l_parser()[6],
+        "fozzy":parser.beer_tuborg_green_svitle_4_banki_05l_parser()[8]
+}},
+    {'beer_ppb_zakarpatske_svitle_4_banki_05l':{
+        "silpo":parser.beer_ppb_zakarpatske_svitle_4_banki_05l_parser()[3],
+        "ashan":parser.beer_ppb_zakarpatske_svitle_4_banki_05l_parser()[4],
+        "novus":parser.beer_ppb_zakarpatske_svitle_4_banki_05l_parser()[5],
+        "metro":parser.beer_ppb_zakarpatske_svitle_4_banki_05l_parser()[6]
+}},
+    {'beer_ppb_bochkove_svitle_4_banki_05l':{
+        "silpo":parser.beer_ppb_bochkove_svitle_4_banki_05l_parser()[3],
+        "novus":parser.beer_ppb_bochkove_svitle_4_banki_05l_parser()[5],
+        "metro":parser.beer_ppb_bochkove_svitle_4_banki_05l_parser()[6]
+}},
+    {'beer_budweiser_budvar_svitle_05l':{
+        "varus":parser.beer_budweiser_budvar_svitle_05l_parser()[2],
+        "ashan":parser.beer_budweiser_budvar_svitle_05l_parser()[4],
+        "novus":parser.beer_budweiser_budvar_svitle_05l_parser()[5],
+        "metro":parser.beer_budweiser_budvar_svitle_05l_parser()[6]
+}},
+    {'beer_pilsner_urquell_svitle_05l':{
+        "metro":parser.beer_pilsner_urquell_05l_glass_parser()[6]
+}},
+    {'beer_robert_doms_belgiyskiy_svitle_nefilter_05l_glass':{
+        "varus":parser.beer_robert_doms_belgiyskiy_svitle_nefilter_05l_glass_parser()[2],
+        "silpo":parser.beer_robert_doms_belgiyskiy_svitle_nefilter_05l_glass_parser()[3],
+        "metro":parser.beer_robert_doms_belgiyskiy_svitle_nefilter_05l_glass_parser()[6]
+}}
 
 ]
 

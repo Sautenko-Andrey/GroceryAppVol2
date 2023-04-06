@@ -1,7 +1,5 @@
 import os
 
-
-
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 from keras import optimizers
@@ -120,6 +118,7 @@ class GroceryAppPhoto:
 
         #сохраняем модель обученной НС:
         self.model.save('my_model_photo')           #сохранил не как h5!!!
+        print('Обучение НС успешно завершено.')
 
     def model_value(self):
         '''Метод, выводящий на экран точность и потери НС на тестовых данных'''

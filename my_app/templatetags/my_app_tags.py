@@ -618,6 +618,56 @@ def get_kefir_slaviya_2_5_850gr():
     '''Тэг,возвращающий информацию о "Кефир Славия 2,5 % 850 грамм"'''
     return ItemsPicsFromNet.objects.get(pk=116)
 
+@register.simple_tag()
+def get_beer_obolon_kievskoe_razlivnoe_svetloe_195l_plastic():
+    '''Тэг,возвращающий информацию о "Пиво Оболонь Киевское разливное светлое 1,95 л в пластике"'''
+    return ItemsPicsFromNet.objects.get(pk=117)
+
+@register.simple_tag()
+def get_beer_chernigivske_light_svitle_2l_plastic():
+    '''Тэг,возвращающий информацию о "Пиво Черниговское light светлое 2,0 л в пластике"'''
+    return ItemsPicsFromNet.objects.get(pk=118)
+
+@register.simple_tag()
+def get_beer_opilla_korifey_svitle_2l_plastic():
+    '''Тэг,возвращающий информацию о "Пиво Опилля Корифей светлое 2,0 л в пластике"'''
+    return ItemsPicsFromNet.objects.get(pk=119)
+
+@register.simple_tag()
+def get_beer_yantar_svitle_2l_plastic():
+    '''Тэг,возвращающий информацию о "Пиво Янтарь светлое 2,0 л в пластике"'''
+    return ItemsPicsFromNet.objects.get(pk=120)
+
+@register.simple_tag()
+def get_beer_tuborg_green_svitle_4_banki_05l():
+    '''Тэг,возвращающий информацию о "Пиво Tuborg Green 4 банки х 0,5 л"'''
+    return ItemsPicsFromNet.objects.get(pk=121)
+
+@register.simple_tag()
+def get_beer_ppb_zakarpatske_svitle_4_banki_05l():
+    '''Тэг,возвращающий информацию о "Пиво ППБ Закарпатське 4 банки х 0,5 л"'''
+    return ItemsPicsFromNet.objects.get(pk=122)
+
+@register.simple_tag()
+def get_beer_ppb_bochkove_svitle_4_banki_05l():
+    '''Тэг,возвращающий информацию о "Пиво ППБ Бочкове 4 банки х 0,5 л"'''
+    return ItemsPicsFromNet.objects.get(pk=123)
+
+@register.simple_tag()
+def get_beer_budweiser_budvar_05l_glass():
+    '''Тэг,возвращающий информацию о "Пиво Budweiser Budvar светлое 0,5 л в стекле"'''
+    return ItemsPicsFromNet.objects.get(pk=124)
+
+@register.simple_tag()
+def get_beer_pilsner_urquell_05l_glass():
+    '''Тэг,возвращающий информацию о "Пиво Pilsner Urquell светлое 0,5 л в стекле"'''
+    return ItemsPicsFromNet.objects.get(pk=125)
+
+@register.simple_tag()
+def get_beer_robert_doms_belgiyskiy_svitle_nefilter_05l_glass():
+    '''Тэг,возвращающий информацию о "Пиво Robert Doms бельгийский светлое нефильтрованное 0,5 л в стекле"'''
+    return ItemsPicsFromNet.objects.get(pk=126)
+
 
 
 
