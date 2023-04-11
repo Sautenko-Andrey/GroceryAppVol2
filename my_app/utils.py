@@ -29,10 +29,16 @@ def price_updating_data(price):
     return price
 
 def best_price_identify(prices_array:list):
+    '''В prices_array нам поступают все цены из БД.А нам надо определить
+    минимальную из тех маркетов, которые выбрал пользователь.'''
     #очищаем от цен, которых нет в магазине
     clear_list=tuple(x for x in prices_array if type(x) == float)
     #определяем лучшую цену
-    best_price=min(clear_list)
+    #проверяем пуст списо с ценами или нет
+    if len(clear_list)>0:
+        best_price=min(clear_list)
+    else:
+        best_price=0
 
     global respond
     for index,value in enumerate(prices_array):
@@ -55,11 +61,11 @@ def best_price_identify(prices_array:list):
         elif value == best_price and index==8:
             respond = ('fozzy',value)
 
-    print(prices_array)
-    print(clear_list)
-    print(best_price)
-    print(respond)
-
+    # print(prices_array)
+    # print(clear_list)
+    # print(best_price)
+    # print(respond)
+    return respond
 
 def get_products_prices(respond:str):
     '''Функция, обрабатывающая результат работы НС и выдающая цены для продуктов'''
@@ -130,3 +136,6 @@ def get_products_prices(respond:str):
     return atb_price,eko_price,varus_price,silpo_price,ashan_price,\
            novus_price,metro_price,nash_kray_price,fozzy_price,picture
 
+
+prices=[101.56, 35.87, 89.99]
+my_test=best_price_identify(prices)

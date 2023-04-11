@@ -2102,9 +2102,39 @@ class SetResults(MutualContext, ListView):
             # добавим цены из БД цен
             atb_price, eko_price, varus_price, silpo_price,ashan_price,\
             novus_price,metro_price,nash_kray_price,fozzy_price,picture=get_products_prices(result)
+
+            #отфильтруем цены. оставим только те цены , которые соответствуют выбранным супермаркетам!
+            filtered_prices=[]
+            marker=1
+            if order.atb_choice==marker:               #тут какой-то баг!
+                filtered_prices.append(atb_price)
+            else:
+                filtered_prices.append(9999999999)
+            # elif order.eko_choice==marker:
+            #     filtered_prices.append(eko_price)
+            # elif order.varus_choice==marker:
+            #     filtered_prices.append(varus_price)
+            # elif order.silpo_choice==marker:
+            #     filtered_prices.append(silpo_price)
+            # elif order.ashan_choice==marker:
+            #     filtered_prices.append(ashan_price)
+            # elif order.novus_choice==marker:
+            #     filtered_prices.append(novus_price)
+            # elif order.metro_choice==marker:
+            #     filtered_prices.append(metro_price)
+            # elif order.nash_kray_choice==marker:
+            #     filtered_prices.append(nash_kray_price)
+            # elif order.fozzy_choice==marker:
+            #     filtered_prices.append(fozzy_price)
+            filtered_prices.append(picture)
+            print('Отфильтрованный список цен',filtered_prices)
+
+
             #определяем лучшую цену:
-            best_price=best_price_identify([atb_price, eko_price, varus_price, silpo_price,ashan_price,
-            novus_price,metro_price,nash_kray_price,fozzy_price,picture])
+            best_price=best_price_identify(filtered_prices)
+            print('Best price: ',best_price)
+            #best_price=best_price_identify([atb_price, eko_price, varus_price, silpo_price,ashan_price,
+            #novus_price,metro_price,nash_kray_price,fozzy_price,picture]) #заносит все цены из БД
 
             total_product_info.append(
                 {result: [
