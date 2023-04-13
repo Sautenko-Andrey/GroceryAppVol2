@@ -1307,6 +1307,150 @@ class ProductParserVol2:
             'https://metro.zakaz.ua/uk/products/pivo-lvivske-500ml--04820000456401/'
         ])
 
+    def beer_chernigivske_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Черниговское светлое 0,5 л жб'''
+        return self.prices_parsing([
+            'https://auchan.ua/ua/pivo-chernigivs-ke-svetloe-v-banke-4-8-500-ml-1021107/',
+            'https://novus.online/product/pivo-svitle-cernigivske-48-05l-zb',
+            'https://fozzyshop.ua/ru/pivo-svetloe/3002-pivo-chernigivske-svetloe-4820000381239.html'
+        ])
+
+    def beer_chernigivske_bile_nefilter_05_l_jb_parser(self):
+        ''' Парсер для Пиво Черниговское белое нефильтрованное 0,5 л жб'''
+        return self.prices_parsing([
+            'https://www.atbmarket.com/product/pivo-05-l-cepnigivske-bile',
+            'https://shop.silpo.ua/product/pyvo-chernigivske-bile-nefiltrovane-z-b-68067',
+            'https://auchan.ua/ua/pivo-chernigivs-ke-beloe-svetloe-v-banke-5-500-ml-1021095/',
+            'https://metro.zakaz.ua/uk/products/pivo-chernigivske-500ml-ukrayina--04820034920336/',
+            'https://fozzyshop.ua/ru/pivo-svetloe/2984-pivo-chernigivske-bile-nefiltrovannoe-4820000380706.html'
+        ])
+
+    def beer_velkopopovicky_kozel_temne_05_l_jb_parser(self):
+        ''' Парсер для Пиво Velkopopovicky Kozel темное 0,5 л жб'''
+        return self.prices_parsing([
+            'https://atbmarket.com/product/pivo-05l-velkopopovicky-kozel-temne',
+            'https://auchan.ua/ua/pivo-kozel-temnoe-v-banke-3-8-500-ml-1021101/',
+            'https://novus.online/product/pivo-temne-velkopopovicky-kozel-cerny-38-05l-zb',
+            'https://metro.zakaz.ua/uk/products/pivo-velkopopovitskii-kozel-500ml-ukrayina--04820034924211/',
+            'https://fozzyshop.ua/ru/pivo-temnoe/64333-pivo-velkopopovitsky-kozel-temnoe-zh-b-4820034924211.html'
+        ])
+
+    def beer_edelmeister_pilsner_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Edelmeister Pilsner светлое 0,5 л жб'''
+        return self.prices_parsing([
+            'https://atbmarket.com/product/pivo-05-l-edelmeister-pilsner-svitle-filtrovane-45-polsa'
+        ])
+
+    def beer_faxe_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Faxe светлое 0,5 л жб'''
+        return self.prices_parsing([
+            'https://atbmarket.com/product/pivo-05-l-faxe-svitle-filtrovane-46-litva'
+        ])
+
+    def beer_livu_pilzenes_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Livu Pilzenes светлое 0,5 л жб'''
+        return self.prices_parsing([
+            'https://atbmarket.com/product/pivo-05l-livu-pilzenes-svitle-filtrovane-44-litva'
+        ])
+
+    def beer_velkopopovicky_kozel_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Velkopopovicky Kozel светлое 0,5 л жб'''
+        return self.prices_parsing([
+            'https://atbmarket.com/product/pivo-05l-velkopopovicky-kozel-svitle',
+            'https://shop.silpo.ua/product/pyvo-velkopopovitsky-kozel-4-svitle-z-b-786389',
+            'https://auchan.ua/ua/pivo-kozel-svetloe-v-banke-4-500-ml-1021131/',
+            'https://novus.online/product/pivo-svitle-velkopopovicky-kozel-svetly-40-05l-zb',
+            'https://metro.zakaz.ua/uk/products/pivo-velkopopovitskii-kozel-500ml-ukrayina--04820034924174/'
+        ])
+
+    def beer_obolon_beermix_limon_05_l_jb_parser(self):
+        ''' Парсер для Пиво Obolon Beermix limon светлое 0,5 л жб'''
+        return self.prices_parsing([
+            'https://atbmarket.com/product/pivo-05l-obolon-beermix-limon',
+            'https://eko.zakaz.ua/uk/products/pivo-birmiks-500ml-ukrayina--04820000192101/',
+            'https://varus.ua/pivo-birmiks-limon-obolon-0-5l-z-b-ukraina',
+            'https://shop.silpo.ua/product/pyvo-obolon-beermix-lymon-z-b-59268',
+            'https://auchan.ua/ua/pivo-obolon-beermix-limon-svetloe-fil-trovannoe-2-5-0-5-l-1032053/',
+            'https://novus.online/product/pivo-specialne-obolon-beermix-lemon-25-05l-zb',
+            'https://metro.zakaz.ua/uk/products/pivo-birmiks-500ml-ukrayina--04820000192101/',
+            'https://shop.nashkraj.ua/kovel/product/6752-pivo-obolon-birmiks-0-5l-limon-zh-b2-5',
+            'https://fozzyshop.ua/ru/slaboalkogolnye-napitki/2901-pivo-obolon-beermix-limon-4820000192101.html'
+        ])
+
+    def beer_edelmeister_weizenbier_svitle_nefilter_05_l_jb_parser(self):
+        ''' Парсер для Пиво Edelmeister Weizenbier нефильтрованное светлое 0,5 л жб'''
+        return self.prices_parsing([
+           'https://atbmarket.com/product/pivo-05-l-edelmeister-weizenbier-svitle-nefiltrovane-52-polsa'
+        ])
+
+    def beer_edelmeister_schwarzbier_temne_05_l_jb_parser(self):
+        ''' Парсер для Пиво Edelmeister schwarzbier темное 0,5 л жб'''
+        return self.prices_parsing([
+           'https://atbmarket.com/product/pivo-05-l-edelmeister-schwarzbier-temne-filtrovane-42-polsa'
+        ])
+
+    def beer_hike_blanche_nefilter_05_l_jb_parser(self):
+        ''' Парсер для Пиво Hike Blanche нефильтрованное 0,5 л жб'''
+        return self.prices_parsing([
+           'https://atbmarket.com/product/pivo-05l-hike-blanche-svitle-nefiltpovane',
+            'https://eko.zakaz.ua/uk/products/pivo-khaik-500ml-ukrayina--04820193032314/',
+            'https://varus.ua/pivo-blansh-4-9-hayk-0-5l-z-b-ukraina',
+            'https://auchan.ua/ua/pivo-hike-blanche-svetloe-nefil-trovannoe-4-9-zh-b-0-5-l-1031618/',
+            'https://novus.online/product/pivo-svitle-hike-blans-49-05l-zb',
+            'https://metro.zakaz.ua/uk/products/pivo-khaik-500ml-ukrayina--04820193032314/'
+        ])
+
+    def beer_zlata_praha_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Zlata Praha светлое 0,5 л жб'''
+        return self.prices_parsing([
+           'https://atbmarket.com/product/pivo-05l-zlata-praha-svitle',
+            'https://varus.ua/pivo-0-5l-5-svitle-pasterizovane-zlata-praha-zb',
+            'https://auchan.ua/ua/pivo-zlata-praha-svetloe-fil-trovannoe-5-0-0-5-l-1032028/'
+        ])
+
+    def beer_thuringer_premium_beer_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Thuringer premium beer светлое 0,5 л жб'''
+        return self.prices_parsing([
+           'https://atbmarket.com/product/pivo-05l-thuringer-premium-beer-svitle-filtrovane-nimeccina'
+        ])
+
+    def beer_livu_sencu_beer_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Livu Sencu светлое 0,5 л жб'''
+        return self.prices_parsing([
+           'https://atbmarket.com/product/pivo-05l-livu-sencu-svitle-filtrovane-52-litva'
+        ])
+
+    def beer_germanarich_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Germanarich светлое 0,5 л жб'''
+        return self.prices_parsing([
+           'https://atbmarket.com/product/pivo-05-l-germanarich-svetloe'
+        ])
+
+    def beer_hike_premium_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Hike Premium светлое 0,5 л жб'''
+        return self.prices_parsing([
+            'https://atbmarket.com/product/pivo-05l-hike-premium-svitle',
+            'https://eko.zakaz.ua/uk/products/pivo-khaik-500ml-ukrayina--04820000192514/',
+            'https://varus.ua/pivo-hayk-premium-0-5l-z-b',
+            'https://shop.silpo.ua/product/pyvo-hike-premium-z-b-196380',
+            'https://auchan.ua/ua/pivo-hike-svetloe-fil-trovannoe-4-8-0-5-l-1032038/',
+            'https://novus.online/product/pivo-svitle-hike-premium-49-05l-zb',
+            'https://metro.zakaz.ua/uk/products/pivo-khaik-500ml-ukrayina--04820000192514/',
+            'https://fozzyshop.ua/ru/pivo-svetloe/20156-pivo-hike-premium-4820000192514.html'
+        ])
+
+    def beer_obolon_nonalcohol_nefilter_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Obolon безалкогольное нефильтрованное светлое 0,5 л жб'''
+        return self.prices_parsing([
+            'https://atbmarket.com/product/pivo-bezalkogolne-05l-obolon-0-svitle-nefiltrovane-pastepizovane',
+            'https://varus.ua/pivo-specialne-0-5l-0-5-svitle-pasterizovane-0-nefiltrovane-plus-obolon-zb',
+            'https://auchan.ua/ua/pivo-0-obolon-bezalkogol-noe-svetloe-nefil-trovannoe-0-5-0-5-l-1031603/',
+        ])
+
+
+
+
+
 
 
 

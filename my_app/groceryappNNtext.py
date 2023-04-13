@@ -34,10 +34,10 @@ class GroceryAppText:
         '''Инициализация модели НС и ее подготовка к обучению'''
 
         self.model = keras.Sequential([
-            Embedding(self.MAX_WORDS, 143, input_length=self.MAX_LENGTH_TEXT),
-            LSTM(143, return_sequences=True),  # 128
-            LSTM(64),  # 64
-            Dense(143, activation='softmax')
+            Embedding(self.MAX_WORDS, 150, input_length=self.MAX_LENGTH_TEXT),
+            LSTM(150, return_sequences=True),  # 128
+            LSTM(75),  # 64
+            Dense(150, activation='softmax')
         ])
 
         self.model.compile(optimizer=Adam(0.0001), loss='categorical_crossentropy',
@@ -50,7 +50,7 @@ class GroceryAppText:
         TRAIN_DATA, TARGET_DATA, tokenizer = self.converted_data()
 
         # запускаем тренировку:
-        history = self.model.fit(TRAIN_DATA, TARGET_DATA, batch_size=50, epochs=50)
+        history = self.model.fit(TRAIN_DATA, TARGET_DATA, epochs=50, batch_size=50)
 
         reverse_word_map = dict(map(reversed, self.converted_data()[2].word_index.items()))
 
@@ -108,8 +108,7 @@ class GroceryAppText:
         toilet_papir_text = self.add_new_item('toilet_papir_kiev_63m.txt')
         coffee_aroma_gold_freeze_dried_70g_text = self.add_new_item('coffee_aroma_gold_freeze_dried_70g.txt')
         gorchica_veres_ukrainska_micna_120g_text = self.add_new_item('gorchica_veres_ukrainska_micna_120g.txt')
-        tea_monomah_100_ceylon_original_black_krupn_list_90g_text = self.add_new_item(
-            'tea_monomah_100%_ceylon_original_black_krupn_list_90g.txt')
+        tea_monomah_100_ceylon_original_black_krupn_list_90g_text = self.add_new_item('tea_monomah_100%_ceylon_original_black_krupn_list_90g.txt')
         tea_monomah_ceylon_black_text = self.add_new_item('tea_monomah_ceylon_black.txt')
         apple_gala_text = self.add_new_item('apple_gala.txt')
         desodorant_garnier_spring_spirit_text = self.add_new_item('desodorant_garnier_spring_spirit.txt')
@@ -219,6 +218,13 @@ class GroceryAppText:
         beer_germanarich_svitle_05_l_jb_text=self.add_new_item('beer_germanarich_svitle_05_l_jb.txt')
         beer_hike_premium_svitle_05_l_jb_text=self.add_new_item('beer_hike_premium_svitle_05_l_jb.txt')
         beer_obolon_nonalcohol_svitle_nefilter_05_l_jb_text=self.add_new_item('beer_obolon_nonalcohol_svitle_nefilter_05_l_jb.txt')
+        beer_zibert_bavarske_svitle_05_l_jb_text=self.add_new_item('beer_zibert_bavarske_svitle_05_l_jb.txt')
+        beer_bavaria_liquid_apple_nonalcohol_svitle_05_l_jb_text = self.add_new_item('beer_bavaria_liquid_apple_nonalcohol_svitle_05_l_jb.txt')
+        beer_heineken_svitle_05_l_jb_text=self.add_new_item('beer_heineken_svitle_05_l_jb.txt')
+        beer_rychtar_grunt_11_svitle_05_l_jb_text=self.add_new_item('beer_rychtar_grunt_11_svitle_05_l_jb.txt')
+        beer_amstel_svitle_05_l_jb_text=self.add_new_item('beer_amstel_svitle_05_l_jb.txt')
+        beer_bavaria_svitle_05_l_jb_text=self.add_new_item('beer_bavaria_svitle_05_l_jb.txt')
+        beer_bavaria_svitle_nonalcohol_05_l_jb_text=self.add_new_item('beer_bavaria_svitle_nonalcohol_05_l_jb.txt')
 
         # объединям обучающие выборки:
         texts = obolon_premium_extra_11_text + hetman_sagaydachniy_07_text \
@@ -284,7 +290,11 @@ class GroceryAppText:
                 + beer_edelmeister_weizenbier_nefilter_svitle_05_l_jb_text + beer_edelmeister_schwarzbier_temnoe_05_l_jb_text\
                 + beer_hike_blanche_svitle_nefilter_05_l_jb_text + beer_zlata_praha_svitle_05_l_jb_text\
                 + beer_thuringer_premium_beer_svitle_05_l_jb_text + beer_livu_sencu_svitle_05_l_jb_text\
-                + beer_germanarich_svitle_05_l_jb_text + beer_hike_premium_svitle_05_l_jb_text + beer_obolon_nonalcohol_svitle_nefilter_05_l_jb_text
+                + beer_germanarich_svitle_05_l_jb_text + beer_hike_premium_svitle_05_l_jb_text\
+                + beer_obolon_nonalcohol_svitle_nefilter_05_l_jb_text + beer_zibert_bavarske_svitle_05_l_jb_text\
+                + beer_bavaria_liquid_apple_nonalcohol_svitle_05_l_jb_text + beer_heineken_svitle_05_l_jb_text\
+                + beer_rychtar_grunt_11_svitle_05_l_jb_text + beer_amstel_svitle_05_l_jb_text + beer_bavaria_svitle_05_l_jb_text\
+                + beer_bavaria_svitle_nonalcohol_05_l_jb_text
 
         # подсчитываем кол-во выборок
         count_obolon_premium_extra_11_text = len(obolon_premium_extra_11_text)
@@ -430,6 +440,13 @@ class GroceryAppText:
         count_beer_germanarich_svitle_05_l_jb_text=len(beer_germanarich_svitle_05_l_jb_text)
         count_beer_hike_premium_svitle_05_l_jb_text=len(beer_hike_premium_svitle_05_l_jb_text)
         count_beer_obolon_nonalcohol_svitle_nefilter_05_l_jb_text=len(beer_obolon_nonalcohol_svitle_nefilter_05_l_jb_text)
+        count_beer_zibert_bavarske_svitle_05_l_jb_text=len(beer_zibert_bavarske_svitle_05_l_jb_text)
+        count_beer_bavaria_liquid_apple_nonalcohol_svitle_05_l_jb_text=len(beer_bavaria_liquid_apple_nonalcohol_svitle_05_l_jb_text)
+        count_beer_heineken_svitle_05_l_jb_text=len(beer_heineken_svitle_05_l_jb_text)
+        count_beer_rychtar_grunt_11_svitle_05_l_jb_text=len(beer_rychtar_grunt_11_svitle_05_l_jb_text)
+        count_beer_amstel_svitle_05_l_jb_text=len(beer_amstel_svitle_05_l_jb_text)
+        count_beer_bavaria_svitle_05_l_jb_text=len(beer_bavaria_svitle_05_l_jb_text)
+        count_beer_bavaria_svitle_nonalcohol_05_l_jb_text=len(beer_bavaria_svitle_nonalcohol_05_l_jb_text)
 
         return texts, count_obolon_premium_extra_11_text, count_hetman_sagaydachniy_07_text, \
                count_coffee_aroma_gold_classic_100gr_text, count_apple_golden_text, count_coca_cola_2l_text, \
@@ -490,7 +507,10 @@ class GroceryAppText:
                count_beer_edelmeister_schwarzbier_temnoe_05_l_jb_text,count_beer_hike_blanche_svitle_nefilter_05_l_jb_text,\
                count_beer_zlata_praha_svitle_05_l_jb_text,count_beer_thuringer_premium_beer_svitle_05_l_jb_text,\
                count_beer_livu_sencu_svitle_05_l_jb_text,count_beer_germanarich_svitle_05_l_jb_text,\
-               count_beer_hike_premium_svitle_05_l_jb_text,count_beer_obolon_nonalcohol_svitle_nefilter_05_l_jb_text
+               count_beer_hike_premium_svitle_05_l_jb_text,count_beer_obolon_nonalcohol_svitle_nefilter_05_l_jb_text,\
+               count_beer_zibert_bavarske_svitle_05_l_jb_text,count_beer_bavaria_liquid_apple_nonalcohol_svitle_05_l_jb_text,\
+               count_beer_heineken_svitle_05_l_jb_text,count_beer_rychtar_grunt_11_svitle_05_l_jb_text,\
+               count_beer_amstel_svitle_05_l_jb_text,count_beer_bavaria_svitle_05_l_jb_text,count_beer_bavaria_svitle_nonalcohol_05_l_jb_text
 
 
     def converted_data(self):
@@ -516,7 +536,7 @@ class GroceryAppText:
 
         # окончательно формируем обучающую выборку:
         TRAIN_SAMPLE = data_pad
-        items = 143
+        items = 150
         TARGET_SAMPLE = np.array(
             make_list(items, 0) *
             self.upload_data()[1] + make_list(items, 1) * self.upload_data()[2] + make_list(items, 2) *
@@ -593,7 +613,14 @@ class GroceryAppText:
             self.upload_data()[140]+ make_list(items, 140) *
             self.upload_data()[141]+ make_list(items, 141) *
             self.upload_data()[142]+ make_list(items, 142) *
-            self.upload_data()[143])
+            self.upload_data()[143]+ make_list(items, 143) *
+            self.upload_data()[144]+ make_list(items, 144) *
+            self.upload_data()[145]+ make_list(items, 145) *
+            self.upload_data()[146]+ make_list(items, 146) *
+            self.upload_data()[147]+ make_list(items, 147) *
+            self.upload_data()[148]+ make_list(items, 148) *
+            self.upload_data()[149]+ make_list(items, 149) *
+            self.upload_data()[150])
 
         # перемешиваем обучающую выборку для лучшей тренированности НС:
         # создаем рандомные индексы:

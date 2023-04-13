@@ -174,6 +174,14 @@ class TesterForGroceryAppText:
         beer_germanarich_svitle_05_l_jb_text = self.add_new_item('beer_germanarich_svitle_05_l_jb.txt')
         beer_hike_premium_svitle_05_l_jb_text = self.add_new_item('beer_hike_premium_svitle_05_l_jb.txt')
         beer_obolon_nonalcohol_svitle_nefilter_05_l_jb_text = self.add_new_item('beer_obolon_nonalcohol_svitle_nefilter_05_l_jb.txt')
+        beer_zibert_bavarske_svitle_05_l_jb_text = self.add_new_item('beer_zibert_bavarske_svitle_05_l_jb.txt')
+        beer_bavaria_liquid_apple_nonalcohol_svitle_05_l_jb_text = self.add_new_item('beer_bavaria_liquid_apple_nonalcohol_svitle_05_l_jb.txt')
+        beer_heineken_svitle_05_l_jb_text = self.add_new_item('beer_heineken_svitle_05_l_jb.txt')
+        beer_rychtar_grunt_11_svitle_05_l_jb_text = self.add_new_item('beer_rychtar_grunt_11_svitle_05_l_jb.txt')
+        beer_amstel_svitle_05_l_jb_text = self.add_new_item('beer_amstel_svitle_05_l_jb.txt')
+        beer_bavaria_svitle_05_l_jb_text = self.add_new_item('beer_bavaria_svitle_05_l_jb.txt')
+        beer_bavaria_svitle_nonalcohol_05_l_jb_text = self.add_new_item('beer_bavaria_svitle_nonalcohol_05_l_jb.txt')
+
 
         # объединям обучающие выборки:
         texts = obolon_premium_extra_11_text+ hetman_sagaydachniy_07_text\
@@ -242,7 +250,10 @@ class TesterForGroceryAppText:
                 + beer_edelmeister_schwarzbier_temnoe_05_l_jb_text + beer_hike_blanche_svitle_nefilter_05_l_jb_text\
                 + beer_zlata_praha_svitle_05_l_jb_text + beer_thuringer_premium_beer_svitle_05_l_jb_text\
                 + beer_livu_sencu_svitle_05_l_jb_text + beer_germanarich_svitle_05_l_jb_text\
-                + beer_hike_premium_svitle_05_l_jb_text + beer_obolon_nonalcohol_svitle_nefilter_05_l_jb_text
+                + beer_hike_premium_svitle_05_l_jb_text + beer_obolon_nonalcohol_svitle_nefilter_05_l_jb_text\
+                + beer_zibert_bavarske_svitle_05_l_jb_text + beer_bavaria_liquid_apple_nonalcohol_svitle_05_l_jb_text\
+                + beer_heineken_svitle_05_l_jb_text + beer_rychtar_grunt_11_svitle_05_l_jb_text + beer_amstel_svitle_05_l_jb_text\
+                + beer_bavaria_svitle_05_l_jb_text + beer_bavaria_svitle_nonalcohol_05_l_jb_text
 
         return texts
 
@@ -569,6 +580,20 @@ class TesterForGroceryAppText:
             return 'Пиво 0,5л Hike Преміум світле жб'
         elif np.argmax(result) == 142:
             return 'Пивo бeзaлкoгoльнe 0,5л Обoлoнь 0 світлe нефільтроване пaстepизoвaнe жб'
+        elif np.argmax(result) == 143:
+            return 'Пивo Zibert Баварское светлое 0,5 л жб'
+        elif np.argmax(result) == 144:
+            return 'Пивo Bavaria Liquid Apple безалкогольное светлое 0,5 л жб'
+        elif np.argmax(result) == 145:
+            return 'Пивo Heineken светлое 0,5 л жб'
+        elif np.argmax(result) == 146:
+            return 'Пивo Rychtar Grant 11 светлое 0,5 л жб'
+        elif np.argmax(result) == 147:
+            return 'Пивo Amstel светлое 0,5 л жб'
+        elif np.argmax(result) == 148:
+            return 'Пивo Bavaria светлое 0,5 л жб'
+        elif np.argmax(result) == 149:
+            return 'Пивo Bavaria светлое безалкогольное 0,5 л жб'
 
 
 

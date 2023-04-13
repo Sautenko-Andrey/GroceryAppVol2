@@ -1828,6 +1828,113 @@ class ItemNameAnswerPage(MutualContext, ListView):
         elif context_dict['nn_answer'] == 'Пиво Robert Doms бельгийский светлое нефильтрованное 0,5 л в стекле':
             context_dict['item_image_for_user'] = get_beer_robert_doms_belgiyskiy_svitle_nefilter_05l_glass
             context_dict['price_from_site_metro'] = store['beer_pilsner_urquell_svitle_05l']['metro']
+
+        elif context_dict['nn_answer'] == 'Пиво 0,5 л Чернігівське світле жб':
+            context_dict['item_image_for_user'] = get_beer_chernigivske_svitle_05l_jb
+            context_dict['price_from_site_ashan'] = store['beer_chernigivske_svitle_05_l_jb']['ashan']
+            context_dict['price_from_site_novus'] = store['beer_chernigivske_svitle_05_l_jb']['novus']
+            context_dict['price_from_site_fozzy'] = store['beer_chernigivske_svitle_05_l_jb']['fozzy']
+
+        elif context_dict['nn_answer'] == 'Пивo 0,5 л Чepнігівськe Білe жб':
+            context_dict['item_image_for_user'] = get_beer_chernigivske_bile_nefilter_05l_jb
+            context_dict['price_from_site_atb'] = store['beer_chernigivske_bile_nefilter_05_l_jb']['atb']
+            context_dict['price_from_site_silpo'] = store['beer_chernigivske_bile_nefilter_05_l_jb']['silpo']
+            context_dict['price_from_site_ashan'] = store['beer_chernigivske_bile_nefilter_05_l_jb']['ashan']
+            context_dict['price_from_site_metro'] = store['beer_chernigivske_bile_nefilter_05_l_jb']['metro']
+            context_dict['price_from_site_fozzy'] = store['beer_chernigivske_bile_nefilter_05_l_jb']['fozzy']
+
+        elif context_dict['nn_answer'] == 'Пиво 0,5л Velkopopovicky Kozel темне жб':
+            context_dict['item_image_for_user'] = get_beer_velkopopovicky_kozel_temne_05l_jb
+            context_dict['price_from_site_atb'] = store['beer_velkopopovicky_kozel_temne_05_l_jb']['atb']
+            context_dict['price_from_site_ashan'] = store['beer_velkopopovicky_kozel_temne_05_l_jb']['ashan']
+            context_dict['price_from_site_novus'] = store['beer_velkopopovicky_kozel_temne_05_l_jb']['novus']
+            context_dict['price_from_site_metro'] = store['beer_velkopopovicky_kozel_temne_05_l_jb']['metro']
+            context_dict['price_from_site_fozzy'] = store['beer_velkopopovicky_kozel_temne_05_l_jb']['fozzy']
+
+        elif context_dict['nn_answer'] == 'Пиво 0,5 л Edelmeister Pilsner світле фільтроване жб':
+            context_dict['item_image_for_user'] = get_beer_edelmeister_pilsner_svitle_05l_jb
+            context_dict['price_from_site_atb'] = store['beer_edelmeister_pilsner_svitle_05_l_jb']['atb']
+
+        elif context_dict['nn_answer'] == 'Пиво 0,5 л Faxe світле фільтроване жб':
+            context_dict['item_image_for_user'] = get_beer_faxe_svitle_05l_jb
+            context_dict['price_from_site_atb'] = store['beer_faxe_svitle_05_l_jb']['atb']
+
+        elif context_dict['nn_answer'] == 'Пиво 0,5л Livu Pilzenes світле фільтроване жб':
+            context_dict['item_image_for_user'] = get_beer_livu_pilzenes_svitle_05l_jb
+            context_dict['price_from_site_atb'] = store['beer_livu_pilzenes_svitle_05_l_jb']['atb']
+
+        elif context_dict['nn_answer'] == 'Пиво 0,5л Velkopopovicky Kozel світле жб':
+            context_dict['item_image_for_user'] = get_beer_velkopopovicky_kozel_temne_05l_jb
+            context_dict['price_from_site_atb'] = store['beer_velkopopovicky_kozel_svitle_05_l_jb']['atb']
+            context_dict['price_from_site_silpo'] = store['beer_velkopopovicky_kozel_svitle_05_l_jb']['silpo']
+            context_dict['price_from_site_ashan'] = store['beer_velkopopovicky_kozel_svitle_05_l_jb']['ashan']
+            context_dict['price_from_site_novus'] = store['beer_velkopopovicky_kozel_svitle_05_l_jb']['novus']
+            context_dict['price_from_site_metro'] = store['beer_velkopopovicky_kozel_svitle_05_l_jb']['metro']
+
+        elif context_dict['nn_answer'] == 'Пиво 0,5л Оболонь BeerMix Лимон жб':
+            context_dict['item_image_for_user'] = get_beer_obolon_beermix_limon_svitle_05l_jb
+            context_dict['price_from_site_atb'] = store['beer_obolon_beermix_limon_svitle_05_l_jb']['atb']
+            context_dict['price_from_site_eko'] = store['beer_obolon_beermix_limon_svitle_05_l_jb']['eko']
+            context_dict['price_from_site_varus'] = store['beer_obolon_beermix_limon_svitle_05_l_jb']['varus']
+            context_dict['price_from_site_silpo'] = store['beer_obolon_beermix_limon_svitle_05_l_jb']['silpo']
+            context_dict['price_from_site_ashan'] = store['beer_obolon_beermix_limon_svitle_05_l_jb']['ashan']
+            context_dict['price_from_site_novus'] = store['beer_obolon_beermix_limon_svitle_05_l_jb']['novus']
+            context_dict['price_from_site_metro'] = store['beer_obolon_beermix_limon_svitle_05_l_jb']['metro']
+            context_dict['price_from_site_nash_kray'] = store['beer_obolon_beermix_limon_svitle_05_l_jb']['nash_kray']
+            context_dict['price_from_site_fozzy'] = store['beer_obolon_beermix_limon_svitle_05_l_jb']['fozzy']
+
+        elif context_dict['nn_answer'] == 'Пиво 0,5 л Edelmeister Weizenbier світле нефільтроване жб':
+            context_dict['item_image_for_user'] = get_beer_edelmeister_weizenbier_nefilter_svitle_05l_jb
+            context_dict['price_from_site_atb'] = store['beer_edelmeister_weizenbier_svitle_nefilter_05_l_jb']['atb']
+
+        elif context_dict['nn_answer'] == 'Пиво 0,5 л Edelmeister Schwarzbier темне фільтроване жб':
+            context_dict['item_image_for_user'] = get_beer_edelmeister_schwarzbier_temne_05l_jb
+            context_dict['price_from_site_atb'] = store['beer_edelmeister_schwarzbier_temne_05_l_jb']['atb']
+
+        elif context_dict['nn_answer'] == 'Пивo 0,5л Hike Blanche світлe нeфільтpoвaнe жб':
+            context_dict['item_image_for_user'] = get_beer_hike_blanche_svitle_nefilter_05l_jb
+            context_dict['price_from_site_atb'] = store['beer_hike_blanche_nefilter_05_l_jb']['atb']
+            context_dict['price_from_site_eko'] = store['beer_hike_blanche_nefilter_05_l_jb']['eko']
+            context_dict['price_from_site_varus'] = store['beer_hike_blanche_nefilter_05_l_jb']['varus']
+            context_dict['price_from_site_ashan'] = store['beer_hike_blanche_nefilter_05_l_jb']['ashan']
+            context_dict['price_from_site_novus'] = store['beer_hike_blanche_nefilter_05_l_jb']['novus']
+            context_dict['price_from_site_metro'] = store['beer_hike_blanche_nefilter_05_l_jb']['metro']
+
+        elif context_dict['nn_answer'] == 'Пиво 0,5л Zlata Praha світле жб':
+            context_dict['item_image_for_user'] = get_beer_zlata_praha_svitle_05l_jb
+            context_dict['price_from_site_atb'] = store['beer_zlata_praha_svitle_05_l_jb']['atb']
+            context_dict['price_from_site_varus'] = store['beer_zlata_praha_svitle_05_l_jb']['varus']
+            context_dict['price_from_site_ashan'] = store['beer_zlata_praha_svitle_05_l_jb']['ashan']
+
+        elif context_dict['nn_answer'] == 'Пиво 0,5л Thuringer Premium Beer світле фільтроване жб':
+            context_dict['item_image_for_user'] = get_beer_thuringer_premium_beer_svitle_05l_jb
+            context_dict['price_from_site_atb'] = store['beer_thuringer_premium_beer_svitle_05_l_jb']['atb']
+
+        elif context_dict['nn_answer'] == 'Пиво 0,5л Livu Sencu світле фільтроване жб':
+            context_dict['item_image_for_user'] = get_beer_livu_sencu_svitle_05l_jb
+            context_dict['price_from_site_atb'] = store['beer_livu_sencu_beer_svitle_05_l_jb']['atb']
+
+        elif context_dict['nn_answer'] == 'Пиво 0,5 л Germanarich светлое жб':
+            context_dict['item_image_for_user'] = get_beer_germanarich_svitle_05l_jb
+            context_dict['price_from_site_atb'] = store['beer_germanarich_svitle_05_l_jb']['atb']
+
+        elif context_dict['nn_answer'] == 'Пиво 0,5л Hike Преміум світле жб':
+            context_dict['item_image_for_user'] = get_beer_hike_premium_svitle_05l_jb
+            context_dict['price_from_site_atb'] = store['beer_hike_premium_svitle_05_l_jb']['atb']
+            context_dict['price_from_site_eko'] = store['beer_hike_premium_svitle_05_l_jb']['eko']
+            context_dict['price_from_site_varus'] = store['beer_hike_premium_svitle_05_l_jb']['varus']
+            context_dict['price_from_site_silpo'] = store['beer_hike_premium_svitle_05_l_jb']['silpo']
+            context_dict['price_from_site_ashan'] = store['beer_hike_premium_svitle_05_l_jb']['ashan']
+            context_dict['price_from_site_novus'] = store['beer_hike_premium_svitle_05_l_jb']['novus']
+            context_dict['price_from_site_metro'] = store['beer_hike_premium_svitle_05_l_jb']['metro']
+            context_dict['price_from_site_fozzy'] = store['beer_hike_premium_svitle_05_l_jb']['fozzy']
+
+        elif context_dict['nn_answer'] == 'Пивo бeзaлкoгoльнe 0,5л Обoлoнь 0 світлe нефільтроване пaстepизoвaнe жб':
+            context_dict['item_image_for_user'] = get_beer_obolon_svitle_nefilter_nonalcohol_05l_jb
+            context_dict['price_from_site_atb'] = store['beer_obolon_nonalcohol_nefilter_svitle_05_l_jb']['atb']
+            context_dict['price_from_site_varus'] = store['beer_obolon_nonalcohol_nefilter_svitle_05_l_jb']['varus']
+            context_dict['price_from_site_ashan'] = store['beer_obolon_nonalcohol_nefilter_svitle_05_l_jb']['ashan']
+
         else:
             context_dict['item_image_for_user'] = get_apple_golden
             context_dict['price_from_site_atb'] = store['apple_golden']['atb']
