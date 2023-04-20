@@ -1444,10 +1444,510 @@ class ProductParserVol2:
         return self.prices_parsing([
             'https://atbmarket.com/product/pivo-bezalkogolne-05l-obolon-0-svitle-nefiltrovane-pastepizovane',
             'https://varus.ua/pivo-specialne-0-5l-0-5-svitle-pasterizovane-0-nefiltrovane-plus-obolon-zb',
-            'https://auchan.ua/ua/pivo-0-obolon-bezalkogol-noe-svetloe-nefil-trovannoe-0-5-0-5-l-1031603/',
+            'https://auchan.ua/ua/pivo-0-obolon-bezalkogol-noe-svetloe-nefil-trovannoe-0-5-0-5-l-1031603/'
         ])
 
+    def beer_zibert_bavarskoe_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пивo Zibert Баварское светлое 0,5 л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-zibert-500ml--04820193034011/',
+            'https://novus.online/product/pyvo-svitle-zibert-bavarske-5-05l-zb',
+            'https://metro.zakaz.ua/uk/products/pivo-zibert-500ml--04820193034011/'
+        ])
 
+    def beer_bavaria_liquid_apple_ninalco_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пивo Bavaria Liquid Apple безалкогольное светлое 0,5 л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo--08714800017602/'
+        ])
+
+    def beer_heineken_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пивo Heineken светлое 0,5 л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-khaineken-500ml--04820046962010/',
+            'https://varus.ua/pivo-0-5l-5-svitle-filtrovane-heineken',
+            'https://shop.silpo.ua/product/pyvo-heineken-svitle-z-b-721739',
+            'https://auchan.ua/ua/pivo-heineken-svetloe-fil-trovannoe-5-zh-b-0-5-l-1031763/',
+            'https://novus.online/product/pivo-svitle-heineken-5-05l-zb',
+            'https://metro.zakaz.ua/uk/products/pivo-khaineken-500ml--04820046962010/',
+            'https://fozzyshop.ua/ru/pivo-svetloe/46783-pivo-heineken-svetloe-zh-b-4820046962010.html'
+        ])
+
+    def beer_rychtar_grant_11_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пивo Rychtar Grant 11 светлое 0,5 л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-500ml--08594018930074/'
+        ])
+
+    def beer_amstel_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пивo Amstel светлое 0,5 л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-amstel-500ml-ukrayina--04820046963109/',
+            'https://varus.ua/pivo-0-5l-5-svitle-filtrovane-amstel-zb',
+            'https://shop.silpo.ua/product/pyvo-amstel-svitle-z-b-783829',
+            'https://auchan.ua/ua/pivo-amstel-svetloe-fil-trovannoe-5-zh-b-0-5-l-1031723/',
+            'https://novus.online/product/pivo-svitle-amstel-lager-5-05l-zb',
+            'https://metro.zakaz.ua/uk/products/pivo-amstel-500ml-ukrayina--04820046963109/',
+            'https://fozzyshop.ua/ru/pivo-svetloe/63281-pivo-amstel-svetloe-zh-b-4820046963109.html'
+        ])
+
+    def beer_bavaria_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пивo Bavaria светлое 0,5 л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-bavariia-500ml-golandiia--08714800007191/',
+            'https://varus.ua/pivo-svitle-bavariya-0-5l-z-b',
+            'https://auchan.ua/ua/pivo-bavaria-svetloe-fil-trovannoe-5-0-5-l-1032139/',
+            'https://metro.zakaz.ua/uk/products/pivo-bavariia-500ml-golandiia--08714800007191/'
+        ])
+
+    def beer_bavaria_svitle_nonalcohol_05_l_jb_parser(self):
+        ''' Парсер для Пивo Bavaria светлое безалкогольное 0,5 л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-bavariia-500ml--ekomarket00000026220352/',
+            'https://varus.ua/bavariya-pivo-0-5l-z-b-b-a'
+        ])
+
+    def beer_edelburg_lager_05_l_jb_parser(self):
+        ''' Парсер для Пиво Edelburg Lager світле 5,2% 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-500ml-nimechchina--04260684190046/',
+            'https://metro.zakaz.ua/uk/products/pivo-500ml-nimechchina--04260684190046/'
+        ])
+
+    def beer_donner_pils_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Donner Pils світле 3,5% 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-500ml--05900535001488/'
+        ])
+
+    def beer_dutch_windmill_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Dutch Windmill світле 4,6% 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-500ml--08714800029735/',
+            'https://varus.ua/pivo-dach-vindmill-0-5-l-zh-b',
+            'https://novus.online/product/pivo-svitle-dutch-windmill-46-05l-zb'
+        ])
+
+    def beer_edelburg_hefeweizen_svitle_nefilter_05_l_jb_parser(self):
+        ''' Парсер для Пиво Edelburg Hefeweizen світле нефільтроване 5,1% 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-500ml-nimechchina--04260684190015/',
+            'https://metro.zakaz.ua/uk/products/pivo-500ml-nimechchina--04260684190015/'
+        ])
+
+    def beer_edelmeister_unfiltered_svitle_nefilter_05_l_jb_parser(self):
+        ''' Парсер для Пиво Edelmeister Unfiltered світле нефільтроване 5,7% 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-edelmeister-500ml--05900535016192/'
+        ])
+
+    def beer_estrella_damm_barcelona_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Estrella Damm Barcelona світле 4,6% 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-estrella-500ml-ispaniia--08410793286123/',
+            'https://shop.silpo.ua/product/pyvo-estrella-damm-barcelona-svitle-z-b-489877',
+            'https://novus.online/product/pivo-svitle-estrella-damm-barcelona-46-05-zb',
+            'https://metro.zakaz.ua/uk/products/pivo-estrella-500ml-ispaniia--08410793286123/',
+            'https://fozzyshop.ua/ru/pivo-svetloe/40047-pivo-estrella-damm-barcelona-svetloe-zh-b-8410793286123.html'
+        ])
+
+    def beer_halne_jasne_pelne_05_l_jb_parser(self):
+        ''' Парсер для Пиво Halne Jasne Pelne з/б 6% 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-khalne-500ml-polshcha--05900535009293/',
+            'https://novus.online/product/pivo-svitle-halne-pelne-6-05l-zb'
+        ])
+
+    def beer_eurotour_hefeweissbier_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Eurotour Hefeweissbier світле 5% 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-500ml--04014086086908/'
+        ])
+
+    def beer_hollandia_strong_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Hollandia Strong світле 7,5% 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-gollandiia-500ml-golandiia--08714800017305/',
+            'https://varus.ua/pivo-hollandia-svetloe-filtrovanoe-7-5-0-5-l',
+            'https://auchan.ua/ua/pivo-hollandia-strong-svetloe-fil-trovannoe-7-5-0-5-l-1031523/'
+        ])
+
+    def beer_lander_brau_premium_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Lander Brau Premium світле 4,9% 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-lander-brau-500ml--08714800026697/',
+            'https://varus.ua/pivo-lander-brau-premium-pilsner-svetloe-filtrovannoe-4-9-0-5-l',
+            'https://metro.zakaz.ua/uk/products/pivo-lander-brau-500ml--08714800026697/'
+        ])
+
+    def beer_saku_kuld_05_l_jb_parser(self):
+        ''' Парсер для Пиво Saku Kuld 5,2% 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo--04740019113259/'
+        ])
+
+    def beer_saku_originaal_05_l_jb_parser(self):
+        ''' Парсер для Пиво Saku Originaal 4,7% 0,5л л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo--04740019766233/'
+        ])
+
+    def beer_stangen_lager_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Stangen Lager світле 5,4% 0,5л л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-500ml-nimechchina--04260556080055/'
+        ])
+
+    def beer_van_pur_premium_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Van Pur Premium світле 5% 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-500ml--05900535000160/'
+        ])
+
+    def beer_bavaria_mango_marakya_nonalco_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Bavaria манго-маракуйя світле безалкогольне 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-500ml--08714800036023/'
+        ])
+
+    def beer_bavaria_granat_nonalco_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Bavaria гранат світле безалкогольне 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-bavariia-500ml--08714800040846/'
+        ])
+
+    def beer_obolon_beermix_malina_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Оболонь Beermix Малина світле 2,5% 0,5л жб'''
+        return self.prices_parsing([
+            'https://atbmarket.com/product/pivo-05-l-obolon-beermix-malina',
+            'https://eko.zakaz.ua/uk/products/pivo-birmiks-500ml-ukrayina--04820000193238/',
+            'https://auchan.ua/ua/pivo-obolon-beermix-malina-svetloe-fil-trovannoe-2-5-0-5-l-1032033/',
+            'https://shop.nashkraj.ua/kovel/product/6753-pivo-obolon-birmiks-0-5l-malina-zh-b2-5'
+        ])
+
+    def beer_obolon_beermix_vishnya_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Оболонь Beermix Вишня світле 2,5% 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-birmiks-500ml-ukrayina--04820000192125/',
+            'https://varus.ua/pivo-birmiks-vishnya-obolon-0-5l-z-b',
+            'https://shop.silpo.ua/product/pyvo-obolon-beermix-vyshnia-z-b-90894',
+            'https://auchan.ua/ua/pivo-obolon-beermix-vishnja-svetloe-fil-trovannoe-2-5-0-5-l-1032048/',
+            'https://novus.online/product/pivo-specialne-obolon-beermix-cherry-25-05l-zb',
+            'https://metro.zakaz.ua/uk/products/pivo-birmiks-500ml-ukrayina--04820000192125/',
+            'https://shop.nashkraj.ua/kovel/product/6750-pivo-obolon-birmiks-0-5l-vishnya-zh-b-2-5',
+            'https://fozzyshop.ua/ru/slaboalkogolnye-napitki/2891-pivo-obolon-beermix-vishnya-4820000192125.html'
+        ])
+
+    def beer_lomza_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Lomza світле 5,7% 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-500ml--05903538900765/'
+        ])
+
+    def beer_paderborner_pilsener_05_l_jb_parser(self):
+        ''' Парсер для Пиво Paderborner Pilsener світле 4,8% 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-paderborner-500ml-nimechchina--04101120015106/',
+            'https://shop.silpo.ua/product/pyvo-paderborner-pilsener-svitle-z-b-415766',
+            'https://novus.online/product/pivo-svitle-paderborner-pilsener-48-05l-zb',
+            'https://metro.zakaz.ua/uk/products/pivo-paderborner-500ml-nimechchina--04101120015106/',
+            'https://fozzyshop.ua/ru/pivo-svetloe/76994-pivo-paderborner-zh-b-4101120015106.html'
+        ])
+
+    def beer_paderborner_export_05_l_jb_parser(self):
+        ''' Парсер для Пиво Paderborner Export світле 5,5% 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-paderborner-500ml-nimechchina--04101120004711/',
+            'https://shop.silpo.ua/product/pyvo-paderborner-export-svitle-z-b-822648',
+            'https://novus.online/product/pivo-svitle-paderborner-export-5505-l-zb',
+            'https://metro.zakaz.ua/uk/products/pivo-paderborner-500ml-nimechchina--04101120004711/'
+        ])
+
+    def beer_clausthaler_grapefruit_nonalco_05_l_jb_parser(self):
+        ''' Парсер для Пиво Clausthaler Grapefruit безалкогольне 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-klaustkhaler-500ml-nimechchina--04053400208312/',
+            'https://varus.ua/pivo-bezalkogolne-klauszaler-grejpfrut-05l-z-b',
+            'https://metro.zakaz.ua/uk/products/pivo-klaustkhaler-500ml-nimechchina--04053400208312/'
+        ])
+
+    def beer_clausthaler_original_nonalco_05_l_jb_parser(self):
+        ''' Парсер для Пиво Clausthaler Original безалкогольне 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-klaustkhaler-500ml--04053400001579/',
+            'https://varus.ua/pivo-clausthaler-svetloe-filtrovanoe-bezalkogolnoe-0-0-5-l',
+            'https://metro.zakaz.ua/uk/products/pivo-klaustkhaler-500ml--04053400001579/'
+        ])
+
+    def beer_clausthaler_lemon_nonalco_05_l_jb_parser(self):
+        ''' Парсер для Пиво Clausthaler Lemon безалкогольне 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-klaustkhaler-500ml-nimechchina--04053400204918/',
+            'https://varus.ua/pivo-bezalkogolne-klauszaler-limon-05l-z-b',
+            'https://novus.online/product/pyvo-ba-clausthaler-lemon-0505l-zhb'
+        ])
+
+    def beer_forever_rock_n_roll_nefilter_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Forever Rock & Roll світле нефільтроване 7,5% 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-forever-500ml-ukrayina--04820183001719/'
+        ])
+
+    def beer_forever_black_queen_nefilter_temne_05_l_jb_parser(self):
+        ''' Парсер для Пиво Forever Black Queen темне нефільтроване 5,5% 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-volinskii-brovar-ukrayina--04820183001481/'
+        ])
+
+    def beer_forever_kite_safari_nefilter_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Forever Kite Safari світле нефільтроване 7% 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-500ml--04820183001504/'
+        ])
+
+    def beer_forever_crazy_nefilter_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Forever Crazy світле нефільтроване 6,5% 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-forever-ukrayina--04820183001702/'
+        ])
+
+    def beer_hike_light_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Hike Light світле 3,5% 0,5л жб'''
+        return self.prices_parsing([
+            'https://www.atbmarket.com/product/pivo-05-l-hike-light-svitle-zb',
+            'https://eko.zakaz.ua/uk/products/pivo-khaik-500ml--04820193035681/',
+            'https://varus.ua/pivo-hike-light-svetloe-filtrovannoe-0-5-l',
+            'https://shop.silpo.ua/product/pyvo-hike-light-svitle-z-b-909635',
+            'https://metro.zakaz.ua/uk/products/pivo-khaik-500ml--04820193035681/'
+        ])
+
+    def beer_hike_zero_nonalco_05_l_jb_parser(self):
+        ''' Парсер для Пиво Hike Zero безалкогольне 0,5л жб'''
+        return self.prices_parsing([
+            'https://www.atbmarket.com/product/pivo-bezalkogolne-05-l-hike-zero-zb',
+            'https://eko.zakaz.ua/uk/products/pivo-khaik-500ml--04820193034349/',
+            'https://varus.ua/pivo-hike-zero-svetloe-filtrovannoe-0-0-5-l',
+            'https://shop.silpo.ua/product/pyvo-hike-zero-0-0-svitle-bezalkogolne-z-b-856073',
+            'https://novus.online/product/pyvo-bezalkoholne-hike-zero-05-05l-zb',
+            'https://metro.zakaz.ua/uk/products/pivo-khaik-500ml--04820193034349/',
+            'https://fozzyshop.ua/ru/pivo-bezalkogolnoe/88456-pivo-hike-zero-00-svetloe-bezalkogolnoe-zh-b-4820193034349.html'
+        ])
+
+    def beer_horn_disel_ice_pilsner_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Horn Disel Ice Pilsner світле 4,7% 0,568л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-volfes-engelmen-568ml-litva--04770301236809/'
+        ])
+
+    def beer_horn_disel_original_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Horn Disel Original 5,3% 0,568л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-volfes-engelmen-568ml-litva--04770301229160/'
+        ])
+
+    def beer_horn_disel_traditional_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Horn Disel Traditional світле 6% 0,568л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-volfes-engelmen-568ml-litva--04770301231439/'
+        ])
+
+    def beer_horn_disel_premium_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Horn Premium Diesel світле 5% 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-khorn-disel--04770301234454/'
+        ])
+
+    def beer_krusovice_cerne_temne_05_l_jb_parser(self):
+        ''' Парсер для Пиво Krusovice Cerne темне 3,8% 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-krushovitse-500ml-ukrayina--04820046962140/',
+            'https://varus.ua/pivo-0-5l-3-8-temne-filtrovane-pasterizovane-krusovice-cerne-zb',
+            'https://shop.silpo.ua/product/pyvo-krusovice-cerne-temne-z-b-743431',
+            'https://novus.online/product/pivo-temne-krusovice-cerne-38-05l-zb',
+            'https://metro.zakaz.ua/uk/products/pivo-krushovitse-500ml-ukrayina--04820046962140/',
+            'https://shop.nashkraj.ua/kovel/product/263774-pivo-krusovice-0-5l-karlov-temn-3-8-zh-b',
+            'https://fozzyshop.ua/ru/pivo-temnoe/50296-pivo-krusovice-cerne-temnoe-zh-b-4820046962140.html'
+        ])
+
+    def beer_lander_brau_micne_05_l_jb_parser(self):
+        ''' Парсер для Пиво Lander Brau міцне 4,9% 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-500ml--08714800032582/',
+            'https://metro.zakaz.ua/uk/products/pivo-500ml--08714800032582/'
+        ])
+
+    def beer_lander_brau_svitle_nefilter_05_l_jb_parser(self):
+        ''' Парсер для Пиво Lander Brau світле нефільтроване 4,7% 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-500ml--08714800032674/',
+            'https://varus.ua/pivo-lander-brau-premium-pilsner-svetloe-filtrovannoe-4-9-0-5-l',
+            'https://metro.zakaz.ua/uk/products/pivo-500ml--08714800032674/'
+        ])
+
+    def beer_paderborner_pilger_svitle_nefilter_05_l_jb_parser(self):
+        ''' Парсер для Пиво Paderborner Pilger світле нефільтроване пастеризоване 5% 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-paderborner-500ml--04101120004735/',
+            'https://shop.silpo.ua/product/pyvo-paderborner-pilger-svitle-nefiltrovane-z-b-737942',
+            'https://novus.online/product/pivo-svitle-nefiltrovane-paderborner-pilger-50-05l-zb',
+            'https://metro.zakaz.ua/uk/products/pivo-paderborner-500ml--04101120004735/',
+            'https://fozzyshop.ua/ru/pivo-pshenichnoe/52457-pivo-paderborner-pilger-cvetloe-nefiltrovannoe-zhb-4101120004735.html'
+        ])
+
+    def beer_platan_jedenactka_11_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Platan Jedenactka 11 світле 4,6% 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-500ml--08594044362139/'
+        ])
+
+    def beer_praga_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Praga світле фільтроване 4,7% 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-praga-500ml-chekhiia--08593875219490/',
+            'https://novus.online/product/pivo-svitle-praga-premium-pils-47-05l-zb',
+            'https://metro.zakaz.ua/uk/products/pivo-praga-500ml-chekhiia--08593875219490/'
+        ])
+
+    def beer_saku_rock_svitle_0568_l_jb_parser(self):
+        ''' Парсер для Пиво Saku Rock світле 5,3% 0,568л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-saku-568ml-estoniia--04740019121087/'
+        ])
+
+    def beer_sitnan_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Sitnan світле 5% 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-sitnan-500ml--08588000080687/',
+            'https://novus.online/product/pyvo-svitle-sitnan-12-alk-50-05l-zhbanka'
+        ])
+
+    def beer_vienas_premium_golden_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Vienas Premium Golden світле 5% 0,568л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-568ml-litva--04779030610423/'
+        ])
+
+    def beer_vienas_premium_traditional_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Vienas Premium Traditional світле 5,8% 0,568л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-568ml-litva--04779030610607/'
+        ])
+
+    def beer_volynski_browar_forever_sweet_wit_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Volynski Browar Forever Sweet Wit пшеничне світле нефільтроване 4,5% 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-ukrayina--04820183001429/'
+        ])
+
+    def beer_zahringer_premium_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Zahringer Преміум світле 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-tsaringer-500ml-nimechchina--04054500131746/'
+        ])
+
+    def beer_zahringer_hefeweizen_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Zahringer Hefeweizen світле 0,5л ж'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-tsaringer-500ml-nimechchina--04054500131715/'
+        ])
+
+    def beer_jajkivske_nefilter_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Жашківське світле нефільтроване 4,5% 0,5л жб'''
+        return self.prices_parsing([
+            'https://www.atbmarket.com/product/pivo-05-l-zaskivske-svitle-zb',
+            'https://eko.zakaz.ua/uk/products/ukrayina--04820252120259/',
+            'https://shop.silpo.ua/product/pyvo-zhashkivske-svitle-nefiltrovane-z-b-909105',
+            'https://novus.online/product/pyvo-svitle-nefiltrovane-zhashkivske-05-45-zb'
+        ])
+
+    def beer_obolon_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Оболонь світле 4,5% 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-obolon-500ml-ukrayina--04820000190954/',
+            'https://varus.ua/pivo-obolon-svitle-filtrovane-4-5-0-5-l',
+            'https://shop.silpo.ua/product/pyvo-obolon-svitle-z-b-861',
+            'https://novus.online/product/pivo-svitle-obolon-45-05l-zb',
+            'https://metro.zakaz.ua/uk/products/pivo-obolon-500ml-ukrayina--04820000190954/',
+            'https://fozzyshop.ua/ru/pivo-svetloe/2918-pivo-obolon-svitle-svetloe-4820000190954.html'
+        ])
+
+    def beer_pubster_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Pubster світле 5% 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-obolon-500ml--04820193034592/',
+            'https://varus.ua/pivo-svitle-pabster-0-5-l-z-b',
+            'https://shop.silpo.ua/product/pyvo-pubster-svitle-z-b-872791',
+            'https://novus.online/product/pyvo-svitle-obolon-pubster-5-05l-zb',
+            'https://metro.zakaz.ua/uk/products/pivo-obolon-500ml--04820193034592/'
+        ])
+
+    def beer_chaika_chernomorskaya_05_l_jb_parser(self):
+        ''' Парсер для Пиво ППБ Чайка Чорноморська 4,5% 0,5л жб'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-persha-privatna-brovarnia-500ml-ukrayina--04820046964533/',
+            'https://shop.silpo.ua/product/pyvo-chaika-chornomorska-svitle-z-b-866178',
+            'https://novus.online/product/pyvo-svitle-chayka-chornomorska-45-05l-zb',
+            'https://metro.zakaz.ua/uk/products/pivo-persha-privatna-brovarnia-500ml-ukrayina--04820046964533/',
+            'https://fozzyshop.ua/ru/pivo-svetloe/88463-pivo-chajka-chornomorska-svitle-zh-b-4820046964533.html'
+        ])
+
+    def beer_ppb_zakarpatske_origin_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво ППБ Закарпатське Оригінальне світле 4,4% 0,5л'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-radomishl-500ml-ukrayina--04820046963765/',
+            'https://varus.ua/pivo-0-5l-4-4-svitle-originalne-zakarpatske-zb',
+            'https://shop.silpo.ua/product/pyvo-persha-pryvatna-brovarnia-zakarpatske-oryginalne-svitle-z-b-818888',
+            'https://novus.online/product/pivo-svitle-zakarpatske-originalne-44-05l-zb',
+            'https://fozzyshop.ua/ru/pivo-svetloe/77006-pivo-persha-privatna-brovarnya-zakarpatskoe-originalnoe-svetloe-zh-b-4820046963765.html'
+        ])
+
+    def beer_ppb_bochkove_nefilter_05_l_jb_parser(self):
+        ''' Парсер для Пиво ППБ Бочкове Нефільтроване з/б 4,8% 0,5л'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-persha-privatna-brovarnia-500ml-ukrayina--04820046963222/',
+            'https://shop.silpo.ua/product/pyvo-persha-pryvatna-brovarnia-bochkove-svitle-nefiltrovane-z-b-783830',
+            'https://auchan.ua/ua/pivo-persha-privatna-brovarnja-bochkovoe-svetloe-nefil-trovannoe-4-8-0-5-l-1031718/',
+            'https://novus.online/product/pivo-svitle-ppb-bockove-specialne-nefiltrovane-48-05l-zb',
+            'https://metro.zakaz.ua/uk/products/pivo-persha-privatna-brovarnia-500ml-ukrayina--04820046963222/',
+            'https://shop.nashkraj.ua/kovel/product/317722-pivo-privatbrovarnya-0-5l-bochkove-nef-zh-b'
+        ])
+
+    def beer_ppb_nefilter_svitle_nonalco_05_l_jb_parser(self):
+        ''' Парсер для Пиво ППБ Нефільтроване світле безалкогольне 0,5л'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-persha-privatna-brovarnia-500ml-ukrayina--04820046963369/',
+            'https://varus.ua/pivo-specialne-0-5l-bezalkogolne-svitle-nefiltrovane-pasterizovane-persha-privatna-brovarnya-zb',
+            'https://shop.silpo.ua/product/pyvo-persha-pryvatna-brovarnia-svitle-nefiltrovane-bezalkogolne-z-b-797104',
+            'https://novus.online/product/pyvo-bezalkoholne-svitle-nefiltrovane-ppb-zhb-05l',
+            'https://metro.zakaz.ua/uk/products/pivo-persha-privatna-brovarnia-500ml--04820046964304/',
+            'https://fozzyshop.ua/ru/pivo-bezalkogolnoe/64332-pivo-persha-privatna-brovarnya-svetloe-n-f-b-alk-zh-b-4820046963369.html'
+        ])
+
+    def beer_ppb_limon_lime_nonalco_nefilter_05_l_jb_parser(self):
+        ''' Парсер для Пиво ППБ Лимон-Лайм безалкогольне нефільтроване 0,5л'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-persha-privatna-brovarnia-500ml--04820046964786/',
+            'https://varus.ua/pivo-persha-privatna-brovarnya-limon-lajm-bezalkogolne-nefiltrovane-bochkove-05-l',
+            'https://novus.online/product/pyvo-bezalkoholne-zi-smakom-lymona-laym-ppb-zhb-05l'
+        ])
+
+    def beer_chaika_dniprovskaya_05_l_jb_parser(self):
+        ''' Парсер для Пиво Чайка Дніпровська світле фільтроване 4,8% 0,5л'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-chaika-500ml-ukrayina--04820046964014/',
+            'https://shop.silpo.ua/product/pyvo-chaika-dniprovska-svitle-z-b-836169',
+            'https://novus.online/product/pivo-svitle-cajka-dniprovska-48-05l-zb',
+            'https://metro.zakaz.ua/uk/products/pivo-chaika-500ml-ukrayina--04820046964014/',
+            'https://shop.nashkraj.ua/kovel/product/398516-pivo-chayka-0-5l-dniprovska-zh-b',
+            'https://fozzyshop.ua/ru/pivo-svetloe/88459-pivo-chajka-dniprovska-svetloe-zh-b-4820046964014.html'
+        ])
+
+    def beer_brok_export_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Brok Export світле 5,2% 0,5л'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-brok-500ml-polshcha--05900535004007/',
+            'https://novus.online/product/pivo-svitle-brok-export-52-05l-zb'
+        ])
 
 
 

@@ -958,8 +958,317 @@ all_products_names=[
         "atb":parser.beer_hike_premium_svitle_05_l_jb_parser()[0],
         "varus":parser.beer_hike_premium_svitle_05_l_jb_parser()[2],
         "ashan":parser.beer_hike_premium_svitle_05_l_jb_parser()[4]
-
-}}
+}},
+    {'beer_zibert_bavarskoe_svitle_05_l_jb':{
+        "eko":parser.beer_zibert_bavarskoe_svitle_05_l_jb_parser()[1],
+        "novus":parser.beer_zibert_bavarskoe_svitle_05_l_jb_parser()[5],
+        "metro":parser.beer_zibert_bavarskoe_svitle_05_l_jb_parser()[6]
+}},
+    {'beer_bavaria_liquid_apple_ninalco_svitle_05_l_jb':{
+        "eko":parser.beer_bavaria_liquid_apple_ninalco_svitle_05_l_jb_parser()[1]
+}},
+    {'beer_heineken_svitle_05_l_jb':{
+        "eko":parser.beer_heineken_svitle_05_l_jb_parser()[1],
+        "varus":parser.beer_heineken_svitle_05_l_jb_parser()[2],
+        "silpo":parser.beer_heineken_svitle_05_l_jb_parser()[3],
+        "ashan":parser.beer_heineken_svitle_05_l_jb_parser()[4],
+        "novus":parser.beer_heineken_svitle_05_l_jb_parser()[5],
+        "metro":parser.beer_heineken_svitle_05_l_jb_parser()[6],
+        "fozzy":parser.beer_heineken_svitle_05_l_jb_parser()[8]
+}},
+    {'beer_rychtar_grant_11_svitle_05_l_jb':{
+        "eko":parser.beer_rychtar_grant_11_svitle_05_l_jb_parser()[1]
+}},
+    {'beer_amstel_svitle_05_l_jb':{
+        "eko":parser.beer_amstel_svitle_05_l_jb_parser()[1],
+        "varus":parser.beer_amstel_svitle_05_l_jb_parser()[2],
+        "silpo":parser.beer_amstel_svitle_05_l_jb_parser()[3],
+        "ashan":parser.beer_amstel_svitle_05_l_jb_parser()[4],
+        "novus":parser.beer_amstel_svitle_05_l_jb_parser()[5],
+        "metro":parser.beer_amstel_svitle_05_l_jb_parser()[6],
+        "fozzy":parser.beer_amstel_svitle_05_l_jb_parser()[8]
+}},
+    {'beer_bavaria_svitle_05_l_jb':{
+        "eko":parser.beer_bavaria_svitle_05_l_jb_parser()[1],
+        "varus":parser.beer_bavaria_svitle_05_l_jb_parser()[2],
+        "ashan":parser.beer_bavaria_svitle_05_l_jb_parser()[4],
+        "metro":parser.beer_bavaria_svitle_05_l_jb_parser()[6]
+}},
+    {'beer_bavaria_svitle_nonalcohol_05_l_jb':{
+        "eko":parser.beer_bavaria_svitle_nonalcohol_05_l_jb_parser()[1],
+        "varus":parser.beer_bavaria_svitle_nonalcohol_05_l_jb_parser()[2]
+}},
+    {'beer_edelburg_lager_05_l_jb':{
+        "eko":parser.beer_edelburg_lager_05_l_jb_parser()[1],
+        "metro":parser.beer_edelburg_lager_05_l_jb_parser()[6]
+}},
+    {'beer_donner_pils_svitle_05_l_jb':{
+        "eko":parser.beer_donner_pils_svitle_05_l_jb_parser()[1]
+}},
+    {'beer_dutch_windmill_svitle_05_l_jb':{
+        "eko":parser.beer_dutch_windmill_svitle_05_l_jb_parser()[1],
+        "varus":parser.beer_dutch_windmill_svitle_05_l_jb_parser()[2],
+        "novus":parser.beer_dutch_windmill_svitle_05_l_jb_parser()[5]
+}},
+    {'beer_edelburg_hefeweizen_svitle_nefilter_05_l_jb':{
+        "eko":parser.beer_edelburg_hefeweizen_svitle_nefilter_05_l_jb_parser()[1],
+        "metro":parser.beer_edelburg_hefeweizen_svitle_nefilter_05_l_jb_parser()[6]
+}},
+    {'beer_edelmeister_unfiltered_svitle_nefilter_05_l_jb':{
+        "eko":parser.beer_edelmeister_unfiltered_svitle_nefilter_05_l_jb_parser()[1]
+}},
+    {'beer_estrella_damm_barcelona_svitle_05_l_jb':{
+        "eko":parser.beer_estrella_damm_barcelona_svitle_05_l_jb_parser()[1],
+        "silpo":parser.beer_estrella_damm_barcelona_svitle_05_l_jb_parser()[3],
+        "novus":parser.beer_estrella_damm_barcelona_svitle_05_l_jb_parser()[5],
+        "metro":parser.beer_estrella_damm_barcelona_svitle_05_l_jb_parser()[6],
+        "fozzy":parser.beer_estrella_damm_barcelona_svitle_05_l_jb_parser()[8]
+}},
+    {'beer_halne_jasne_pelne_05_l_jb':{
+        "eko":parser.beer_halne_jasne_pelne_05_l_jb_parser()[1],
+        "novus":parser.beer_halne_jasne_pelne_05_l_jb_parser()[5]
+}},
+    {'beer_eurotour_hefeweissbier_svitle_05_l_jb':{
+        "eko":parser.beer_eurotour_hefeweissbier_svitle_05_l_jb_parser()[1]
+}},
+    {'beer_hollandia_strong_svitle_05_l_jb':{
+        "eko":parser.beer_hollandia_strong_svitle_05_l_jb_parser()[1],
+        "varus":parser.beer_hollandia_strong_svitle_05_l_jb_parser()[2],
+        "ashan":parser.beer_hollandia_strong_svitle_05_l_jb_parser()[4]
+}},
+    {'beer_lander_brau_premium_svitle_05_l_jb':{
+        "eko":parser.beer_lander_brau_premium_svitle_05_l_jb_parser()[1],
+        "varus":parser.beer_lander_brau_premium_svitle_05_l_jb_parser()[2],
+        "metro":parser.beer_lander_brau_premium_svitle_05_l_jb_parser()[6]
+}},
+    {'beer_saku_kuld_05_l_jb':{
+        "eko":parser.beer_saku_kuld_05_l_jb_parser()[1]
+}},
+    {'beer_saku_originaal_05_l_jb':{
+        "eko":parser.beer_saku_originaal_05_l_jb_parser()[1]
+}},
+    {'beer_stangen_lager_svitle_05_l_jb':{
+        "eko":parser.beer_stangen_lager_svitle_05_l_jb_parser()[1]
+}},
+    {'beer_van_pur_premium_svitle_05_l_jb':{
+        "eko":parser.beer_van_pur_premium_svitle_05_l_jb_parser()[1]
+}},
+    {'beer_bavaria_mango_marakya_nonalco_svitle_05_l_jb':{
+        "eko":parser.beer_bavaria_mango_marakya_nonalco_svitle_05_l_jb_parser()[1]
+}},
+    {'beer_bavaria_granat_nonalco_svitle_05_l_jb':{
+        "eko":parser.beer_bavaria_granat_nonalco_svitle_05_l_jb_parser()[1]
+}},
+    {'beer_obolon_beermix_malina_svitle_05_l_jb':{
+        "atb":parser.beer_obolon_beermix_malina_svitle_05_l_jb_parser()[0],
+        "eko":parser.beer_obolon_beermix_malina_svitle_05_l_jb_parser()[1],
+        "ashan":parser.beer_obolon_beermix_malina_svitle_05_l_jb_parser()[4],
+        "nash_kray":parser.beer_obolon_beermix_malina_svitle_05_l_jb_parser()[7]
+}},
+    {'beer_obolon_beermix_vishnya_svitle_05_l_jb':{
+        "eko":parser.beer_obolon_beermix_vishnya_svitle_05_l_jb_parser()[1],
+        "varus":parser.beer_obolon_beermix_vishnya_svitle_05_l_jb_parser()[2],
+        "silpo":parser.beer_obolon_beermix_vishnya_svitle_05_l_jb_parser()[3],
+        "ashan":parser.beer_obolon_beermix_vishnya_svitle_05_l_jb_parser()[4],
+        "novus":parser.beer_obolon_beermix_vishnya_svitle_05_l_jb_parser()[5],
+        "metro":parser.beer_obolon_beermix_vishnya_svitle_05_l_jb_parser()[6],
+        "nash_kray":parser.beer_obolon_beermix_vishnya_svitle_05_l_jb_parser()[7],
+        "fozzy":parser.beer_obolon_beermix_vishnya_svitle_05_l_jb_parser()[8]
+}},
+    {'beer_lomza_svitle_05_l_jb':{
+        "eko":parser.beer_lomza_svitle_05_l_jb_parser()[1]
+}},
+    {'beer_paderborner_pilsener_05_l_jb':{
+        "eko":parser.beer_paderborner_pilsener_05_l_jb_parser()[1],
+        "silpo":parser.beer_paderborner_pilsener_05_l_jb_parser()[3],
+        "novus":parser.beer_paderborner_pilsener_05_l_jb_parser()[5],
+        "metro":parser.beer_paderborner_pilsener_05_l_jb_parser()[6],
+        "fozzy":parser.beer_paderborner_pilsener_05_l_jb_parser()[8]
+}},
+    {'beer_paderborner_export_05_l_jb':{
+        "eko":parser.beer_paderborner_export_05_l_jb_parser()[1],
+        "silpo":parser.beer_paderborner_export_05_l_jb_parser()[3],
+        "novus":parser.beer_paderborner_export_05_l_jb_parser()[5],
+        "metro":parser.beer_paderborner_export_05_l_jb_parser()[6]
+}},
+    {'beer_clausthaler_grapefruit_nonalco_05_l_jb':{
+        "eko":parser.beer_clausthaler_grapefruit_nonalco_05_l_jb_parser()[1],
+        "varus":parser.beer_clausthaler_grapefruit_nonalco_05_l_jb_parser()[2],
+        "metro":parser.beer_clausthaler_grapefruit_nonalco_05_l_jb_parser()[6]
+}},
+    {'beer_clausthaler_original_nonalco_05_l_jb':{
+        "eko":parser.beer_clausthaler_original_nonalco_05_l_jb_parser()[1],
+        "varus":parser.beer_clausthaler_original_nonalco_05_l_jb_parser()[2],
+        "metro":parser.beer_clausthaler_original_nonalco_05_l_jb_parser()[6]
+}},
+    {'beer_clausthaler_lemon_nonalco_05_l_jb':{
+        "eko":parser.beer_clausthaler_lemon_nonalco_05_l_jb_parser()[1],
+        "varus":parser.beer_clausthaler_lemon_nonalco_05_l_jb_parser()[2],
+        "novus":parser.beer_clausthaler_lemon_nonalco_05_l_jb_parser()[5]
+}},
+    {'beer_forever_rock_n_roll_nefilter_svitle_05_l_jb':{
+        "eko":parser.beer_forever_rock_n_roll_nefilter_svitle_05_l_jb_parser()[1]
+}},
+    {'beer_forever_black_queen_nefilter_temne_05_l_jb':{
+        "eko":parser.beer_forever_black_queen_nefilter_temne_05_l_jb_parser()[1]
+}},
+    {'beer_forever_kite_safari_nefilter_svitle_05_l_jb':{
+        "eko":parser.beer_forever_kite_safari_nefilter_svitle_05_l_jb_parser()[1]
+}},
+    {'beer_forever_crazy_nefilter_svitle_05_l_jb':{
+        "eko":parser.beer_forever_crazy_nefilter_svitle_05_l_jb_parser()[1]
+}},
+    {'beer_hike_light_svitle_05_l_jb':{
+        "atb":parser.beer_hike_light_svitle_05_l_jb_parser()[0],
+        "eko":parser.beer_hike_light_svitle_05_l_jb_parser()[1],
+        "varus":parser.beer_hike_light_svitle_05_l_jb_parser()[2],
+        "silpo":parser.beer_hike_light_svitle_05_l_jb_parser()[3],
+        "metro":parser.beer_hike_light_svitle_05_l_jb_parser()[6]
+}},
+    {'beer_hike_zero_nonalco_05_l_jb':{
+        "atb":parser.beer_hike_zero_nonalco_05_l_jb_parser()[0],
+        "eko":parser.beer_hike_zero_nonalco_05_l_jb_parser()[1],
+        "varus":parser.beer_hike_zero_nonalco_05_l_jb_parser()[2],
+        "silpo":parser.beer_hike_zero_nonalco_05_l_jb_parser()[3],
+        "novus":parser.beer_hike_zero_nonalco_05_l_jb_parser()[5],
+        "metro":parser.beer_hike_zero_nonalco_05_l_jb_parser()[6],
+        "fozzy":parser.beer_hike_zero_nonalco_05_l_jb_parser()[8]
+}},
+    {'beer_horn_disel_ice_pilsner_svitle_05_l_jb':{
+        "eko":parser.beer_horn_disel_ice_pilsner_svitle_05_l_jb_parser()[1]
+}},
+    {'beer_horn_disel_original_svitle_05_l_jb':{
+        "eko":parser.beer_horn_disel_original_svitle_05_l_jb_parser()[1]
+}},
+    {'beer_horn_disel_traditional_svitle_05_l_jb':{
+        "eko":parser.beer_horn_disel_traditional_svitle_05_l_jb_parser()[1]
+}},
+    {'beer_horn_disel_premium_svitle_05_l_jb':{
+        "eko":parser.beer_horn_disel_premium_svitle_05_l_jb_parser()[1]
+}},
+    {'beer_krusovice_cerne_temne_05_l_jb':{
+        "eko":parser.beer_krusovice_cerne_temne_05_l_jb_parser()[1],
+        "varus":parser.beer_krusovice_cerne_temne_05_l_jb_parser()[2],
+        "silpo":parser.beer_krusovice_cerne_temne_05_l_jb_parser()[3],
+        "novus":parser.beer_krusovice_cerne_temne_05_l_jb_parser()[5],
+        "metro":parser.beer_krusovice_cerne_temne_05_l_jb_parser()[6],
+        "nash_kray":parser.beer_krusovice_cerne_temne_05_l_jb_parser()[7],
+        "fozzy":parser.beer_krusovice_cerne_temne_05_l_jb_parser()[8]
+}},
+    {'beer_lander_brau_micne_05_l_jb':{
+        "eko":parser.beer_lander_brau_micne_05_l_jb_parser()[1],
+        "metro":parser.beer_lander_brau_micne_05_l_jb_parser()[6]
+}},
+    {'beer_lander_brau_svitle_nefilter_05_l_jb':{
+        "eko":parser.beer_lander_brau_svitle_nefilter_05_l_jb_parser()[1],
+        "varus":parser.beer_lander_brau_svitle_nefilter_05_l_jb_parser()[2],
+        "metro":parser.beer_lander_brau_svitle_nefilter_05_l_jb_parser()[6]
+}},
+    {'beer_paderborner_pilger_svitle_nefilter_05_l_jb':{
+        "eko":parser.beer_paderborner_pilger_svitle_nefilter_05_l_jb_parser()[1],
+        "silpo": parser.beer_paderborner_pilger_svitle_nefilter_05_l_jb_parser()[3],
+        "novus": parser.beer_paderborner_pilger_svitle_nefilter_05_l_jb_parser()[5],
+        "metro": parser.beer_paderborner_pilger_svitle_nefilter_05_l_jb_parser()[6],
+        "fozzy": parser.beer_paderborner_pilger_svitle_nefilter_05_l_jb_parser()[8]
+}},
+    {'beer_platan_jedenactka_11_svitle_05_l_jb':{
+        "eko":parser.beer_platan_jedenactka_11_svitle_05_l_jb_parser()[1]
+}},
+    {'beer_praga_svitle_05_l_jb':{
+        "eko":parser.beer_praga_svitle_05_l_jb_parser()[1],
+        "novus": parser.beer_praga_svitle_05_l_jb_parser()[5],
+        "metro": parser.beer_praga_svitle_05_l_jb_parser()[6]
+}},
+    {'beer_saku_rock_svitle_0568_l_jb':{
+        "eko":parser.beer_saku_rock_svitle_0568_l_jb_parser()[1]
+}},
+    {'beer_sitnan_svitle_05_l_jb':{
+        "eko":parser.beer_sitnan_svitle_05_l_jb_parser()[1],
+        "novus": parser.beer_sitnan_svitle_05_l_jb_parser()[5]
+}},
+    {'beer_vienas_premium_golden_svitle_05_l_jb':{
+        "eko":parser.beer_vienas_premium_golden_svitle_05_l_jb_parser()[1]
+}},
+    {'beer_vienas_premium_traditional_svitle_05_l_jb':{
+        "eko":parser.beer_vienas_premium_traditional_svitle_05_l_jb_parser()[1]
+}},
+    {'beer_volynski_browar_forever_sweet_wit_svitle_05_l_jb':{
+        "eko":parser.beer_volynski_browar_forever_sweet_wit_svitle_05_l_jb_parser()[1]
+}},
+    {'beer_zahringer_premium_svitle_05_l_jb':{
+        "eko":parser.beer_zahringer_premium_svitle_05_l_jb_parser()[1]
+}},
+    {'beer_zahringer_hefeweizen_svitle_05_l_jb':{
+        "eko":parser.beer_zahringer_hefeweizen_svitle_05_l_jb_parser()[1]
+}},
+    {'beer_jajkivske_nefilter_svitle_05_l_jb':{
+        "atb":parser.beer_jajkivske_nefilter_svitle_05_l_jb_parser()[0],
+        "eko":parser.beer_jajkivske_nefilter_svitle_05_l_jb_parser()[1],
+        "silpo":parser.beer_jajkivske_nefilter_svitle_05_l_jb_parser()[3],
+        "novus":parser.beer_jajkivske_nefilter_svitle_05_l_jb_parser()[5]
+}},
+    {'beer_obolon_svitle_05_l_jb':{
+        "eko":parser.beer_obolon_svitle_05_l_jb_parser()[1],
+        "varus":parser.beer_obolon_svitle_05_l_jb_parser()[2],
+        "silpo":parser.beer_obolon_svitle_05_l_jb_parser()[3],
+        "novus":parser.beer_obolon_svitle_05_l_jb_parser()[5],
+        "metro":parser.beer_obolon_svitle_05_l_jb_parser()[6],
+        "fozzy":parser.beer_obolon_svitle_05_l_jb_parser()[8]
+}},
+    {'beer_pubster_svitle_05_l_jb':{
+        "eko":parser.beer_pubster_svitle_05_l_jb_parser()[1],
+        "varus":parser.beer_pubster_svitle_05_l_jb_parser()[2],
+        "silpo":parser.beer_pubster_svitle_05_l_jb_parser()[3],
+        "novus":parser.beer_pubster_svitle_05_l_jb_parser()[5],
+        "metro":parser.beer_pubster_svitle_05_l_jb_parser()[6]
+}},
+    {'beer_chaika_chernomorskaya_05_l_jb':{
+        "eko":parser.beer_chaika_chernomorskaya_05_l_jb_parser()[1],
+        "silpo":parser.beer_chaika_chernomorskaya_05_l_jb_parser()[3],
+        "novus":parser.beer_chaika_chernomorskaya_05_l_jb_parser()[5],
+        "metro":parser.beer_chaika_chernomorskaya_05_l_jb_parser()[6],
+        "fozzy":parser.beer_chaika_chernomorskaya_05_l_jb_parser()[8]
+}},
+    {'beer_ppb_zakarpatske_origin_svitle_05_l_jb':{
+        "eko":parser.beer_ppb_zakarpatske_origin_svitle_05_l_jb_parser()[1],
+        "varus":parser.beer_ppb_zakarpatske_origin_svitle_05_l_jb_parser()[2],
+        "silpo":parser.beer_ppb_zakarpatske_origin_svitle_05_l_jb_parser()[3],
+        "novus":parser.beer_ppb_zakarpatske_origin_svitle_05_l_jb_parser()[5],
+        "fozzy":parser.beer_ppb_zakarpatske_origin_svitle_05_l_jb_parser()[8]
+}},
+    {'beer_ppb_bochkove_nefilter_05_l_jb':{
+        "eko":parser.beer_ppb_bochkove_nefilter_05_l_jb_parser()[1],
+        "silpo":parser.beer_ppb_bochkove_nefilter_05_l_jb_parser()[3],
+        "ashan":parser.beer_ppb_bochkove_nefilter_05_l_jb_parser()[4],
+        "novus":parser.beer_ppb_bochkove_nefilter_05_l_jb_parser()[5],
+        "metro":parser.beer_ppb_bochkove_nefilter_05_l_jb_parser()[6],
+        "nash_kray":parser.beer_ppb_bochkove_nefilter_05_l_jb_parser()[7]
+}},
+    {'beer_ppb_nefilter_svitle_nonalco_05_l_jb':{
+        "eko":parser.beer_ppb_nefilter_svitle_nonalco_05_l_jb_parser()[1],
+        "varus":parser.beer_ppb_nefilter_svitle_nonalco_05_l_jb_parser()[2],
+        "silpo":parser.beer_ppb_nefilter_svitle_nonalco_05_l_jb_parser()[3],
+        "novus":parser.beer_ppb_nefilter_svitle_nonalco_05_l_jb_parser()[5],
+        "metro":parser.beer_ppb_nefilter_svitle_nonalco_05_l_jb_parser()[6],
+        "fozzy":parser.beer_ppb_nefilter_svitle_nonalco_05_l_jb_parser()[8]
+}},
+    {'beer_ppb_limon_lime_nonalco_nefilter_05_l_jb':{
+        "eko":parser.beer_ppb_limon_lime_nonalco_nefilter_05_l_jb_parser()[1],
+        "varus":parser.beer_ppb_limon_lime_nonalco_nefilter_05_l_jb_parser()[2],
+        "novus":parser.beer_ppb_limon_lime_nonalco_nefilter_05_l_jb_parser()[5]
+}},
+    {'beer_chaika_dniprovskaya_05_l_jb':{
+        "eko":parser.beer_chaika_dniprovskaya_05_l_jb_parser()[1],
+        "silpo":parser.beer_chaika_dniprovskaya_05_l_jb_parser()[3],
+        "novus":parser.beer_chaika_dniprovskaya_05_l_jb_parser()[5],
+        "metro":parser.beer_chaika_dniprovskaya_05_l_jb_parser()[6],
+        "nash_kray": parser.beer_chaika_dniprovskaya_05_l_jb_parser()[7],
+        "fozzy":parser.beer_chaika_dniprovskaya_05_l_jb_parser()[8]
+}},
+    {'beer_brok_export_svitle_05_l_jb':{
+        "eko":parser.beer_brok_export_svitle_05_l_jb_parser()[1],
+        "novus":parser.beer_brok_export_svitle_05_l_jb_parser()[5]
+}},
 
 ]
 

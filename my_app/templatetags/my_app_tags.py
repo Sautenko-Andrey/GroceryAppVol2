@@ -447,6 +447,211 @@ get_beer_hike_premium_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,142)
 '''Тэг,возвращающий информацию о "Пивo бeзaлкoгoльнe 0,5л Обoлoнь 0 світлe нефільтроване пaстepизoвaнe жб"'''
 get_beer_obolon_svitle_nefilter_nonalcohol_05l_jb = tag.create_tag(ItemsPicsFromNet,143)
 
+'''Тэг,возвращающий информацию о "Пиво Zibert Баварське світле 5% 0,5л жб"'''
+get_beer_zibrert_bavarske_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,144)
+
+'''Тэг,возвращающий информацию о "Пиво Bavaria Liquid Apple світле безалкогольне 0,5л жб"'''
+get_beer_bavaria_liquid_apple_nonalcohol_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,145)
+
+'''Тэг,возвращающий информацию о "Пиво Heineken світле 5% 0,5л жб"'''
+get_beer_heineken_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,146)
+
+'''Тэг,возвращающий информацию о "Пиво Rychtar Grunt 11 світле 4,6% 0,5л жб"'''
+get_beer_rychtar_grunt_11_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,147)
+
+'''Тэг,возвращающий информацию о "Пиво Amstel світле фільтроване 5% 0,5л жб"'''
+get_beer_amstel_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,148)
+
+'''Тэг,возвращающий информацию о "Пиво Bavaria світле фільтроване 5% 0,5л жб"'''
+get_beer_bavaria_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,149)
+
+'''Тэг,возвращающий информацию о "Пиво Bavaria світле 0% 0,5л безалкогольное жб"'''
+get_beer_bavaria_svitle_nonalcohol_05l_jb = tag.create_tag(ItemsPicsFromNet,150)
+
+'''Тэг,возвращающий информацию о "Пиво Edelburg Lager світле 5,2% 0,5л жб"'''
+get_beer_edelburg_lager_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,151)
+
+'''Тэг,возвращающий информацию о "Пиво Donner Pils світле 3,5% 0,5л жб"'''
+get_beer_donner_pils_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,152)
+
+'''Тэг,возвращающий информацию о "Пиво Dutch Windmill світле 4,6% 0,5л жб"'''
+get_beer_dutch_windmill_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,153)
+
+'''Тэг,возвращающий информацию о "Пиво Edelburg Hefeweizen світле нефільтроване 5,1% 0,5л жб"'''
+get_beer_edelburg_hefeweizen_svitle_nefilter_05l_jb = tag.create_tag(ItemsPicsFromNet,154)
+
+'''Тэг,возвращающий информацию о "Пиво Edelmeister Unfiltered світле нефільтроване 5,7% 0,5л жб"'''
+get_beer_edelmeister_unfiltered_svitle_nefilter_05l_jb = tag.create_tag(ItemsPicsFromNet,155)
+
+'''Тэг,возвращающий информацию о "Пиво Estrella Damm Barcelona світле 4,6% 0,5л жб"'''
+get_beer_estrella_damm_barcelona_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,156)
+
+'''Тэг,возвращающий информацию о "Пиво Halne Jasne Pelne з/б 6% 0,5л жб"'''
+get_beer_halne_jasne_pelne_05l_jb = tag.create_tag(ItemsPicsFromNet,157)
+
+'''Тэг,возвращающий информацию о "Пиво Eurotour Hefeweissbier світле 5% 0,5л жб"'''
+get_beer_eurotour_hefeweissbier_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,158)
+
+'''Тэг,возвращающий информацию о "Пиво Hollandia Strong світле 7,5% 0,5л жб"'''
+get_beer_hollandia_strong_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,159)
+
+'''Тэг,возвращающий информацию о "Пиво Lander Brau Premium світле 4,9% 0,5л жб"'''
+get_beer_lander_brau_premium_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,160)
+
+'''Тэг,возвращающий информацию о "Пиво Saku Kuld 5,2% 0,5л жб"'''
+get_beer_Saku_Kuld_05l_jb = tag.create_tag(ItemsPicsFromNet,161)
+
+'''Тэг,возвращающий информацию о "Пиво Saku Originaal 4,7% 0,5л л жб"'''
+get_beer_Saku_Originaal_05l_jb = tag.create_tag(ItemsPicsFromNet,162)
+
+'''Тэг,возвращающий информацию о "Пиво Stangen Lager світле 5,4% 0,5л л жб"'''
+get_beer_Stangen_Lager_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,163)
+
+'''Тэг,возвращающий информацию о "Пиво Van Pur Premium світле 5% 0,5л жб"'''
+get_beer_Van_Pur_Premium_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,164)
+
+'''Тэг,возвращающий информацию о "Пиво Bavaria манго-маракуйя світле безалкогольне 0,5л жб"'''
+get_beer_Bavaria_mango_marakya_nonalcohol_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,165)
+
+'''Тэг,возвращающий информацию о "Пиво Bavaria Гранат безалкогольне 0,5л жб"'''
+get_beer_Bavaria_granat_nonalcohol_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,166)
+
+'''Тэг,возвращающий информацию о "Пиво Оболонь Beermix Малина світле 2,5% 0,5л жб"'''
+get_beer_Obolon_Beermix_malina_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,167)
+
+'''Тэг,возвращающий информацию о "Пиво Оболонь Beermix Вишня спеціальне світле 2,5% 0,5л жб"'''
+get_beer_Obolon_Beermix_vishnya_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,168)
+
+'''Тэг,возвращающий информацию о "Пиво Lomza світле 5,7% 0,5л жб"'''
+get_beer_Lomza_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,169)
+
+'''Тэг,возвращающий информацию о "Пиво Paderborner Pilsener світле 4,8% 0,5л жб"'''
+get_beer_Paderborner_Pilsener_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,170)
+
+'''Тэг,возвращающий информацию о "Пиво Paderborner Export світле 5,5% 0,5л жб"'''
+get_beer_Paderborner_Export_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,171)
+
+'''Тэг,возвращающий информацию о "Пиво Clausthaler Grapefruit безалкогольне 0,5л жб"'''
+get_beer_Clausthaler_Grapefruit_nonalcohol_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,172)
+
+'''Тэг,возвращающий информацию о "Пиво Clausthaler Original безалкогольне 0,5л жб"'''
+get_beer_Clausthaler_Original_nonalcohol_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,173)
+
+'''Тэг,возвращающий информацию о "Пиво Clausthaler Lemon безалкогольне 0,5л жб"'''
+get_beer_Clausthaler_Lemon_nonalcohol_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,174)
+
+'''Тэг,возвращающий информацию о "Пиво Forever Rock & Roll світле нефільтроване 7,5% 0,5л жб"'''
+get_beer_Forever_Rock_N_Roll_svitle_nefilter_05l_jb = tag.create_tag(ItemsPicsFromNet,175)
+
+'''Тэг,возвращающий информацию о "Пиво Forever Black Queen темне нефільтроване 5,5% 0,5л жб"'''
+get_beer_Forever_Black_Queen_temne_nefilter_05l_jb = tag.create_tag(ItemsPicsFromNet,176)
+
+'''Тэг,возвращающий информацию о "Пиво Forever Kite Safari світле нефільтроване 7% 0,5л жб"'''
+get_beer_Forever_Kite_Safari_svitle_nefilter_05l_jb = tag.create_tag(ItemsPicsFromNet,177)
+
+'''Тэг,возвращающий информацию о "Пиво Forever Crazy світле нефільтроване 6,5% 0,5л жб"'''
+get_beer_Forever_Crazy_svitle_nefilter_05l_jb = tag.create_tag(ItemsPicsFromNet,178)
+
+'''Тэг,возвращающий информацию о "Пиво Hike Light світле 3,5% 0,5л жб"'''
+get_beer_Hike_Light_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,179)
+
+'''Тэг,возвращающий информацию о "Пиво Hike Zero безалкогольне 0,5л жб"'''
+get_beer_Hike_Zero_nonalco_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,180)
+
+'''Тэг,возвращающий информацию о "Пиво Horn Disel Ice Pilsner світле 4,7% 0,568л жб"'''
+get_beer_Horn_Disel_Ice_Pilsner_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,181)
+
+'''Тэг,возвращающий информацию о "Пиво Horn Disel Original 5,3% 0,568л жб"'''
+get_beer_Horn_Disel_Original_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,182)
+
+'''Тэг,возвращающий информацию о "Пиво Horn Disel Traditional світле 6% 0,568л жб"'''
+get_beer_Horn_Disel_Traditional_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,183)
+
+'''Тэг,возвращающий информацию о "Пиво Horn Premium Diesel світле 5% 0,5л жб"'''
+get_beer_Horn_Disel_Premium_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,184)
+
+'''Тэг,возвращающий информацию о "Пиво Krusovice Cerne темне 3,8% 0,5л жб"'''
+get_beer_Krusovice_Cerne_temne_05l_jb = tag.create_tag(ItemsPicsFromNet,185)
+
+'''Тэг,возвращающий информацию о "Пиво Lander Brau міцне 4,9% 0,5л жб"'''
+get_beer_Lander_Brau_micne_05l_jb = tag.create_tag(ItemsPicsFromNet,186)
+
+'''Тэг,возвращающий информацию о "Пиво Lander Brau світле нефільтроване 4,7% 0,5л жб"'''
+get_beer_Lander_Brau_svitle_nefilter_05l_jb = tag.create_tag(ItemsPicsFromNet,187)
+
+'''Тэг,возвращающий информацию о "Пиво Paderborner Pilger світле нефільтроване пастеризоване 5% 0,5л жб"'''
+get_beer_Paderborner_Pilger_svitle_nefilter_05l_jb = tag.create_tag(ItemsPicsFromNet,188)
+
+'''Тэг,возвращающий информацию о "Пиво Platan Jedenactka 11 світле 4,6% 0,5л жб"'''
+get_beer_Platan_Jedenactka_11_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,189)
+
+'''Тэг,возвращающий информацию о "Пиво Praga світле фільтроване 4,7% 0,5л жб"'''
+get_beer_Praga_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,190)
+
+'''Тэг,возвращающий информацию о "Пиво Saku Rock світле 5,3% 0,568л жб"'''
+get_beer_Saku_Rock_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,191)
+
+'''Тэг,возвращающий информацию о "Пиво Sitnan світле 5% 0,5л жб"'''
+get_beer_Sitnan_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,192)
+
+'''Тэг,возвращающий информацию о "Пиво Vienas Premium Golden світле 5% 0,568л жб"'''
+get_beer_Vienas_Premium_Golden_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,193)
+
+'''Тэг,возвращающий информацию о "Пиво Vienas Premium Traditional світле 5,8% 0,568л жб"'''
+get_beer_Vienas_Premium_Traditional_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,194)
+
+'''Тэг,возвращающий информацию о "Пиво Volynski Browar Forever Sweet Wit пшеничне світле нефільтроване 4,5% 0,5л жб"'''
+get_beer_Volynski_Browar_Forever_Sweet_Wit_nefilter_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,195)
+
+'''Тэг,возвращающий информацию о "Пиво Zahringer Преміум світле 0,5л жб"'''
+get_beer_Zahringer_premium_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,196)
+
+'''Тэг,возвращающий информацию о "Пиво Zahringer Hefeweizen світле 0,5л жб"'''
+get_beer_Zahringer_Hefeweizen_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,197)
+
+'''Тэг,возвращающий информацию о "Пиво Жашківське світле нефільтроване 4,5% 0,5л жб"'''
+get_beer_jajkivske_nefilter_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,198)
+
+'''Тэг,возвращающий информацию о "Пиво Оболонь світле 4,5% 0,5л жб"'''
+get_beer_obolon_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,199)
+
+'''Тэг,возвращающий информацию о "Пиво Pubster світле 5% 0,5л жб"'''
+get_beer_Pubster_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,200)
+
+'''Тэг,возвращающий информацию о "Пиво ППБ Чайка Чорноморська 4,5% 0,5л жб"'''
+get_beer_Chaika_Chernomorska_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,201)
+
+'''Тэг,возвращающий информацию о "Пиво ППБ Закарпатське Оригінальне світле 4,4% 0,5л"'''
+get_beer_PPB_Zakarpatske_origin_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,202)
+
+'''Тэг,возвращающий информацию о "Пиво ППБ Бочкове Нефільтроване з/б 4,8% 0,5л"'''
+get_beer_PPB_Bochkove_nefilter_05l_jb = tag.create_tag(ItemsPicsFromNet,203)
+
+'''Тэг,возвращающий информацию о "Пиво ППБ Нефільтроване світле безалкогольне 0,5л"'''
+get_beer_PPB_Nefilter_svitle_nonalco_05l_jb = tag.create_tag(ItemsPicsFromNet,204)
+
+'''Тэг,возвращающий информацию о "Пиво ППБ Лимон-Лайм безалкогольне нефільтроване 0,5л"'''
+get_beer_PPB_Limon_lime_nonalco_nefilter_05l_jb = tag.create_tag(ItemsPicsFromNet,205)
+
+'''Тэг,возвращающий информацию о "Пиво Чайка Дніпровська світле фільтроване 4,8% 0,5л"'''
+get_beer_Chaika_Dniprovska_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,206)
+
+'''Тэг,возвращающий информацию о "Пиво Brok Export світле 5,2% 0,5л"'''
+get_beer_Brok_Export_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,207)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # @register.simple_tag()
 # def get_obolon_premium():

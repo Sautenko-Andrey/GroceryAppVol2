@@ -63,8 +63,7 @@ class TesterForGroceryAppText:
         toilet_papir_text = self.add_new_item('toilet_papir_kiev_63m.txt')
         coffee_aroma_gold_freeze_dried_70g_text = self.add_new_item('coffee_aroma_gold_freeze_dried_70g.txt')
         gorchica_veres_ukrainska_micna_120g_text = self.add_new_item('gorchica_veres_ukrainska_micna_120g.txt')
-        tea_monomah_100_ceylon_original_black_krupn_list_90g_text = self.add_new_item(
-            'tea_monomah_100%_ceylon_original_black_krupn_list_90g.txt')
+        tea_monomah_100_ceylon_original_black_krupn_list_90g_text = self.add_new_item('tea_monomah_100%_ceylon_original_black_krupn_list_90g.txt')
         tea_monomah_ceylon_black_text = self.add_new_item('tea_monomah_ceylon_black.txt')
         apple_gala_text = self.add_new_item('apple_gala.txt')
         desodorant_garnier_spring_spirit_text = self.add_new_item('desodorant_garnier_spring_spirit.txt')
@@ -181,6 +180,63 @@ class TesterForGroceryAppText:
         beer_amstel_svitle_05_l_jb_text = self.add_new_item('beer_amstel_svitle_05_l_jb.txt')
         beer_bavaria_svitle_05_l_jb_text = self.add_new_item('beer_bavaria_svitle_05_l_jb.txt')
         beer_bavaria_svitle_nonalcohol_05_l_jb_text = self.add_new_item('beer_bavaria_svitle_nonalcohol_05_l_jb.txt')
+        beer_edelburg_lager_svitle_05_l_jb_text = self.add_new_item('beer_edelburg_lager_svitle_05_l_jb.txt')
+        beer_donner_pills_svitle_05_l_jb_text = self.add_new_item('beer_donner_pills_svitle_05_l_jb.txt')
+        beer_dutch_windmill_svitle_05_l_jb_text = self.add_new_item('beer_dutch_windmill_svitle_05_l_jb.txt')
+        beer_edelberg_hefeweizen_svitle_nefilter_05_l_jb_text = self.add_new_item('beer_edelberg_hefeweizen_svitle_nefilter_05_l_jb.txt')
+        beer_edelmeister_unfiltered_svitle_nefilter_05_l_jb_text = self.add_new_item('beer_edelmeister_unfiltered_svitle_nefilter_05_l_jb.txt')
+        beer_estrella_damm_barcelona_svitle_05_l_jb_text = self.add_new_item('beer_estrella_damm_barcelona_svitle_05_l_jb.txt')
+        beer_halne_jasne_pelne_05_l_jb_text = self.add_new_item('beer_halne_jasne_pelne_05_l_jb.txt')
+        beer_eurotour_hefeweissbier_svitle_05_l_jb_text = self.add_new_item('beer_eurotour_hefeweissbier_svitle_05_l_jb.txt')
+        beer_hollandia_strong_svitle_05_l_jb_text = self.add_new_item('beer_hollandia_strong_svitle_05_l_jb.txt')
+        beer_lander_brau_premium_svitle_05_l_jb_text = self.add_new_item('beer_lander_brau_premium_svitle_05_l_jb.txt')
+        beer_saku_kuld_05_l_jb_text = self.add_new_item('beer_saku_kuld_05_l_jb.txt')
+        beer_saku_original_05_l_jb_text = self.add_new_item('beer_saku_original_05_l_jb.txt')
+        beer_stangen_lager_svitle_05_l_jb_text = self.add_new_item('beer_stangen_lager_svitle_05_l_jb.txt')
+        beer_van_pur_premium_svitle_05_l_jb_text = self.add_new_item('beer_van_pur_premium_svitle_05_l_jb.txt')
+        beer_bavaria_mango_marakya_bezalkogol_svitle_05_l_jb_text = self.add_new_item('beer_bavaria_mango_marakya_bezalkogol_svitle_05_l_jb.txt')
+        beer_bavaria_granat_bezalkogol_svitle_05_l_jb_text = self.add_new_item('beer_bavaria_granat_bezalkogol_svitle_05_l_jb.txt')
+        beer_obolon_beermix_malina_05_l_jb_text = self.add_new_item('beer_obolon_beermix_malina_05_l_jb.txt')
+        beer_obolon_beermix_vishnya_05_l_jb_text = self.add_new_item('beer_obolon_beermix_vishnya_05_l_jb.txt')
+        beer_lomza_svitle_05_l_jb_text = self.add_new_item('beer_lomza_svitle_05_l_jb.txt')
+        beer_paderborner_pilsener_svitle_05_l_jb_text = self.add_new_item('beer_paderborner_pilsener_svitle_05_l_jb.txt')
+        beer_paderborner_export_05_l_jb_text = self.add_new_item('beer_paderborner_export_05_l_jb.txt')
+        beer_clausthaler_greipfruit_nonalcohol_05_l_jb_text = self.add_new_item('beer_clausthaler_greipfruit_nonalcohol_05_l_jb.txt')
+        beer_clausthaler_original_nonalcohol_05_l_jb_text = self.add_new_item('beer_clausthaler_original_nonalcohol_05_l_jb.txt')
+        beer_clausthaler_lemon_nonalcohol_05_l_jb_text = self.add_new_item('beer_clausthaler_lemon_nonalcohol_05_l_jb.txt')
+        beer_forever_rock_n_roll_svitle_nefilter_05_l_jb_text = self.add_new_item('beer_forever_rock_n_roll_svitle_nefilter_05_l_jb.txt')
+        beer_forever_black_queen_temne_nefilter_05_l_jb_text = self.add_new_item('beer_forever_black_queen_temne_nefilter_05_l_jb.txt')
+        beer_forever_kite_safari_svitle_nefilter_05_l_jb_text = self.add_new_item('beer_forever_kite_safari_svitle_nefilter_05_l_jb.txt')
+        beer_forever_crazy_svitle_nefilter_05_l_jb_text = self.add_new_item('beer_forever_crazy_svitle_nefilter_05_l_jb.txt')
+        beer_hike_light_svitle_05_l_jb_text = self.add_new_item('beer_hike_light_svitle_05_l_jb.txt')
+        beer_hike_zero_nonalcohol_05_l_jb_text = self.add_new_item('beer_hike_zero_nonalcohol_05_l_jb.txt')
+        beer_horn_disel_ice_pilsner_svitle_0568_l_jb_text = self.add_new_item('beer_horn_disel_ice_pilsner_svitle_0568_l_jb.txt')
+        beer_horn_original_svitle_0568_l_jb_text = self.add_new_item('beer_horn_original_svitle_0568_l_jb.txt')
+        beer_horn_traditional_svitle_0568_l_jb_text = self.add_new_item('beer_horn_traditional_svitle_0568_l_jb.txt')
+        beer_horn_premium_svitle_05_l_jb_text = self.add_new_item('beer_horn_premium_svitle_05_l_jb.txt')
+        beer_krusovice_cerne_temne_05_l_jb_text = self.add_new_item('beer_krusovice_cerne_temne_05_l_jb.txt')
+        beer_lander_brau_micne_05_l_jb_text = self.add_new_item('beer_lander_brau_micne_05_l_jb.txt')
+        beer_lander_brau_svitle_nefilter_05_l_jb_text = self.add_new_item('beer_lander_brau_svitle_nefilter_05_l_jb.txt')
+        beer_padeborner_pilger_nefilter_svitle_05_l_jb_text = self.add_new_item('beer_padeborner_pilger_nefilter_svitle_05_l_jb.txt')
+        beer_platan_jedenactka_05_l_jb_text = self.add_new_item('beer_platan_jedenactka_05_l_jb.txt')
+        beer_praga_svitle_05_l_jb_text = self.add_new_item('beer_praga_svitle_05_l_jb.txt')
+        beer_saku_rock_svitle_0568_l_jb_text = self.add_new_item('beer_saku_rock_svitle_0568_l_jb.txt')
+        beer_sitnan_svitle_05_l_jb_text = self.add_new_item('beer_sitnan_svitle_05_l_jb.txt')
+        beer_vienas_premium_golden_svitle_05_l_jb_text = self.add_new_item('beer_vienas_premium_golden_svitle_05_l_jb.txt')
+        beer_vienas_premium_traditional_svitle_05_l_jb_text = self.add_new_item('beer_vienas_premium_traditional_svitle_05_l_jb.txt')
+        beer_volynski_browar_forever_sweet_wit_pshen_nefilter_svitle_05_l_jb_text = self.add_new_item('beer_volynski_browar_forever_sweet_wit_pshen_nefilter_svitle_05_l_jb.txt')
+        beer_zahringer_premium_svitle_05_l_jb_text = self.add_new_item('beer_zahringer_premium_svitle_05_l_jb.txt')
+        beer_zahringer_hefeweizen_svitle_05_l_jb_text = self.add_new_item('beer_zahringer_hefeweizen_svitle_05_l_jb.txt')
+        beer_jajkivske_svitle__nefilter_05_l_jb_text = self.add_new_item('beer_jajkivske_svitle__nefilter_05_l_jb.txt')
+        beer_obolon_svitle_05_l_jb_text = self.add_new_item('beer_obolon_svitle_05_l_jb.txt')
+        beer_pubster_svitle_05_l_jb_text = self.add_new_item('beer_pubster_svitle_05_l_jb.txt')
+        beer_chaika_chernomorskaya_05_l_jb_text = self.add_new_item('beer_chaika_chernomorskaya_05_l_jb.txt')
+        beer_ppb_zakarpatske_orig_svitle_05_l_jb_text = self.add_new_item('beer_ppb_zakarpatske_orig_svitle_05_l_jb.txt')
+        beer_ppb_bochkove_nefilter_05_l_jb_text = self.add_new_item('beer_ppb_bochkove_nefilter_05_l_jb.txt')
+        beer_ppb_nefilter_svitle_nonalco_05_l_jb_text = self.add_new_item('beer_ppb_nefilter_svitle_nonalco_05_l_jb.txt')
+        beer_ppb_limon_lime_nonalco_nefilter_05_l_jb_text = self.add_new_item('beer_ppb_limon_lime_nonalco_nefilter_05_l_jb.txt')
+        beer_chaika_dniprovskaya_05_l_jb_text = self.add_new_item('beer_chaika_dniprovskaya_05_l_jb.txt')
+        beer_brok_export_svitle_05_l_jb_text = self.add_new_item('beer_brok_export_svitle_05_l_jb.txt')
 
 
         # объединям обучающие выборки:
@@ -253,7 +309,28 @@ class TesterForGroceryAppText:
                 + beer_hike_premium_svitle_05_l_jb_text + beer_obolon_nonalcohol_svitle_nefilter_05_l_jb_text\
                 + beer_zibert_bavarske_svitle_05_l_jb_text + beer_bavaria_liquid_apple_nonalcohol_svitle_05_l_jb_text\
                 + beer_heineken_svitle_05_l_jb_text + beer_rychtar_grunt_11_svitle_05_l_jb_text + beer_amstel_svitle_05_l_jb_text\
-                + beer_bavaria_svitle_05_l_jb_text + beer_bavaria_svitle_nonalcohol_05_l_jb_text
+                + beer_bavaria_svitle_05_l_jb_text + beer_bavaria_svitle_nonalcohol_05_l_jb_text + beer_edelburg_lager_svitle_05_l_jb_text\
+                + beer_donner_pills_svitle_05_l_jb_text + beer_dutch_windmill_svitle_05_l_jb_text + beer_edelberg_hefeweizen_svitle_nefilter_05_l_jb_text\
+                + beer_edelmeister_unfiltered_svitle_nefilter_05_l_jb_text + beer_estrella_damm_barcelona_svitle_05_l_jb_text\
+                + beer_halne_jasne_pelne_05_l_jb_text + beer_eurotour_hefeweissbier_svitle_05_l_jb_text + beer_hollandia_strong_svitle_05_l_jb_text\
+                + beer_lander_brau_premium_svitle_05_l_jb_text + beer_saku_kuld_05_l_jb_text + beer_saku_original_05_l_jb_text\
+                + beer_stangen_lager_svitle_05_l_jb_text + beer_van_pur_premium_svitle_05_l_jb_text + beer_bavaria_mango_marakya_bezalkogol_svitle_05_l_jb_text\
+                + beer_bavaria_granat_bezalkogol_svitle_05_l_jb_text + beer_obolon_beermix_malina_05_l_jb_text + beer_obolon_beermix_vishnya_05_l_jb_text\
+                + beer_lomza_svitle_05_l_jb_text + beer_paderborner_pilsener_svitle_05_l_jb_text + beer_paderborner_export_05_l_jb_text\
+                + beer_clausthaler_greipfruit_nonalcohol_05_l_jb_text + beer_clausthaler_original_nonalcohol_05_l_jb_text\
+                + beer_clausthaler_lemon_nonalcohol_05_l_jb_text + beer_forever_rock_n_roll_svitle_nefilter_05_l_jb_text\
+                + beer_forever_black_queen_temne_nefilter_05_l_jb_text + beer_forever_kite_safari_svitle_nefilter_05_l_jb_text\
+                + beer_forever_crazy_svitle_nefilter_05_l_jb_text + beer_hike_light_svitle_05_l_jb_text + beer_hike_zero_nonalcohol_05_l_jb_text\
+                + beer_horn_disel_ice_pilsner_svitle_0568_l_jb_text + beer_horn_original_svitle_0568_l_jb_text + beer_horn_traditional_svitle_0568_l_jb_text\
+                + beer_horn_premium_svitle_05_l_jb_text + beer_krusovice_cerne_temne_05_l_jb_text + beer_lander_brau_micne_05_l_jb_text\
+                + beer_lander_brau_svitle_nefilter_05_l_jb_text + beer_padeborner_pilger_nefilter_svitle_05_l_jb_text + beer_platan_jedenactka_05_l_jb_text\
+                + beer_praga_svitle_05_l_jb_text + beer_saku_rock_svitle_0568_l_jb_text + beer_sitnan_svitle_05_l_jb_text\
+                + beer_vienas_premium_golden_svitle_05_l_jb_text + beer_vienas_premium_traditional_svitle_05_l_jb_text\
+                + beer_volynski_browar_forever_sweet_wit_pshen_nefilter_svitle_05_l_jb_text + beer_zahringer_premium_svitle_05_l_jb_text\
+                + beer_zahringer_hefeweizen_svitle_05_l_jb_text + beer_jajkivske_svitle__nefilter_05_l_jb_text + beer_obolon_svitle_05_l_jb_text\
+                + beer_pubster_svitle_05_l_jb_text + beer_chaika_chernomorskaya_05_l_jb_text + beer_ppb_zakarpatske_orig_svitle_05_l_jb_text\
+                + beer_ppb_bochkove_nefilter_05_l_jb_text + beer_ppb_nefilter_svitle_nonalco_05_l_jb_text + beer_ppb_limon_lime_nonalco_nefilter_05_l_jb_text\
+                + beer_chaika_dniprovskaya_05_l_jb_text + beer_brok_export_svitle_05_l_jb_text
 
         return texts
 
@@ -594,6 +671,120 @@ class TesterForGroceryAppText:
             return 'Пивo Bavaria светлое 0,5 л жб'
         elif np.argmax(result) == 149:
             return 'Пивo Bavaria светлое безалкогольное 0,5 л жб'
+        elif np.argmax(result) == 150:
+            return 'Пиво Edelburg Lager світле 5,2% 0,5л жб'
+        elif np.argmax(result) == 151:
+            return 'Пиво Donner Pils світле 3,5% 0,5л жб'
+        elif np.argmax(result) == 152:
+            return 'Пиво Dutch Windmill світле 4,6% 0,5л жб'
+        elif np.argmax(result) == 153:
+            return 'Пиво Edelburg Hefeweizen світле нефільтроване 5,1% 0,5л жб'
+        elif np.argmax(result) == 154:
+            return 'Пиво Edelmeister Unfiltered світле нефільтроване 5,7% 0,5л жб'
+        elif np.argmax(result) == 155:
+            return 'Пиво Estrella Damm Barcelona світле 4,6% 0,5л жб'
+        elif np.argmax(result) == 156:
+            return 'Пиво Halne Jasne Pelne з/б 6% 0,5л жб'
+        elif np.argmax(result) == 157:
+            return 'Пиво Eurotour Hefeweissbier світле 5% 0,5л жб'
+        elif np.argmax(result) == 158:
+            return 'Пиво Hollandia Strong світле 7,5% 0,5л жб'
+        elif np.argmax(result) == 159:
+            return 'Пиво Lander Brau Premium світле 4,9% 0,5л жб'
+        elif np.argmax(result) == 160:
+            return 'Пиво Saku Kuld 5,2% 0,5л жб'
+        elif np.argmax(result) == 161:
+            return 'Пиво Saku Originaal 4,7% 0,5л л жб'
+        elif np.argmax(result) == 162:
+            return 'Пиво Stangen Lager світле 5,4% 0,5л л жб'
+        elif np.argmax(result) == 163:
+            return 'Пиво Van Pur Premium світле 5% 0,5л жб'
+        elif np.argmax(result) == 164:
+            return 'Пиво Bavaria манго-маракуйя світле безалкогольне 0,5л жб'
+        elif np.argmax(result) == 165:
+            return 'Пиво Bavaria Гранат безалкогольне 0,5л жб'
+        elif np.argmax(result) == 166:
+            return 'Пиво Оболонь Beermix Малина світле 2,5% 0,5л жб'
+        elif np.argmax(result) == 167:
+            return 'Пиво Оболонь Beermix Вишня спеціальне світле 2,5% 0,5л жб'
+        elif np.argmax(result) == 168:
+            return 'Пиво Lomza світле 5,7% 0,5л жб'
+        elif np.argmax(result) == 169:
+            return 'Пиво Paderborner Pilsener світле 4,8% 0,5л жб'
+        elif np.argmax(result) == 170:
+            return 'Пиво Paderborner Export світле 5,5% 0,5л жб'
+        elif np.argmax(result) == 171:
+            return 'Пиво Clausthaler Grapefruit безалкогольне 0,5л жб'
+        elif np.argmax(result) == 172:
+            return 'Пиво Clausthaler Original безалкогольне 0,5л жб'
+        elif np.argmax(result) == 173:
+            return 'Пиво Clausthaler Lemon безалкогольне 0,5л жб'
+        elif np.argmax(result) == 174:
+            return 'Пиво Forever Rock & Roll світле нефільтроване 7,5% 0,5л жб'
+        elif np.argmax(result) == 175:
+            return 'Пиво Forever Black Queen темне нефільтроване 5,5% 0,5л жб'
+        elif np.argmax(result) == 176:
+            return 'Пиво Forever Kite Safari світле нефільтроване 7% 0,5л жб'
+        elif np.argmax(result) == 177:
+            return 'Пиво Forever Crazy світле нефільтроване 6,5% 0,5л жб'
+        elif np.argmax(result) == 178:
+            return 'Пиво Hike Light світле 3,5% 0,5л жб'
+        elif np.argmax(result) == 179:
+            return 'Пиво Hike Zero безалкогольне 0,5л жб'
+        elif np.argmax(result) == 180:
+            return 'Пиво Horn Disel Ice Pilsner світле 4,7% 0,568л жб'
+        elif np.argmax(result) == 181:
+            return 'Пиво Horn Disel Original 5,3% 0,568л жб'
+        elif np.argmax(result) == 182:
+            return 'Пиво Horn Disel Traditional світле 6% 0,568л жб'
+        elif np.argmax(result) == 183:
+            return 'Пиво Horn Diesel Premium світле 5% 0,5л жб'
+        elif np.argmax(result) == 184:
+            return 'Пиво Krusovice Cerne темне 3,8% 0,5л жб'
+        elif np.argmax(result) == 185:
+            return 'Пиво Lander Brau міцне 4,9% 0,5л жб'
+        elif np.argmax(result) == 186:
+            return 'Пиво Lander Brau світле нефільтроване 4,7% 0,5л жб'
+        elif np.argmax(result) == 187:
+            return 'Пиво Paderborner Pilger світле нефільтроване пастеризоване 5% 0,5л жб'
+        elif np.argmax(result) == 188:
+            return 'Пиво Platan Jedenactka 11 світле 4,6% 0,5л жб'
+        elif np.argmax(result) == 189:
+            return 'Пиво Praga світле фільтроване 4,7% 0,5л жб'
+        elif np.argmax(result) == 190:
+            return 'Пиво Saku Rock світле 5,3% 0,568л жб'
+        elif np.argmax(result) == 191:
+            return 'Пиво Sitnan світле 5% 0,5л жб'
+        elif np.argmax(result) == 192:
+            return 'Пиво Vienas Premium Golden світле 5% 0,568л жб'
+        elif np.argmax(result) == 193:
+            return 'Пиво Vienas Premium Traditional світле 5,8% 0,568л жб'
+        elif np.argmax(result) == 194:
+            return 'Пиво Volynski Browar Forever Sweet Wit пшеничне світле нефільтроване 4,5% 0,5л жб'
+        elif np.argmax(result) == 195:
+            return 'Пиво Zahringer Преміум світле 0,5л жб'
+        elif np.argmax(result) == 196:
+            return 'Пиво Zahringer Hefeweizen світле 0,5л жб'
+        elif np.argmax(result) == 197:
+            return 'Пиво Жашківське світле нефільтроване 4,5% 0,5л жб'
+        elif np.argmax(result) == 198:
+            return 'Пиво Оболонь світле 4,5% 0,5л жб'
+        elif np.argmax(result) == 199:
+            return 'Пиво Pubster світле 5% 0,5л жб'
+        elif np.argmax(result) == 200:
+            return 'Пиво ППБ Чайка Чорноморська 4,5% 0,5л жб'
+        elif np.argmax(result) == 201:
+            return 'Пиво ППБ Закарпатське Оригінальне світле 4,4% 0,5л'
+        elif np.argmax(result) == 202:
+            return 'Пиво ППБ Бочкове Нефільтроване з/б 4,8% 0,5л'
+        elif np.argmax(result) == 203:
+            return 'Пиво ППБ Нефільтроване світле безалкогольне 0,5л'
+        elif np.argmax(result) == 204:
+            return 'Пиво ППБ Лимон-Лайм безалкогольне нефільтроване 0,5л'
+        elif np.argmax(result) == 205:
+            return 'Пиво Чайка Дніпровська світле фільтроване 4,8% 0,5л'
+        elif np.argmax(result) == 206:
+            return 'Пиво Brok Export світле 5,2% 0,5л'
 
 
 

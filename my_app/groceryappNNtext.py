@@ -34,10 +34,10 @@ class GroceryAppText:
         '''Инициализация модели НС и ее подготовка к обучению'''
 
         self.model = keras.Sequential([
-            Embedding(self.MAX_WORDS, 150, input_length=self.MAX_LENGTH_TEXT),
-            LSTM(150, return_sequences=True),  # 128
-            LSTM(75),  # 64
-            Dense(150, activation='softmax')
+            Embedding(self.MAX_WORDS, 207, input_length=self.MAX_LENGTH_TEXT),
+            LSTM(207, return_sequences=True),  # 128
+            LSTM(100),  # 64
+            Dense(207, activation='softmax')
         ])
 
         self.model.compile(optimizer=Adam(0.0001), loss='categorical_crossentropy',
@@ -225,8 +225,65 @@ class GroceryAppText:
         beer_amstel_svitle_05_l_jb_text=self.add_new_item('beer_amstel_svitle_05_l_jb.txt')
         beer_bavaria_svitle_05_l_jb_text=self.add_new_item('beer_bavaria_svitle_05_l_jb.txt')
         beer_bavaria_svitle_nonalcohol_05_l_jb_text=self.add_new_item('beer_bavaria_svitle_nonalcohol_05_l_jb.txt')
+        beer_edelburg_lager_svitle_05_l_jb_text=self.add_new_item('beer_edelburg_lager_svitle_05_l_jb.txt')
+        beer_donner_pills_svitle_05_l_jb_text=self.add_new_item('beer_donner_pills_svitle_05_l_jb.txt')
+        beer_dutch_windmill_svitle_05_l_jb_text=self.add_new_item('beer_dutch_windmill_svitle_05_l_jb.txt')
+        beer_edelberg_hefeweizen_svitle_nefilter_05_l_jb_text=self.add_new_item('beer_edelberg_hefeweizen_svitle_nefilter_05_l_jb.txt')
+        beer_edelmeister_unfiltered_svitle_nefilter_05_l_jb_text=self.add_new_item('beer_edelmeister_unfiltered_svitle_nefilter_05_l_jb.txt')
+        beer_estrella_damm_barcelona_svitle_05_l_jb_text=self.add_new_item('beer_estrella_damm_barcelona_svitle_05_l_jb.txt')
+        beer_halne_jasne_pelne_05_l_jb_text=self.add_new_item('beer_halne_jasne_pelne_05_l_jb.txt')
+        beer_eurotour_hefeweissbier_svitle_05_l_jb_text=self.add_new_item('beer_eurotour_hefeweissbier_svitle_05_l_jb.txt')
+        beer_hollandia_strong_svitle_05_l_jb_text=self.add_new_item('beer_hollandia_strong_svitle_05_l_jb.txt')
+        beer_lander_brau_premium_svitle_05_l_jb_text=self.add_new_item('beer_lander_brau_premium_svitle_05_l_jb.txt')
+        beer_saku_kuld_05_l_jb_text=self.add_new_item('beer_saku_kuld_05_l_jb.txt')
+        beer_saku_original_05_l_jb_text = self.add_new_item('beer_saku_original_05_l_jb.txt')
+        beer_stangen_lager_svitle_05_l_jb_text=self.add_new_item('beer_stangen_lager_svitle_05_l_jb.txt')
+        beer_van_pur_premium_svitle_05_l_jb_text=self.add_new_item('beer_van_pur_premium_svitle_05_l_jb.txt')
+        beer_bavaria_mango_marakya_bezalkogol_svitle_05_l_jb_text=self.add_new_item('beer_bavaria_mango_marakya_bezalkogol_svitle_05_l_jb.txt')
+        beer_bavaria_granat_bezalkogol_svitle_05_l_jb_text=self.add_new_item('beer_bavaria_granat_bezalkogol_svitle_05_l_jb.txt')
+        beer_obolon_beermix_malina_05_l_jb_text=self.add_new_item('beer_obolon_beermix_malina_05_l_jb.txt')
+        beer_obolon_beermix_vishnya_05_l_jb_text=self.add_new_item('beer_obolon_beermix_vishnya_05_l_jb.txt')
+        beer_lomza_svitle_05_l_jb_text=self.add_new_item('beer_lomza_svitle_05_l_jb.txt')
+        beer_paderborner_pilsener_svitle_05_l_jb_text=self.add_new_item('beer_paderborner_pilsener_svitle_05_l_jb.txt')
+        beer_paderborner_export_05_l_jb_text=self.add_new_item('beer_paderborner_export_05_l_jb.txt')
+        beer_clausthaler_greipfruit_nonalcohol_05_l_jb_text=self.add_new_item('beer_clausthaler_greipfruit_nonalcohol_05_l_jb.txt')
+        beer_clausthaler_original_nonalcohol_05_l_jb_text=self.add_new_item('beer_clausthaler_original_nonalcohol_05_l_jb.txt')
+        beer_clausthaler_lemon_nonalcohol_05_l_jb_text=self.add_new_item('beer_clausthaler_lemon_nonalcohol_05_l_jb.txt')
+        beer_forever_rock_n_roll_svitle_nefilter_05_l_jb_text=self.add_new_item('beer_forever_rock_n_roll_svitle_nefilter_05_l_jb.txt')
+        beer_forever_black_queen_temne_nefilter_05_l_jb_text=self.add_new_item('beer_forever_black_queen_temne_nefilter_05_l_jb.txt')
+        beer_forever_kite_safari_svitle_nefilter_05_l_jb_text=self.add_new_item('beer_forever_kite_safari_svitle_nefilter_05_l_jb.txt')
+        beer_forever_crazy_svitle_nefilter_05_l_jb_text=self.add_new_item('beer_forever_crazy_svitle_nefilter_05_l_jb.txt')
+        beer_hike_light_svitle_05_l_jb_text=self.add_new_item('beer_hike_light_svitle_05_l_jb.txt')
+        beer_hike_zero_nonalcohol_05_l_jb_text=self.add_new_item('beer_hike_zero_nonalcohol_05_l_jb.txt')
+        beer_horn_disel_ice_pilsner_svitle_0568_l_jb_text=self.add_new_item('beer_horn_disel_ice_pilsner_svitle_0568_l_jb.txt')
+        beer_horn_original_svitle_0568_l_jb_text=self.add_new_item('beer_horn_original_svitle_0568_l_jb.txt')
+        beer_horn_traditional_svitle_0568_l_jb_text=self.add_new_item('beer_horn_traditional_svitle_0568_l_jb.txt')
+        beer_horn_premium_svitle_05_l_jb_text=self.add_new_item('beer_horn_premium_svitle_05_l_jb.txt')
+        beer_krusovice_cerne_temne_05_l_jb_text=self.add_new_item('beer_krusovice_cerne_temne_05_l_jb.txt')
+        beer_lander_brau_micne_05_l_jb_text=self.add_new_item('beer_lander_brau_micne_05_l_jb.txt')
+        beer_lander_brau_svitle_nefilter_05_l_jb_text=self.add_new_item('beer_lander_brau_svitle_nefilter_05_l_jb.txt')
+        beer_padeborner_pilger_nefilter_svitle_05_l_jb_text=self.add_new_item('beer_padeborner_pilger_nefilter_svitle_05_l_jb.txt')
+        beer_platan_jedenactka_05_l_jb_text=self.add_new_item('beer_platan_jedenactka_05_l_jb.txt')
+        beer_praga_svitle_05_l_jb_text=self.add_new_item('beer_praga_svitle_05_l_jb.txt')
+        beer_saku_rock_svitle_0568_l_jb_text=self.add_new_item('beer_saku_rock_svitle_0568_l_jb.txt')
+        beer_sitnan_svitle_05_l_jb_text=self.add_new_item('beer_sitnan_svitle_05_l_jb.txt')
+        beer_vienas_premium_golden_svitle_05_l_jb_text=self.add_new_item('beer_vienas_premium_golden_svitle_05_l_jb.txt')
+        beer_vienas_premium_traditional_svitle_05_l_jb_text=self.add_new_item('beer_vienas_premium_traditional_svitle_05_l_jb.txt')
+        beer_volynski_browar_forever_sweet_wit_pshen_nefilter_svitle_05_l_jb_text=self.add_new_item('beer_volynski_browar_forever_sweet_wit_pshen_nefilter_svitle_05_l_jb.txt')
+        beer_zahringer_premium_svitle_05_l_jb_text=self.add_new_item('beer_zahringer_premium_svitle_05_l_jb.txt')
+        beer_zahringer_hefeweizen_svitle_05_l_jb_text=self.add_new_item('beer_zahringer_hefeweizen_svitle_05_l_jb.txt')
+        beer_jajkivske_svitle__nefilter_05_l_jb_text=self.add_new_item('beer_jajkivske_svitle__nefilter_05_l_jb.txt')
+        beer_obolon_svitle_05_l_jb_text=self.add_new_item('beer_obolon_svitle_05_l_jb.txt')
+        beer_pubster_svitle_05_l_jb_text=self.add_new_item('beer_pubster_svitle_05_l_jb.txt')
+        beer_chaika_chernomorskaya_05_l_jb_text=self.add_new_item('beer_chaika_chernomorskaya_05_l_jb.txt')
+        beer_ppb_zakarpatske_orig_svitle_05_l_jb_text=self.add_new_item('beer_ppb_zakarpatske_orig_svitle_05_l_jb.txt')
+        beer_ppb_bochkove_nefilter_05_l_jb_text=self.add_new_item('beer_ppb_bochkove_nefilter_05_l_jb.txt')
+        beer_ppb_nefilter_svitle_nonalco_05_l_jb_text=self.add_new_item('beer_ppb_nefilter_svitle_nonalco_05_l_jb.txt')
+        beer_ppb_limon_lime_nonalco_nefilter_05_l_jb_text=self.add_new_item('beer_ppb_limon_lime_nonalco_nefilter_05_l_jb.txt')
+        beer_chaika_dniprovskaya_05_l_jb_text=self.add_new_item('beer_chaika_dniprovskaya_05_l_jb.txt')
+        beer_brok_export_svitle_05_l_jb_text=self.add_new_item('beer_brok_export_svitle_05_l_jb.txt')
 
-        # объединям обучающие выборки:
+        # объед. обучающие выборки:
         texts = obolon_premium_extra_11_text + hetman_sagaydachniy_07_text \
                 + coffee_aroma_gold_classic_100gr_text + apple_golden_text \
                 + coca_cola_2l_text + KOMO_paprikash_text + garlik_text \
@@ -294,7 +351,28 @@ class GroceryAppText:
                 + beer_obolon_nonalcohol_svitle_nefilter_05_l_jb_text + beer_zibert_bavarske_svitle_05_l_jb_text\
                 + beer_bavaria_liquid_apple_nonalcohol_svitle_05_l_jb_text + beer_heineken_svitle_05_l_jb_text\
                 + beer_rychtar_grunt_11_svitle_05_l_jb_text + beer_amstel_svitle_05_l_jb_text + beer_bavaria_svitle_05_l_jb_text\
-                + beer_bavaria_svitle_nonalcohol_05_l_jb_text
+                + beer_bavaria_svitle_nonalcohol_05_l_jb_text + beer_edelburg_lager_svitle_05_l_jb_text + beer_donner_pills_svitle_05_l_jb_text\
+                + beer_dutch_windmill_svitle_05_l_jb_text + beer_edelberg_hefeweizen_svitle_nefilter_05_l_jb_text\
+                + beer_edelmeister_unfiltered_svitle_nefilter_05_l_jb_text + beer_estrella_damm_barcelona_svitle_05_l_jb_text\
+                + beer_halne_jasne_pelne_05_l_jb_text + beer_eurotour_hefeweissbier_svitle_05_l_jb_text\
+                +  beer_hollandia_strong_svitle_05_l_jb_text + beer_lander_brau_premium_svitle_05_l_jb_text + beer_saku_kuld_05_l_jb_text\
+                + beer_saku_original_05_l_jb_text + beer_stangen_lager_svitle_05_l_jb_text + beer_van_pur_premium_svitle_05_l_jb_text\
+                + beer_bavaria_mango_marakya_bezalkogol_svitle_05_l_jb_text + beer_bavaria_granat_bezalkogol_svitle_05_l_jb_text\
+                + beer_obolon_beermix_malina_05_l_jb_text + beer_obolon_beermix_vishnya_05_l_jb_text + beer_lomza_svitle_05_l_jb_text\
+                + beer_paderborner_pilsener_svitle_05_l_jb_text + beer_paderborner_export_05_l_jb_text + beer_clausthaler_greipfruit_nonalcohol_05_l_jb_text\
+                + beer_clausthaler_original_nonalcohol_05_l_jb_text + beer_clausthaler_lemon_nonalcohol_05_l_jb_text\
+                + beer_forever_rock_n_roll_svitle_nefilter_05_l_jb_text + beer_forever_black_queen_temne_nefilter_05_l_jb_text\
+                + beer_forever_kite_safari_svitle_nefilter_05_l_jb_text + beer_forever_crazy_svitle_nefilter_05_l_jb_text\
+                + beer_hike_light_svitle_05_l_jb_text + beer_hike_zero_nonalcohol_05_l_jb_text + beer_horn_disel_ice_pilsner_svitle_0568_l_jb_text\
+                + beer_horn_original_svitle_0568_l_jb_text + beer_horn_traditional_svitle_0568_l_jb_text + beer_horn_premium_svitle_05_l_jb_text\
+                + beer_krusovice_cerne_temne_05_l_jb_text + beer_lander_brau_micne_05_l_jb_text + beer_lander_brau_svitle_nefilter_05_l_jb_text\
+                + beer_padeborner_pilger_nefilter_svitle_05_l_jb_text + beer_platan_jedenactka_05_l_jb_text + beer_praga_svitle_05_l_jb_text\
+                + beer_saku_rock_svitle_0568_l_jb_text + beer_sitnan_svitle_05_l_jb_text + beer_vienas_premium_golden_svitle_05_l_jb_text\
+                + beer_vienas_premium_traditional_svitle_05_l_jb_text + beer_volynski_browar_forever_sweet_wit_pshen_nefilter_svitle_05_l_jb_text\
+                + beer_zahringer_premium_svitle_05_l_jb_text + beer_zahringer_hefeweizen_svitle_05_l_jb_text + beer_jajkivske_svitle__nefilter_05_l_jb_text\
+                + beer_obolon_svitle_05_l_jb_text + beer_pubster_svitle_05_l_jb_text + beer_chaika_chernomorskaya_05_l_jb_text\
+                + beer_ppb_zakarpatske_orig_svitle_05_l_jb_text + beer_ppb_bochkove_nefilter_05_l_jb_text + beer_ppb_nefilter_svitle_nonalco_05_l_jb_text\
+                + beer_ppb_limon_lime_nonalco_nefilter_05_l_jb_text + beer_chaika_dniprovskaya_05_l_jb_text + beer_brok_export_svitle_05_l_jb_text
 
         # подсчитываем кол-во выборок
         count_obolon_premium_extra_11_text = len(obolon_premium_extra_11_text)
@@ -447,6 +525,63 @@ class GroceryAppText:
         count_beer_amstel_svitle_05_l_jb_text=len(beer_amstel_svitle_05_l_jb_text)
         count_beer_bavaria_svitle_05_l_jb_text=len(beer_bavaria_svitle_05_l_jb_text)
         count_beer_bavaria_svitle_nonalcohol_05_l_jb_text=len(beer_bavaria_svitle_nonalcohol_05_l_jb_text)
+        count_beer_edelburg_lager_svitle_05_l_jb_text=len(beer_edelburg_lager_svitle_05_l_jb_text)
+        count_beer_donner_pills_svitle_05_l_jb_text=len(beer_donner_pills_svitle_05_l_jb_text)
+        count_beer_dutch_windmill_svitle_05_l_jb_text=len(beer_dutch_windmill_svitle_05_l_jb_text)
+        count_beer_edelberg_hefeweizen_svitle_nefilter_05_l_jb_text=len(beer_edelberg_hefeweizen_svitle_nefilter_05_l_jb_text)
+        count_beer_edelmeister_unfiltered_svitle_nefilter_05_l_jb_text=len(beer_edelmeister_unfiltered_svitle_nefilter_05_l_jb_text)
+        count_beer_estrella_damm_barcelona_svitle_05_l_jb_text=len(beer_estrella_damm_barcelona_svitle_05_l_jb_text)
+        count_beer_halne_jasne_pelne_05_l_jb_text=len(beer_halne_jasne_pelne_05_l_jb_text)
+        count_beer_eurotour_hefeweissbier_svitle_05_l_jb_text=len(beer_eurotour_hefeweissbier_svitle_05_l_jb_text)
+        count_beer_hollandia_strong_svitle_05_l_jb_text=len( beer_hollandia_strong_svitle_05_l_jb_text)
+        count_beer_lander_brau_premium_svitle_05_l_jb_text=len(beer_lander_brau_premium_svitle_05_l_jb_text)
+        count_beer_saku_kuld_05_l_jb_text=len(beer_saku_kuld_05_l_jb_text)
+        count_beer_saku_original_05_l_jb_text=len(beer_saku_original_05_l_jb_text)
+        count_beer_stangen_lager_svitle_05_l_jb_text=len(beer_stangen_lager_svitle_05_l_jb_text)
+        count_beer_van_pur_premium_svitle_05_l_jb_text=len(beer_van_pur_premium_svitle_05_l_jb_text)
+        count_beer_bavaria_mango_marakya_bezalkogol_svitle_05_l_jb_text=len(beer_bavaria_mango_marakya_bezalkogol_svitle_05_l_jb_text)
+        count_beer_bavaria_granat_bezalkogol_svitle_05_l_jb_text=len(beer_bavaria_granat_bezalkogol_svitle_05_l_jb_text)
+        count_beer_obolon_beermix_malina_05_l_jb_text=len(beer_obolon_beermix_malina_05_l_jb_text)
+        count_beer_obolon_beermix_vishnya_05_l_jb_text=len(beer_obolon_beermix_vishnya_05_l_jb_text)
+        count_beer_lomza_svitle_05_l_jb_text=len(beer_lomza_svitle_05_l_jb_text)
+        count_beer_paderborner_pilsener_svitle_05_l_jb_text=len(beer_paderborner_pilsener_svitle_05_l_jb_text)
+        count_beer_paderborner_export_05_l_jb_text=len(beer_paderborner_export_05_l_jb_text)
+        count_beer_clausthaler_greipfruit_nonalcohol_05_l_jb_text=len(beer_clausthaler_greipfruit_nonalcohol_05_l_jb_text)
+        count_beer_clausthaler_original_nonalcohol_05_l_jb_text=len(beer_clausthaler_original_nonalcohol_05_l_jb_text)
+        count_beer_clausthaler_lemon_nonalcohol_05_l_jb_text=len(beer_clausthaler_lemon_nonalcohol_05_l_jb_text)
+        count_beer_forever_rock_n_roll_svitle_nefilter_05_l_jb_text=len(beer_forever_rock_n_roll_svitle_nefilter_05_l_jb_text)
+        count_beer_forever_black_queen_temne_nefilter_05_l_jb_text=len(beer_forever_black_queen_temne_nefilter_05_l_jb_text)
+        count_beer_forever_kite_safari_svitle_nefilter_05_l_jb_text=len(beer_forever_kite_safari_svitle_nefilter_05_l_jb_text)
+        count_beer_forever_crazy_svitle_nefilter_05_l_jb_text=len(beer_forever_crazy_svitle_nefilter_05_l_jb_text)
+        count_beer_hike_light_svitle_05_l_jb_text=len(beer_hike_light_svitle_05_l_jb_text)
+        count_beer_hike_zero_nonalcohol_05_l_jb_text=len(beer_hike_zero_nonalcohol_05_l_jb_text)
+        count_beer_horn_disel_ice_pilsner_svitle_0568_l_jb_text=len(beer_horn_disel_ice_pilsner_svitle_0568_l_jb_text)
+        count_beer_horn_original_svitle_0568_l_jb_text=len(beer_horn_original_svitle_0568_l_jb_text)
+        count_beer_horn_traditional_svitle_0568_l_jb_text=len(beer_horn_traditional_svitle_0568_l_jb_text)
+        count_beer_horn_premium_svitle_05_l_jb_text=len(beer_horn_premium_svitle_05_l_jb_text)
+        count_beer_krusovice_cerne_temne_05_l_jb_text=len(beer_krusovice_cerne_temne_05_l_jb_text)
+        count_beer_lander_brau_micne_05_l_jb_text=len(beer_lander_brau_micne_05_l_jb_text)
+        count_beer_lander_brau_svitle_nefilter_05_l_jb_text=len(beer_lander_brau_svitle_nefilter_05_l_jb_text)
+        count_beer_padeborner_pilger_nefilter_svitle_05_l_jb_text=len(beer_padeborner_pilger_nefilter_svitle_05_l_jb_text)
+        count_beer_platan_jedenactka_05_l_jb_text=len(beer_platan_jedenactka_05_l_jb_text)
+        count_beer_praga_svitle_05_l_jb_text=len(beer_praga_svitle_05_l_jb_text)
+        count_beer_saku_rock_svitle_0568_l_jb_text=len(beer_saku_rock_svitle_0568_l_jb_text)
+        count_beer_sitnan_svitle_05_l_jb_text=len(beer_sitnan_svitle_05_l_jb_text)
+        count_beer_vienas_premium_golden_svitle_05_l_jb_text=len(beer_vienas_premium_golden_svitle_05_l_jb_text)
+        count_beer_vienas_premium_traditional_svitle_05_l_jb_text=len(beer_vienas_premium_traditional_svitle_05_l_jb_text)
+        count_beer_volynski_browar_forever_sweet_wit_pshen_nefilter_svitle_05_l_jb_text=len(beer_volynski_browar_forever_sweet_wit_pshen_nefilter_svitle_05_l_jb_text)
+        count_beer_zahringer_premium_svitle_05_l_jb_text=len(beer_zahringer_premium_svitle_05_l_jb_text)
+        count_beer_zahringer_hefeweizen_svitle_05_l_jb_text=len(beer_zahringer_hefeweizen_svitle_05_l_jb_text)
+        count_beer_jajkivske_svitle__nefilter_05_l_jb_text=len(beer_jajkivske_svitle__nefilter_05_l_jb_text)
+        count_beer_obolon_svitle_05_l_jb_text=len(beer_obolon_svitle_05_l_jb_text)
+        count_beer_pubster_svitle_05_l_jb_text=len(beer_pubster_svitle_05_l_jb_text)
+        count_beer_chaika_chernomorskaya_05_l_jb_text=len(beer_chaika_chernomorskaya_05_l_jb_text)
+        count_beer_ppb_zakarpatske_orig_svitle_05_l_jb_text=len(beer_ppb_zakarpatske_orig_svitle_05_l_jb_text)
+        count_beer_ppb_bochkove_nefilter_05_l_jb_text=len(beer_ppb_bochkove_nefilter_05_l_jb_text)
+        count_beer_ppb_nefilter_svitle_nonalco_05_l_jb_text=len(beer_ppb_nefilter_svitle_nonalco_05_l_jb_text)
+        count_beer_ppb_limon_lime_nonalco_nefilter_05_l_jb_text=len(beer_ppb_limon_lime_nonalco_nefilter_05_l_jb_text)
+        count_beer_chaika_dniprovskaya_05_l_jb_text=len(beer_chaika_dniprovskaya_05_l_jb_text)
+        count_beer_brok_export_svitle_05_l_jb_text=len(beer_brok_export_svitle_05_l_jb_text)
 
         return texts, count_obolon_premium_extra_11_text, count_hetman_sagaydachniy_07_text, \
                count_coffee_aroma_gold_classic_100gr_text, count_apple_golden_text, count_coca_cola_2l_text, \
@@ -510,7 +645,30 @@ class GroceryAppText:
                count_beer_hike_premium_svitle_05_l_jb_text,count_beer_obolon_nonalcohol_svitle_nefilter_05_l_jb_text,\
                count_beer_zibert_bavarske_svitle_05_l_jb_text,count_beer_bavaria_liquid_apple_nonalcohol_svitle_05_l_jb_text,\
                count_beer_heineken_svitle_05_l_jb_text,count_beer_rychtar_grunt_11_svitle_05_l_jb_text,\
-               count_beer_amstel_svitle_05_l_jb_text,count_beer_bavaria_svitle_05_l_jb_text,count_beer_bavaria_svitle_nonalcohol_05_l_jb_text
+               count_beer_amstel_svitle_05_l_jb_text,count_beer_bavaria_svitle_05_l_jb_text,count_beer_bavaria_svitle_nonalcohol_05_l_jb_text,\
+               count_beer_edelburg_lager_svitle_05_l_jb_text,count_beer_donner_pills_svitle_05_l_jb_text,\
+               count_beer_dutch_windmill_svitle_05_l_jb_text,count_beer_edelberg_hefeweizen_svitle_nefilter_05_l_jb_text,\
+               count_beer_edelmeister_unfiltered_svitle_nefilter_05_l_jb_text,count_beer_estrella_damm_barcelona_svitle_05_l_jb_text,\
+               count_beer_halne_jasne_pelne_05_l_jb_text,count_beer_eurotour_hefeweissbier_svitle_05_l_jb_text,\
+               count_beer_hollandia_strong_svitle_05_l_jb_text,count_beer_lander_brau_premium_svitle_05_l_jb_text,\
+               count_beer_saku_kuld_05_l_jb_text,\
+               count_beer_saku_original_05_l_jb_text,count_beer_stangen_lager_svitle_05_l_jb_text,count_beer_van_pur_premium_svitle_05_l_jb_text,\
+               count_beer_bavaria_mango_marakya_bezalkogol_svitle_05_l_jb_text,count_beer_bavaria_granat_bezalkogol_svitle_05_l_jb_text,\
+               count_beer_obolon_beermix_malina_05_l_jb_text,count_beer_obolon_beermix_vishnya_05_l_jb_text,count_beer_lomza_svitle_05_l_jb_text,\
+               count_beer_paderborner_pilsener_svitle_05_l_jb_text,count_beer_paderborner_export_05_l_jb_text,count_beer_clausthaler_greipfruit_nonalcohol_05_l_jb_text,\
+               count_beer_clausthaler_original_nonalcohol_05_l_jb_text,count_beer_clausthaler_lemon_nonalcohol_05_l_jb_text,\
+               count_beer_forever_rock_n_roll_svitle_nefilter_05_l_jb_text,count_beer_forever_black_queen_temne_nefilter_05_l_jb_text,\
+               count_beer_forever_kite_safari_svitle_nefilter_05_l_jb_text,count_beer_forever_crazy_svitle_nefilter_05_l_jb_text,\
+               count_beer_hike_light_svitle_05_l_jb_text,count_beer_hike_zero_nonalcohol_05_l_jb_text,count_beer_horn_disel_ice_pilsner_svitle_0568_l_jb_text,\
+               count_beer_horn_original_svitle_0568_l_jb_text,count_beer_horn_traditional_svitle_0568_l_jb_text,count_beer_horn_premium_svitle_05_l_jb_text,\
+               count_beer_krusovice_cerne_temne_05_l_jb_text,count_beer_lander_brau_micne_05_l_jb_text,count_beer_lander_brau_svitle_nefilter_05_l_jb_text,\
+               count_beer_padeborner_pilger_nefilter_svitle_05_l_jb_text,count_beer_platan_jedenactka_05_l_jb_text,count_beer_praga_svitle_05_l_jb_text,\
+               count_beer_saku_rock_svitle_0568_l_jb_text,count_beer_sitnan_svitle_05_l_jb_text,count_beer_vienas_premium_golden_svitle_05_l_jb_text,\
+               count_beer_vienas_premium_traditional_svitle_05_l_jb_text,count_beer_volynski_browar_forever_sweet_wit_pshen_nefilter_svitle_05_l_jb_text,\
+               count_beer_zahringer_premium_svitle_05_l_jb_text,count_beer_zahringer_hefeweizen_svitle_05_l_jb_text,count_beer_jajkivske_svitle__nefilter_05_l_jb_text,\
+               count_beer_obolon_svitle_05_l_jb_text,count_beer_pubster_svitle_05_l_jb_text,count_beer_chaika_chernomorskaya_05_l_jb_text,\
+               count_beer_ppb_zakarpatske_orig_svitle_05_l_jb_text,count_beer_ppb_bochkove_nefilter_05_l_jb_text,count_beer_ppb_nefilter_svitle_nonalco_05_l_jb_text,\
+               count_beer_ppb_limon_lime_nonalco_nefilter_05_l_jb_text,count_beer_chaika_dniprovskaya_05_l_jb_text,count_beer_brok_export_svitle_05_l_jb_text
 
 
     def converted_data(self):
@@ -536,7 +694,7 @@ class GroceryAppText:
 
         # окончательно формируем обучающую выборку:
         TRAIN_SAMPLE = data_pad
-        items = 150
+        items = 207
         TARGET_SAMPLE = np.array(
             make_list(items, 0) *
             self.upload_data()[1] + make_list(items, 1) * self.upload_data()[2] + make_list(items, 2) *
@@ -607,20 +765,45 @@ class GroceryAppText:
             self.upload_data()[131]+ make_list(items, 131) *self.upload_data()[132]+ make_list(items, 132) *
             self.upload_data()[133]+ make_list(items, 133) *self.upload_data()[134]+ make_list(items, 134) *
             self.upload_data()[135]+ make_list(items, 135) *self.upload_data()[136]+ make_list(items, 136) *
-            self.upload_data()[137]+ make_list(items, 137) *
-            self.upload_data()[138]+ make_list(items, 138) *
-            self.upload_data()[139]+ make_list(items, 139) *
-            self.upload_data()[140]+ make_list(items, 140) *
-            self.upload_data()[141]+ make_list(items, 141) *
-            self.upload_data()[142]+ make_list(items, 142) *
-            self.upload_data()[143]+ make_list(items, 143) *
-            self.upload_data()[144]+ make_list(items, 144) *
-            self.upload_data()[145]+ make_list(items, 145) *
-            self.upload_data()[146]+ make_list(items, 146) *
-            self.upload_data()[147]+ make_list(items, 147) *
-            self.upload_data()[148]+ make_list(items, 148) *
-            self.upload_data()[149]+ make_list(items, 149) *
-            self.upload_data()[150])
+            self.upload_data()[137]+ make_list(items, 137) *self.upload_data()[138]+ make_list(items, 138) *
+            self.upload_data()[139]+ make_list(items, 139) *self.upload_data()[140]+ make_list(items, 140) *
+            self.upload_data()[141]+ make_list(items, 141) *self.upload_data()[142]+ make_list(items, 142) *
+            self.upload_data()[143]+ make_list(items, 143) *self.upload_data()[144]+ make_list(items, 144) *
+            self.upload_data()[145]+ make_list(items, 145) *self.upload_data()[146]+ make_list(items, 146) *
+            self.upload_data()[147]+ make_list(items, 147) *self.upload_data()[148]+ make_list(items, 148) *
+            self.upload_data()[149]+ make_list(items, 149) *self.upload_data()[150]+ make_list(items, 150) *
+            self.upload_data()[151]+ make_list(items, 151) *self.upload_data()[152]+ make_list(items, 152) *
+            self.upload_data()[153]+ make_list(items, 153) *self.upload_data()[154]+ make_list(items, 154) *
+            self.upload_data()[155]+ make_list(items, 155) *self.upload_data()[156]+ make_list(items, 156) *
+            self.upload_data()[157]+ make_list(items, 157) *self.upload_data()[158]+ make_list(items, 158) *
+            self.upload_data()[159]+ make_list(items, 159) *self.upload_data()[160]+ make_list(items, 160) *
+            self.upload_data()[161]+ make_list(items, 161) *self.upload_data()[162]+ make_list(items, 162) *
+            self.upload_data()[163]+ make_list(items, 163) *self.upload_data()[164]+ make_list(items, 164) *
+            self.upload_data()[165]+ make_list(items, 165) *self.upload_data()[166]+ make_list(items, 166) *
+            self.upload_data()[167]+ make_list(items, 167) *self.upload_data()[168]+ make_list(items, 168) *
+            self.upload_data()[169]+ make_list(items, 169) *self.upload_data()[170]+ make_list(items, 170) *
+            self.upload_data()[171]+ make_list(items, 171) *self.upload_data()[172]+ make_list(items, 172) *
+            self.upload_data()[173]+ make_list(items, 173) *self.upload_data()[174]+ make_list(items, 174) *
+            self.upload_data()[175]+ make_list(items, 175) *self.upload_data()[176]+ make_list(items, 176) *
+            self.upload_data()[177]+ make_list(items, 177) *self.upload_data()[178]+ make_list(items, 178) *
+            self.upload_data()[179]+ make_list(items, 179) *self.upload_data()[180]+ make_list(items, 180) *
+            self.upload_data()[181]+ make_list(items, 181) *self.upload_data()[182]+ make_list(items, 182) *
+            self.upload_data()[183]+ make_list(items, 183) *self.upload_data()[184]+ make_list(items, 184) *
+            self.upload_data()[185]+ make_list(items, 185) *self.upload_data()[186]+ make_list(items, 186) *
+            self.upload_data()[187]+ make_list(items, 187) *self.upload_data()[188]+ make_list(items, 188) *
+            self.upload_data()[189]+ make_list(items, 189) *self.upload_data()[190]+ make_list(items, 190) *
+            self.upload_data()[191]+ make_list(items, 191) *self.upload_data()[192]+ make_list(items, 192) *
+            self.upload_data()[193]+ make_list(items, 193) *self.upload_data()[194]+ make_list(items, 194) *
+            self.upload_data()[195]+ make_list(items, 195) *self.upload_data()[196]+ make_list(items, 196) *
+            self.upload_data()[197]+ make_list(items, 197) *self.upload_data()[198]+ make_list(items, 198) *
+            self.upload_data()[199]+ make_list(items, 199) *self.upload_data()[200]+ make_list(items, 200) *
+            self.upload_data()[201]+ make_list(items, 201) *
+            self.upload_data()[202]+ make_list(items, 202) *
+            self.upload_data()[203]+ make_list(items, 203) *
+            self.upload_data()[204]+ make_list(items, 204) *
+            self.upload_data()[205]+ make_list(items, 205) *
+            self.upload_data()[206]+ make_list(items, 206) *
+            self.upload_data()[207])
 
         # перемешиваем обучающую выборку для лучшей тренированности НС:
         # создаем рандомные индексы:
