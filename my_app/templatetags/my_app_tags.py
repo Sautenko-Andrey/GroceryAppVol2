@@ -639,6 +639,36 @@ get_beer_Chaika_Dniprovska_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,206)
 '''Тэг,возвращающий информацию о "Пиво Brok Export світле 5,2% 0,5л"'''
 get_beer_Brok_Export_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,207)
 
+'''Тэг,возвращающий информацию о "Пиво Carling світле фільроване з/б 4% 0.5 л"'''
+get_beer_Carling_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,208)
+
+'''Тэг,возвращающий информацию о "Пиво Keten Brug Blanche Elegant 4.8% 0.5 л"'''
+get_beer_Keten_Brug_Blanche_Elegant_05l_jb = tag.create_tag(ItemsPicsFromNet,209)
+
+'''Тэг,возвращающий информацию о "Пиво Budweiser безалкогольне 0.5 л"'''
+get_beer_Budweiser_nonalco_05l_jb = tag.create_tag(ItemsPicsFromNet,210)
+
+'''Тэг,возвращающий информацию о "Пиво Feldschlosschen Wheat Beer світле нефільтроване 5% 0.5 л"'''
+get_beer_Feldschlosschen_Wheat_Beer_svitle_nefilter_05l_jb = tag.create_tag(ItemsPicsFromNet,211)
+
+'''Тэг,возвращающий информацию о "Пиво Тетерів Хмільна Вишня напівтемне фільтроване з/б 8% 0.5 л"'''
+get_beer_Teteriv_hmilna_vishnya_napivtemne_05l_jb = tag.create_tag(ItemsPicsFromNet,212)
+
+'''Тэг,возвращающий информацию о "Пиво Grotwerg світле пастеризоване фільтроване безалкогольне 0.5 л"'''
+get_beer_Grotwerg_svitle_nonalco_05l_jb = tag.create_tag(ItemsPicsFromNet,213)
+
+'''Тэг,возвращающий информацию о "Пиво Holland Import світле фільтроване 4.8% 0.5 л"'''
+get_beer_Holland_import_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,214)
+
+'''Тэг,возвращающий информацию о "Пиво Golden Castle Export світле 4.8% 0.5 л"'''
+get_beer_Golden_castle_export_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,215)
+
+'''Тэг,возвращающий информацию о "Пиво 5.0 Original Craft Beer сітле нефільтроване 4.1% 0.5 л"'''
+get_beer_5_0_original_craft_beer_nefilter_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,216)
+
+'''Тэг,возвращающий информацию о "Пиво Guinness Draught темне фільтроване 4.1% 0.44 л"'''
+get_beer_Guinness_draught_temne_05l_jb = tag.create_tag(ItemsPicsFromNet,217)
+
 
 
 

@@ -34,10 +34,10 @@ class GroceryAppText:
         '''Инициализация модели НС и ее подготовка к обучению'''
 
         self.model = keras.Sequential([
-            Embedding(self.MAX_WORDS, 207, input_length=self.MAX_LENGTH_TEXT),
-            LSTM(207, return_sequences=True),  # 128
+            Embedding(self.MAX_WORDS, 217, input_length=self.MAX_LENGTH_TEXT),
+            LSTM(217, return_sequences=True),  # 128
             LSTM(100),  # 64
-            Dense(207, activation='softmax')
+            Dense(217, activation='softmax')
         ])
 
         self.model.compile(optimizer=Adam(0.0001), loss='categorical_crossentropy',
@@ -50,7 +50,7 @@ class GroceryAppText:
         TRAIN_DATA, TARGET_DATA, tokenizer = self.converted_data()
 
         # запускаем тренировку:
-        history = self.model.fit(TRAIN_DATA, TARGET_DATA, epochs=50, batch_size=50)
+        history = self.model.fit(TRAIN_DATA, TARGET_DATA, epochs=45, batch_size=50)
 
         reverse_word_map = dict(map(reversed, self.converted_data()[2].word_index.items()))
 
@@ -282,6 +282,16 @@ class GroceryAppText:
         beer_ppb_limon_lime_nonalco_nefilter_05_l_jb_text=self.add_new_item('beer_ppb_limon_lime_nonalco_nefilter_05_l_jb.txt')
         beer_chaika_dniprovskaya_05_l_jb_text=self.add_new_item('beer_chaika_dniprovskaya_05_l_jb.txt')
         beer_brok_export_svitle_05_l_jb_text=self.add_new_item('beer_brok_export_svitle_05_l_jb.txt')
+        beer_carling_svitle_05_l_jb_text=self.add_new_item('beer_carling_svitle_05_l_jb.txt')
+        beer_keten_brug_blanche_elegant_nefilter_05_l_jb_text=self.add_new_item('beer_keten_brug_blanche_elegant_nefilter_05_l_jb.txt')
+        beer_budweiser_nonalco_svitle_05_l_jb_text=self.add_new_item('beer_budweiser_nonalco_svitle_05_l_jb.txt')
+        beer_feldschlosschen_wheat_beer_svitle05_l_jb_text=self.add_new_item('beer_feldschlosschen_wheat_beer_svitle05_l_jb.txt')
+        beer_teteriv_hmilna_vishnya_polutemne_05_l_jb_text=self.add_new_item('beer_teteriv_hmilna_vishnya_polutemne_05_l_jb.txt')
+        beer_grotwerg_svitle_nonalco_05_l_jb_text=self.add_new_item('beer_grotwerg_svitle_nonalco_05_l_jb.txt')
+        beer_holland_import_svitle_05_l_jb_text = self.add_new_item('beer_holland_import_svitle_05_l_jb.txt')
+        beer_golden_castle_export_svitle_05_l_jb_text=self.add_new_item('beer_golden_castle_export_svitle_05_l_jb.txt')
+        beer_5_0_origin_craft_beer_nefilter_svitle_05_l_jb_text=self.add_new_item('beer_5_0_origin_craft_beer_nefilter_svitle_05_l_jb.txt')
+        beer_guinness_draught_temne_044_l_jb_text=self.add_new_item('beer_guinness_draught_temne_044_l_jb.txt')
 
         # объед. обучающие выборки:
         texts = obolon_premium_extra_11_text + hetman_sagaydachniy_07_text \
@@ -372,7 +382,11 @@ class GroceryAppText:
                 + beer_zahringer_premium_svitle_05_l_jb_text + beer_zahringer_hefeweizen_svitle_05_l_jb_text + beer_jajkivske_svitle__nefilter_05_l_jb_text\
                 + beer_obolon_svitle_05_l_jb_text + beer_pubster_svitle_05_l_jb_text + beer_chaika_chernomorskaya_05_l_jb_text\
                 + beer_ppb_zakarpatske_orig_svitle_05_l_jb_text + beer_ppb_bochkove_nefilter_05_l_jb_text + beer_ppb_nefilter_svitle_nonalco_05_l_jb_text\
-                + beer_ppb_limon_lime_nonalco_nefilter_05_l_jb_text + beer_chaika_dniprovskaya_05_l_jb_text + beer_brok_export_svitle_05_l_jb_text
+                + beer_ppb_limon_lime_nonalco_nefilter_05_l_jb_text + beer_chaika_dniprovskaya_05_l_jb_text + beer_brok_export_svitle_05_l_jb_text\
+                + beer_carling_svitle_05_l_jb_text + beer_keten_brug_blanche_elegant_nefilter_05_l_jb_text + beer_budweiser_nonalco_svitle_05_l_jb_text\
+                + beer_feldschlosschen_wheat_beer_svitle05_l_jb_text + beer_teteriv_hmilna_vishnya_polutemne_05_l_jb_text\
+                + beer_grotwerg_svitle_nonalco_05_l_jb_text + beer_holland_import_svitle_05_l_jb_text + beer_golden_castle_export_svitle_05_l_jb_text\
+                + beer_5_0_origin_craft_beer_nefilter_svitle_05_l_jb_text + beer_guinness_draught_temne_044_l_jb_text
 
         # подсчитываем кол-во выборок
         count_obolon_premium_extra_11_text = len(obolon_premium_extra_11_text)
@@ -582,6 +596,16 @@ class GroceryAppText:
         count_beer_ppb_limon_lime_nonalco_nefilter_05_l_jb_text=len(beer_ppb_limon_lime_nonalco_nefilter_05_l_jb_text)
         count_beer_chaika_dniprovskaya_05_l_jb_text=len(beer_chaika_dniprovskaya_05_l_jb_text)
         count_beer_brok_export_svitle_05_l_jb_text=len(beer_brok_export_svitle_05_l_jb_text)
+        count_beer_carling_svitle_05_l_jb_text=len(beer_carling_svitle_05_l_jb_text)
+        count_beer_keten_brug_blanche_elegant_nefilter_05_l_jb_text=len(beer_keten_brug_blanche_elegant_nefilter_05_l_jb_text)
+        count_beer_budweiser_nonalco_svitle_05_l_jb_text=len(beer_budweiser_nonalco_svitle_05_l_jb_text)
+        count_beer_feldschlosschen_wheat_beer_svitle05_l_jb_text=len(beer_feldschlosschen_wheat_beer_svitle05_l_jb_text)
+        count_beer_teteriv_hmilna_vishnya_polutemne_05_l_jb_text=len(beer_teteriv_hmilna_vishnya_polutemne_05_l_jb_text)
+        count_beer_grotwerg_svitle_nonalco_05_l_jb_text=len(beer_grotwerg_svitle_nonalco_05_l_jb_text)
+        count_beer_holland_import_svitle_05_l_jb_text=len(beer_holland_import_svitle_05_l_jb_text)
+        count_beer_golden_castle_export_svitle_05_l_jb_text=len(beer_golden_castle_export_svitle_05_l_jb_text)
+        count_beer_5_0_origin_craft_beer_nefilter_svitle_05_l_jb_text=len(beer_5_0_origin_craft_beer_nefilter_svitle_05_l_jb_text)
+        count_beer_guinness_draught_temne_044_l_jb_text=len(beer_guinness_draught_temne_044_l_jb_text)
 
         return texts, count_obolon_premium_extra_11_text, count_hetman_sagaydachniy_07_text, \
                count_coffee_aroma_gold_classic_100gr_text, count_apple_golden_text, count_coca_cola_2l_text, \
@@ -668,7 +692,11 @@ class GroceryAppText:
                count_beer_zahringer_premium_svitle_05_l_jb_text,count_beer_zahringer_hefeweizen_svitle_05_l_jb_text,count_beer_jajkivske_svitle__nefilter_05_l_jb_text,\
                count_beer_obolon_svitle_05_l_jb_text,count_beer_pubster_svitle_05_l_jb_text,count_beer_chaika_chernomorskaya_05_l_jb_text,\
                count_beer_ppb_zakarpatske_orig_svitle_05_l_jb_text,count_beer_ppb_bochkove_nefilter_05_l_jb_text,count_beer_ppb_nefilter_svitle_nonalco_05_l_jb_text,\
-               count_beer_ppb_limon_lime_nonalco_nefilter_05_l_jb_text,count_beer_chaika_dniprovskaya_05_l_jb_text,count_beer_brok_export_svitle_05_l_jb_text
+               count_beer_ppb_limon_lime_nonalco_nefilter_05_l_jb_text,count_beer_chaika_dniprovskaya_05_l_jb_text,count_beer_brok_export_svitle_05_l_jb_text,\
+               count_beer_carling_svitle_05_l_jb_text,count_beer_keten_brug_blanche_elegant_nefilter_05_l_jb_text,count_beer_budweiser_nonalco_svitle_05_l_jb_text,\
+               count_beer_feldschlosschen_wheat_beer_svitle05_l_jb_text,count_beer_teteriv_hmilna_vishnya_polutemne_05_l_jb_text,\
+               count_beer_grotwerg_svitle_nonalco_05_l_jb_text,count_beer_holland_import_svitle_05_l_jb_text,count_beer_golden_castle_export_svitle_05_l_jb_text,\
+               count_beer_5_0_origin_craft_beer_nefilter_svitle_05_l_jb_text,count_beer_guinness_draught_temne_044_l_jb_text
 
 
     def converted_data(self):
@@ -694,7 +722,7 @@ class GroceryAppText:
 
         # окончательно формируем обучающую выборку:
         TRAIN_SAMPLE = data_pad
-        items = 207
+        items = 217
         TARGET_SAMPLE = np.array(
             make_list(items, 0) *
             self.upload_data()[1] + make_list(items, 1) * self.upload_data()[2] + make_list(items, 2) *
@@ -797,13 +825,15 @@ class GroceryAppText:
             self.upload_data()[195]+ make_list(items, 195) *self.upload_data()[196]+ make_list(items, 196) *
             self.upload_data()[197]+ make_list(items, 197) *self.upload_data()[198]+ make_list(items, 198) *
             self.upload_data()[199]+ make_list(items, 199) *self.upload_data()[200]+ make_list(items, 200) *
-            self.upload_data()[201]+ make_list(items, 201) *
-            self.upload_data()[202]+ make_list(items, 202) *
-            self.upload_data()[203]+ make_list(items, 203) *
-            self.upload_data()[204]+ make_list(items, 204) *
-            self.upload_data()[205]+ make_list(items, 205) *
-            self.upload_data()[206]+ make_list(items, 206) *
-            self.upload_data()[207])
+            self.upload_data()[201]+ make_list(items, 201) *self.upload_data()[202]+ make_list(items, 202) *
+            self.upload_data()[203]+ make_list(items, 203) *self.upload_data()[204]+ make_list(items, 204) *
+            self.upload_data()[205]+ make_list(items, 205) *self.upload_data()[206]+ make_list(items, 206) *
+            self.upload_data()[207]+ make_list(items, 207) *self.upload_data()[208]+ make_list(items, 208) *
+            self.upload_data()[209]+ make_list(items, 209) *self.upload_data()[210]+ make_list(items, 210) *
+            self.upload_data()[211]+ make_list(items, 211) *self.upload_data()[212]+ make_list(items, 212) *
+            self.upload_data()[213]+ make_list(items, 213) *self.upload_data()[214]+ make_list(items, 214) *
+            self.upload_data()[215]+ make_list(items, 215) *self.upload_data()[216]+ make_list(items, 216) *
+            self.upload_data()[217])
 
         # перемешиваем обучающую выборку для лучшей тренированности НС:
         # создаем рандомные индексы:

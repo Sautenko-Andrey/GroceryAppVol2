@@ -32,39 +32,24 @@ def best_price_identify(prices_array:list):
     '''В prices_array нам поступают все цены из БД.А нам надо определить
     минимальную из тех маркетов, которые выбрал пользователь.'''
     #очищаем от цен, которых нет в магазине
-    clear_list=tuple(x for x in prices_array if type(x) == float)
-    #определяем лучшую цену
-    #проверяем пуст списо с ценами или нет
-    if len(clear_list)>0:
-        best_price=min(clear_list)
+    clear_list = tuple(x for x in prices_array if type(x[1]) == float)
+    # определяем лучшую цену
+    # проверяем пуст списо с ценами или нет
+    value_only=[]
+    for i in clear_list:
+        value_only.append(i[1])
+
+    if len(value_only)>0:
+        best_price = min(value_only)
     else:
-        best_price=0
+        best_price = 0
 
-    global respond
+    respond = '---'
     for index,value in enumerate(prices_array):
-        if value==best_price and index==0:
-            respond=('atb',value)
-        elif value == best_price and index==1:
-            respond=('eko',value)
-        elif value == best_price and index==2:
-            respond = ('varus',value)
-        elif value == best_price and index==3:
-            respond = ('silpo',value)
-        elif value == best_price and index==4:
-            respond = ('ashan',value)
-        elif value == best_price and index==5:
-            respond = ('novus',value)
-        elif value == best_price and index==6:
-            respond = ('metro',value)
-        elif value == best_price and index==7:
-            respond = ('nash_kray',value)
-        elif value == best_price and index==8:
-            respond = ('fozzy',value)
 
-    # print(prices_array)
-    # print(clear_list)
-    # print(best_price)
-    # print(respond)
+        if value[1] == best_price:
+            respond = f'{value[0]} {best_price} грн'
+
     return respond
 
 def get_products_prices(respond:str):
@@ -137,5 +122,3 @@ def get_products_prices(respond:str):
            novus_price,metro_price,nash_kray_price,fozzy_price,picture
 
 
-prices=[101.56, 35.87, 89.99]
-my_test=best_price_identify(prices)

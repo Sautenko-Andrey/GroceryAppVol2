@@ -1269,6 +1269,33 @@ all_products_names=[
         "eko":parser.beer_brok_export_svitle_05_l_jb_parser()[1],
         "novus":parser.beer_brok_export_svitle_05_l_jb_parser()[5]
 }},
+    {'beer_carling_svitle_05_l_jb':{
+        "atb": parser.beer_carling_svitle_05_l_jb_parser()[0],
+        "varus": parser.beer_carling_svitle_05_l_jb_parser()[2],
+        "silpo": parser.beer_carling_svitle_05_l_jb_parser()[3],
+        "novus": parser.beer_carling_svitle_05_l_jb_parser()[5]
+}},
+    {'beer_keten_brug_blanche_elegant_05_l_jb':{
+        "atb": parser.beer_keten_brug_blanche_elegant_05_l_jb_parser()[0],
+        "varus": parser.beer_keten_brug_blanche_elegant_05_l_jb_parser()[2],
+        "silpo": parser.beer_keten_brug_blanche_elegant_05_l_jb_parser()[3],
+        "novus": parser.beer_keten_brug_blanche_elegant_05_l_jb_parser()[5]
+}},
+    {'beer_budweiser_nonalco_05_l_jb':{
+        "varus": parser.beer_budweiser_nonalco_05_l_jb_parser()[2],
+        "silpo": parser.beer_budweiser_nonalco_05_l_jb_parser()[3]
+}},
+    {'beer_feldschlosschenWheatBeer_svitle_nefilter_05_l_jb':{
+        "varus": parser.beer_FeldschlosschenWheatBeer_svitle_nefilter_05_l_jb_parser()[2]
+}},
+    {'beer_teteriv_hmilna_vishnya_napivtemne_05_l_jb':{
+        "eko":parser.beer_teteriv_hmilna_vishnya_napivtemne_05_l_jb_parser()[1],
+        "varus":parser.beer_teteriv_hmilna_vishnya_napivtemne_05_l_jb_parser()[2],
+        "silpo":parser.beer_teteriv_hmilna_vishnya_napivtemne_05_l_jb_parser()[3],
+        "ashan":parser.beer_teteriv_hmilna_vishnya_napivtemne_05_l_jb_parser()[4],
+        "novus":parser.beer_teteriv_hmilna_vishnya_napivtemne_05_l_jb_parser()[5],
+        "nash_kray":parser.beer_teteriv_hmilna_vishnya_napivtemne_05_l_jb_parser()[7]
+}},
 
 ]
 

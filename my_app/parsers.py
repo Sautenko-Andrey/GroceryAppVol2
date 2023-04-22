@@ -1949,6 +1949,48 @@ class ProductParserVol2:
             'https://novus.online/product/pivo-svitle-brok-export-52-05l-zb'
         ])
 
+    def beer_carling_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Carling світле фільроване з/б 4% 0.5 л'''
+        return self.prices_parsing([
+            'https://www.atbmarket.com/product/pivo-05-l-carling-svitle-zb',
+            'https://varus.ua/pivo-0-5l-4-0-svitle-carling-zb',
+            'https://shop.silpo.ua/product/pyvo-sarlihg-z-b-498824',
+            'https://novus.online/product/pivo-svitle-carling-40-05l-zb'
+        ])
+
+    def beer_keten_brug_blanche_elegant_05_l_jb_parser(self):
+        ''' Парсер для Пиво Keten Brug Blanche Elegant 4.8% 0.5 л'''
+        return self.prices_parsing([
+            'https://www.atbmarket.com/product/pivo-05-l-keten-brug-blanche-elegant-zb',
+            'https://varus.ua/pivo-keten-brug-blanche-elegant-4-8-specialne-pasterizovane-0-5-l',
+            'https://shop.silpo.ua/product/pyvo-keten-brug-blanche-elegant-z-b-890782',
+            'https://novus.online/product/pyvo-svitle-keten-brug-blanche-48-05l-zb'
+        ])
+
+    def beer_budweiser_nonalco_05_l_jb_parser(self):
+        ''' Парсер для Пиво Budweiser безалкогольне 0.5 л'''
+        return self.prices_parsing([
+            'https://varus.ua/pivo-bezalkogolne-budvajzer-05l-z-b',
+            'https://shop.silpo.ua/product/pyvo-budweiser-budvar-nealko-svitle-b-alk-z-b-921766'
+        ])
+
+    def beer_FeldschlosschenWheatBeer_svitle_nefilter_05_l_jb_parser(self):
+        ''' Парсер для Пиво Feldschlosschen Wheat Beer світле нефільтроване 5% 0.5 л'''
+        return self.prices_parsing([
+            'https://varus.ua/pivo-feldschlosschen-wheat-beer-svetloe-nefiltrovannoe-5-0-5-l'
+        ])
+
+    def beer_teteriv_hmilna_vishnya_napivtemne_05_l_jb_parser(self):
+        ''' Парсер для Пиво Тетерів Хмільна Вишня напівтемне фільтроване з/б 8% 0.5 л'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-radomishl-500ml--04820046963604/',
+            'https://varus.ua/pivo-specialne-0-5l-8-hmilna-vishnya-teteriv-zb',
+            'https://shop.silpo.ua/product/pyvo-teteriv-khmilna-vyshnia-napivtemne-z-b-803780',
+            'https://auchan.ua/ua/pivo-persha-privatna-brovarnja-teterev-hmel-naja-vishnja-polutemnoe-fil-trovannoe-8-0-5-l-1031708/',
+            'https://novus.online/product/pivo-specialne-napivtemne-teteriv-hmilna-visna-8-05l-zb',
+            'https://shop.nashkraj.ua/kovel/product/333806-pivo-privatnabrov-0-5l-teteriv-vishnya-zh-b'
+        ])
+
 
 
 

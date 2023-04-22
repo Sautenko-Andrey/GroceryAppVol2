@@ -2311,6 +2311,52 @@ class ItemNameAnswerPage(MutualContext, ListView):
             context_dict['price_from_site_eko'] = store['beer_brok_export_svitle_05_l_jb']['eko']
             context_dict['price_from_site_novus'] = store['beer_brok_export_svitle_05_l_jb']['novus']
 
+        elif context_dict['nn_answer'] == 'Пиво Carling світле фільроване з/б 4% 0.5 л':
+            context_dict['item_image_for_user'] = get_beer_Carling_svitle_05l_jb
+            context_dict['price_from_site_atb'] = store['beer_carling_svitle_05_l_jb']['atb']
+            context_dict['price_from_site_varus'] = store['beer_carling_svitle_05_l_jb']['varus']
+            context_dict['price_from_site_silpo'] = store['beer_carling_svitle_05_l_jb']['silpo']
+            context_dict['price_from_site_novus'] = store['beer_carling_svitle_05_l_jb']['novus']
+
+        elif context_dict['nn_answer'] == 'Пиво Keten Brug Blanche Elegant 4.8% 0.5 л':
+            context_dict['item_image_for_user'] = get_beer_Keten_Brug_Blanche_Elegant_05l_jb
+            context_dict['price_from_site_atb'] = store['beer_keten_brug_blanche_elegant_05_l_jb']['atb']
+            context_dict['price_from_site_varus'] = store['beer_keten_brug_blanche_elegant_05_l_jb']['varus']
+            context_dict['price_from_site_silpo'] = store['beer_keten_brug_blanche_elegant_05_l_jb']['silpo']
+            context_dict['price_from_site_novus'] = store['beer_keten_brug_blanche_elegant_05_l_jb']['novus']
+
+        elif context_dict['nn_answer'] == 'Пиво Budweiser безалкогольне 0.5 л':
+            context_dict['item_image_for_user'] = get_beer_Budweiser_nonalco_05l_jb
+            context_dict['price_from_site_varus'] = store['beer_budweiser_nonalco_05_l_jb']['varus']
+            context_dict['price_from_site_silpo'] = store['beer_budweiser_nonalco_05_l_jb']['silpo']
+
+        elif context_dict['nn_answer'] == 'Пиво Feldschlosschen Wheat Beer світле нефільтроване 5% 0.5 л':
+            context_dict['item_image_for_user'] = get_beer_Feldschlosschen_Wheat_Beer_svitle_nefilter_05l_jb
+            context_dict['price_from_site_varus'] = store['beer_feldschlosschenWheatBeer_svitle_nefilter_05_l_jb']['varus']
+
+        elif context_dict['nn_answer'] == 'Пиво Тетерів Хмільна Вишня напівтемне фільтроване з/б 8% 0.5 л':
+            context_dict['item_image_for_user'] = get_beer_Teteriv_hmilna_vishnya_napivtemne_05l_jb
+            context_dict['price_from_site_eko'] = store['beer_teteriv_hmilna_vishnya_napivtemne_05_l_jb']['eko']
+            context_dict['price_from_site_varus'] = store['beer_teteriv_hmilna_vishnya_napivtemne_05_l_jb']['varus']
+            context_dict['price_from_site_silpo'] = store['beer_teteriv_hmilna_vishnya_napivtemne_05_l_jb']['silpo']
+            context_dict['price_from_site_ashan'] = store['beer_teteriv_hmilna_vishnya_napivtemne_05_l_jb']['ashan']
+            context_dict['price_from_site_novus'] = store['beer_teteriv_hmilna_vishnya_napivtemne_05_l_jb']['novus']
+            context_dict['price_from_site_nash_kray'] = store['beer_teteriv_hmilna_vishnya_napivtemne_05_l_jb']['nash_kray']
+
+        elif context_dict['nn_answer'] == 'Пиво Grotwerg світле пастеризоване фільтроване безалкогольне 0.5 л':
+            context_dict['item_image_for_user'] = get_beer_Grotwerg_svitle_nonalco_05l_jb
+
+        elif context_dict['nn_answer'] == 'Пиво Holland Import світле фільтроване 4.8% 0.5 л':
+            context_dict['item_image_for_user'] = get_beer_Holland_import_svitle_05l_jb
+
+        elif context_dict['nn_answer'] == 'Пиво Golden Castle Export світле 4.8% 0.5 л':
+            context_dict['item_image_for_user'] = get_beer_Golden_castle_export_svitle_05l_jb
+
+        elif context_dict['nn_answer'] == 'Пиво 5.0 Original Craft Beer сітле нефільтроване 4.1% 0.5 л':
+            context_dict['item_image_for_user'] = get_beer_5_0_original_craft_beer_nefilter_svitle_05l_jb
+
+        elif context_dict['nn_answer'] == 'Пиво Guinness Draught темне фільтроване 4.1% 0.44 л':
+            context_dict['item_image_for_user'] = get_beer_Guinness_draught_temne_05l_jb
 
         else:
             context_dict['item_image_for_user'] = get_apple_golden
@@ -2591,26 +2637,26 @@ class SetResults(MutualContext, ListView):
             filtered_prices=[]
             marker=1
             if order.atb_choice==marker:               #тут какой-то баг!
-                filtered_prices.append(atb_price)
-            else:
-                filtered_prices.append(9999999999)
-            # elif order.eko_choice==marker:
-            #     filtered_prices.append(eko_price)
-            # elif order.varus_choice==marker:
-            #     filtered_prices.append(varus_price)
-            # elif order.silpo_choice==marker:
-            #     filtered_prices.append(silpo_price)
-            # elif order.ashan_choice==marker:
-            #     filtered_prices.append(ashan_price)
-            # elif order.novus_choice==marker:
-            #     filtered_prices.append(novus_price)
-            # elif order.metro_choice==marker:
-            #     filtered_prices.append(metro_price)
-            # elif order.nash_kray_choice==marker:
-            #     filtered_prices.append(nash_kray_price)
-            # elif order.fozzy_choice==marker:
-            #     filtered_prices.append(fozzy_price)
-            filtered_prices.append(picture)
+                filtered_prices.append(("ATB",atb_price))
+            # else:
+            #     filtered_prices.append(9999999999)
+            if order.eko_choice==marker:
+                 filtered_prices.append(("EKO",eko_price))
+            if order.varus_choice==marker:
+                 filtered_prices.append(("Varus",varus_price))
+            if order.silpo_choice==marker:
+                 filtered_prices.append(("Сильпо",silpo_price))
+            if order.ashan_choice==marker:
+                 filtered_prices.append(("Ашан",ashan_price))
+            if order.novus_choice==marker:
+                 filtered_prices.append(("Novus",novus_price))
+            if order.metro_choice==marker:
+                 filtered_prices.append(("Metro",metro_price))
+            if order.nash_kray_choice==marker:
+                 filtered_prices.append(("Наш Край",nash_kray_price))
+            if order.fozzy_choice==marker:
+                 filtered_prices.append(("Fozzy",fozzy_price))
+            # filtered_prices.append(picture)
             print('Отфильтрованный список цен',filtered_prices)
 
 

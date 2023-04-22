@@ -237,7 +237,16 @@ class TesterForGroceryAppText:
         beer_ppb_limon_lime_nonalco_nefilter_05_l_jb_text = self.add_new_item('beer_ppb_limon_lime_nonalco_nefilter_05_l_jb.txt')
         beer_chaika_dniprovskaya_05_l_jb_text = self.add_new_item('beer_chaika_dniprovskaya_05_l_jb.txt')
         beer_brok_export_svitle_05_l_jb_text = self.add_new_item('beer_brok_export_svitle_05_l_jb.txt')
-
+        beer_carling_svitle_05_l_jb_text = self.add_new_item('beer_carling_svitle_05_l_jb.txt')
+        beer_keten_brug_blanche_elegant_nefilter_05_l_jb_text = self.add_new_item('beer_keten_brug_blanche_elegant_nefilter_05_l_jb.txt')
+        beer_budweiser_nonalco_svitle_05_l_jb_text = self.add_new_item('beer_budweiser_nonalco_svitle_05_l_jb.txt')
+        beer_feldschlosschen_wheat_beer_svitle05_l_jb_text = self.add_new_item('beer_feldschlosschen_wheat_beer_svitle05_l_jb.txt')
+        beer_teteriv_hmilna_vishnya_polutemne_05_l_jb_text = self.add_new_item('beer_teteriv_hmilna_vishnya_polutemne_05_l_jb.txt')
+        beer_grotwerg_svitle_nonalco_05_l_jb_text = self.add_new_item('beer_grotwerg_svitle_nonalco_05_l_jb.txt')
+        beer_holland_import_svitle_05_l_jb_text = self.add_new_item('beer_holland_import_svitle_05_l_jb.txt')
+        beer_golden_castle_export_svitle_05_l_jb_text = self.add_new_item('beer_golden_castle_export_svitle_05_l_jb.txt')
+        beer_5_0_origin_craft_beer_nefilter_svitle_05_l_jb_text = self.add_new_item('beer_5_0_origin_craft_beer_nefilter_svitle_05_l_jb.txt')
+        beer_guinness_draught_temne_044_l_jb_text = self.add_new_item('beer_guinness_draught_temne_044_l_jb.txt')
 
         # объединям обучающие выборки:
         texts = obolon_premium_extra_11_text+ hetman_sagaydachniy_07_text\
@@ -330,7 +339,11 @@ class TesterForGroceryAppText:
                 + beer_zahringer_hefeweizen_svitle_05_l_jb_text + beer_jajkivske_svitle__nefilter_05_l_jb_text + beer_obolon_svitle_05_l_jb_text\
                 + beer_pubster_svitle_05_l_jb_text + beer_chaika_chernomorskaya_05_l_jb_text + beer_ppb_zakarpatske_orig_svitle_05_l_jb_text\
                 + beer_ppb_bochkove_nefilter_05_l_jb_text + beer_ppb_nefilter_svitle_nonalco_05_l_jb_text + beer_ppb_limon_lime_nonalco_nefilter_05_l_jb_text\
-                + beer_chaika_dniprovskaya_05_l_jb_text + beer_brok_export_svitle_05_l_jb_text
+                + beer_chaika_dniprovskaya_05_l_jb_text + beer_brok_export_svitle_05_l_jb_text + beer_carling_svitle_05_l_jb_text\
+                + beer_keten_brug_blanche_elegant_nefilter_05_l_jb_text + beer_budweiser_nonalco_svitle_05_l_jb_text\
+                + beer_feldschlosschen_wheat_beer_svitle05_l_jb_text + beer_teteriv_hmilna_vishnya_polutemne_05_l_jb_text\
+                + beer_grotwerg_svitle_nonalco_05_l_jb_text + beer_holland_import_svitle_05_l_jb_text + beer_golden_castle_export_svitle_05_l_jb_text\
+                + beer_5_0_origin_craft_beer_nefilter_svitle_05_l_jb_text + beer_guinness_draught_temne_044_l_jb_text
 
         return texts
 
@@ -785,6 +798,25 @@ class TesterForGroceryAppText:
             return 'Пиво Чайка Дніпровська світле фільтроване 4,8% 0,5л'
         elif np.argmax(result) == 206:
             return 'Пиво Brok Export світле 5,2% 0,5л'
-
+        elif np.argmax(result) == 207:
+            return 'Пиво Carling світле фільроване з/б 4% 0.5 л'
+        elif np.argmax(result) == 208:
+            return 'Пиво Keten Brug Blanche Elegant 4.8% 0.5 л'
+        elif np.argmax(result) == 209:
+            return 'Пиво Budweiser безалкогольне 0.5 л'
+        elif np.argmax(result) == 210:
+            return 'Пиво Feldschlosschen Wheat Beer світле нефільтроване 5% 0.5 л'
+        elif np.argmax(result) == 211:
+            return 'Пиво Тетерів Хмільна Вишня напівтемне фільтроване з/б 8% 0.5 л'
+        elif np.argmax(result) == 212:
+            return 'Пиво Grotwerg світле пастеризоване фільтроване безалкогольне 0.5 л'
+        elif np.argmax(result) == 213:
+            return 'Пиво Holland Import світле фільтроване 4.8% 0.5 л'
+        elif np.argmax(result) == 214:
+            return 'Пиво Golden Castle Export світле 4.8% 0.5 л'
+        elif np.argmax(result) == 215:
+            return 'Пиво 5.0 Original Craft Beer сітле нефільтроване 4.1% 0.5 л'
+        elif np.argmax(result) == 216:
+            return 'Пиво Guinness Draught темне фільтроване 4.1% 0.44 л'
 
 
