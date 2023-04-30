@@ -8,6 +8,8 @@ from keras.preprocessing.text import Tokenizer
 from keras_preprocessing.sequence import pad_sequences
 from keras.models import load_model
 
+from .items_full_names import *
+
 
 class TesterForGroceryAppText:
     # опредедяем количество наиболее употребляемых слов в тексте запроса пользователя
@@ -247,25 +249,36 @@ class TesterForGroceryAppText:
         beer_golden_castle_export_svitle_05_l_jb_text = self.add_new_item('beer_golden_castle_export_svitle_05_l_jb.txt')
         beer_5_0_origin_craft_beer_nefilter_svitle_05_l_jb_text = self.add_new_item('beer_5_0_origin_craft_beer_nefilter_svitle_05_l_jb.txt')
         beer_guinness_draught_temne_044_l_jb_text = self.add_new_item('beer_guinness_draught_temne_044_l_jb.txt')
+        beer_grimbergenDoubleAmbree_napivtemne_05_l_jb_text = self.add_new_item('beer_grimbergenDoubleAmbree_napivtemne_05_l_jb.txt')
+        beer_warsteinerPremiumVerum_svitle_05_l_jb_text = self.add_new_item('beer_warsteinerPremiumVerum_svitle_05_l_jb.txt')
+        beer_dab_temne_05_l_jb_text = self.add_new_item('beer_dab_temne_05_l_jb.txt')
+        beer_grimbergenBlanche_svitle_05_l_jb_text = self.add_new_item('beer_grimbergenBlanche_svitle_05_l_jb.txt')
+        beer_klosterkellerWeissbierChina_svitle_nefilter_05_l_jb_text = self.add_new_item('beer_klosterkellerWeissbierChina_svitle_nefilter_05_l_jb.txt')
+        beer_karpackiePils_svitle_05_l_jb_text = self.add_new_item('beer_karpackiePils_svitle_05_l_jb.txt')
+        beer_5_0_OriginalPills_svitle_05_l_jb_text = self.add_new_item('beer_5_0_OriginalPills_svitle_05_l_jb.txt')
+        beer_5_0_Original_Lager_svitle_05_l_jb_text = self.add_new_item('beer_5_0_Original_Lager_svitle_05_l_jb.txt')
+        beer_5_0_Original_Weiss_svitle_nefilter_05_l_jb_text = self.add_new_item('beer_5_0_Original_Weiss_svitle_nefilter_05_l_jb.txt')
+        beer_fahnen_brau_svitle_05_l_jb_text = self.add_new_item('beer_fahnen_brau_svitle_05_l_jb.txt')
+        beer_gosser_light_svitle_05_l_jb_text = self.add_new_item('beer_gosser_light_svitle_05_l_jb.txt')
+        beer_holland_import_svitle_033_l_jb_text = self.add_new_item('beer_holland_import_svitle_033_l_jb.txt')
+        beer_holsten_pilsener_048_l_jb_text = self.add_new_item('beer_holsten_pilsener_048_l_jb.txt')
+        beer_obolon_premium_extra_brew_svitle_05_l_jb_text = self.add_new_item('beer_obolon_premium_extra_brew_svitle_05_l_jb.txt')
+        beer_lvivske__svitle_048_l_jb_text = self.add_new_item('beer_lvivske__svitle_048_l_jb.txt')
+        beer_carlsberg_premium_pilsner_05_l_jb_text = self.add_new_item('beer_carlsberg_premium_pilsner_05_l_jb.txt')
+        beer_carlsberg_pilsner_05_l_jb_text = self.add_new_item('beer_carlsberg_pilsner_05_l_jb.txt')
+
+
 
         # объединям обучающие выборки:
-        texts = obolon_premium_extra_11_text+ hetman_sagaydachniy_07_text\
-                + coffee_aroma_gold_classic_100gr_text+ apple_golden_text\
-                + coca_cola_2l_text + KOMO_paprikash_text+ garlik_text\
-                + kent_8_text+ tea_minutka_40_p_black_text\
-                + oil_shedriy_dar_850_text+ onion_text+ fairy_text\
-                + apple_black_prince_text+ gorchica_kolos_text\
-                + smetana_stolica_smaky_20_400_text+ limon_text\
-                + oil_oleyna_neraf_850_text+ pivo_lvivske_svitle_24l_text\
-                + pena_arko_cool_200_100_text+ pena_arko_sensitive_200_100_text\
-                + carrot_text + drojji_text + eggs_text\
-                + desodorant_garnier_magniy_text + cabbage_text\
-                + marlboro_red_text + mayonez_detsk_shedro_190_text\
-                + rexona_aloe_vera_w_text + smetana_stolica_smaky_15jir_400gr_text\
-                + tea_monomah_kenya_90_text + toilet_papir_text\
+        texts = obolon_premium_extra_11_text+ hetman_sagaydachniy_07_text + coffee_aroma_gold_classic_100gr_text+ apple_golden_text\
+                + coca_cola_2l_text + KOMO_paprikash_text+ garlik_text + kent_8_text+ tea_minutka_40_p_black_text\
+                + oil_shedriy_dar_850_text+ onion_text+ fairy_text + apple_black_prince_text+ gorchica_kolos_text\
+                + smetana_stolica_smaky_20_400_text+ limon_text + oil_oleyna_neraf_850_text+ pivo_lvivske_svitle_24l_text\
+                + pena_arko_cool_200_100_text+ pena_arko_sensitive_200_100_text + carrot_text + drojji_text + eggs_text\
+                + desodorant_garnier_magniy_text + cabbage_text + marlboro_red_text + mayonez_detsk_shedro_190_text\
+                + rexona_aloe_vera_w_text + smetana_stolica_smaky_15jir_400gr_text + tea_monomah_kenya_90_text + toilet_papir_text\
                 + coffee_aroma_gold_freeze_dried_70g_text + gorchica_veres_ukrainska_micna_120g_text\
-                + tea_monomah_100_ceylon_original_black_krupn_list_90g_text\
-                + tea_monomah_ceylon_black_text + apple_gala_text\
+                + tea_monomah_100_ceylon_original_black_krupn_list_90g_text + tea_monomah_ceylon_black_text + apple_gala_text\
                 + desodorant_garnier_spring_spirit_text + smetana_galichanska_15_370gr_text\
                 + chips_lays_with_salt_big_pack_text + sprite_2l_text\
                 + fanta_2l_text + bond_street_blue_selection_text + camel_blue_text + LD_red_text\
@@ -343,7 +356,13 @@ class TesterForGroceryAppText:
                 + beer_keten_brug_blanche_elegant_nefilter_05_l_jb_text + beer_budweiser_nonalco_svitle_05_l_jb_text\
                 + beer_feldschlosschen_wheat_beer_svitle05_l_jb_text + beer_teteriv_hmilna_vishnya_polutemne_05_l_jb_text\
                 + beer_grotwerg_svitle_nonalco_05_l_jb_text + beer_holland_import_svitle_05_l_jb_text + beer_golden_castle_export_svitle_05_l_jb_text\
-                + beer_5_0_origin_craft_beer_nefilter_svitle_05_l_jb_text + beer_guinness_draught_temne_044_l_jb_text
+                + beer_5_0_origin_craft_beer_nefilter_svitle_05_l_jb_text + beer_guinness_draught_temne_044_l_jb_text\
+                + beer_grimbergenDoubleAmbree_napivtemne_05_l_jb_text + beer_warsteinerPremiumVerum_svitle_05_l_jb_text\
+                + beer_dab_temne_05_l_jb_text + beer_grimbergenBlanche_svitle_05_l_jb_text + beer_klosterkellerWeissbierChina_svitle_nefilter_05_l_jb_text\
+                + beer_karpackiePils_svitle_05_l_jb_text + beer_5_0_OriginalPills_svitle_05_l_jb_text + beer_5_0_Original_Lager_svitle_05_l_jb_text\
+                + beer_5_0_Original_Weiss_svitle_nefilter_05_l_jb_text + beer_fahnen_brau_svitle_05_l_jb_text + beer_gosser_light_svitle_05_l_jb_text\
+                + beer_holland_import_svitle_033_l_jb_text + beer_holsten_pilsener_048_l_jb_text + beer_obolon_premium_extra_brew_svitle_05_l_jb_text\
+                + beer_lvivske__svitle_048_l_jb_text + beer_carlsberg_premium_pilsner_05_l_jb_text + beer_carlsberg_pilsner_05_l_jb_text
 
         return texts
 
@@ -385,47 +404,47 @@ class TesterForGroceryAppText:
         result = model.predict(data_pad)
         print(result, np.argmax(result), sep='\n')
         if np.argmax(result) == 0:
-            return 'Пиво "Оболонь Премиум Экстра 1,1 л"'
+            return BEER_OBOLON_PREMIUM_EXTRA_1_1_L
         elif np.argmax(result)==1:
-            return 'Водка "Гетьман ICE 0,7 л"'
+            return VODKA_HETMAN_ICE_07_L
         elif np.argmax(result)==2:
-            return 'Кофе "Арома Голд Классик 100 гр"'
+            return COFFEE_AROMA_GOLD_CLASSIC_100_GR
         elif np.argmax(result)==3:
-            return 'Яблоко Голден, 1 кг'
+            return APPLE_GOLDEN
         elif np.argmax(result)==4:
-            return 'Напиток Coca Cola 2 л'
+            return COCA_COLA_2_L
         elif np.argmax(result)==5:
-            return 'Сырок плавленный КОМО Паприкаш'
+            return SIROK_PLAVLENIY_KOMO_PAPRIKASH
         elif np.argmax(result)==6:
-            return 'Чеснок'
+            return GARLIK
         elif np.argmax(result)==7:
-            return 'Сигареты Кент 8'
+            return KENT_8
         elif np.argmax(result)==8:
-            return 'Чай "Минутка" черный 40 пакетиков'
+            return TEA_MINUTKA_40_BAGS
         elif np.argmax(result) == 9:
-            return 'Масло подсолнечное "Щедрый Дар" 850 г рафинированное'
+            return SUN_OIL_SHEDRIY_DAR_RAFINIR_580_GR
         elif np.argmax(result) == 10:
-            return 'Лук, 1 кг'
+            return ONION
         elif np.argmax(result) == 11:
-            return 'Средство для мытья посуды Fairy, лимон, 500 г'
+            return FAIRY_LIMON_500_GR
         elif np.argmax(result) == 12:
-            return 'Яблоко "Черный принц"'
+            return APPLE_BLACK_PRINCE
         elif np.argmax(result) == 13:
-            return 'Горчица "Колос"'
+            return MUSTARD_KOLOS
         elif np.argmax(result) == 14:
-            return 'Сметана "Столица Смаку" 20% 400 гр'
+            return SMETANA_STOLICA_SMAKY_20PER_400_GR
         elif np.argmax(result) == 15:
-            return 'Лимон, 1 кг'
+            return LEMON
         elif np.argmax(result) ==16:
-            return 'Масло подсолнечное нерафинированное Олейна, 850 гр'
+            return SUN_OIL_OLEYNA_NERAF_850_GR
         elif np.argmax(result) == 17:
-            return 'Пиво Львовское светлое 2.4 литра'
+            return BEER_LVIVSKE_SVITLE_2_4_L
         elif np.argmax(result) == 18:
-            return 'Пена для бритья "Arko Cool 200 млг + бонус 100 млг"'
+            return SHAVING_FOAM_ARKO_COOL_200_MLG
         elif np.argmax(result) == 19:
-            return 'Пена для бритья "Arko Sensitive 200 млг + бонус 100 млг"'
+            return SHAVING_FOAM_ARKO_SENSITIVE_200_MLG
         elif np.argmax(result)==20:
-            return 'Морковь, 1 кг'
+            return CARROT
         elif np.argmax(result) ==21:
             return 'Дрожжи харьковские 100 гр хлебо-пекарские пресованные'
         elif np.argmax(result) == 22:
@@ -818,5 +837,39 @@ class TesterForGroceryAppText:
             return 'Пиво 5.0 Original Craft Beer сітле нефільтроване 4.1% 0.5 л'
         elif np.argmax(result) == 216:
             return 'Пиво Guinness Draught темне фільтроване 4.1% 0.44 л'
+        elif np.argmax(result) == 217:
+            return 'Пиво Grimbergen Double Ambree напівтемне фільтроване 6.5% 0.5 л'
+        elif np.argmax(result) == 218:
+            return 'Пиво Warsteiner Premium Verum світле фільтроване 4.8% 0.5 л'
+        elif np.argmax(result) == 219:
+            return 'Пиво DAB темне фільтроване 4.9% 0.5 л'
+        elif np.argmax(result) == 220:
+            return 'Пиво спеціальне Grimbergen Blanche світле пастеризоване 6% 0.5 л'
+        elif np.argmax(result) == 221:
+            return 'Пиво Klosterkeller Weissbier China світле нефільтроване 5.4% 0.5 л'
+        elif np.argmax(result) == 222:
+            return 'Пиво Karpackie Pils світле фільтроване 4% 0.5 л'
+        elif np.argmax(result) == 223:
+            return 'Пиво 5,0 Original Pills світле фільтроване 5% 0.5 л'
+        elif np.argmax(result) == 224:
+            return 'Пиво 5,0 Original Lager світле фільтроване 5.4% 0.5 л'
+        elif np.argmax(result) == 225:
+            return 'Пиво 5,0 Original Weiss Beer світле нефільтроване 5% 0.5 л'
+        elif np.argmax(result) == 226:
+            return 'Пиво Fahnen Brau світле фільтроване 4.7% 0.5 л'
+        elif np.argmax(result) == 227:
+            return 'Пиво Gosser Light світле фільтроване 5.2% 0.5 л'
+        elif np.argmax(result) == 228:
+            return 'Пиво Hollandia Import світле фільтроване 4.8% 0.33 л'
+        elif np.argmax(result) == 229:
+            return 'Пиво Holsten Pilsener 4.7% 0.48 л'
+        elif np.argmax(result) == 230:
+            return 'Пиво Оболонь Premium Extra Brew світле фільтроване з/б 4.6% 0.5 л'
+        elif np.argmax(result) == 231:
+            return 'Пиво Львівське світле 4,3% 0,48 л'
+        elif np.argmax(result) == 232:
+            return 'Пиво Carlsberg Premium Pilsner світле фільтроване з/б 5% 0.5 л'
+        elif np.argmax(result) == 233:
+            return 'Пиво Carlsberg Pilsner 0.5 л'
 
 

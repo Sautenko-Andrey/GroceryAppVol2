@@ -1296,6 +1296,105 @@ all_products_names=[
         "novus":parser.beer_teteriv_hmilna_vishnya_napivtemne_05_l_jb_parser()[5],
         "nash_kray":parser.beer_teteriv_hmilna_vishnya_napivtemne_05_l_jb_parser()[7]
 }},
+    {'beer_grotwerg_svitle_05_l_jb':{
+        "varus":parser.beer_grotwerg_svitle_05_l_jb_parser()[2]
+}},
+    {'beer_holland_import_svitle_05_l_jb':{
+        "eko":parser.beer_holland_import_svitle_05_l_jb_parser()[1],
+        "varus":parser.beer_holland_import_svitle_05_l_jb_parser()[2],
+        "novus":parser.beer_holland_import_svitle_05_l_jb_parser()[5]
+}},
+    {'beer_golden_castle_export_svitle_05_l_jb':{
+        "varus":parser.beer_golden_castle_export_svitle_05_l_jb_parser()[2],
+        "silpo":parser.beer_golden_castle_export_svitle_05_l_jb_parser()[3],
+        "novus":parser.beer_golden_castle_export_svitle_05_l_jb_parser()[5]
+}},
+    {'beer_5_0_original_craft_beer_nefilter_svitle_05_l_jb':{
+        "eko":parser.beer_5_0_original_craft_beer_nefilter_svitle_05_l_jb_parser()[1],
+        "varus":parser.beer_5_0_original_craft_beer_nefilter_svitle_05_l_jb_parser()[2]
+}},
+
+    {'beer_guinness_draught_temne_044_l_jb':{
+        "varus":parser.beer_guinness_draught_temne_044_l_jb_parser()[2],
+        "silpo":parser.beer_guinness_draught_temne_044_l_jb_parser()[3],
+        "ashan":parser.beer_guinness_draught_temne_044_l_jb_parser()[4],
+        "metro":parser.beer_guinness_draught_temne_044_l_jb_parser()[6],
+        "fozzy":parser.beer_guinness_draught_temne_044_l_jb_parser()[8]
+}},
+    {'beer_grimbergenDoubleAmbree_napivtemne_05_l_jb':{
+        "varus":parser.beer_grimbergenDoubleAmbree_napivtemne_05_l_jb_parser()[2],
+        "silpo":parser.beer_grimbergenDoubleAmbree_napivtemne_05_l_jb_parser()[3],
+        "metro":parser.beer_grimbergenDoubleAmbree_napivtemne_05_l_jb_parser()[6],
+        "fozzy":parser.beer_grimbergenDoubleAmbree_napivtemne_05_l_jb_parser()[8]
+}},
+    {'beer_warsteinerPremiumVerum_svitle_05_l_jb':{
+        "varus": parser.beer_warsteinerPremiumVerum_svitle_05_l_jb_parser()[2],
+        "silpo": parser.beer_warsteinerPremiumVerum_svitle_05_l_jb_parser()[3]
+}},
+    {'beer_dab_temne_05_l_jb':{
+        "varus":parser.beer_dab_temne_05_l_jb_parser()[2],
+        "silpo":parser.beer_dab_temne_05_l_jb_parser()[3],
+        "metro":parser.beer_dab_temne_05_l_jb_parser()[6]
+}},
+    {'beer_grimbergenBlanche_svitle_05_l_jb':{
+        "varus":parser.beer_grimbergenBlanche_svitle_05_l_jb_parser()[2],
+        "silpo":parser.beer_grimbergenBlanche_svitle_05_l_jb_parser()[3],
+        "metro":parser.beer_grimbergenBlanche_svitle_05_l_jb_parser()[6],
+        "fozzy":parser.beer_grimbergenBlanche_svitle_05_l_jb_parser()[8]
+}},
+    {'beer_klosterkellerWeissbierChina_nefilter_svitle_05_l_jb':{
+        "varus":parser.beer_klosterkellerWeissbierChina_nefilter_svitle_05_l_jb_parser()[2]
+}},
+    {'beer_karpackiePils_svitle_05_l_jb':{
+        "varus":parser.beer_karpackiePils_svitle_05_l_jb_parser()[2]
+}},
+    {'beer_5_0_OriginalPills_svitle_05_l_jb':{
+        "varus":parser.beer_5_0_OriginalPills_svitle_05_l_jb_parser()[2]
+}},
+    {'beer_5_0_Original_lager_svitle_05_l_jb':{
+        "varus":parser.beer_5_0_Original_lager_svitle_05_l_jb_parser()[2]
+}},
+    {'beer_5_0_Original_weiss_beer_nefilter_svitle_05_l_jb':{
+        "varus":parser.beer_5_0_Original_weiss_beer_nefilter_svitle_05_l_jb_parser()[2]
+}},
+    {'beer_Fahnen_Brau_svitle_05_l_jb':{
+        "varus":parser.beer_Fahnen_Brau_svitle_05_l_jb_parser()[2],
+        "novus":parser.beer_Fahnen_Brau_svitle_05_l_jb_parser()[5]
+}},
+    {'beer_Gosser_Light_svitle_05_l_jb':{
+        "varus":parser.beer_Gosser_Light_svitle_05_l_jb_parser()[2],
+        "silpo":parser.beer_Gosser_Light_svitle_05_l_jb_parser()[3]
+}},
+    {'beer_Hollandia_Import_svitle_033_l_jb':{
+        "varus":parser.beer_Hollandia_Import_svitle_033_l_jb_parser()[2]
+}},
+    {'beer_Holsten_Pilsner_048_l_jb':{
+        "varus":parser.beer_Holsten_Pilsner_048_l_jb_parser()[2],
+        "silpo":parser.beer_Holsten_Pilsner_048_l_jb_parser()[3],
+        "metro":parser.beer_Holsten_Pilsner_048_l_jb_parser()[6],
+        "fozzy":parser.beer_Holsten_Pilsner_048_l_jb_parser()[8]
+}},
+    {'beer_Obolon_Premium_Extra_Brew_svitle_05_l_jb':{
+        "varus":parser.beer_Obolon_Premium_Extra_Brew_svitle_05_l_jb_parser()[2],
+        "silpo":parser.beer_Obolon_Premium_Extra_Brew_svitle_05_l_jb_parser()[3]
+}},
+    {'beer_Lvivske_svitle_48_l_jb':{
+        "varus":parser.beer_Lvivske_svitle_48_l_jb_parser()[2],
+        "silpo":parser.beer_Lvivske_svitle_48_l_jb_parser()[3],
+        "metro":parser.beer_Lvivske_svitle_48_l_jb_parser()[6],
+        "nash_kray":parser.beer_Lvivske_svitle_48_l_jb_parser()[7]
+}},
+    {'beer_Carlsberg_Premium_Pilsner_svitle_05_l_jb':{
+        "varus":parser.beer_Carlsberg_Premium_Pilsner_svitle_05_l_jb_parser()[2],
+        "silpo":parser.beer_Carlsberg_Premium_Pilsner_svitle_05_l_jb_parser()[3]
+}},
+    {'beer_Carlsberg_Pilsner_05_l_jb':{
+        "varus":parser.beer_Carlsberg_Pilsner_05_l_jb_parser()[2],
+        "silpo":parser.beer_Carlsberg_Pilsner_05_l_jb_parser()[3],
+        "metro":parser.beer_Carlsberg_Pilsner_05_l_jb_parser()[6],
+        "fozzy":parser.beer_Carlsberg_Pilsner_05_l_jb_parser()[8]
+}}
+
 
 ]
 

@@ -34,10 +34,10 @@ class GroceryAppText:
         '''Инициализация модели НС и ее подготовка к обучению'''
 
         self.model = keras.Sequential([
-            Embedding(self.MAX_WORDS, 217, input_length=self.MAX_LENGTH_TEXT),
-            LSTM(217, return_sequences=True),  # 128
+            Embedding(self.MAX_WORDS, 234, input_length=self.MAX_LENGTH_TEXT),
+            LSTM(234, return_sequences=True),  # 128
             LSTM(100),  # 64
-            Dense(217, activation='softmax')
+            Dense(234, activation='softmax')
         ])
 
         self.model.compile(optimizer=Adam(0.0001), loss='categorical_crossentropy',
@@ -50,7 +50,7 @@ class GroceryAppText:
         TRAIN_DATA, TARGET_DATA, tokenizer = self.converted_data()
 
         # запускаем тренировку:
-        history = self.model.fit(TRAIN_DATA, TARGET_DATA, epochs=45, batch_size=50)
+        history = self.model.fit(TRAIN_DATA, TARGET_DATA, epochs=30, batch_size=50)
 
         reverse_word_map = dict(map(reversed, self.converted_data()[2].word_index.items()))
 
@@ -292,6 +292,24 @@ class GroceryAppText:
         beer_golden_castle_export_svitle_05_l_jb_text=self.add_new_item('beer_golden_castle_export_svitle_05_l_jb.txt')
         beer_5_0_origin_craft_beer_nefilter_svitle_05_l_jb_text=self.add_new_item('beer_5_0_origin_craft_beer_nefilter_svitle_05_l_jb.txt')
         beer_guinness_draught_temne_044_l_jb_text=self.add_new_item('beer_guinness_draught_temne_044_l_jb.txt')
+        beer_grimbergenDoubleAmbree_napivtemne_05_l_jb_text=self.add_new_item('beer_grimbergenDoubleAmbree_napivtemne_05_l_jb.txt')
+        beer_warsteinerPremiumVerum_svitle_05_l_jb_text=self.add_new_item('beer_warsteinerPremiumVerum_svitle_05_l_jb.txt')
+        beer_dab_temne_05_l_jb_text=self.add_new_item('beer_dab_temne_05_l_jb.txt')
+        beer_grimbergenBlanche_svitle_05_l_jb_text=self.add_new_item('beer_grimbergenBlanche_svitle_05_l_jb.txt')
+        beer_klosterkellerWeissbierChina_svitle_nefilter_05_l_jb_text=self.add_new_item('beer_klosterkellerWeissbierChina_svitle_nefilter_05_l_jb.txt')
+        beer_karpackiePils_svitle_05_l_jb_text=self.add_new_item('beer_karpackiePils_svitle_05_l_jb.txt')
+        beer_5_0_OriginalPills_svitle_05_l_jb_text=self.add_new_item('beer_5_0_OriginalPills_svitle_05_l_jb.txt')
+        beer_5_0_Original_Lager_svitle_05_l_jb_text=self.add_new_item('beer_5_0_Original_Lager_svitle_05_l_jb.txt')
+        beer_5_0_Original_Weiss_svitle_nefilter_05_l_jb_text = self.add_new_item('beer_5_0_Original_Weiss_svitle_nefilter_05_l_jb.txt')
+        beer_fahnen_brau_svitle_05_l_jb_text=self.add_new_item('beer_fahnen_brau_svitle_05_l_jb.txt')
+        beer_gosser_light_svitle_05_l_jb_text=self.add_new_item('beer_gosser_light_svitle_05_l_jb.txt')
+        beer_holland_import_svitle_033_l_jb_text=self.add_new_item('beer_holland_import_svitle_033_l_jb.txt')
+        beer_holsten_pilsener_048_l_jb_text=self.add_new_item('beer_holsten_pilsener_048_l_jb.txt')
+        beer_obolon_premium_extra_brew_svitle_05_l_jb_text=self.add_new_item('beer_obolon_premium_extra_brew_svitle_05_l_jb.txt')
+        beer_lvivske__svitle_048_l_jb_text=self.add_new_item('beer_lvivske__svitle_048_l_jb.txt')
+        beer_carlsberg_premium_pilsner_05_l_jb_text=self.add_new_item('beer_carlsberg_premium_pilsner_05_l_jb.txt')
+        beer_carlsberg_pilsner_05_l_jb_text=self.add_new_item('beer_carlsberg_pilsner_05_l_jb.txt')
+
 
         # объед. обучающие выборки:
         texts = obolon_premium_extra_11_text + hetman_sagaydachniy_07_text \
@@ -386,7 +404,13 @@ class GroceryAppText:
                 + beer_carling_svitle_05_l_jb_text + beer_keten_brug_blanche_elegant_nefilter_05_l_jb_text + beer_budweiser_nonalco_svitle_05_l_jb_text\
                 + beer_feldschlosschen_wheat_beer_svitle05_l_jb_text + beer_teteriv_hmilna_vishnya_polutemne_05_l_jb_text\
                 + beer_grotwerg_svitle_nonalco_05_l_jb_text + beer_holland_import_svitle_05_l_jb_text + beer_golden_castle_export_svitle_05_l_jb_text\
-                + beer_5_0_origin_craft_beer_nefilter_svitle_05_l_jb_text + beer_guinness_draught_temne_044_l_jb_text
+                + beer_5_0_origin_craft_beer_nefilter_svitle_05_l_jb_text + beer_guinness_draught_temne_044_l_jb_text + beer_grimbergenDoubleAmbree_napivtemne_05_l_jb_text\
+                + beer_warsteinerPremiumVerum_svitle_05_l_jb_text + beer_dab_temne_05_l_jb_text + beer_grimbergenBlanche_svitle_05_l_jb_text\
+                + beer_klosterkellerWeissbierChina_svitle_nefilter_05_l_jb_text + beer_karpackiePils_svitle_05_l_jb_text\
+                + beer_5_0_OriginalPills_svitle_05_l_jb_text + beer_5_0_Original_Lager_svitle_05_l_jb_text + beer_5_0_Original_Weiss_svitle_nefilter_05_l_jb_text\
+                + beer_fahnen_brau_svitle_05_l_jb_text + beer_gosser_light_svitle_05_l_jb_text + beer_holland_import_svitle_033_l_jb_text\
+                + beer_holsten_pilsener_048_l_jb_text + beer_obolon_premium_extra_brew_svitle_05_l_jb_text + beer_lvivske__svitle_048_l_jb_text\
+                + beer_carlsberg_premium_pilsner_05_l_jb_text + beer_carlsberg_pilsner_05_l_jb_text
 
         # подсчитываем кол-во выборок
         count_obolon_premium_extra_11_text = len(obolon_premium_extra_11_text)
@@ -606,6 +630,23 @@ class GroceryAppText:
         count_beer_golden_castle_export_svitle_05_l_jb_text=len(beer_golden_castle_export_svitle_05_l_jb_text)
         count_beer_5_0_origin_craft_beer_nefilter_svitle_05_l_jb_text=len(beer_5_0_origin_craft_beer_nefilter_svitle_05_l_jb_text)
         count_beer_guinness_draught_temne_044_l_jb_text=len(beer_guinness_draught_temne_044_l_jb_text)
+        count_beer_grimbergenDoubleAmbree_napivtemne_05_l_jb_text=len(beer_grimbergenDoubleAmbree_napivtemne_05_l_jb_text)
+        count_beer_warsteinerPremiumVerum_svitle_05_l_jb_text=len(beer_warsteinerPremiumVerum_svitle_05_l_jb_text)
+        count_beer_dab_temne_05_l_jb_text=len(beer_dab_temne_05_l_jb_text)
+        count_beer_grimbergenBlanche_svitle_05_l_jb_text=len(beer_grimbergenBlanche_svitle_05_l_jb_text)
+        count_beer_klosterkellerWeissbierChina_svitle_nefilter_05_l_jb_text=len(beer_klosterkellerWeissbierChina_svitle_nefilter_05_l_jb_text)
+        count_beer_karpackiePils_svitle_05_l_jb_text=len(beer_karpackiePils_svitle_05_l_jb_text)
+        count_beer_5_0_OriginalPills_svitle_05_l_jb_text=len(beer_5_0_OriginalPills_svitle_05_l_jb_text)
+        count_beer_5_0_Original_Lager_svitle_05_l_jb_text=len(beer_5_0_Original_Lager_svitle_05_l_jb_text)
+        count_beer_5_0_Original_Weiss_svitle_nefilter_05_l_jb_text=len(beer_5_0_Original_Weiss_svitle_nefilter_05_l_jb_text)
+        count_beer_fahnen_brau_svitle_05_l_jb_text=len(beer_fahnen_brau_svitle_05_l_jb_text)
+        count_beer_gosser_light_svitle_05_l_jb_text=len(beer_gosser_light_svitle_05_l_jb_text)
+        count_beer_holland_import_svitle_033_l_jb_text=len(beer_holland_import_svitle_033_l_jb_text)
+        count_beer_holsten_pilsener_048_l_jb_text=len(beer_holsten_pilsener_048_l_jb_text)
+        count_beer_obolon_premium_extra_brew_svitle_05_l_jb_text=len(beer_obolon_premium_extra_brew_svitle_05_l_jb_text)
+        count_beer_lvivske__svitle_048_l_jb_text=len(beer_lvivske__svitle_048_l_jb_text)
+        count_beer_carlsberg_premium_pilsner_05_l_jb_text=len(beer_carlsberg_premium_pilsner_05_l_jb_text)
+        count_beer_carlsberg_pilsner_05_l_jb_text=len(beer_carlsberg_pilsner_05_l_jb_text)
 
         return texts, count_obolon_premium_extra_11_text, count_hetman_sagaydachniy_07_text, \
                count_coffee_aroma_gold_classic_100gr_text, count_apple_golden_text, count_coca_cola_2l_text, \
@@ -696,7 +737,13 @@ class GroceryAppText:
                count_beer_carling_svitle_05_l_jb_text,count_beer_keten_brug_blanche_elegant_nefilter_05_l_jb_text,count_beer_budweiser_nonalco_svitle_05_l_jb_text,\
                count_beer_feldschlosschen_wheat_beer_svitle05_l_jb_text,count_beer_teteriv_hmilna_vishnya_polutemne_05_l_jb_text,\
                count_beer_grotwerg_svitle_nonalco_05_l_jb_text,count_beer_holland_import_svitle_05_l_jb_text,count_beer_golden_castle_export_svitle_05_l_jb_text,\
-               count_beer_5_0_origin_craft_beer_nefilter_svitle_05_l_jb_text,count_beer_guinness_draught_temne_044_l_jb_text
+               count_beer_5_0_origin_craft_beer_nefilter_svitle_05_l_jb_text,count_beer_guinness_draught_temne_044_l_jb_text,\
+               count_beer_grimbergenDoubleAmbree_napivtemne_05_l_jb_text,count_beer_warsteinerPremiumVerum_svitle_05_l_jb_text,\
+               count_beer_dab_temne_05_l_jb_text,count_beer_grimbergenBlanche_svitle_05_l_jb_text,count_beer_klosterkellerWeissbierChina_svitle_nefilter_05_l_jb_text,\
+               count_beer_karpackiePils_svitle_05_l_jb_text,count_beer_5_0_OriginalPills_svitle_05_l_jb_text,count_beer_5_0_Original_Lager_svitle_05_l_jb_text,\
+               count_beer_5_0_Original_Weiss_svitle_nefilter_05_l_jb_text,count_beer_fahnen_brau_svitle_05_l_jb_text,count_beer_gosser_light_svitle_05_l_jb_text,\
+               count_beer_holland_import_svitle_033_l_jb_text,count_beer_holsten_pilsener_048_l_jb_text,count_beer_obolon_premium_extra_brew_svitle_05_l_jb_text,\
+               count_beer_lvivske__svitle_048_l_jb_text,count_beer_carlsberg_premium_pilsner_05_l_jb_text,count_beer_carlsberg_pilsner_05_l_jb_text
 
 
     def converted_data(self):
@@ -722,7 +769,7 @@ class GroceryAppText:
 
         # окончательно формируем обучающую выборку:
         TRAIN_SAMPLE = data_pad
-        items = 217
+        items = 234
         TARGET_SAMPLE = np.array(
             make_list(items, 0) *
             self.upload_data()[1] + make_list(items, 1) * self.upload_data()[2] + make_list(items, 2) *
@@ -833,7 +880,24 @@ class GroceryAppText:
             self.upload_data()[211]+ make_list(items, 211) *self.upload_data()[212]+ make_list(items, 212) *
             self.upload_data()[213]+ make_list(items, 213) *self.upload_data()[214]+ make_list(items, 214) *
             self.upload_data()[215]+ make_list(items, 215) *self.upload_data()[216]+ make_list(items, 216) *
-            self.upload_data()[217])
+            self.upload_data()[217]+ make_list(items, 217) *
+            self.upload_data()[218]+ make_list(items, 218) *
+            self.upload_data()[219]+ make_list(items, 219) *
+            self.upload_data()[220]+ make_list(items, 220) *
+            self.upload_data()[221]+ make_list(items, 221) *
+            self.upload_data()[222]+ make_list(items, 222) *
+            self.upload_data()[223]+ make_list(items, 223) *
+            self.upload_data()[224]+ make_list(items, 224) *
+            self.upload_data()[225]+ make_list(items, 225) *
+            self.upload_data()[226]+ make_list(items, 226) *
+            self.upload_data()[227]+ make_list(items, 227) *
+            self.upload_data()[228]+ make_list(items, 228) *
+            self.upload_data()[229]+ make_list(items, 229) *
+            self.upload_data()[230]+ make_list(items, 230) *
+            self.upload_data()[231]+ make_list(items, 231) *
+            self.upload_data()[232]+ make_list(items, 232) *
+            self.upload_data()[233]+ make_list(items, 233) *
+            self.upload_data()[234])
 
         # перемешиваем обучающую выборку для лучшей тренированности НС:
         # создаем рандомные индексы:

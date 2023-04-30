@@ -43,132 +43,173 @@ class ProductParserVol2:
         price = float(price.replace(',', '.'))
         return price
 
-    def prices_parsing(self, urls: list):
+    def prices_parsing(self, urls: list) -> list:
+
+        #задаем изначальный список с ценами во всех маркетах по нулям
         results = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+        #части(начала) адресов страниц магазинов (url)
+        atb_url_name_short = 'https://www.atb'
+        atb_url_name_long = 'https://atbmarket'
+        eko_url_name = 'https://eko'
+        varus_url_name = 'https://varus'
+        silpo_url_name='https://shop.silpo'
+        ashan_url_name = 'https://auchan'
+        novus_url_name = 'https://novus.online'
+        metro_url_name = 'https://metro.zakaz.ua'
+        nk_url_name = 'https://shop.nashkraj.ua'
+        fozzy_url_name= 'https://fozzyshop.ua'
+
+        #срезы для адресов магазинов
+        atb_url_slice_short = slice(0,15)   # ранвосильно срезу[:15]
+        atb_url_slice_long = slice(0,17)    # ранвосильно срезу[:17]
+        eko_url_slice = slice(0,11)
+        varus_url_slice = slice(0,13)
+        silpo_url_slice = slice(0,18)
+        ashan_url_slice = slice(0,14)
+        novus_url_slice = slice(0,20)
+        metro_url_slice = slice(0,22)
+        nk_url_slice = slice(0,24)
+        fozzy_url_slice = slice(0,20)
+
+        #время задержки при парсинге 5 секунд
+        waiting_time = 5
+
+        #номера индексов магазинов в списке с ценами по порядку
+        atb_index = 0
+        eko_index = 1
+        varus_index = 2
+        silpo_index = 3
+        ashan_index = 4
+        novus_index = 5
+        metro_index = 6
+        nk_index = 7
+        fozzy_index = 8
+
         '''Парсинг цен для продукта сразу со всех досутпных маркетов.'''
         for url in urls:
-            if url[:15] == 'https://www.atb' or url[:17] == 'https://atbmarket':
+            if url[atb_url_slice_short] == atb_url_name_short or url[atb_url_slice_long] == atb_url_name_long:
                 # парсим цену АТБ
                 self.driver.get(url)
                 try:
                     self.atb_price = self.driver.find_element(self.SELECTOR, self.ATB_REGULAR_DIV_CLASS).text
-                    self.driver.implicitly_wait(5)
+                    self.driver.implicitly_wait(waiting_time)
                     self.atb_price = price_updating_data(self.atb_price)
-                    results[0] = self.atb_price
+                    results[atb_index] = self.atb_price
                 except Exception as ex:
                     print(ex)
-            elif url[:11] == 'https://eko':
+            elif url[eko_url_slice] == eko_url_name:
                 # парсим цену ЭКО
                 self.driver.get(url)
                 try:
                     self.eko_price = self.driver.find_element(self.SELECTOR, self.EKO_REGULAR_DIV_CLASS).text
                     # self.driver.implicitly_wait(5)
-                    results[1] = float(self.eko_price[:5])
+                    results[eko_index] = float(self.eko_price[:5])   #берем только первые 5 символов включая точку
                 except Exception as ex:
                     print(ex)
                     if ex:
                         try:
                             self.eko_price = self.driver.find_element(self.SELECTOR, self.EKO_DISCOUNT_DIV_CLASS).text
-                            self.driver.implicitly_wait(5)
-                            results[1] = float(self.eko_price[:5])
+                            self.driver.implicitly_wait(waiting_time)
+                            results[eko_index] = float(self.eko_price[:5]) #берем только первые 5 символов включая точку
                         except Exception as ex:
                             print(ex)
-            elif url[:13] == 'https://varus':
+            elif url[varus_url_slice] == varus_url_name:
                 # парсим цену Varus
                 self.driver.get(url)
                 try:
                     self.varus_price = self.driver.find_element(self.SELECTOR, self.VARUS_REGULAR_DIV_CLASS).text
-                    self.driver.implicitly_wait(5)
-                    results[2] = float(self.varus_price[:5])
+                    self.driver.implicitly_wait(waiting_time)
+                    results[varus_index] = float(self.varus_price[:5]) #берем только первые 5 символов включая точку
                 except Exception as ex:
                     print(ex)
                     if ex:
                         try:
                             self.varus_price = self.driver.find_element(self.SELECTOR,
                                                                         self.VARUS_SPECIAL_DIV_CLASS).text
-                            self.driver.implicitly_wait(5)
-                            results[2] = float(self.varus_price[:5])
+                            self.driver.implicitly_wait(waiting_time)
+                            results[varus_index] = float(self.varus_price[:5]) #берем только первые 5 символов включая точку
                         except Exception as ex:
                             print(ex)
                             if ex:
                                 try:
                                     self.varus_price = self.driver.find_element(self.SELECTOR,
                                                                                 self.VARUS_DISCOUNT_DIV_CLASS).text
-                                    self.driver.implicitly_wait(5)
-                                    results[2] = float(self.varus_price[:5])
+                                    self.driver.implicitly_wait(waiting_time)
+                                    results[varus_index] = float(self.varus_price[:5])
                                 except Exception as ex:
                                     print(ex)
                                     if ex:
                                         try:
                                             self.varus_price = self.driver.find_element(self.SELECTOR,
                                                                                         self.VARUS_REGULAR_SPAN_CLASS).text
-                                            self.driver.implicitly_wait(5)
-                                            results[2] = float(self.varus_price[:5])
+                                            self.driver.implicitly_wait(waiting_time)
+                                            results[varus_index] = float(self.varus_price[:5])
                                         except Exception as ex:
                                             print(ex)
-            elif url[:18] == 'https://shop.silpo':
+            elif url[silpo_url_slice] == silpo_url_name:
                 # парсим цену Сильпо
                 self.driver.get(url)
                 try:
                     self.silpo_price = self.driver.find_element(self.SELECTOR, self.SILPO_REGULAR_DIV_CLASS).text
-                    self.driver.implicitly_wait(5)
-                    results[3] = float(self.silpo_price[:5])
+                    self.driver.implicitly_wait(waiting_time)
+                    results[silpo_index] = float(self.silpo_price[:5])#берем только первые 5 символов включая точку
                 except Exception as ex:
                     print(ex)
-            elif url[:14] == 'https://auchan':
+            elif url[ashan_url_slice] == ashan_url_name:
                 # парсим цену Ашан
                 self.driver.get(url)
                 try:
                     self.ashan_price = self.driver.find_element(self.SELECTOR, self.ASHAN_DIV_CLASS).text
-                    self.driver.implicitly_wait(5)
+                    self.driver.implicitly_wait(waiting_time)
                     self.ashan_price = price_updating_data(self.ashan_price)
-                    results[4] = self.ashan_price
+                    results[ashan_index] = self.ashan_price
                 except Exception as ex:
                     print(ex)
-            elif url[:20] == 'https://novus.online':
+            elif url[novus_url_slice] == novus_url_name:
                 # парсим цену Novus
                 self.driver.get(url)
                 try:
                     self.novus_price = self.driver.find_element(self.SELECTOR,self.NOVUS_DIV_CLASS).text
-                    self.driver.implicitly_wait(5)
-                    results[5] = float(self.novus_price[:5])
+                    self.driver.implicitly_wait(waiting_time)
+                    results[novus_index] = float(self.novus_price[:5])
                 except Exception as ex:
                     print(ex)
                     if ex:
                         try:
                             self.novus_price = self.driver.find_element(self.SELECTOR,
                                                                         self.NOVUS_SPECIAL_DIV_CLASS).text
-                            self.driver.implicitly_wait(5)
-                            results[5] = float(self.novus_price[:5])
+                            self.driver.implicitly_wait(waiting_time)
+                            results[novus_index] = float(self.novus_price[:5])
                         except Exception as ex:
                             print(ex)
-            elif url[:22]== 'https://metro.zakaz.ua':
+            elif url[metro_url_slice]== metro_url_name:
                 #парсим цену Метро
                 self.driver.get(url)
                 try:
                     self.metro_price = self.driver.find_element(self.SELECTOR,self.METRO_REGULAR_DIV_CLASS).text
-                    self.driver.implicitly_wait(5)
-                    results[6] = float(self.metro_price[:5])
+                    self.driver.implicitly_wait(waiting_time)
+                    results[metro_index] = float(self.metro_price[:5])
                 except Exception as ex:
                     print(ex)
-            elif url[:24]== 'https://shop.nashkraj.ua':
+            elif url[nk_url_slice]== nk_url_name:
                 #парсим цену Наш Край
                 self.driver.get(url)
                 try:
                     self.nash_kray_price = self.driver.find_element(self.SELECTOR,self.NASH_KRAY_DIV_CLASS).text
-                    self.driver.implicitly_wait(5)
+                    self.driver.implicitly_wait(waiting_time)
                     self.nash_kray_price = price_updating_data(self.nash_kray_price)
-                    results[7] = self.nash_kray_price
+                    results[nk_index] = self.nash_kray_price
                 except Exception as ex:
                     print(ex)
-            elif url[:20]== 'https://fozzyshop.ua':
+            elif url[fozzy_url_slice]== fozzy_url_name:
                 #парсим цену Fozzy
                 self.driver.get(url)
                 try:
                     self.fozzy_price = self.driver.find_element(self.SELECTOR,self.FOZZY_REGULAR_DIV_CLASS).text
-                    self.driver.implicitly_wait(5)
+                    self.driver.implicitly_wait(waiting_time)
                     self.fozzy_price = price_updating_data(self.fozzy_price)
-                    results[8] = self.fozzy_price
+                    results[fozzy_index] = self.fozzy_price
                 except Exception as ex:
                     print(ex)
 
@@ -1990,6 +2031,170 @@ class ProductParserVol2:
             'https://novus.online/product/pivo-specialne-napivtemne-teteriv-hmilna-visna-8-05l-zb',
             'https://shop.nashkraj.ua/kovel/product/333806-pivo-privatnabrov-0-5l-teteriv-vishnya-zh-b'
         ])
+
+    def beer_grotwerg_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Grotwerg світле пастеризоване фільтроване безалкогольне 0.5 л'''
+        return self.prices_parsing([
+            'https://varus.ua/pivo-grotwerg-bezalkogolne-05l'
+        ])
+
+    def beer_holland_import_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Holland Import світле фільтроване 4.8% 0.5 л'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-500ml--08714800024471/',
+            'https://varus.ua/pivo-holland-import-svitle-filtrovane-48-05l',
+            'https://novus.online/product/pivo-svitle-holland-import-48-033l-zb'
+        ])
+
+    def beer_golden_castle_export_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Golden Castle Export світле 4.8% 0.5 л'''
+        return self.prices_parsing([
+            'https://varus.ua/pivo-svitle-golden-kastle-eksport-05l-z-b',
+            'https://shop.silpo.ua/product/pyvo-golden-castle-export-svitle-z-b-879652',
+            'https://novus.online/product/pyvo-svitle-golden-castle-48-05l-zb'
+        ])
+
+    def beer_5_0_original_craft_beer_nefilter_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво 5.0 Original Craft Beer сітле нефільтроване 4.1% 0.5 л'''
+        return self.prices_parsing([
+            'https://eko.zakaz.ua/uk/products/pivo-500ml-nimechchina--04014086096518/',
+            'https://varus.ua/pivo-originalne-kraft-bir-0-5l-z-b'
+        ])
+
+    def beer_guinness_draught_temne_044_l_jb_parser(self):
+        ''' Парсер для Пиво Guinness Draught темне фільтроване 4.1% 0.44 л'''
+        return self.prices_parsing([
+            'https://varus.ua/pivo-0-44l-4-2-temne-pasterizovane-draught-guinness-zb',
+            'https://shop.silpo.ua/product/pyvo-guinness-draught-temne-z-b-104560',
+            'https://auchan.ua/ua/pivo-guinness-draught-temnoe-fil-trovannoe-4-1-0-44-l-1031563/',
+            'https://metro.zakaz.ua/uk/products/pivo-ginness-440ml-irlandiia--05000213101872/',
+            'https://fozzyshop.ua/ru/pivo-temnoe/2739-pivo-guinness-draught-temnoe-5000213014905.html'
+        ])
+
+    def beer_grimbergenDoubleAmbree_napivtemne_05_l_jb_parser(self):
+        ''' Парсер для Пиво Grimbergen Double Ambree напівтемне фільтроване 6.5% 0.5 л'''
+        return self.prices_parsing([
+            'https://varus.ua/pivo-specialne-0-5l-6-5-temne-pasterizovane-double-ambree-grimbergen-zb',
+            'https://shop.silpo.ua/product/pyvo-grimbergen-double-ambree-temne-z-b-797415',
+            'https://metro.zakaz.ua/uk/products/pivo-grimbergen-500ml-polshcha--03080216049076/',
+            'https://fozzyshop.ua/ru/pivo-temnoe/66255-pivo-grimbergen-double-ambree-temnoe-zh-b-3080216049076.html'
+        ])
+
+    def beer_warsteinerPremiumVerum_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Warsteiner Premium Verum світле фільтроване 4.8% 0.5 л'''
+        return self.prices_parsing([
+            'https://varus.ua/pivo-0-5l-4-8-sv-warsteiner-prem-verum',
+            'https://shop.silpo.ua/product/pyvo-warsteiner-premium-svitle-z-b-508486'
+        ])
+
+    def beer_dab_temne_05_l_jb_parser(self):
+        ''' Парсер для Пиво DAB темне фільтроване 4.9% 0.5 л'''
+        return self.prices_parsing([
+            'https://varus.ua/pivo-temne-dab-0-5l-z-b',
+            'https://shop.silpo.ua/product/pyvo-dab-dark-temne-z-b-921777',
+            'https://metro.zakaz.ua/uk/products/pivo-dab-500ml-nimechchina--04053400277936/'
+        ])
+
+    def beer_grimbergenBlanche_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво спеціальне Grimbergen Blanche світле пастеризоване 6% 0.5 л'''
+        return self.prices_parsing([
+            'https://varus.ua/pivo-grimbergen-blansh-05l-z-b',
+            'https://shop.silpo.ua/product/pyvo-grimbergen-blanche-svitle-z-b-876014',
+            'https://metro.zakaz.ua/uk/products/pivo-grimbergen-500ml--05901594001266/',
+            'https://fozzyshop.ua/ru/pivo-pshenichnoe/88987-pivo-grimbergen-blanche-svetloe-zh-b-5901594001266.html'
+        ])
+
+    def beer_klosterkellerWeissbierChina_nefilter_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Klosterkeller Weissbier China світле нефільтроване 5.4% 0.5 л'''
+        return self.prices_parsing([
+            'https://varus.ua/pivo-klosterkeller-weissbier-china-svitle-nefiltrovane-54-05-l'
+        ])
+
+    def beer_karpackiePils_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Karpackie Pils світле фільтроване 4% 0.5 л'''
+        return self.prices_parsing([
+            'https://varus.ua/pivo-karpackie-pils-svitle-4-05l'
+        ])
+
+    def beer_5_0_OriginalPills_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво 5,0 Original Pills світле фільтроване 5% 0.5 л'''
+        return self.prices_parsing([
+            'https://varus.ua/pivo-5-0-original-pills-svetloe-filtrovannoe-5-0-5-l'
+        ])
+
+    def beer_5_0_Original_lager_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво 5,0 Original Lager світле фільтроване 5.4% 0.5 л'''
+        return self.prices_parsing([
+            'https://varus.ua/pivo-5-0-original-lager-svetloe-filtrovannoe-5-4-0-5-l'
+        ])
+
+    def beer_5_0_Original_weiss_beer_nefilter_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво 5,0 Original Weiss Beer світле нефільтроване 5% 0.5 л'''
+        return self.prices_parsing([
+            'https://varus.ua/pivo-5-0-original-weiss-beer-svetloe-nefiltrovannoe-5-0-5-l'
+        ])
+
+    def beer_Fahnen_Brau_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Fahnen Brau світле фільтроване 4.7% 0.5 л'''
+        return self.prices_parsing([
+            'https://varus.ua/pivo-0-5l-4-7-svitle-fahnen-brau-z-b',
+            'https://novus.online/product/pivo-svitle-fahnen-brau-47-05l-zb'
+        ])
+
+    def beer_Gosser_Light_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Gosser Light світле фільтроване 5.2% 0.5 л'''
+        return self.prices_parsing([
+            'https://varus.ua/gesser-pivo-0-5l-z-b',
+            'https://shop.silpo.ua/product/pyvo-gosser-svitle-z-b-46523'
+        ])
+
+    def beer_Hollandia_Import_svitle_033_l_jb_parser(self):
+        ''' Парсер для Пиво Hollandia Import світле фільтроване 4.8% 0.33 л'''
+        return self.prices_parsing([
+            'https://varus.ua/pivo-gollandiya-import-0-33l-zb'
+        ])
+
+    def beer_Holsten_Pilsner_048_l_jb_parser(self):
+        ''' Парсер для Пиво Holsten Pilsener 4.7% 0.48 л'''
+        return self.prices_parsing([
+            'https://varus.ua/pivo-holsten-pilsener-4-7-svitle-pasterizovane-0-48-l',
+            'https://shop.silpo.ua/product/pyvo-holsten-pilsener-svitle-z-b-909343',
+            'https://metro.zakaz.ua/uk/products/ukrayina--04820250941412/',
+            'https://fozzyshop.ua/ru/pivo-svetloe/100280-pivo-holsten-pilsener-svetloe-zh-b-250014933959.html'
+        ])
+
+    def beer_Obolon_Premium_Extra_Brew_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Оболонь Premium Extra Brew світле фільтроване з/б 4.6% 0.5 л'''
+        return self.prices_parsing([
+            'https://varus.ua/pivo-0-5l-4-6-svitle-pasterizovane-premium-extra-brew-obolon-zb',
+            'https://shop.silpo.ua/product/pyvo-obolon-premium-extra-brew-svitle-z-b-805168'
+        ])
+
+    def beer_Lvivske_svitle_48_l_jb_parser(self):
+        ''' Парсер для Пиво Львівське світле 4,3% 0,48 л'''
+        return self.prices_parsing([
+            'https://varus.ua/pivo-lvivske-svitle-43-048-l',
+            'https://shop.silpo.ua/product/pyvo-lvivske-svitle-z-b-857477',
+            'https://metro.zakaz.ua/uk/products/pivo-lvivske-500ml-ukrayina--04820250942303/',
+            'https://shop.nashkraj.ua/kovel/product/435152-pivo-lvivske-0-5l-svitle-4-5-zh-b'
+        ])
+
+    def beer_Carlsberg_Premium_Pilsner_svitle_05_l_jb_parser(self):
+        ''' Парсер для Пиво Carlsberg Premium Pilsner світле фільтроване з/б 5% 0.5 л'''
+        return self.prices_parsing([
+            'https://varus.ua/pivo-0-5l-5-svitle-pasterizovane-liverpool-fc-champions-carlsberg-zb',
+            'https://shop.silpo.ua/product/pyvo-carlsberg-svitle-z-b-260560'
+        ])
+
+    def beer_Carlsberg_Pilsner_05_l_jb_parser(self):
+        ''' Парсер для Пиво Carlsberg Pilsner 0.5 л'''
+        return self.prices_parsing([
+            'https://varus.ua/pivo-carlsberg-bezalkogolne-05-l',
+            'https://shop.silpo.ua/product/pyvo-carlsberg-pilsner-svitle-bezalkogolne-z-b-908441',
+            'https://metro.zakaz.ua/uk/products/pivo-500ml--04820250941962/',
+            'https://fozzyshop.ua/ru/pivo-bezalkogolnoe/100275-pivo-carlsberg-pilsner-svetloe-bezalkogolnoe-zh-b-250014915207.html'
+        ])
+
 
 
 

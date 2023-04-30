@@ -18,7 +18,7 @@ class SimpleTagMakerOneItem:
 tag = SimpleTagMakerOneItem()
 
 # создадим тэги:
-'''Тэг, возвращающий информацию о пиве "Оболонь Прмиум 1,1 л из БД"'''
+'''Тэг, возвращающий информацию о пиве "Пиво "Оболонь Премиум Экстра 1,1 л""'''
 get_obolon_premium = tag.create_tag(ItemsPicsFromNet,2)
 
 '''Тэг, возвращающий информацию о кофе "Aroma Gold Classic 100 g"'''
@@ -668,6 +668,62 @@ get_beer_5_0_original_craft_beer_nefilter_svitle_05l_jb = tag.create_tag(ItemsPi
 
 '''Тэг,возвращающий информацию о "Пиво Guinness Draught темне фільтроване 4.1% 0.44 л"'''
 get_beer_Guinness_draught_temne_05l_jb = tag.create_tag(ItemsPicsFromNet,217)
+
+'''Тэг,возвращающий информацию о "Пиво Grimbergen Double Ambree напівтемне фільтроване 6.5% 0.5 л"'''
+get_beer_GrimbergenDoubleAmbree_napivtemne_05l_jb = tag.create_tag(ItemsPicsFromNet,218)
+
+'''Тэг,возвращающий информацию о "Пиво Warsteiner Premium Verum світле фільтроване 4.8% 0.5 л"'''
+get_beer_WarsteinerPremiumVerum_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,219)
+
+'''Тэг,возвращающий информацию о "Пиво DAB темне фільтроване 4.9% 0.5 л"'''
+get_beer_DAB_temne_05l_jb = tag.create_tag(ItemsPicsFromNet,220)
+
+'''Тэг,возвращающий информацию о "Пиво спеціальне Grimbergen Blanche світле пастеризоване 6% 0.5 л"'''
+get_beer_GrimbergenBlanche_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,221)
+
+'''Тэг,возвращающий информацию о "Пиво Klosterkeller Weissbier China світле нефільтроване 5.4% 0.5 л"'''
+get_beer_KlosterkellerWeissbierChina_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,222)
+
+'''Тэг,возвращающий информацию о "Пиво Karpackie Pils світле фільтроване 4% 0.5 л"'''
+get_beer_KarpackiePils_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,223)
+
+'''Тэг,возвращающий информацию о "Пиво 5,0 Original Pills світле фільтроване 5% 0.5 л"'''
+get_beer_5_0_OriginalPills_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,224)
+
+'''Тэг,возвращающий информацию о "Пиво 5,0 Original Lager світле фільтроване 5.4% 0.5 л"'''
+get_beer_5_0_OriginalLager_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,225)
+
+'''Тэг,возвращающий информацию о "Пиво 5,0 Original Weiss Beer світле нефільтроване 5% 0.5 л"'''
+get_beer_5_0_Original_Weiss_nefilter_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,226)
+
+'''Тэг,возвращающий информацию о "Пиво Fahnen Brau світле фільтроване 4.7% 0.5 л"'''
+get_beer_Fahnen_Brau_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,227)
+
+'''Тэг,возвращающий информацию о "Пиво Gosser Light світле фільтроване 5.2% 0.5 л"'''
+get_beer_Gosser_light_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,228)
+
+'''Тэг,возвращающий информацию о "Пиво Hollandia Import світле фільтроване 4.8% 0.33 л"'''
+get_beer_HollandiaImport_svitle_033l_jb = tag.create_tag(ItemsPicsFromNet,229)
+
+'''Тэг,возвращающий информацию о "Пиво Holsten Pilsener 4.7% 0.48 л"'''
+get_beer_Holsten_Pilsener_048l_jb = tag.create_tag(ItemsPicsFromNet,230)
+
+
+'''Тэг,возвращающий информацию о "Пиво Оболонь Premium Extra Brew світле фільтроване з/б 4.6% 0.5 л"'''
+get_beer_Obolon_Premium_Extra_Brew_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,231)
+
+
+'''Тэг,возвращающий информацию о "Пиво Львівське світле 4,3% 0,48 л"'''
+get_beer_Lvivske_svitle_048l_jb = tag.create_tag(ItemsPicsFromNet,232)
+
+
+'''Тэг,возвращающий информацию о "Пиво Carlsberg Premium Pilsner світле фільтроване з/б 5% 0.5 л"'''
+get_beer_Carlsberg_Premium_Pilsner_svitle_05l_jb = tag.create_tag(ItemsPicsFromNet,233)
+
+
+'''Тэг,возвращающий информацию о "Пиво Carlsberg Pilsner 0.5 л"'''
+get_beer_Carlsberg_Pilsner_05l_jb = tag.create_tag(ItemsPicsFromNet,234)
+
 
 
 
