@@ -731,7 +731,7 @@ class ProductParserVol2:
             'https://auchan.ua/ua/pivo-stella-artois-svetloe-5-500-ml-1021059/',
             'https://novus.online/product/pivo-svitle-stella-artois-50-05l-sklpl',
             'https://metro.zakaz.ua/ru/products/pivo-stella-artua-500ml-belgiia--04820000380348/',
-            'https://fozzyshop.ua/ru/pivo-svetloe/2815-pivo-stella-artois-svetloe-4820034921500.html',
+            'https://fozzyshop.ua/ru/pivo-svetloe/2815-pivo-stella-artois-svetloe-4820034921500.html'
         ])
 
     def beer_obolon_svitle_05_l_glass_parser(self):
