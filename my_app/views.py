@@ -75,628 +75,643 @@ class PhotoAnswerPage(MutualContext, ListView):
         context_dict = super().get_context_data(**kwargs)
         context_dict['nn_answer'] = self.NN_works()  # подключение НС:
 
-        # подключение тэгов для отображние изображений товара:
-        if context_dict['nn_answer'] == 'Пиво "Оболонь Премиум Экстра 1.1 л"':
-            context_dict['item_image_for_user'] = get_obolon_premium
-            # метод подключения к собственной базе данных цен
-            context_dict['price_from_site_atb'] = store['obolon_premium_1.1_l']['atb']
-            context_dict['price_from_site_eko'] = store['obolon_premium_1.1_l']['eko']
-            # метод подключения парсеров в режиме online
-            # parser = ProductParserVol2()
-            # res_atb = parser.obolon_premium_parser()[0]
-            # context_dict['price_from_site_atb'] = res_atb
-            # res_eko = parser.obolon_premium_parser()[1]
-            # context_dict['price_from_site_eko'] = res_eko
-            # res_varus = parser.obolon_premium_parser()[2]
-            # context_dict['price_from_site_varus'] = res_varus
+        # подключение класса, который формирует контекст (цены + инфо о товаре)
+        item_context = ContextSupervisor(context_dict['nn_answer'])
+        # подключение тега для отображения информации о товаре (изображение и текст)
+        context_dict['item_image_for_user'] = item_context.info
+        # подключение цен товара
+        context_dict['price_from_site_atb'] = item_context.atb_price
+        context_dict['price_from_site_eko'] = item_context.eko_price
+        context_dict['price_from_site_varus'] = item_context.varus_price
+        context_dict['price_from_site_silpo'] = item_context.silpo_price
+        context_dict['price_from_site_ashan'] = item_context.ashan_price
+        context_dict['price_from_site_novus'] = item_context.novus_price
+        context_dict['price_from_site_metro'] = item_context.metro_price
+        context_dict['price_from_site_nash_kray'] = item_context.nk_price
+        context_dict['price_from_site_fozzy'] = item_context.fozzy_price
 
-        elif context_dict['nn_answer'] == 'Водка "Гетьман ICE 0,7 л"':
-            context_dict['item_image_for_user'] = get_hetman_ICE
-            context_dict['price_from_site_atb'] = store['vodka_hetman_ice_07']['atb']
-            # parser = ProductParserVol2()
-            # res_atb = parser.vodka_getman_ICE_parcer()[0]
-            # context_dict['price_from_site_atb'] = res_atb
-            # res_eko = parser.vodka_getman_ICE_parcer()[1]
-            # context_dict['price_from_site_eko'] = res_eko
-            # res_varus = parser.vodka_getman_ICE_parcer()[2]
-            # context_dict['price_from_site_varus'] = res_varus
-
-        elif context_dict['nn_answer'] == 'Кофе растворимый "Aroma Gold Classic 100 грамм"':
-            context_dict['item_image_for_user'] = coffe_aroma_gold_classic_100gr
-            context_dict['price_from_site_eko'] = store['coffee_aroma_gold']['eko']
-            context_dict['price_from_site_fozzy'] = store['coffee_aroma_gold']['fozzy']
-            # parser = ProductParserVol2()
-            # res_atb=parser.coffee_aroma_gold_parcer()[0]
-            # context_dict['price_from_site_atb'] = res_atb
-            # res_eko = parser.coffee_aroma_gold_parcer()[1]
-            # context_dict['price_from_site_eko'] = res_eko
-            # res_varus = parser.coffee_aroma_gold_parcer()[2]
-            # context_dict['price_from_site_varus'] = res_varus
-
-        elif context_dict['nn_answer'] == 'Масло подсолнечное "Щедрый Дар" 0,85 л':
-            context_dict['item_image_for_user'] = get_oil_shedriy_dar_085l
-            context_dict['price_from_site_atb'] = store['oil_shedriy_dar_raf_850']['atb']
-            context_dict['price_from_site_eko'] = store['oil_shedriy_dar_raf_850']['eko']
-            context_dict['price_from_site_varus'] = store['oil_shedriy_dar_raf_850']['varus']
-            context_dict['price_from_site_silpo'] = store['oil_shedriy_dar_raf_850']['silpo']
-            context_dict['price_from_site_ashan'] = store['oil_shedriy_dar_raf_850']['ashan']
-            context_dict['price_from_site_novus'] = store['oil_shedriy_dar_raf_850']['novus']
-            context_dict['price_from_site_metro'] = store['oil_shedriy_dar_raf_850']['metro']
-            context_dict['price_from_site_fozzy'] = store['oil_shedriy_dar_raf_850']['fozzy']
-            # parser = ProductParserVol2()
-            # res_atb = parser.oil_shedriy_dar_850_parcer()[0]
-            # context_dict['price_from_site_atb'] = res_atb
-            # res_eko = parser.oil_shedriy_dar_850_parcer()[1]
-            # context_dict['price_from_site_eko'] = res_eko
-            # res_varus = parser.oil_shedriy_dar_850_parcer()[2]
-            # context_dict['price_from_site_varus'] = res_varus
-            # res_silpo = parser.oil_shedriy_dar_850_parcer()[3]
-            # context_dict['price_from_site_silpo'] = res_silpo
-            # res_ashan = parser.oil_shedriy_dar_850_parcer()[4]
-            # context_dict['price_from_site_ashan'] = res_ashan
-
-        elif context_dict['nn_answer'] == 'Яблоко Голден, 1 кг':
-            context_dict['item_image_for_user'] = get_apple_golden
-            context_dict['price_from_site_atb'] = store['apple_golden']['atb']
-            context_dict['price_from_site_eko'] = store['apple_golden']['eko']
-            context_dict['price_from_site_varus'] = store['apple_golden']['varus']
-            context_dict['price_from_site_silpo'] = store['apple_golden']['silpo']
-            context_dict['price_from_site_metro'] = store['apple_golden']['metro']
-            context_dict['price_from_site_nash_kray'] = store['apple_golden']['nash_kray']
-            context_dict['price_from_site_fozzy'] = store['apple_golden']['fozzy']
-            # parser = ProductParserVol2()
-            # res_atb = parser.apple_golden_parcer()[0]
-            # context_dict['price_from_site_atb'] = res_atb
-            # res_eko = parser.apple_golden_parcer()[1]
-            # context_dict['price_from_site_eko'] = res_eko
-            # res_varus = parser.apple_golden_parcer()[2]
-            # context_dict['price_from_site_varus'] = res_varus
-            # res_silpo = parser.apple_golden_parcer()[3]
-            # context_dict['price_from_site_silpo'] = res_silpo
-
-        elif context_dict['nn_answer'] == 'Напиток безалкогольный "Coca-Cola" 2 л':
-            context_dict['item_image_for_user'] = get_coca_cola_2l
-            context_dict['price_from_site_atb'] = store['coca_cola_2l']['atb']
-            context_dict['price_from_site_eko'] = store['coca_cola_2l']['eko']
-            context_dict['price_from_site_varus'] = store['coca_cola_2l']['varus']
-            context_dict['price_from_site_silpo'] = store['coca_cola_2l']['silpo']
-            context_dict['price_from_site_ashan'] = store['coca_cola_2l']['ashan']
-            context_dict['price_from_site_novus'] = store['coca_cola_2l']['novus']
-            context_dict['price_from_site_metro'] = store['coca_cola_2l']['metro']
-            context_dict['price_from_site_nash_kray'] = store['coca_cola_2l']['nash_kray']
-            context_dict['price_from_site_fozzy'] = store['coca_cola_2l']['fozzy']
-            # parser = ProductParserVol2()
-            # res_atb = parser.coca_cola_2l_parcer()[0]
-            # context_dict['price_from_site_atb'] = res_atb
-            # res_eko = parser.coca_cola_2l_parcer()[1]
-            # context_dict['price_from_site_eko'] = res_eko
-            # res_varus = parser.coca_cola_2l_parcer()[2]
-            # context_dict['price_from_site_varus'] = res_varus
-            # res_silpo = parser.coca_cola_2l_parcer()[3]
-            # context_dict['price_from_site_silpo'] = res_silpo
-            # res_ashan = parser.coca_cola_2l_parcer()[4]
-            # context_dict['price_from_site_ashan'] = res_ashan
-
-        elif context_dict['nn_answer'] == 'Сырок плавленный "Комо Паприкаш"':
-            context_dict['item_image_for_user'] = get_KOMO_paprikash
-            context_dict['price_from_site_novus'] = store['sir_plavlenniy_komo_paprikash']['novus']
-            context_dict['price_from_site_metro'] = store['sir_plavlenniy_komo_paprikash']['metro']
-            context_dict['price_from_site_nash_kray'] = store['sir_plavlenniy_komo_paprikash']['nash_kray']
-            context_dict['price_from_site_fozzy'] = store['sir_plavlenniy_komo_paprikash']['fozzy']
-
-        elif context_dict['nn_answer'] == 'Сигареты "Kent 8"':
-            context_dict['item_image_for_user'] = get_sigarets_kent_8
-            context_dict['price_from_site_atb'] = store['sigarets_kent_8']['atb']
-            context_dict['price_from_site_eko'] = store['sigarets_kent_8']['eko']
-            context_dict['price_from_site_varus'] = store['sigarets_kent_8']['varus']
-            context_dict['price_from_site_silpo'] = store['sigarets_kent_8']['silpo']
-            context_dict['price_from_site_ashan'] = store['sigarets_kent_8']['ashan']
-            context_dict['price_from_site_novus'] = store['sigarets_kent_8']['novus']
-            context_dict['price_from_site_fozzy'] = store['sigarets_kent_8']['fozzy']
-            # parser = ProductParserVol2()
-            # res_atb = parser.kent_8_parcer()[0]
-            # context_dict['price_from_site_atb'] = res_atb
-            # res_eko = parser.kent_8_parcer()[1]
-            # context_dict['price_from_site_eko'] = res_eko
-            # res_varus = parser.kent_8_parcer()[2]
-            # context_dict['price_from_site_varus'] = res_varus
-            # res_silpo = parser.kent_8_parcer()[3]
-            # context_dict['price_from_site_silpo'] = res_silpo
-
-        elif context_dict['nn_answer'] == 'Чеснок, кг':
-            context_dict['item_image_for_user'] = get_garlik
-            context_dict['price_from_site_atb'] = store['garlik']['atb']
-            context_dict['price_from_site_eko'] = store['garlik']['eko']
-            context_dict['price_from_site_varus'] = store['garlik']['varus']
-            context_dict['price_from_site_silpo'] = store['garlik']['silpo']
-            context_dict['price_from_site_novus'] = store['garlik']['novus']
-            context_dict['price_from_site_nash_kray'] = store['garlik']['nash_kray']
-            context_dict['price_from_site_fozzy'] = store['garlik']['fozzy']
-            # parser = ProductParserVol2()
-            # res_atb = parser.garlik_parcer()[0]
-            # context_dict['price_from_site_atb'] = res_atb
-            # res_eko = parser.garlik_parcer()[1]
-            # context_dict['price_from_site_eko'] = res_eko
-            # res_varus = parser.garlik_parcer()[2]
-            # context_dict['price_from_site_varus'] = res_varus
-            # res_silpo = parser.garlik_parcer()[3]
-            # context_dict['price_from_site_silpo'] = res_silpo
-
-        elif context_dict['nn_answer'] == 'Моющее средство Fairy':
-            context_dict['item_image_for_user'] = get_fairy_500_lime
-            context_dict['price_from_site_atb'] = store['fairy_limon_500']['atb']
-            context_dict['price_from_site_eko'] = store['fairy_limon_500']['eko']
-            context_dict['price_from_site_varus'] = store['fairy_limon_500']['varus']
-            context_dict['price_from_site_silpo'] = store['fairy_limon_500']['silpo']
-            context_dict['price_from_site_novus'] = store['fairy_limon_500']['novus']
-            context_dict['price_from_site_metro'] = store['fairy_limon_500']['metro']
-            context_dict['price_from_site_fozzy'] = store['fairy_limon_500']['fozzy']
-            # parser = ProductParserVol2()
-            # res_atb = parser.fairy_limon_500_parcer()[0]
-            # context_dict['price_from_site_atb'] = res_atb
-            # res_eko = parser.fairy_limon_500_parcer()[1]
-            # context_dict['price_from_site_eko'] = res_eko
-            # res_varus = parser.fairy_limon_500_parcer()[2]
-            # context_dict['price_from_site_varus'] = res_varus
-            # res_silpo = parser.fairy_limon_500_parcer()[3]
-            # context_dict['price_from_site_silpo'] = res_silpo
-
-        elif context_dict['nn_answer'] == 'Лук, 1 кг':
-            context_dict['item_image_for_user'] = get_onion
-            context_dict['price_from_site_atb'] = store['onion']['atb']
-            context_dict['price_from_site_eko'] = store['onion']['eko']
-            context_dict['price_from_site_varus'] = store['onion']['varus']
-            context_dict['price_from_site_silpo'] = store['onion']['silpo']
-            context_dict['price_from_site_novus'] = store['onion']['novus']
-            context_dict['price_from_site_metro'] = store['onion']['metro']
-            context_dict['price_from_site_nash_kray'] = store['onion']['nash_kray']
-            context_dict['price_from_site_fozzy'] = store['onion']['fozzy']
-            # parser = ProductParserVol2()
-            # res_atb = parser.onion_parcer()[0]
-            # context_dict['price_from_site_atb'] = res_atb
-            # res_eko = parser.onion_parcer()[1]
-            # context_dict['price_from_site_eko'] = res_eko
-            # res_varus = parser.onion_parcer()[2]
-            # context_dict['price_from_site_varus'] = res_varus
-            # res_silpo=parser.onion_parcer()[3]
-            # context_dict['price_from_site_silpo'] = res_silpo
-
-        elif context_dict['nn_answer'] == 'Яблоко "Черный принц"':
-            context_dict['item_image_for_user'] = get_apple_black_prince
-            context_dict['price_from_site_atb'] = store['apple_black_prince']['atb']
-            context_dict['price_from_site_eko'] = store['apple_black_prince']['eko']
-            context_dict['price_from_site_varus'] = store['apple_black_prince']['varus']
-            context_dict['price_from_site_silpo'] = store['apple_black_prince']['silpo']
-            context_dict['price_from_site_metro'] = store['apple_black_prince']['metro']
-            context_dict['price_from_site_fozzy'] = store['apple_black_prince']['fozzy']
-            # parser = ProductParserVol2()
-            # res_atb = parser.apple_black_prince_parcer()[0]
-            # context_dict['price_from_site_atb'] = res_atb
-            # res_eko = parser.apple_black_prince_parcer()[1]
-            # context_dict['price_from_site_eko'] = res_eko
-            # res_varus = parser.apple_black_prince_parcer()[2]
-            # context_dict['price_from_site_varus'] = res_varus
-            # res_silpo = parser.apple_black_prince_parcer()[3]
-            # context_dict['price_from_site_silpo'] = res_silpo
-
-        elif context_dict['nn_answer'] == 'Сметана "Столица Смаку" 20% 400 гр':
-            context_dict['item_image_for_user'] = get_smetana_stolica_smaky_20_400gr
-            context_dict['price_from_site_varus'] = store['smetana_stol_smaky_20%']['varus']
-            # parser = ProductParserVol2()
-            # res_atb = parser.smetana_stolica_smaky_400_20()[0]
-            # context_dict['price_from_site_atb'] = res_atb
-            # res_eko = parser.smetana_stolica_smaky_400_20()[1]
-            # context_dict['price_from_site_eko'] = res_eko
-            # res_varus = parser.smetana_stolica_smaky_400_20()[2]
-            # context_dict['price_from_site_varus'] = res_varus
-
-        elif context_dict['nn_answer'] == 'Горчица "Колос"':
-            context_dict['item_image_for_user'] = get_gorchica_kolos
-            # нет на сайтах
-
-        elif context_dict['nn_answer'] == 'Лимон, кг':
-            context_dict['item_image_for_user'] = get_limon
-            context_dict['price_from_site_atb'] = store['limon']['atb']
-            context_dict['price_from_site_eko'] = store['limon']['eko']
-            context_dict['price_from_site_varus'] = store['limon']['varus']
-            context_dict['price_from_site_silpo'] = store['limon']['silpo']
-            context_dict['price_from_site_novus'] = store['limon']['novus']
-            context_dict['price_from_site_metro'] = store['limon']['metro']
-            context_dict['price_from_site_nash_kray'] = store['limon']['nash_kray']
-            context_dict['price_from_site_fozzy'] = store['limon']['fozzy']
-            # parser = ProductParserVol2()
-            # res_atb = parser.limon_parcer()[0]
-            # context_dict['price_from_site_atb'] = res_atb
-            # res_eko = parser.limon_parcer()[1]
-            # context_dict['price_from_site_eko'] = res_eko
-            # res_varus = parser.limon_parcer()[2]
-            # context_dict['price_from_site_varus'] = res_varus
-            # res_silpo = parser.limon_parcer()[3]
-            # context_dict['price_from_site_silpo'] = res_silpo
-
-        elif context_dict['nn_answer'] == 'Масло подсолнечное "Олейна" нерафинированное, 850 гр':
-            context_dict['item_image_for_user'] = get_oil_oleyna_neraf_850
-            context_dict['price_from_site_eko'] = store['oil_oleyna_neraf_850']['eko']
-            context_dict['price_from_site_ashan'] = store['oil_oleyna_neraf_850']['ashan']
-            # parser = ProductParserVol2()
-            # res_atb = parser.oil_oleyna_neraf_850_parcer()[0]
-            # context_dict['price_from_site_atb'] = res_atb
-            # res_eko = parser.oil_oleyna_neraf_850_parcer()[1]
-            # context_dict['price_from_site_eko'] = res_eko
-            # res_varus = parser.oil_oleyna_neraf_850_parcer()[2]
-            # context_dict['price_from_site_varus'] = res_varus
-
-        elif context_dict['nn_answer'] == 'Дрожжи "Харьковские", 100 гр':
-            context_dict['item_image_for_user'] = get_drojji_hark
-            # out of stock
-
-        elif context_dict['nn_answer'] == 'Чай черный "Мономах Кения", 90 гр':
-            context_dict['item_image_for_user'] = get_tea_monomah_kenya
-            context_dict['price_from_site_eko'] = store['tea_monomah_kenya_90']['eko']
-            # parser = ProductParserVol2()
-            # res_atb = parser.tea_monomah_black_kenya_90_parcer()[0]
-            # context_dict['price_from_site_atb'] = res_atb
-            # res_eko = parser.tea_monomah_black_kenya_90_parcer()[1]
-            # context_dict['price_from_site_eko'] = res_eko
-            # res_varus = parser.tea_monomah_black_kenya_90_parcer()[2]
-            # context_dict['price_from_site_varus'] = res_varus
-
-        elif context_dict['nn_answer'] == 'Пена для бритья "Arko Cool" 300 гр+100':
-            context_dict['item_image_for_user'] = get_arko_cool_300_100
-            context_dict['price_from_site_atb'] = store['arko_cool_200']['atb']
-            context_dict['price_from_site_eko'] = store['arko_cool_200']['eko']
-            context_dict['price_from_site_varus'] = store['arko_cool_200']['varus']
-            context_dict['price_from_site_silpo'] = store['arko_cool_200']['silpo']
-            context_dict['price_from_site_ashan'] = store['arko_cool_200']['ashan']
-            context_dict['price_from_site_novus'] = store['arko_cool_200']['novus']
-            context_dict['price_from_site_metro'] = store['arko_cool_200']['metro']
-            context_dict['price_from_site_fozzy'] = store['arko_cool_200']['fozzy']
-            # parser = ProductParserVol2()
-            # res_atb = parser.arko_cool_200_bonus100_parcer()[0]
-            # context_dict['price_from_site_atb'] = res_atb
-            # res_eko = parser.arko_cool_200_bonus100_parcer()[1]
-            # context_dict['price_from_site_eko'] = res_eko
-            # res_varus = parser.arko_cool_200_bonus100_parcer()[2]
-            # context_dict['price_from_site_varus'] = res_varus
-            # res_silpo = parser.arko_cool_200_bonus100_parcer()[3]
-            # context_dict['price_from_site_silpo'] = res_silpo
-
-        elif context_dict['nn_answer'] == 'Пена для бритья "Arko Sensitive" 300 гр+100':
-            context_dict['item_image_for_user'] = get_arko_sensitive_300_100
-            context_dict['price_from_site_atb'] = store['arko_sensitive_200']['atb']
-            context_dict['price_from_site_eko'] = store['arko_sensitive_200']['eko']
-            context_dict['price_from_site_varus'] = store['arko_sensitive_200']['varus']
-            context_dict['price_from_site_silpo'] = store['arko_sensitive_200']['silpo']
-            context_dict['price_from_site_ashan'] = store['arko_sensitive_200']['ashan']
-            context_dict['price_from_site_novus'] = store['arko_sensitive_200']['novus']
-            context_dict['price_from_site_metro'] = store['arko_sensitive_200']['metro']
-            context_dict['price_from_site_nash_kray'] = store['arko_sensitive_200']['nash_kray']
-            context_dict['price_from_site_fozzy'] = store['arko_sensitive_200']['fozzy']
-            # parser = ProductParserVol2()
-            # res_atb = parser.arko_sensitive_200_bonus100_parcer()[0]
-            # context_dict['price_from_site_atb'] = res_atb
-            # res_eko = parser.arko_sensitive_200_bonus100_parcer()[1]
-            # context_dict['price_from_site_eko'] = res_eko
-            # res_varus = parser.arko_sensitive_200_bonus100_parcer()[2]
-            # context_dict['price_from_site_varus'] = res_varus
-            # res_silpo = parser.arko_sensitive_200_bonus100_parcer()[3]
-            # context_dict['price_from_site_silpo'] = res_silpo
-
-        elif context_dict['nn_answer'] == "Морковь, кг":
-            context_dict['item_image_for_user'] = get_carrot
-            context_dict['price_from_site_atb'] = store['carrot']['atb']
-            context_dict['price_from_site_eko'] = store['carrot']['eko']
-            context_dict['price_from_site_varus'] = store['carrot']['varus']
-            context_dict['price_from_site_silpo'] = store['carrot']['silpo']
-            context_dict['price_from_site_novus'] = store['carrot']['novus']
-            context_dict['price_from_site_metro'] = store['carrot']['metro']
-            context_dict['price_from_site_nash_kray'] = store['carrot']['nash_kray']
-            context_dict['price_from_site_fozzy'] = store['carrot']['fozzy']
-            # parser = ProductParserVol2()
-            # res_atb = parser.carrot_parcer()[0]
-            # context_dict['price_from_site_atb'] = res_atb
-            # res_eko = parser.carrot_parcer()[1]
-            # context_dict['price_from_site_eko'] = res_eko
-            # res_varus = parser.carrot_parcer()[2]
-            # context_dict['price_from_site_varus'] = res_varus
-            # res_silpo = parser.carrot_parcer()[3]
-            # context_dict['price_from_site_silpo'] = res_silpo
-
-        elif context_dict['nn_answer'] == 'Капуста белокачанная, кг':
-            context_dict['item_image_for_user'] = get_cabbage
-            context_dict['price_from_site_atb'] = store['cabbage']['atb']
-            context_dict['price_from_site_eko'] = store['cabbage']['eko']
-            context_dict['price_from_site_varus'] = store['cabbage']['varus']
-            context_dict['price_from_site_silpo'] = store['cabbage']['silpo']
-            context_dict['price_from_site_novus'] = store['cabbage']['novus']
-            context_dict['price_from_site_metro'] = store['cabbage']['metro']
-            context_dict['price_from_site_nash_kray'] = store['cabbage']['nash_kray']
-            context_dict['price_from_site_fozzy'] = store['cabbage']['fozzy']
-            # parser = ProductParserVol2()
-            # res_atb = parser.cabbage_parcer()[0]
-            # context_dict['price_from_site_atb'] = res_atb
-            # res_eko = parser.cabbage_parcer()[1]
-            # context_dict['price_from_site_eko'] = res_eko
-            # res_varus = parser.cabbage_parcer()[2]
-            # context_dict['price_from_site_varus'] = res_varus
-            # res_silpo = parser.cabbage_parcer()[3]
-            # context_dict['price_from_site_silpo'] = res_silpo
-
-        elif context_dict['nn_answer'] == 'Яйца куринные, 10 шт':
-            context_dict['item_image_for_user'] = get_chicken_eggs
-            context_dict['price_from_site_atb'] = store['eggs']['atb']
-            context_dict['price_from_site_eko'] = store['eggs']['eko']
-            context_dict['price_from_site_varus'] = store['eggs']['varus']
-            context_dict['price_from_site_silpo'] = store['eggs']['silpo']
-            context_dict['price_from_site_ashan'] = store['eggs']['ashan']
-            context_dict['price_from_site_novus'] = store['eggs']['novus']
-            context_dict['price_from_site_metro'] = store['eggs']['metro']
-            context_dict['price_from_site_nash_kray'] = store['eggs']['nash_kray']
-            context_dict['price_from_site_fozzy'] = store['eggs']['fozzy']
-            # parser = ProductParserVol2()
-            # res_atb = parser.egg_parcer()[0]
-            # context_dict['price_from_site_atb'] = res_atb
-            # res_eko = parser.egg_parcer()[1]
-            # context_dict['price_from_site_eko'] = res_eko
-            # res_varus = parser.egg_parcer()[2]
-            # context_dict['price_from_site_varus'] = res_varus
-            # res_silpo = parser.egg_parcer()[3]
-            # context_dict['price_from_site_silpo'] = res_silpo
-
-        elif context_dict['nn_answer'] == 'Майонез домашний детский "Щедро" 67%':
-            context_dict['item_image_for_user'] = get_mayonez_dom_detsk_shedro_67
-            context_dict['price_from_site_atb'] = store['mayonez_detsk_shedro_67%']['atb']
-            context_dict['price_from_site_eko'] = store['mayonez_detsk_shedro_67%']['eko']
-            context_dict['price_from_site_varus'] = store['mayonez_detsk_shedro_67%']['varus']
-            context_dict['price_from_site_silpo'] = store['mayonez_detsk_shedro_67%']['silpo']
-            context_dict['price_from_site_metro'] = store['mayonez_detsk_shedro_67%']['metro']
-            context_dict['price_from_site_fozzy'] = store['mayonez_detsk_shedro_67%']['fozzy']
-            # parser = ProductParserVol2()
-            # res_atb = parser.mayonez_detsk_shedro_67_parcer()[0]
-            # context_dict['price_from_site_atb'] = res_atb
-            # res_eko = parser.mayonez_detsk_shedro_67_parcer()[1]
-            # context_dict['price_from_site_eko'] = res_eko
-            # res_varus = parser.mayonez_detsk_shedro_67_parcer()[2]
-            # context_dict['price_from_site_varus'] = res_varus
-            # res_silpo = parser.mayonez_detsk_shedro_67_parcer()[3]
-            # context_dict['price_from_site_silpo'] = res_silpo
-
-        elif context_dict['nn_answer'] == 'Дезодорант "Rexona Aloe Vera" женский':
-            context_dict['item_image_for_user'] = get_reksona_aloe_vera_w
-            context_dict['price_from_site_eko'] = store['rexona_aloe_vera']['eko']
-            context_dict['price_from_site_ashan'] = store['rexona_aloe_vera']['ashan']
-            # parser = ProductParserVol2()
-            # res_atb = parser.rexona_aloe_vera_w_parcer()[0]
-            # context_dict['price_from_site_atb'] = res_atb
-            # res_eko = parser.rexona_aloe_vera_w_parcer()[1]
-            # context_dict['price_from_site_eko'] = res_eko
-            # res_varus = parser.rexona_aloe_vera_w_parcer()[2]
-            # context_dict['price_from_site_varus'] = res_varus
-
-        elif context_dict['nn_answer'] == 'Туалетная бумага "Киев" 63 м':
-            context_dict['item_image_for_user'] = get_toilet_papir_kiev_63m
-            # out of stock
-
-        elif context_dict['nn_answer'] == 'Сигареты Marlboro red':
-            context_dict['item_image_for_user'] = get_marlboro_red
-            context_dict['price_from_site_atb'] = store['marlboro_red']['atb']
-            context_dict['price_from_site_eko'] = store['marlboro_red']['eko']
-            context_dict['price_from_site_varus'] = store['marlboro_red']['varus']
-            context_dict['price_from_site_silpo'] = store['marlboro_red']['silpo']
-            context_dict['price_from_site_ashan'] = store['marlboro_red']['ashan']
-            context_dict['price_from_site_novus'] = store['marlboro_red']['novus']
-            context_dict['price_from_site_fozzy'] = store['marlboro_red']['fozzy']
-            # parser = ProductParserVol2()
-            # res_atb = parser.marloboro_red_parcer()[0]
-            # context_dict['price_from_site_atb'] = res_atb
-            # res_eko = parser.marloboro_red_parcer()[1]
-            # context_dict['price_from_site_eko'] = res_eko
-            # res_varus = parser.marloboro_red_parcer()[2]
-            # context_dict['price_from_site_varus'] = res_varus
-            # res_silpo = parser.marloboro_red_parcer()[3]
-            # context_dict['price_from_site_silpo'] = res_silpo
-            # res_ashan = parser.marloboro_red_parcer()[4]
-            # context_dict['price_from_site_ashan'] = res_ashan
-
-        elif context_dict['nn_answer'] == 'Пиво "Львовское светлое", 2.4 литра':
-            context_dict['item_image_for_user'] = get_pivo_lvivske_svitle
-            context_dict['price_from_site_varus'] = store['beer_lvivske_svetl_2.4 l']['varus']
-            context_dict['price_from_site_silpo'] = store['beer_lvivske_svetl_2.4 l']['silpo']
-            context_dict['price_from_site_ashan'] = store['beer_lvivske_svetl_2.4 l']['ashan']
-            context_dict['price_from_site_fozzy'] = store['beer_lvivske_svetl_2.4 l']['fozzy']
-            # parser = ProductParserVol2()
-            # res_atb = parser.beer_lvivske_svitle_24l()[0]
-            # context_dict['price_from_site_atb'] = res_atb
-            # res_eko = parser.beer_lvivske_svitle_24l()[1]
-            # context_dict['price_from_site_eko'] = res_eko
-            # res_varus = parser.beer_lvivske_svitle_24l()[2]
-            # context_dict['price_from_site_varus'] = res_varus
-            # res_silpo = parser.beer_lvivske_svitle_24l()[3]
-            # context_dict['price_from_site_silpo'] = res_silpo
-
-        elif context_dict['nn_answer'] == 'Сметана Столица Смаку 400 гр 15% жирности':
-            context_dict['item_image_for_user'] = get_smetana_stol_smaku_400_15
-            context_dict['price_from_site_varus'] = store['smetana_stol_smaky_15%']['varus']
-            # parser = ProductParserVol2()
-            # res_atb = parser.smetana_stolica_smaky_400_15_parcer()[0]
-            # context_dict['price_from_site_atb'] = res_atb
-            # res_eko = parser.smetana_stolica_smaky_400_15_parcer()[1]
-            # context_dict['price_from_site_eko'] = res_eko
-            # res_varus = parser.smetana_stolica_smaky_400_15_parcer()[2]
-            # context_dict['price_from_site_varus'] = res_varus
-
-        elif context_dict['nn_answer'] == 'Дезодорант Garnier Магний мужской':
-            context_dict['item_image_for_user'] = get_dezodorant_garnier_magniy_m
-            context_dict['price_from_site_silpo'] = store['desodorant_garnier_man']['silpo']
-            context_dict['price_from_site_fozzy'] = store['desodorant_garnier_man']['fozzy']
-            # parser = ProductParserVol2()
-            # res_silpo =parser.desodorant_garnier_magniy_man_parser()[3]
-            # context_dict['price_from_site_silpo'] = res_silpo
-
-        elif context_dict['nn_answer'] == 'Чай Мономах Цейлон черный':
-            context_dict['item_image_for_user'] = get_tea_monomah_ceylon_black
-
-        elif context_dict['nn_answer'] == 'Кофе Арома Голд Freeze Dried 70 грамм':
-            context_dict['item_image_for_user'] = get_coffee_aroma_gold_freeze_dried_70
-            context_dict['price_from_site_eko'] = store['cofee_aroma_gold_freeze_dried_70g']['eko']
-            context_dict['price_from_site_silpo'] = store['cofee_aroma_gold_freeze_dried_70g']['silpo']
-            context_dict['price_from_site_nash_kray'] = store['cofee_aroma_gold_freeze_dried_70g']['nash_kray']
-
-        elif context_dict['nn_answer'] == 'Горчица Верес украинска мицна 120 грамм':
-            context_dict['item_image_for_user'] = get_gorchica_veres_micna_ukr_120g
-            context_dict['price_from_site_silpo'] = store['gorchica_veres_ukrainska_micna_120g']['silpo']
-            context_dict['price_from_site_novus'] = store['gorchica_veres_ukrainska_micna_120g']['novus']
-            context_dict['price_from_site_metro'] = store['gorchica_veres_ukrainska_micna_120g']['metro']
-
-        elif context_dict['nn_answer'] == 'Чай Мономах 100% Цейлон Original черный крупнолистовой':
-            context_dict['item_image_for_user'] = get_tea_monomah_original_ceylon_90g
-
-        elif context_dict['nn_answer'] == 'Дезодорант Garnier весенняя свежесть':
-            context_dict['item_image_for_user'] = get_desodorant_garnier_spring_spirit
-            context_dict['price_from_site_silpo'] = store['desodorant_garnier_spring_spirit']['silpo']
-            context_dict['price_from_site_novus'] = store['desodorant_garnier_spring_spirit']['novus']
-            context_dict['price_from_site_metro'] = store['desodorant_garnier_spring_spirit']['metro']
-            context_dict['price_from_site_fozzy'] = store['desodorant_garnier_spring_spirit']['fozzy']
-
-        elif context_dict['nn_answer'] == 'Яблоко Гала, кг':
-            context_dict['item_image_for_user'] = get_apple_gala
-            context_dict['price_from_site_atb'] = store['apple_gala']['atb']
-            context_dict['price_from_site_eko'] = store['apple_gala']['eko']
-            context_dict['price_from_site_varus'] = store['apple_gala']['varus']
-            context_dict['price_from_site_silpo'] = store['apple_gala']['silpo']
-            context_dict['price_from_site_novus'] = store['apple_gala']['novus']
-            context_dict['price_from_site_metro'] = store['apple_gala']['metro']
-            context_dict['price_from_site_fozzy'] = store['apple_gala']['fozzy']
-
-        elif context_dict['nn_answer'] == 'Сметана Галичанская 15% 370 грамм':
-            context_dict['item_image_for_user'] = get_smetana_galichanska_15_370gr
-            context_dict['price_from_site_atb'] = store['smetana_galichanska_15_370gr']['atb']
-            context_dict['price_from_site_eko'] = store['smetana_galichanska_15_370gr']['eko']
-            context_dict['price_from_site_novus'] = store['smetana_galichanska_15_370gr']['novus']
-            context_dict['price_from_site_metro'] = store['smetana_galichanska_15_370gr']['metro']
-            context_dict['price_from_site_fozzy'] = store['smetana_galichanska_15_370gr']['fozzy']
-
-        elif context_dict['nn_answer'] == 'Чипсы Lays с солью большая пачка 30 грамм':
-            context_dict['item_image_for_user'] = get_chips_lays_salt_big_pack_30g
-            context_dict['price_from_site_eko'] = store['chips_lays_with_salt_big_pack']['eko']
-            context_dict['price_from_site_fozzy'] = store['chips_lays_with_salt_big_pack']['fozzy']
-
-        elif context_dict['nn_answer'] == 'Напиток Sprite 2 литра':
-            context_dict['item_image_for_user'] = get_sprite_2l
-            context_dict['price_from_site_eko'] = store['sprite_2l']['eko']
-            context_dict['price_from_site_varus'] = store['sprite_2l']['varus']
-            context_dict['price_from_site_silpo'] = store['sprite_2l']['silpo']
-            context_dict['price_from_site_ashan'] = store['sprite_2l']['ashan']
-            context_dict['price_from_site_novus'] = store['sprite_2l']['novus']
-            context_dict['price_from_site_metro'] = store['sprite_2l']['metro']
-            context_dict['price_from_site_nash_kray'] = store['sprite_2l']['nash_kray']
-            context_dict['price_from_site_fozzy'] = store['sprite_2l']['fozzy']
-
-        elif context_dict['nn_answer'] == 'Напиток Fanta 2 литра':
-            context_dict['item_image_for_user'] = get_fanta_2l
-            context_dict['price_from_site_eko'] = store['fanta_2l']['eko']
-            context_dict['price_from_site_varus'] = store['fanta_2l']['varus']
-            context_dict['price_from_site_silpo'] = store['fanta_2l']['silpo']
-            context_dict['price_from_site_ashan'] = store['fanta_2l']['ashan']
-            context_dict['price_from_site_novus'] = store['fanta_2l']['novus']
-            context_dict['price_from_site_metro'] = store['fanta_2l']['metro']
-            context_dict['price_from_site_nash_kray'] = store['fanta_2l']['nash_kray']
-            context_dict['price_from_site_fozzy'] = store['fanta_2l']['fozzy']
-
-        elif context_dict['nn_answer'] == 'Кетчуп Торчин с чесноком 270 гр':
-            context_dict['item_image_for_user'] = get_ketchup_torchin_s_chesnokom
-            context_dict['price_from_site_eko'] = store['ketchup_torchin_s_chasnikom_270gr']['eko']
-            context_dict['price_from_site_varus'] = store['ketchup_torchin_s_chasnikom_270gr']['varus']
-            context_dict['price_from_site_metro'] = store['ketchup_torchin_s_chasnikom_270gr']['metro']
-            context_dict['price_from_site_fozzy'] = store['ketchup_torchin_s_chasnikom_270gr']['fozzy']
-
-        elif context_dict['nn_answer'] == 'Майонез Королевский Смак королевский 67 % 300 гр':
-            context_dict['item_image_for_user'] = get_mayonez_korolivkiy_smak_korolivskiy_67_300gr
-            context_dict['price_from_site_atb'] = store['mayonez_korolivskiy_smak_korolivskiy_67_300gr']['atb']
-            context_dict['price_from_site_eko'] = store['mayonez_korolivskiy_smak_korolivskiy_67_300gr']['eko']
-            context_dict['price_from_site_varus'] = store['mayonez_korolivskiy_smak_korolivskiy_67_300gr']['varus']
-            context_dict['price_from_site_novus'] = store['mayonez_korolivskiy_smak_korolivskiy_67_300gr']['novus']
-            context_dict['price_from_site_metro'] = store['mayonez_korolivskiy_smak_korolivskiy_67_300gr']['metro']
-            context_dict['price_from_site_fozzy'] = store['mayonez_korolivskiy_smak_korolivskiy_67_300gr']['fozzy']
-
-        elif context_dict['nn_answer'] == 'Мука ЗОЛОТЕ ЗЕРНЯТКО пшеничное 2 кг':
-            context_dict['item_image_for_user'] = get_muka_zolote_zernyatko_pshenichne_2kg
-
-        elif context_dict['nn_answer'] == 'Соус Чумак чесночный 200 грамм':
-            context_dict['item_image_for_user'] = get_sous_torchin_chesnochniy_200gr
-            context_dict['price_from_site_eko'] = store['sous_chumak_chesnochniy_200gr']['eko']
-            context_dict['price_from_site_varus'] = store['sous_chumak_chesnochniy_200gr']['varus']
-            context_dict['price_from_site_novus'] = store['sous_chumak_chesnochniy_200gr']['novus']
-
-        elif context_dict['nn_answer'] == 'Жвачка Orbit полуниця-банан':
-            context_dict['item_image_for_user'] = get_jvachka_orbit_clubnika_banan
-            context_dict['price_from_site_atb'] = store['orbit_polunica_banan']['atb']
-            context_dict['price_from_site_eko'] = store['orbit_polunica_banan']['eko']
-            context_dict['price_from_site_varus'] = store['orbit_polunica_banan']['varus']
-            context_dict['price_from_site_ashan'] = store['orbit_polunica_banan']['ashan']
-            context_dict['price_from_site_novus'] = store['orbit_polunica_banan']['novus']
-            context_dict['price_from_site_metro'] = store['orbit_polunica_banan']['metro']
-            context_dict['price_from_site_nash_kray'] = store['orbit_polunica_banan']['nash_kray']
-            context_dict['price_from_site_fozzy'] = store['orbit_polunica_banan']['fozzy']
-
-        elif context_dict['nn_answer'] == 'Сигареты LM красные':
-            context_dict['item_image_for_user'] = get_sigarets_LM_red
-            context_dict['price_from_site_ashan'] = store['sigarets_lm_red']['ashan']
-            context_dict['price_from_site_novus'] = store['sigarets_lm_red']['novus']
-            context_dict['price_from_site_fozzy'] = store['sigarets_lm_red']['fozzy']
-
-        elif context_dict['nn_answer'] == 'Кетчуп Торчин до шашлику 270 грамм':
-            context_dict['item_image_for_user'] = get_ketchup_torchin_do_shasliky_270gr
-            context_dict['price_from_site_eko'] = store['ketchup_torchin_do_shashliky_270gr']['eko']
-            context_dict['price_from_site_varus'] = store['ketchup_torchin_do_shashliky_270gr']['varus']
-            context_dict['price_from_site_silpo'] = store['ketchup_torchin_do_shashliky_270gr']['silpo']
-            context_dict['price_from_site_ashan'] = store['ketchup_torchin_do_shashliky_270gr']['ashan']
-            context_dict['price_from_site_novus'] = store['ketchup_torchin_do_shashliky_270gr']['novus']
-            context_dict['price_from_site_fozzy'] = store['ketchup_torchin_do_shashliky_270gr']['fozzy']
-
-        elif context_dict['nn_answer'] == 'Майонез Чумак аппетитный 50% 300 грамм':
-            context_dict['item_image_for_user'] = get_mayonez_chumak_appetitniy_50_300gr
-            context_dict['price_from_site_eko'] = store['mayonez_chumak_appetitniy_50_300gr']['eko']
-            context_dict['price_from_site_varus'] = store['mayonez_chumak_appetitniy_50_300gr']['varus']
-            context_dict['price_from_site_silpo'] = store['mayonez_chumak_appetitniy_50_300gr']['silpo']
-            context_dict['price_from_site_novus'] = store['mayonez_chumak_appetitniy_50_300gr']['novus']
-            context_dict['price_from_site_metro'] = store['mayonez_chumak_appetitniy_50_300gr']['metro']
-
-        elif context_dict['nn_answer'] == 'Колбаса Перша Столиця Салями Фирменная высший сорт':
-            context_dict['item_image_for_user'] = get_kolbasa_persha_stolica_salyami_firmova_vs
-
-        elif context_dict['nn_answer'] == 'Кофе Чорна Карта GOLD 50 грамм':
-            context_dict['item_image_for_user'] = get_cofee_chorna_karta_gold_50gr
-            context_dict['price_from_site_eko'] = store['coffee_chorna_karta_50gr']['eko']
-
-        elif context_dict['nn_answer'] == 'Пиво Zibert светлое 0,5 л в банке':
-            context_dict['item_image_for_user'] = get_beer_zibert_svitle_05_l_banochnoe
-            context_dict['price_from_site_atb'] = store['beer_zibert_svitle_05l_v_banke']['atb']
-            context_dict['price_from_site_eko'] = store['beer_zibert_svitle_05l_v_banke']['eko']
-            context_dict['price_from_site_varus'] = store['beer_zibert_svitle_05l_v_banke']['varus']
-            context_dict['price_from_site_novus'] = store['beer_zibert_svitle_05l_v_banke']['novus']
-            context_dict['price_from_site_metro'] = store['beer_zibert_svitle_05l_v_banke']['metro']
-
-        elif context_dict['nn_answer'] == 'Йогурт Фанни 240 грамм 1.5% лесовые ягоды':
-            context_dict['item_image_for_user'] = get_yogurt_fanni_lisovi_yagodi_1_5_240gr
-            context_dict['price_from_site_varus'] = store['yogurt_fanni_lisovi_yagodi_1_5_240gr_stakan']['varus']
-            context_dict['price_from_site_silpo'] = store['yogurt_fanni_lisovi_yagodi_1_5_240gr_stakan']['silpo']
-
-        elif context_dict['nn_answer'] == 'Кефир Славия 2,5% 850 грамм':
-            context_dict['item_image_for_user'] = get_kefir_slaviya_2_5_850gr
-
-        else:
-            context_dict['item_image_for_user'] = get_tea_minutka_black_40_b
-            context_dict['price_from_site_atb'] = store['tea_minutka']['atb']
-            context_dict['price_from_site_eko'] = store['tea_minutka']['eko']
-            context_dict['price_from_site_metro'] = store['tea_minutka']['metro']
-            # parser = ProductParserVol2()
-            # res_atb = parser.tea_minutka_black_40_b_parcer()[0]
-            # context_dict['price_from_site_atb'] = res_atb
-            # res_eko = parser.tea_minutka_black_40_b_parcer()[1]
-            # context_dict['price_from_site_eko'] = res_eko
-            # res_varus = parser.tea_minutka_black_40_b_parcer()[2]
-            # context_dict['price_from_site_varus'] = res_varus
+        # # подключение тэгов для отображние изображений товара:
+        # if context_dict['nn_answer'] == 'Пиво "Оболонь Премиум Экстра 1.1 л"':
+        #     context_dict['item_image_for_user'] = get_obolon_premium
+        #     # метод подключения к собственной базе данных цен
+        #     context_dict['price_from_site_atb'] = store['obolon_premium_1.1_l']['atb']
+        #     context_dict['price_from_site_eko'] = store['obolon_premium_1.1_l']['eko']
+        #     # метод подключения парсеров в режиме online
+        #     # parser = ProductParserVol2()
+        #     # res_atb = parser.obolon_premium_parser()[0]
+        #     # context_dict['price_from_site_atb'] = res_atb
+        #     # res_eko = parser.obolon_premium_parser()[1]
+        #     # context_dict['price_from_site_eko'] = res_eko
+        #     # res_varus = parser.obolon_premium_parser()[2]
+        #     # context_dict['price_from_site_varus'] = res_varus
+        #
+        # elif context_dict['nn_answer'] == 'Водка "Гетьман ICE 0,7 л"':
+        #     context_dict['item_image_for_user'] = get_hetman_ICE
+        #     context_dict['price_from_site_atb'] = store['vodka_hetman_ice_07']['atb']
+        #     # parser = ProductParserVol2()
+        #     # res_atb = parser.vodka_getman_ICE_parcer()[0]
+        #     # context_dict['price_from_site_atb'] = res_atb
+        #     # res_eko = parser.vodka_getman_ICE_parcer()[1]
+        #     # context_dict['price_from_site_eko'] = res_eko
+        #     # res_varus = parser.vodka_getman_ICE_parcer()[2]
+        #     # context_dict['price_from_site_varus'] = res_varus
+        #
+        # elif context_dict['nn_answer'] == 'Кофе растворимый "Aroma Gold Classic 100 грамм"':
+        #     context_dict['item_image_for_user'] = coffe_aroma_gold_classic_100gr
+        #     context_dict['price_from_site_eko'] = store['coffee_aroma_gold']['eko']
+        #     context_dict['price_from_site_fozzy'] = store['coffee_aroma_gold']['fozzy']
+        #     # parser = ProductParserVol2()
+        #     # res_atb=parser.coffee_aroma_gold_parcer()[0]
+        #     # context_dict['price_from_site_atb'] = res_atb
+        #     # res_eko = parser.coffee_aroma_gold_parcer()[1]
+        #     # context_dict['price_from_site_eko'] = res_eko
+        #     # res_varus = parser.coffee_aroma_gold_parcer()[2]
+        #     # context_dict['price_from_site_varus'] = res_varus
+        #
+        # elif context_dict['nn_answer'] == 'Масло подсолнечное "Щедрый Дар" 0,85 л':
+        #     context_dict['item_image_for_user'] = get_oil_shedriy_dar_085l
+        #     context_dict['price_from_site_atb'] = store['oil_shedriy_dar_raf_850']['atb']
+        #     context_dict['price_from_site_eko'] = store['oil_shedriy_dar_raf_850']['eko']
+        #     context_dict['price_from_site_varus'] = store['oil_shedriy_dar_raf_850']['varus']
+        #     context_dict['price_from_site_silpo'] = store['oil_shedriy_dar_raf_850']['silpo']
+        #     context_dict['price_from_site_ashan'] = store['oil_shedriy_dar_raf_850']['ashan']
+        #     context_dict['price_from_site_novus'] = store['oil_shedriy_dar_raf_850']['novus']
+        #     context_dict['price_from_site_metro'] = store['oil_shedriy_dar_raf_850']['metro']
+        #     context_dict['price_from_site_fozzy'] = store['oil_shedriy_dar_raf_850']['fozzy']
+        #     # parser = ProductParserVol2()
+        #     # res_atb = parser.oil_shedriy_dar_850_parcer()[0]
+        #     # context_dict['price_from_site_atb'] = res_atb
+        #     # res_eko = parser.oil_shedriy_dar_850_parcer()[1]
+        #     # context_dict['price_from_site_eko'] = res_eko
+        #     # res_varus = parser.oil_shedriy_dar_850_parcer()[2]
+        #     # context_dict['price_from_site_varus'] = res_varus
+        #     # res_silpo = parser.oil_shedriy_dar_850_parcer()[3]
+        #     # context_dict['price_from_site_silpo'] = res_silpo
+        #     # res_ashan = parser.oil_shedriy_dar_850_parcer()[4]
+        #     # context_dict['price_from_site_ashan'] = res_ashan
+        #
+        # elif context_dict['nn_answer'] == 'Яблоко Голден, 1 кг':
+        #     context_dict['item_image_for_user'] = get_apple_golden
+        #     context_dict['price_from_site_atb'] = store['apple_golden']['atb']
+        #     context_dict['price_from_site_eko'] = store['apple_golden']['eko']
+        #     context_dict['price_from_site_varus'] = store['apple_golden']['varus']
+        #     context_dict['price_from_site_silpo'] = store['apple_golden']['silpo']
+        #     context_dict['price_from_site_metro'] = store['apple_golden']['metro']
+        #     context_dict['price_from_site_nash_kray'] = store['apple_golden']['nash_kray']
+        #     context_dict['price_from_site_fozzy'] = store['apple_golden']['fozzy']
+        #     # parser = ProductParserVol2()
+        #     # res_atb = parser.apple_golden_parcer()[0]
+        #     # context_dict['price_from_site_atb'] = res_atb
+        #     # res_eko = parser.apple_golden_parcer()[1]
+        #     # context_dict['price_from_site_eko'] = res_eko
+        #     # res_varus = parser.apple_golden_parcer()[2]
+        #     # context_dict['price_from_site_varus'] = res_varus
+        #     # res_silpo = parser.apple_golden_parcer()[3]
+        #     # context_dict['price_from_site_silpo'] = res_silpo
+        #
+        # elif context_dict['nn_answer'] == 'Напиток безалкогольный "Coca-Cola" 2 л':
+        #     context_dict['item_image_for_user'] = get_coca_cola_2l
+        #     context_dict['price_from_site_atb'] = store['coca_cola_2l']['atb']
+        #     context_dict['price_from_site_eko'] = store['coca_cola_2l']['eko']
+        #     context_dict['price_from_site_varus'] = store['coca_cola_2l']['varus']
+        #     context_dict['price_from_site_silpo'] = store['coca_cola_2l']['silpo']
+        #     context_dict['price_from_site_ashan'] = store['coca_cola_2l']['ashan']
+        #     context_dict['price_from_site_novus'] = store['coca_cola_2l']['novus']
+        #     context_dict['price_from_site_metro'] = store['coca_cola_2l']['metro']
+        #     context_dict['price_from_site_nash_kray'] = store['coca_cola_2l']['nash_kray']
+        #     context_dict['price_from_site_fozzy'] = store['coca_cola_2l']['fozzy']
+        #     # parser = ProductParserVol2()
+        #     # res_atb = parser.coca_cola_2l_parcer()[0]
+        #     # context_dict['price_from_site_atb'] = res_atb
+        #     # res_eko = parser.coca_cola_2l_parcer()[1]
+        #     # context_dict['price_from_site_eko'] = res_eko
+        #     # res_varus = parser.coca_cola_2l_parcer()[2]
+        #     # context_dict['price_from_site_varus'] = res_varus
+        #     # res_silpo = parser.coca_cola_2l_parcer()[3]
+        #     # context_dict['price_from_site_silpo'] = res_silpo
+        #     # res_ashan = parser.coca_cola_2l_parcer()[4]
+        #     # context_dict['price_from_site_ashan'] = res_ashan
+        #
+        # elif context_dict['nn_answer'] == 'Сырок плавленный "Комо Паприкаш"':
+        #     context_dict['item_image_for_user'] = get_KOMO_paprikash
+        #     context_dict['price_from_site_novus'] = store['sir_plavlenniy_komo_paprikash']['novus']
+        #     context_dict['price_from_site_metro'] = store['sir_plavlenniy_komo_paprikash']['metro']
+        #     context_dict['price_from_site_nash_kray'] = store['sir_plavlenniy_komo_paprikash']['nash_kray']
+        #     context_dict['price_from_site_fozzy'] = store['sir_plavlenniy_komo_paprikash']['fozzy']
+        #
+        # elif context_dict['nn_answer'] == 'Сигареты "Kent 8"':
+        #     context_dict['item_image_for_user'] = get_sigarets_kent_8
+        #     context_dict['price_from_site_atb'] = store['sigarets_kent_8']['atb']
+        #     context_dict['price_from_site_eko'] = store['sigarets_kent_8']['eko']
+        #     context_dict['price_from_site_varus'] = store['sigarets_kent_8']['varus']
+        #     context_dict['price_from_site_silpo'] = store['sigarets_kent_8']['silpo']
+        #     context_dict['price_from_site_ashan'] = store['sigarets_kent_8']['ashan']
+        #     context_dict['price_from_site_novus'] = store['sigarets_kent_8']['novus']
+        #     context_dict['price_from_site_fozzy'] = store['sigarets_kent_8']['fozzy']
+        #     # parser = ProductParserVol2()
+        #     # res_atb = parser.kent_8_parcer()[0]
+        #     # context_dict['price_from_site_atb'] = res_atb
+        #     # res_eko = parser.kent_8_parcer()[1]
+        #     # context_dict['price_from_site_eko'] = res_eko
+        #     # res_varus = parser.kent_8_parcer()[2]
+        #     # context_dict['price_from_site_varus'] = res_varus
+        #     # res_silpo = parser.kent_8_parcer()[3]
+        #     # context_dict['price_from_site_silpo'] = res_silpo
+        #
+        # elif context_dict['nn_answer'] == 'Чеснок, кг':
+        #     context_dict['item_image_for_user'] = get_garlik
+        #     context_dict['price_from_site_atb'] = store['garlik']['atb']
+        #     context_dict['price_from_site_eko'] = store['garlik']['eko']
+        #     context_dict['price_from_site_varus'] = store['garlik']['varus']
+        #     context_dict['price_from_site_silpo'] = store['garlik']['silpo']
+        #     context_dict['price_from_site_novus'] = store['garlik']['novus']
+        #     context_dict['price_from_site_nash_kray'] = store['garlik']['nash_kray']
+        #     context_dict['price_from_site_fozzy'] = store['garlik']['fozzy']
+        #     # parser = ProductParserVol2()
+        #     # res_atb = parser.garlik_parcer()[0]
+        #     # context_dict['price_from_site_atb'] = res_atb
+        #     # res_eko = parser.garlik_parcer()[1]
+        #     # context_dict['price_from_site_eko'] = res_eko
+        #     # res_varus = parser.garlik_parcer()[2]
+        #     # context_dict['price_from_site_varus'] = res_varus
+        #     # res_silpo = parser.garlik_parcer()[3]
+        #     # context_dict['price_from_site_silpo'] = res_silpo
+        #
+        # elif context_dict['nn_answer'] == 'Моющее средство Fairy':
+        #     context_dict['item_image_for_user'] = get_fairy_500_lime
+        #     context_dict['price_from_site_atb'] = store['fairy_limon_500']['atb']
+        #     context_dict['price_from_site_eko'] = store['fairy_limon_500']['eko']
+        #     context_dict['price_from_site_varus'] = store['fairy_limon_500']['varus']
+        #     context_dict['price_from_site_silpo'] = store['fairy_limon_500']['silpo']
+        #     context_dict['price_from_site_novus'] = store['fairy_limon_500']['novus']
+        #     context_dict['price_from_site_metro'] = store['fairy_limon_500']['metro']
+        #     context_dict['price_from_site_fozzy'] = store['fairy_limon_500']['fozzy']
+        #     # parser = ProductParserVol2()
+        #     # res_atb = parser.fairy_limon_500_parcer()[0]
+        #     # context_dict['price_from_site_atb'] = res_atb
+        #     # res_eko = parser.fairy_limon_500_parcer()[1]
+        #     # context_dict['price_from_site_eko'] = res_eko
+        #     # res_varus = parser.fairy_limon_500_parcer()[2]
+        #     # context_dict['price_from_site_varus'] = res_varus
+        #     # res_silpo = parser.fairy_limon_500_parcer()[3]
+        #     # context_dict['price_from_site_silpo'] = res_silpo
+        #
+        # elif context_dict['nn_answer'] == 'Лук, 1 кг':
+        #     context_dict['item_image_for_user'] = get_onion
+        #     context_dict['price_from_site_atb'] = store['onion']['atb']
+        #     context_dict['price_from_site_eko'] = store['onion']['eko']
+        #     context_dict['price_from_site_varus'] = store['onion']['varus']
+        #     context_dict['price_from_site_silpo'] = store['onion']['silpo']
+        #     context_dict['price_from_site_novus'] = store['onion']['novus']
+        #     context_dict['price_from_site_metro'] = store['onion']['metro']
+        #     context_dict['price_from_site_nash_kray'] = store['onion']['nash_kray']
+        #     context_dict['price_from_site_fozzy'] = store['onion']['fozzy']
+        #     # parser = ProductParserVol2()
+        #     # res_atb = parser.onion_parcer()[0]
+        #     # context_dict['price_from_site_atb'] = res_atb
+        #     # res_eko = parser.onion_parcer()[1]
+        #     # context_dict['price_from_site_eko'] = res_eko
+        #     # res_varus = parser.onion_parcer()[2]
+        #     # context_dict['price_from_site_varus'] = res_varus
+        #     # res_silpo=parser.onion_parcer()[3]
+        #     # context_dict['price_from_site_silpo'] = res_silpo
+        #
+        # elif context_dict['nn_answer'] == 'Яблоко "Черный принц"':
+        #     context_dict['item_image_for_user'] = get_apple_black_prince
+        #     context_dict['price_from_site_atb'] = store['apple_black_prince']['atb']
+        #     context_dict['price_from_site_eko'] = store['apple_black_prince']['eko']
+        #     context_dict['price_from_site_varus'] = store['apple_black_prince']['varus']
+        #     context_dict['price_from_site_silpo'] = store['apple_black_prince']['silpo']
+        #     context_dict['price_from_site_metro'] = store['apple_black_prince']['metro']
+        #     context_dict['price_from_site_fozzy'] = store['apple_black_prince']['fozzy']
+        #     # parser = ProductParserVol2()
+        #     # res_atb = parser.apple_black_prince_parcer()[0]
+        #     # context_dict['price_from_site_atb'] = res_atb
+        #     # res_eko = parser.apple_black_prince_parcer()[1]
+        #     # context_dict['price_from_site_eko'] = res_eko
+        #     # res_varus = parser.apple_black_prince_parcer()[2]
+        #     # context_dict['price_from_site_varus'] = res_varus
+        #     # res_silpo = parser.apple_black_prince_parcer()[3]
+        #     # context_dict['price_from_site_silpo'] = res_silpo
+        #
+        # elif context_dict['nn_answer'] == 'Сметана "Столица Смаку" 20% 400 гр':
+        #     context_dict['item_image_for_user'] = get_smetana_stolica_smaky_20_400gr
+        #     context_dict['price_from_site_varus'] = store['smetana_stol_smaky_20%']['varus']
+        #     # parser = ProductParserVol2()
+        #     # res_atb = parser.smetana_stolica_smaky_400_20()[0]
+        #     # context_dict['price_from_site_atb'] = res_atb
+        #     # res_eko = parser.smetana_stolica_smaky_400_20()[1]
+        #     # context_dict['price_from_site_eko'] = res_eko
+        #     # res_varus = parser.smetana_stolica_smaky_400_20()[2]
+        #     # context_dict['price_from_site_varus'] = res_varus
+        #
+        # elif context_dict['nn_answer'] == 'Горчица "Колос"':
+        #     context_dict['item_image_for_user'] = get_gorchica_kolos
+        #     # нет на сайтах
+        #
+        # elif context_dict['nn_answer'] == 'Лимон, кг':
+        #     context_dict['item_image_for_user'] = get_limon
+        #     context_dict['price_from_site_atb'] = store['limon']['atb']
+        #     context_dict['price_from_site_eko'] = store['limon']['eko']
+        #     context_dict['price_from_site_varus'] = store['limon']['varus']
+        #     context_dict['price_from_site_silpo'] = store['limon']['silpo']
+        #     context_dict['price_from_site_novus'] = store['limon']['novus']
+        #     context_dict['price_from_site_metro'] = store['limon']['metro']
+        #     context_dict['price_from_site_nash_kray'] = store['limon']['nash_kray']
+        #     context_dict['price_from_site_fozzy'] = store['limon']['fozzy']
+        #     # parser = ProductParserVol2()
+        #     # res_atb = parser.limon_parcer()[0]
+        #     # context_dict['price_from_site_atb'] = res_atb
+        #     # res_eko = parser.limon_parcer()[1]
+        #     # context_dict['price_from_site_eko'] = res_eko
+        #     # res_varus = parser.limon_parcer()[2]
+        #     # context_dict['price_from_site_varus'] = res_varus
+        #     # res_silpo = parser.limon_parcer()[3]
+        #     # context_dict['price_from_site_silpo'] = res_silpo
+        #
+        # elif context_dict['nn_answer'] == 'Масло подсолнечное "Олейна" нерафинированное, 850 гр':
+        #     context_dict['item_image_for_user'] = get_oil_oleyna_neraf_850
+        #     context_dict['price_from_site_eko'] = store['oil_oleyna_neraf_850']['eko']
+        #     context_dict['price_from_site_ashan'] = store['oil_oleyna_neraf_850']['ashan']
+        #     # parser = ProductParserVol2()
+        #     # res_atb = parser.oil_oleyna_neraf_850_parcer()[0]
+        #     # context_dict['price_from_site_atb'] = res_atb
+        #     # res_eko = parser.oil_oleyna_neraf_850_parcer()[1]
+        #     # context_dict['price_from_site_eko'] = res_eko
+        #     # res_varus = parser.oil_oleyna_neraf_850_parcer()[2]
+        #     # context_dict['price_from_site_varus'] = res_varus
+        #
+        # elif context_dict['nn_answer'] == 'Дрожжи "Харьковские", 100 гр':
+        #     context_dict['item_image_for_user'] = get_drojji_hark
+        #     # out of stock
+        #
+        # elif context_dict['nn_answer'] == 'Чай черный "Мономах Кения", 90 гр':
+        #     context_dict['item_image_for_user'] = get_tea_monomah_kenya
+        #     context_dict['price_from_site_eko'] = store['tea_monomah_kenya_90']['eko']
+        #     # parser = ProductParserVol2()
+        #     # res_atb = parser.tea_monomah_black_kenya_90_parcer()[0]
+        #     # context_dict['price_from_site_atb'] = res_atb
+        #     # res_eko = parser.tea_monomah_black_kenya_90_parcer()[1]
+        #     # context_dict['price_from_site_eko'] = res_eko
+        #     # res_varus = parser.tea_monomah_black_kenya_90_parcer()[2]
+        #     # context_dict['price_from_site_varus'] = res_varus
+        #
+        # elif context_dict['nn_answer'] == 'Пена для бритья "Arko Cool" 300 гр+100':
+        #     context_dict['item_image_for_user'] = get_arko_cool_300_100
+        #     context_dict['price_from_site_atb'] = store['arko_cool_200']['atb']
+        #     context_dict['price_from_site_eko'] = store['arko_cool_200']['eko']
+        #     context_dict['price_from_site_varus'] = store['arko_cool_200']['varus']
+        #     context_dict['price_from_site_silpo'] = store['arko_cool_200']['silpo']
+        #     context_dict['price_from_site_ashan'] = store['arko_cool_200']['ashan']
+        #     context_dict['price_from_site_novus'] = store['arko_cool_200']['novus']
+        #     context_dict['price_from_site_metro'] = store['arko_cool_200']['metro']
+        #     context_dict['price_from_site_fozzy'] = store['arko_cool_200']['fozzy']
+        #     # parser = ProductParserVol2()
+        #     # res_atb = parser.arko_cool_200_bonus100_parcer()[0]
+        #     # context_dict['price_from_site_atb'] = res_atb
+        #     # res_eko = parser.arko_cool_200_bonus100_parcer()[1]
+        #     # context_dict['price_from_site_eko'] = res_eko
+        #     # res_varus = parser.arko_cool_200_bonus100_parcer()[2]
+        #     # context_dict['price_from_site_varus'] = res_varus
+        #     # res_silpo = parser.arko_cool_200_bonus100_parcer()[3]
+        #     # context_dict['price_from_site_silpo'] = res_silpo
+        #
+        # elif context_dict['nn_answer'] == 'Пена для бритья "Arko Sensitive" 300 гр+100':
+        #     context_dict['item_image_for_user'] = get_arko_sensitive_300_100
+        #     context_dict['price_from_site_atb'] = store['arko_sensitive_200']['atb']
+        #     context_dict['price_from_site_eko'] = store['arko_sensitive_200']['eko']
+        #     context_dict['price_from_site_varus'] = store['arko_sensitive_200']['varus']
+        #     context_dict['price_from_site_silpo'] = store['arko_sensitive_200']['silpo']
+        #     context_dict['price_from_site_ashan'] = store['arko_sensitive_200']['ashan']
+        #     context_dict['price_from_site_novus'] = store['arko_sensitive_200']['novus']
+        #     context_dict['price_from_site_metro'] = store['arko_sensitive_200']['metro']
+        #     context_dict['price_from_site_nash_kray'] = store['arko_sensitive_200']['nash_kray']
+        #     context_dict['price_from_site_fozzy'] = store['arko_sensitive_200']['fozzy']
+        #     # parser = ProductParserVol2()
+        #     # res_atb = parser.arko_sensitive_200_bonus100_parcer()[0]
+        #     # context_dict['price_from_site_atb'] = res_atb
+        #     # res_eko = parser.arko_sensitive_200_bonus100_parcer()[1]
+        #     # context_dict['price_from_site_eko'] = res_eko
+        #     # res_varus = parser.arko_sensitive_200_bonus100_parcer()[2]
+        #     # context_dict['price_from_site_varus'] = res_varus
+        #     # res_silpo = parser.arko_sensitive_200_bonus100_parcer()[3]
+        #     # context_dict['price_from_site_silpo'] = res_silpo
+        #
+        # elif context_dict['nn_answer'] == "Морковь, кг":
+        #     context_dict['item_image_for_user'] = get_carrot
+        #     context_dict['price_from_site_atb'] = store['carrot']['atb']
+        #     context_dict['price_from_site_eko'] = store['carrot']['eko']
+        #     context_dict['price_from_site_varus'] = store['carrot']['varus']
+        #     context_dict['price_from_site_silpo'] = store['carrot']['silpo']
+        #     context_dict['price_from_site_novus'] = store['carrot']['novus']
+        #     context_dict['price_from_site_metro'] = store['carrot']['metro']
+        #     context_dict['price_from_site_nash_kray'] = store['carrot']['nash_kray']
+        #     context_dict['price_from_site_fozzy'] = store['carrot']['fozzy']
+        #     # parser = ProductParserVol2()
+        #     # res_atb = parser.carrot_parcer()[0]
+        #     # context_dict['price_from_site_atb'] = res_atb
+        #     # res_eko = parser.carrot_parcer()[1]
+        #     # context_dict['price_from_site_eko'] = res_eko
+        #     # res_varus = parser.carrot_parcer()[2]
+        #     # context_dict['price_from_site_varus'] = res_varus
+        #     # res_silpo = parser.carrot_parcer()[3]
+        #     # context_dict['price_from_site_silpo'] = res_silpo
+        #
+        # elif context_dict['nn_answer'] == 'Капуста белокачанная, кг':
+        #     context_dict['item_image_for_user'] = get_cabbage
+        #     context_dict['price_from_site_atb'] = store['cabbage']['atb']
+        #     context_dict['price_from_site_eko'] = store['cabbage']['eko']
+        #     context_dict['price_from_site_varus'] = store['cabbage']['varus']
+        #     context_dict['price_from_site_silpo'] = store['cabbage']['silpo']
+        #     context_dict['price_from_site_novus'] = store['cabbage']['novus']
+        #     context_dict['price_from_site_metro'] = store['cabbage']['metro']
+        #     context_dict['price_from_site_nash_kray'] = store['cabbage']['nash_kray']
+        #     context_dict['price_from_site_fozzy'] = store['cabbage']['fozzy']
+        #     # parser = ProductParserVol2()
+        #     # res_atb = parser.cabbage_parcer()[0]
+        #     # context_dict['price_from_site_atb'] = res_atb
+        #     # res_eko = parser.cabbage_parcer()[1]
+        #     # context_dict['price_from_site_eko'] = res_eko
+        #     # res_varus = parser.cabbage_parcer()[2]
+        #     # context_dict['price_from_site_varus'] = res_varus
+        #     # res_silpo = parser.cabbage_parcer()[3]
+        #     # context_dict['price_from_site_silpo'] = res_silpo
+        #
+        # elif context_dict['nn_answer'] == 'Яйца куринные, 10 шт':
+        #     context_dict['item_image_for_user'] = get_chicken_eggs
+        #     context_dict['price_from_site_atb'] = store['eggs']['atb']
+        #     context_dict['price_from_site_eko'] = store['eggs']['eko']
+        #     context_dict['price_from_site_varus'] = store['eggs']['varus']
+        #     context_dict['price_from_site_silpo'] = store['eggs']['silpo']
+        #     context_dict['price_from_site_ashan'] = store['eggs']['ashan']
+        #     context_dict['price_from_site_novus'] = store['eggs']['novus']
+        #     context_dict['price_from_site_metro'] = store['eggs']['metro']
+        #     context_dict['price_from_site_nash_kray'] = store['eggs']['nash_kray']
+        #     context_dict['price_from_site_fozzy'] = store['eggs']['fozzy']
+        #     # parser = ProductParserVol2()
+        #     # res_atb = parser.egg_parcer()[0]
+        #     # context_dict['price_from_site_atb'] = res_atb
+        #     # res_eko = parser.egg_parcer()[1]
+        #     # context_dict['price_from_site_eko'] = res_eko
+        #     # res_varus = parser.egg_parcer()[2]
+        #     # context_dict['price_from_site_varus'] = res_varus
+        #     # res_silpo = parser.egg_parcer()[3]
+        #     # context_dict['price_from_site_silpo'] = res_silpo
+        #
+        # elif context_dict['nn_answer'] == 'Майонез домашний детский "Щедро" 67%':
+        #     context_dict['item_image_for_user'] = get_mayonez_dom_detsk_shedro_67
+        #     context_dict['price_from_site_atb'] = store['mayonez_detsk_shedro_67%']['atb']
+        #     context_dict['price_from_site_eko'] = store['mayonez_detsk_shedro_67%']['eko']
+        #     context_dict['price_from_site_varus'] = store['mayonez_detsk_shedro_67%']['varus']
+        #     context_dict['price_from_site_silpo'] = store['mayonez_detsk_shedro_67%']['silpo']
+        #     context_dict['price_from_site_metro'] = store['mayonez_detsk_shedro_67%']['metro']
+        #     context_dict['price_from_site_fozzy'] = store['mayonez_detsk_shedro_67%']['fozzy']
+        #     # parser = ProductParserVol2()
+        #     # res_atb = parser.mayonez_detsk_shedro_67_parcer()[0]
+        #     # context_dict['price_from_site_atb'] = res_atb
+        #     # res_eko = parser.mayonez_detsk_shedro_67_parcer()[1]
+        #     # context_dict['price_from_site_eko'] = res_eko
+        #     # res_varus = parser.mayonez_detsk_shedro_67_parcer()[2]
+        #     # context_dict['price_from_site_varus'] = res_varus
+        #     # res_silpo = parser.mayonez_detsk_shedro_67_parcer()[3]
+        #     # context_dict['price_from_site_silpo'] = res_silpo
+        #
+        # elif context_dict['nn_answer'] == 'Дезодорант "Rexona Aloe Vera" женский':
+        #     context_dict['item_image_for_user'] = get_reksona_aloe_vera_w
+        #     context_dict['price_from_site_eko'] = store['rexona_aloe_vera']['eko']
+        #     context_dict['price_from_site_ashan'] = store['rexona_aloe_vera']['ashan']
+        #     # parser = ProductParserVol2()
+        #     # res_atb = parser.rexona_aloe_vera_w_parcer()[0]
+        #     # context_dict['price_from_site_atb'] = res_atb
+        #     # res_eko = parser.rexona_aloe_vera_w_parcer()[1]
+        #     # context_dict['price_from_site_eko'] = res_eko
+        #     # res_varus = parser.rexona_aloe_vera_w_parcer()[2]
+        #     # context_dict['price_from_site_varus'] = res_varus
+        #
+        # elif context_dict['nn_answer'] == 'Туалетная бумага "Киев" 63 м':
+        #     context_dict['item_image_for_user'] = get_toilet_papir_kiev_63m
+        #     # out of stock
+        #
+        # elif context_dict['nn_answer'] == 'Сигареты Marlboro red':
+        #     context_dict['item_image_for_user'] = get_marlboro_red
+        #     context_dict['price_from_site_atb'] = store['marlboro_red']['atb']
+        #     context_dict['price_from_site_eko'] = store['marlboro_red']['eko']
+        #     context_dict['price_from_site_varus'] = store['marlboro_red']['varus']
+        #     context_dict['price_from_site_silpo'] = store['marlboro_red']['silpo']
+        #     context_dict['price_from_site_ashan'] = store['marlboro_red']['ashan']
+        #     context_dict['price_from_site_novus'] = store['marlboro_red']['novus']
+        #     context_dict['price_from_site_fozzy'] = store['marlboro_red']['fozzy']
+        #     # parser = ProductParserVol2()
+        #     # res_atb = parser.marloboro_red_parcer()[0]
+        #     # context_dict['price_from_site_atb'] = res_atb
+        #     # res_eko = parser.marloboro_red_parcer()[1]
+        #     # context_dict['price_from_site_eko'] = res_eko
+        #     # res_varus = parser.marloboro_red_parcer()[2]
+        #     # context_dict['price_from_site_varus'] = res_varus
+        #     # res_silpo = parser.marloboro_red_parcer()[3]
+        #     # context_dict['price_from_site_silpo'] = res_silpo
+        #     # res_ashan = parser.marloboro_red_parcer()[4]
+        #     # context_dict['price_from_site_ashan'] = res_ashan
+        #
+        # elif context_dict['nn_answer'] == 'Пиво "Львовское светлое", 2.4 литра':
+        #     context_dict['item_image_for_user'] = get_pivo_lvivske_svitle
+        #     context_dict['price_from_site_varus'] = store['beer_lvivske_svetl_2.4 l']['varus']
+        #     context_dict['price_from_site_silpo'] = store['beer_lvivske_svetl_2.4 l']['silpo']
+        #     context_dict['price_from_site_ashan'] = store['beer_lvivske_svetl_2.4 l']['ashan']
+        #     context_dict['price_from_site_fozzy'] = store['beer_lvivske_svetl_2.4 l']['fozzy']
+        #     # parser = ProductParserVol2()
+        #     # res_atb = parser.beer_lvivske_svitle_24l()[0]
+        #     # context_dict['price_from_site_atb'] = res_atb
+        #     # res_eko = parser.beer_lvivske_svitle_24l()[1]
+        #     # context_dict['price_from_site_eko'] = res_eko
+        #     # res_varus = parser.beer_lvivske_svitle_24l()[2]
+        #     # context_dict['price_from_site_varus'] = res_varus
+        #     # res_silpo = parser.beer_lvivske_svitle_24l()[3]
+        #     # context_dict['price_from_site_silpo'] = res_silpo
+        #
+        # elif context_dict['nn_answer'] == 'Сметана Столица Смаку 400 гр 15% жирности':
+        #     context_dict['item_image_for_user'] = get_smetana_stol_smaku_400_15
+        #     context_dict['price_from_site_varus'] = store['smetana_stol_smaky_15%']['varus']
+        #     # parser = ProductParserVol2()
+        #     # res_atb = parser.smetana_stolica_smaky_400_15_parcer()[0]
+        #     # context_dict['price_from_site_atb'] = res_atb
+        #     # res_eko = parser.smetana_stolica_smaky_400_15_parcer()[1]
+        #     # context_dict['price_from_site_eko'] = res_eko
+        #     # res_varus = parser.smetana_stolica_smaky_400_15_parcer()[2]
+        #     # context_dict['price_from_site_varus'] = res_varus
+        #
+        # elif context_dict['nn_answer'] == 'Дезодорант Garnier Магний мужской':
+        #     context_dict['item_image_for_user'] = get_dezodorant_garnier_magniy_m
+        #     context_dict['price_from_site_silpo'] = store['desodorant_garnier_man']['silpo']
+        #     context_dict['price_from_site_fozzy'] = store['desodorant_garnier_man']['fozzy']
+        #     # parser = ProductParserVol2()
+        #     # res_silpo =parser.desodorant_garnier_magniy_man_parser()[3]
+        #     # context_dict['price_from_site_silpo'] = res_silpo
+        #
+        # elif context_dict['nn_answer'] == 'Чай Мономах Цейлон черный':
+        #     context_dict['item_image_for_user'] = get_tea_monomah_ceylon_black
+        #
+        # elif context_dict['nn_answer'] == 'Кофе Арома Голд Freeze Dried 70 грамм':
+        #     context_dict['item_image_for_user'] = get_coffee_aroma_gold_freeze_dried_70
+        #     context_dict['price_from_site_eko'] = store['cofee_aroma_gold_freeze_dried_70g']['eko']
+        #     context_dict['price_from_site_silpo'] = store['cofee_aroma_gold_freeze_dried_70g']['silpo']
+        #     context_dict['price_from_site_nash_kray'] = store['cofee_aroma_gold_freeze_dried_70g']['nash_kray']
+        #
+        # elif context_dict['nn_answer'] == 'Горчица Верес украинска мицна 120 грамм':
+        #     context_dict['item_image_for_user'] = get_gorchica_veres_micna_ukr_120g
+        #     context_dict['price_from_site_silpo'] = store['gorchica_veres_ukrainska_micna_120g']['silpo']
+        #     context_dict['price_from_site_novus'] = store['gorchica_veres_ukrainska_micna_120g']['novus']
+        #     context_dict['price_from_site_metro'] = store['gorchica_veres_ukrainska_micna_120g']['metro']
+        #
+        # elif context_dict['nn_answer'] == 'Чай Мономах 100% Цейлон Original черный крупнолистовой':
+        #     context_dict['item_image_for_user'] = get_tea_monomah_original_ceylon_90g
+        #
+        # elif context_dict['nn_answer'] == 'Дезодорант Garnier весенняя свежесть':
+        #     context_dict['item_image_for_user'] = get_desodorant_garnier_spring_spirit
+        #     context_dict['price_from_site_silpo'] = store['desodorant_garnier_spring_spirit']['silpo']
+        #     context_dict['price_from_site_novus'] = store['desodorant_garnier_spring_spirit']['novus']
+        #     context_dict['price_from_site_metro'] = store['desodorant_garnier_spring_spirit']['metro']
+        #     context_dict['price_from_site_fozzy'] = store['desodorant_garnier_spring_spirit']['fozzy']
+        #
+        # elif context_dict['nn_answer'] == 'Яблоко Гала, кг':
+        #     context_dict['item_image_for_user'] = get_apple_gala
+        #     context_dict['price_from_site_atb'] = store['apple_gala']['atb']
+        #     context_dict['price_from_site_eko'] = store['apple_gala']['eko']
+        #     context_dict['price_from_site_varus'] = store['apple_gala']['varus']
+        #     context_dict['price_from_site_silpo'] = store['apple_gala']['silpo']
+        #     context_dict['price_from_site_novus'] = store['apple_gala']['novus']
+        #     context_dict['price_from_site_metro'] = store['apple_gala']['metro']
+        #     context_dict['price_from_site_fozzy'] = store['apple_gala']['fozzy']
+        #
+        # elif context_dict['nn_answer'] == 'Сметана Галичанская 15% 370 грамм':
+        #     context_dict['item_image_for_user'] = get_smetana_galichanska_15_370gr
+        #     context_dict['price_from_site_atb'] = store['smetana_galichanska_15_370gr']['atb']
+        #     context_dict['price_from_site_eko'] = store['smetana_galichanska_15_370gr']['eko']
+        #     context_dict['price_from_site_novus'] = store['smetana_galichanska_15_370gr']['novus']
+        #     context_dict['price_from_site_metro'] = store['smetana_galichanska_15_370gr']['metro']
+        #     context_dict['price_from_site_fozzy'] = store['smetana_galichanska_15_370gr']['fozzy']
+        #
+        # elif context_dict['nn_answer'] == 'Чипсы Lays с солью большая пачка 30 грамм':
+        #     context_dict['item_image_for_user'] = get_chips_lays_salt_big_pack_30g
+        #     context_dict['price_from_site_eko'] = store['chips_lays_with_salt_big_pack']['eko']
+        #     context_dict['price_from_site_fozzy'] = store['chips_lays_with_salt_big_pack']['fozzy']
+        #
+        # elif context_dict['nn_answer'] == 'Напиток Sprite 2 литра':
+        #     context_dict['item_image_for_user'] = get_sprite_2l
+        #     context_dict['price_from_site_eko'] = store['sprite_2l']['eko']
+        #     context_dict['price_from_site_varus'] = store['sprite_2l']['varus']
+        #     context_dict['price_from_site_silpo'] = store['sprite_2l']['silpo']
+        #     context_dict['price_from_site_ashan'] = store['sprite_2l']['ashan']
+        #     context_dict['price_from_site_novus'] = store['sprite_2l']['novus']
+        #     context_dict['price_from_site_metro'] = store['sprite_2l']['metro']
+        #     context_dict['price_from_site_nash_kray'] = store['sprite_2l']['nash_kray']
+        #     context_dict['price_from_site_fozzy'] = store['sprite_2l']['fozzy']
+        #
+        # elif context_dict['nn_answer'] == 'Напиток Fanta 2 литра':
+        #     context_dict['item_image_for_user'] = get_fanta_2l
+        #     context_dict['price_from_site_eko'] = store['fanta_2l']['eko']
+        #     context_dict['price_from_site_varus'] = store['fanta_2l']['varus']
+        #     context_dict['price_from_site_silpo'] = store['fanta_2l']['silpo']
+        #     context_dict['price_from_site_ashan'] = store['fanta_2l']['ashan']
+        #     context_dict['price_from_site_novus'] = store['fanta_2l']['novus']
+        #     context_dict['price_from_site_metro'] = store['fanta_2l']['metro']
+        #     context_dict['price_from_site_nash_kray'] = store['fanta_2l']['nash_kray']
+        #     context_dict['price_from_site_fozzy'] = store['fanta_2l']['fozzy']
+        #
+        # elif context_dict['nn_answer'] == 'Кетчуп Торчин с чесноком 270 гр':
+        #     context_dict['item_image_for_user'] = get_ketchup_torchin_s_chesnokom
+        #     context_dict['price_from_site_eko'] = store['ketchup_torchin_s_chasnikom_270gr']['eko']
+        #     context_dict['price_from_site_varus'] = store['ketchup_torchin_s_chasnikom_270gr']['varus']
+        #     context_dict['price_from_site_metro'] = store['ketchup_torchin_s_chasnikom_270gr']['metro']
+        #     context_dict['price_from_site_fozzy'] = store['ketchup_torchin_s_chasnikom_270gr']['fozzy']
+        #
+        # elif context_dict['nn_answer'] == 'Майонез Королевский Смак королевский 67 % 300 гр':
+        #     context_dict['item_image_for_user'] = get_mayonez_korolivkiy_smak_korolivskiy_67_300gr
+        #     context_dict['price_from_site_atb'] = store['mayonez_korolivskiy_smak_korolivskiy_67_300gr']['atb']
+        #     context_dict['price_from_site_eko'] = store['mayonez_korolivskiy_smak_korolivskiy_67_300gr']['eko']
+        #     context_dict['price_from_site_varus'] = store['mayonez_korolivskiy_smak_korolivskiy_67_300gr']['varus']
+        #     context_dict['price_from_site_novus'] = store['mayonez_korolivskiy_smak_korolivskiy_67_300gr']['novus']
+        #     context_dict['price_from_site_metro'] = store['mayonez_korolivskiy_smak_korolivskiy_67_300gr']['metro']
+        #     context_dict['price_from_site_fozzy'] = store['mayonez_korolivskiy_smak_korolivskiy_67_300gr']['fozzy']
+        #
+        # elif context_dict['nn_answer'] == 'Мука ЗОЛОТЕ ЗЕРНЯТКО пшеничное 2 кг':
+        #     context_dict['item_image_for_user'] = get_muka_zolote_zernyatko_pshenichne_2kg
+        #
+        # elif context_dict['nn_answer'] == 'Соус Чумак чесночный 200 грамм':
+        #     context_dict['item_image_for_user'] = get_sous_torchin_chesnochniy_200gr
+        #     context_dict['price_from_site_eko'] = store['sous_chumak_chesnochniy_200gr']['eko']
+        #     context_dict['price_from_site_varus'] = store['sous_chumak_chesnochniy_200gr']['varus']
+        #     context_dict['price_from_site_novus'] = store['sous_chumak_chesnochniy_200gr']['novus']
+        #
+        # elif context_dict['nn_answer'] == 'Жвачка Orbit полуниця-банан':
+        #     context_dict['item_image_for_user'] = get_jvachka_orbit_clubnika_banan
+        #     context_dict['price_from_site_atb'] = store['orbit_polunica_banan']['atb']
+        #     context_dict['price_from_site_eko'] = store['orbit_polunica_banan']['eko']
+        #     context_dict['price_from_site_varus'] = store['orbit_polunica_banan']['varus']
+        #     context_dict['price_from_site_ashan'] = store['orbit_polunica_banan']['ashan']
+        #     context_dict['price_from_site_novus'] = store['orbit_polunica_banan']['novus']
+        #     context_dict['price_from_site_metro'] = store['orbit_polunica_banan']['metro']
+        #     context_dict['price_from_site_nash_kray'] = store['orbit_polunica_banan']['nash_kray']
+        #     context_dict['price_from_site_fozzy'] = store['orbit_polunica_banan']['fozzy']
+        #
+        # elif context_dict['nn_answer'] == 'Сигареты LM красные':
+        #     context_dict['item_image_for_user'] = get_sigarets_LM_red
+        #     context_dict['price_from_site_ashan'] = store['sigarets_lm_red']['ashan']
+        #     context_dict['price_from_site_novus'] = store['sigarets_lm_red']['novus']
+        #     context_dict['price_from_site_fozzy'] = store['sigarets_lm_red']['fozzy']
+        #
+        # elif context_dict['nn_answer'] == 'Кетчуп Торчин до шашлику 270 грамм':
+        #     context_dict['item_image_for_user'] = get_ketchup_torchin_do_shasliky_270gr
+        #     context_dict['price_from_site_eko'] = store['ketchup_torchin_do_shashliky_270gr']['eko']
+        #     context_dict['price_from_site_varus'] = store['ketchup_torchin_do_shashliky_270gr']['varus']
+        #     context_dict['price_from_site_silpo'] = store['ketchup_torchin_do_shashliky_270gr']['silpo']
+        #     context_dict['price_from_site_ashan'] = store['ketchup_torchin_do_shashliky_270gr']['ashan']
+        #     context_dict['price_from_site_novus'] = store['ketchup_torchin_do_shashliky_270gr']['novus']
+        #     context_dict['price_from_site_fozzy'] = store['ketchup_torchin_do_shashliky_270gr']['fozzy']
+        #
+        # elif context_dict['nn_answer'] == 'Майонез Чумак аппетитный 50% 300 грамм':
+        #     context_dict['item_image_for_user'] = get_mayonez_chumak_appetitniy_50_300gr
+        #     context_dict['price_from_site_eko'] = store['mayonez_chumak_appetitniy_50_300gr']['eko']
+        #     context_dict['price_from_site_varus'] = store['mayonez_chumak_appetitniy_50_300gr']['varus']
+        #     context_dict['price_from_site_silpo'] = store['mayonez_chumak_appetitniy_50_300gr']['silpo']
+        #     context_dict['price_from_site_novus'] = store['mayonez_chumak_appetitniy_50_300gr']['novus']
+        #     context_dict['price_from_site_metro'] = store['mayonez_chumak_appetitniy_50_300gr']['metro']
+        #
+        # elif context_dict['nn_answer'] == 'Колбаса Перша Столиця Салями Фирменная высший сорт':
+        #     context_dict['item_image_for_user'] = get_kolbasa_persha_stolica_salyami_firmova_vs
+        #
+        # elif context_dict['nn_answer'] == 'Кофе Чорна Карта GOLD 50 грамм':
+        #     context_dict['item_image_for_user'] = get_cofee_chorna_karta_gold_50gr
+        #     context_dict['price_from_site_eko'] = store['coffee_chorna_karta_50gr']['eko']
+        #
+        # elif context_dict['nn_answer'] == 'Пиво Zibert светлое 0,5 л в банке':
+        #     context_dict['item_image_for_user'] = get_beer_zibert_svitle_05_l_banochnoe
+        #     context_dict['price_from_site_atb'] = store['beer_zibert_svitle_05l_v_banke']['atb']
+        #     context_dict['price_from_site_eko'] = store['beer_zibert_svitle_05l_v_banke']['eko']
+        #     context_dict['price_from_site_varus'] = store['beer_zibert_svitle_05l_v_banke']['varus']
+        #     context_dict['price_from_site_novus'] = store['beer_zibert_svitle_05l_v_banke']['novus']
+        #     context_dict['price_from_site_metro'] = store['beer_zibert_svitle_05l_v_banke']['metro']
+        #
+        # elif context_dict['nn_answer'] == 'Йогурт Фанни 240 грамм 1.5% лесовые ягоды':
+        #     context_dict['item_image_for_user'] = get_yogurt_fanni_lisovi_yagodi_1_5_240gr
+        #     context_dict['price_from_site_varus'] = store['yogurt_fanni_lisovi_yagodi_1_5_240gr_stakan']['varus']
+        #     context_dict['price_from_site_silpo'] = store['yogurt_fanni_lisovi_yagodi_1_5_240gr_stakan']['silpo']
+        #
+        # elif context_dict['nn_answer'] == 'Кефир Славия 2,5% 850 грамм':
+        #     context_dict['item_image_for_user'] = get_kefir_slaviya_2_5_850gr
+        #
+        # else:
+        #     context_dict['item_image_for_user'] = get_tea_minutka_black_40_b
+        #     context_dict['price_from_site_atb'] = store['tea_minutka']['atb']
+        #     context_dict['price_from_site_eko'] = store['tea_minutka']['eko']
+        #     context_dict['price_from_site_metro'] = store['tea_minutka']['metro']
+        #     # parser = ProductParserVol2()
+        #     # res_atb = parser.tea_minutka_black_40_b_parcer()[0]
+        #     # context_dict['price_from_site_atb'] = res_atb
+        #     # res_eko = parser.tea_minutka_black_40_b_parcer()[1]
+        #     # context_dict['price_from_site_eko'] = res_eko
+        #     # res_varus = parser.tea_minutka_black_40_b_parcer()[2]
+        #     # context_dict['price_from_site_varus'] = res_varus
 
         mutual_context_dict = self.get_user_context(title='Результат поиска')
         return dict(list(context_dict.items()) + list(mutual_context_dict.items()))
@@ -721,8 +736,6 @@ class ItemNameAnswerPage(MutualContext, ListView):
         user_text = self.get_queryset().user_item_name
         result = pred.identify_item(user_text)
         return result
-
-
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context_dict = super().get_context_data(**kwargs)

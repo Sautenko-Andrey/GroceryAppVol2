@@ -446,430 +446,430 @@ class TesterForGroceryAppText:
         elif np.argmax(result)==20:
             return CARROT
         elif np.argmax(result) ==21:
-            return 'Дрожжи харьковские 100 гр хлебо-пекарские пресованные'
+            return DROJJI_HARKOV_100_GR
         elif np.argmax(result) == 22:
-            return 'Яйца куринные, 10 штук'
+            return EGGS
         elif np.argmax(result) == 23:
-            return 'Дезодорант Garnier Магний для мужчин'
+            return DESODORANT_GARNIER_MAGNIY_MEN
         elif np.argmax(result) == 24:
-            return 'Капуста белокачанная , 1 кг'
+            return CABBAGE
         elif np.argmax(result)==25:
-            return 'Сигареты Marlboro Red'
+            return MARLBORO_RED
         elif np.argmax(result) == 26:
-            return 'Майонез детский Щедро домашний 67% жирности'
+            return MAYONES_DETSKIY_SHEDRO_67
         elif np.argmax(result) == 27:
-            return 'Дезодорант Rexona Aloe Vera женский'
+            return DESODORANT_REXONA_ALOE_VERA_WOMEN
         elif np.argmax(result) == 28:
-            return 'Сметана Столица Смаку 15% жирности 400 гр'
+            return SMETANA_STOLICA_SMAKY_15_400_GR
         elif np.argmax(result) == 29:
-            return 'Чай Мономах Кения черный 90 гр'
+            return TEA_MONOMAH_KENYA_BLACK_90_GR
         elif np.argmax(result) == 30:
-            return 'Туалетная бумага Киев 63 м'
+            return TOILET_PAPER_KIEV_63_M
         elif np.argmax(result) == 31:
-            return 'Кофе Арома Голд Freeze Dried 70 грамм'
+            return COFFEE_AROMA_GOLD_FREEZE_FRIED_70_GR
         elif np.argmax(result) == 32:
-            return 'Горчица Верес украинска мицна 120 грамм'
+            return MUSTARD_VERES_UKRAINSKA_MICNA_120_GR
         elif np.argmax(result) == 33:
-            return 'Чай Мономах 100% Цейлон Original черный крупнолистовой'
+            return TEA_MONOMAH_100_CEYLON_ORIGINAL_BLACK_KRUPNOLIST
         elif np.argmax(result) == 34:
-            return 'Чай Мономах Цейлон черный'
+            return DESODORANT_GARNIER_VESENNYA_SVEJEST
         elif np.argmax(result) == 35:
-            return 'Яблоко Гала, кг'
+            return APPLE_GALA
         elif np.argmax(result) == 36:
-            return 'Дезодорант Garnier весенняя свежесть'
+            return DESODORANT_GARNIER_VESENNYA_SVEJEST
         elif np.argmax(result) == 37:
-            return 'Сметана Галичанская 15% 370 грамм'
+            return SMETANA_GALICHANSKAYA_15_370_GR
         elif np.argmax(result) == 38:
-            return 'Чипсы Lays с солью большая пачка 30 грамм'
+            return CHIPS_SALT_BIG_PACK_30_GR
         elif np.argmax(result) == 39:
-            return 'Напиток Sprite 2 литра'
+            return SPRITE_2L
         elif np.argmax(result) == 40:
-            return 'Напиток Fanta 2 литра'
+            return FANTA_2L
         elif np.argmax(result) == 41:
-            return 'Сигареты Bond Street Blue Selection'
+            return BOND_STREET_BLUE_SELECTION
         elif np.argmax(result) == 42:
-            return 'Сигареты Camel Blue'
+            return CAMEL_BLUE
         elif np.argmax(result) == 43:
-            return 'Сигареты LD Red'
+            return LD_RED
         elif np.argmax(result) == 44:
-            return 'Сигареты Marlboro Gold'
+            return MARLBORO_GOLD
         elif np.argmax(result) == 45:
-            return 'Сигареты Rothmans Demi BLue Exclusive'
+            return ROTHMANS_DEMI_BLUE_EXCLUSIVE
         elif np.argmax(result) == 46:
-            return 'Сигареты Rothmans Demi Click Purple'
+            return ROTHMANS_DEMI_CLICK_PURPLE
         elif np.argmax(result) == 47:
-            return 'Сигареты Winston Caster'
+            return WINSTON_CASTER
         elif np.argmax(result) == 48:
-            return 'Сигареты Parlament Aqua Blue'
+            return PARLAMENT_AQUA_BLUE
         elif np.argmax(result) == 49:
-            return 'Сигареты Winston Blue'
+            return WINSTON_BLUE
         elif np.argmax(result) == 50:
-            return 'Сигареты Bond Street Red Selection'
+            return BOND_STREET_RED_SELECTION
         elif np.argmax(result) == 51:
-            return 'Сигареты LD Blue'
+            return LD_BLUE
         elif np.argmax(result) == 52:
-            return 'Сигареты Kent Silver'
+            return KENT_SILVER
         elif np.argmax(result) == 53:
-            return 'Kent Navy Blue New'
+            return KENT_NAVY_BLUE_NEW
         elif np.argmax(result) == 54:
-            return 'Пиво "Черниговское Светлое" 0,5 л в стекле'
+            return BEER_CHERNIGOVSKOE_SVITLE_05_L_GLASS
         elif np.argmax(result) == 55:
-            return 'Пиво "Stella Artois" 0,5 л в стекле'
+            return BEER_STELLA_ARTOIS_05_L_GLASS
         elif np.argmax(result) == 56:
-            return 'Пиво "Оболонь Светлое" 0,5 л в стекле'
+            return BEER_OBOLON_SVITLE_05_L_GLASS
         elif np.argmax(result) == 57:
-            return 'Пиво Жигулевское светлое 0,5 л в стекле'
+            return BEER_JIGULIVSKE_SVITLE_05_L_GLASS
         elif np.argmax(result) == 58:
-            return 'Пиво Рогань традиционное светлое 0,5 л в стекле'
+            return BEER_ROGAN_TRADICIYNE_SVITLE_05_L_GLASS
         elif np.argmax(result) == 59:
-            return 'Пиво Корона Экстра светлое 0,33 л в стекле'
+            return BEER_CORONA_EXTRA_SVITLE_033_L_GLASS
         elif np.argmax(result) == 60:
-            return 'Пиво Черниговоское Белое нефильтрованное 0,5 л в стекле'
+            return BEER_CHERNIGIVSKE_BILE_NEFILTER_05_L_GLASS
         elif np.argmax(result) == 61:
-            return 'Пиво Янтарь светлое 0,5 л в стекле'
+            return BEER_YANTAR_SVITLE_05_L_GLASS
         elif np.argmax(result) == 62:
-            return 'Пиво Zibert светлое 0,5 л в стекле'
+            return BEER_ZIBERT_SVITLE_05_L_GLASS
         elif np.argmax(result) == 63:
-            return 'Пиво Арсенал мицне 0,5 л в стекле'
+            return BEER_ARSENAL_MICNE_05_L_GLASS
         elif np.argmax(result) == 64:
-            return 'Пиво Перша Броварня Закарпатське 0,5 л в стекле'
+            return BEER_PPB_ZAKARPATSKE_05_L_GLASS
         elif np.argmax(result) == 65:
-            return 'Пиво Львовское светлое 0,5 л в стекле'
+            return BEER_LVIVSKE_SVITLE_05_L_GLASS
         elif np.argmax(result) == 66:
-            return 'Пиво Львовское 1715 0,5 л в стекле'
+            return BEER_LVIVSKE_1715_05_L_GLASS
         elif np.argmax(result) == 67:
-            return 'Пиво Zlata Praha светлое 0,5 л в стекле'
+            return BEER_ZLATA_PRAHA_SVITLE_05_L_GLASS
         elif np.argmax(result) == 68:
-            return 'Пиво Tuborg Green 0,5 л в стекле'
+            return BEER_TUBORG_GREEN_05_L_GLASS
         elif np.argmax(result) == 69:
-            return 'Пиво Славутич ICE MIX Lime 0,5 л в стекле'
+            return BEER_SLAVUTICH_ICE_MIX_LIME_05_L_GLASS
         elif np.argmax(result) == 70:
-            return 'Пиво Тетерев 0,5 л в стекле'
+            return BEER_TETEREV_05_L_GLASS
         elif np.argmax(result) == 71:
-            return 'Пиво Krusovice светлое 0,5 л в стекле'
+            return BEER_KRUSOVICE_SVITLE_05_L_GLASS
         elif np.argmax(result) == 72:
-            return 'Пиво Heineken светлое 0,5 л в стекле'
+            return BEER_HEINEKEN_SVITLE_05_L_GLASS
         elif np.argmax(result) == 73:
-            return 'Пиво Amstel светлое 0,5 л в стекле'
+            return BEER_AMSTEL_SVITLE_05_L_GLASS
         elif np.argmax(result) == 74:
-            return 'Пиво Hike premium светлое 0,5 л в стекле'
+            return BEER_HIKE_PREMIUM_SVITLE_05_L_GLASS
         elif np.argmax(result) == 75:
-            return 'Пиво Бочкове светлое 0,5 л в стекле'
+            return BEER_BOCHKOVE_SVITLE_05_L_GLASS
         elif np.argmax(result) == 76:
-            return 'Пиво Kronenbourg 1664 Blanc светлое 0,5 л в стекле'
+            return BEER_KRONENBOURG_1664_BLANC_SVITLE_05_L_GLASS
         elif np.argmax(result) == 77:
-            return 'Пиво Опилля Фирменное непастеризоване светлое 0,5 л в стекле'
+            return BEER_OPILLYA_FIRMENNOE_SVITLE_05_L_GLASS
         elif np.argmax(result) == 78:
-            return 'Пиво Ячменный Колос светлое 0,5 л в стекле'
+            return BEER_YACHMENNIY_KOLOS_SVITLE_05_L_GLASS
         elif np.argmax(result) == 79:
-            return 'Пиво "Опилля Корифей" светлое 0,5 в стекле'
+            return BEER_OPILLYA_KORIFEY_SVITLE_05_L_GLASS
         elif np.argmax(result) == 80:
-            return 'Пиво "Чайка Днепровская" 0,5 л в стекле'
+            return BEER_CHAYKA_DNIPROVSKAYA_05_L_GLASS
         elif np.argmax(result) == 81:
-            return 'Пиво "Чайка Черноморская" светлое 0,5 л в стекле'
+            return BEER_CHAYKA_CHERNOMORSKAYA_SVITLE_05_L_GLASS
         elif np.argmax(result) == 82:
-            return 'Пиво Умань Waissburg светлое 1 литр'
+            return BEER_UMAN_WAISSBURG_SVITLE_1_L
         elif np.argmax(result) == 83:
-            return 'Пиво Умань Пшеничное светлое 1 литр'
+            return BEER_UMAN_PSHENICHNOE_SVITLE_1_L
         elif np.argmax(result) == 84:
-            return 'Пиво Бердичевское Хмельное светлое 1 литр'
+            return BEER_BERDICHEVSKOE_HMELNOE_SVITLE_1_L
         elif np.argmax(result) == 85:
-            return 'Пиво Бердичевское Лагер светлое 1 литр'
+            return BEER_BERDICHEVSKOE_LAGER_SVITLE_1_L
         elif np.argmax(result) == 86:
-            return 'Пиво Опилля Корифей 1.1 литра'
+            return BEER_OPILLYA_KORIFEY_11_L
         elif np.argmax(result) == 87:
-            return 'Пиво Оболонь жигулевское экспортное 1.5 литра'
+            return BEER_OBOLON_JIGULIVSKE_EXPORTNE_15_L
         elif np.argmax(result) == 88:
-            return 'Пиво Янтарь светлое 1,2 литра'
+            return BEER_YANTAR_SVITLE_12_L
         elif np.argmax(result) == 89:
-            return 'Пиво Жашковское пшеничное нефильтрованное 1 литр'
+            return BEER_JASHKOVSKOE_PSHENICHNOE_NEFILTER_1_L
         elif np.argmax(result) == 90:
-            return 'Пиво Жашковское светлое нефильтрованное 1 литр'
+            return BEER_JASHKOVSKOE_SVITLE_NEFILTER_1_L
         elif np.argmax(result) == 91:
-            return 'Пиво Жашковское жигулевское нефильтрованное 1 литр'
+            return BEER_JASHKOVSKOE_JIGULIVSKE_NEFILTER_1_L
         elif np.argmax(result) == 92:
-            return 'Пиво Перша приватна броварня бочкове 1 литр'
+            return BEER_PPB_BOCHKOVE_1_L
         elif np.argmax(result) == 93:
-            return 'Пиво Чайка днипровська 1 литр'
+            return BEER_CHAYKA_DNIPROVSKAYA_1_L
         elif np.argmax(result) == 94:
-            return 'Кетчуп Торчин с чесноком 270 гр'
+            return KETCHUP_TORCHIN_CHESNOK_270_GR
         elif np.argmax(result) == 95:
-            return 'Мука ЗОЛОТЕ ЗЕРНЯТКО пшеничное 2 кг'
+            return MUKA_ZOLOTE_ZERNYATKO_PSHENICHNE_2_KG
         elif np.argmax(result) == 96:
-            return 'Майонез Королевский Смак королевский 67 % 300 гр'
+            return MAYONES_KOROLIVSKIY_SMAK_KOROLIVSKIY_67_300_GR
         elif np.argmax(result) == 97:
-            return 'Пиво Черниговское Белое нефильтрованное 1 л'
+            return BEER_CHERNIGOVSKOE_BELOE_NEFILTER_1_L
         elif np.argmax(result) == 98:
-            return 'Пиво Оболонь светлое 1 л'
+            return BEER_OBOLON_SVITLE_1_L
         elif np.argmax(result) == 99:
-            return 'Пиво Рогань традиционное светлое 1 л'
+            return BEER_ROGAN_TRADICIYNE_SVITLE_1_L
         elif np.argmax(result) == 100:
-            return 'Соус Чумак чесночный 200 грамм'
+            return SOUS_CHUMAK_CHESNOCHNIY_200_GR
         elif np.argmax(result) == 101:
-            return 'Жвачка Orbit полуниця-банан'
+            return ORBIT_POLYNICA_BANAN
         elif np.argmax(result) == 102:
-            return 'Сигареты LM красные'
+            return LM_RED
         elif np.argmax(result) == 103:
-            return 'Жигулевское светлое 2 литра'
+            return BEER_JIGULIVSKE_SVITLE_2_L
         elif np.argmax(result) == 104:
-            return 'Пиво Чайка Днепровская 2 литра'
+            return BEER_CHAYKA_DNIPROVSKAYA_2_L
         elif np.argmax(result) == 105:
-            return 'Пиво Piwny Kebek 2 литра'
+            return BEER_PIWNY_KEBEK_2_L
         elif np.argmax(result) == 106:
-            return 'Кетчуп Торчин до шашлику 270 грамм'
+            return KETCHUP_TORCHIN_DO_SHASHLIKY_270_GR
         elif np.argmax(result) == 107:
-            return 'Майонез Чумак аппетитный 50% 300 грамм'
+            return MAYONES_CHUMAK_APPETITNIY_50_300_GR
         elif np.argmax(result) == 108:
-            return 'Колбаса Перша Столиця Салями Фирменная высший сорт'
+            return KOLBASA_PERSHA_STOLICA_SALYAMI_FIRMENNAYA_VS
         elif np.argmax(result) == 109:
-            return 'Кофе Чорна Карта GOLD 50 грамм'
+            return COFFEE_CHERNA_KARTA_GOLD_50_GR
         elif np.argmax(result) == 110:
-            return 'Пиво Арсенал "Міцне" світле, 2л'
+            return BEER_ARSENAL_MICNE_SVITLE_2_L
         elif np.argmax(result) == 111:
-            return 'Пиво "ППБ Бочкове" світле, 2л'
+            return BEER_PPB_BOCHKOVE_SVITLE_2_L
         elif np.argmax(result) == 112:
-            return 'Пиво "ППБ Закарпатське оригінальне" світле, 2л'
+            return BEER_PPB_ZAKARPATSKE_ORIGINALNE_SVITLE_2_L
         elif np.argmax(result) == 113:
-            return 'Пиво Zibert светлое 0,5 л в банке'
+            return BEER_ZIBERT_SVITLE_05_L_JB
         elif np.argmax(result) == 114:
-            return 'Йогурт Фанни 240 грамм 1.5% лесовые ягоды'
+            return YOGURT_FANNI_240_GR_1_5_LESNIE_YAGODI
         elif np.argmax(result) == 115:
-            return 'Кефир Славия 2,5% 850 грамм'
+            return KEFIR_SLAVIYA_2_5_850_GR
         elif np.argmax(result) == 116:
-            return 'Пиво Оболонь Киевское розливное светлое 1,95 литра в пластике'
+            return BEER_OBOLON_KIEVSKOE_ROZLIVNOE_SVITLE_195_L
         elif np.argmax(result) == 117:
-            return 'Пиво Черниговское light светлое 2,0 л в пластике'
+            return BEER_CHERNIGOVSKOE_LIGHT_SVITLE_2_L
         elif np.argmax(result) == 118:
-            return 'Пиво Опилля Корифей светлое 2,0 л в пластике'
+            return BEER_OPILLYA_KORIFEY_2_L
         elif np.argmax(result) == 119:
-            return 'Пиво Янтарь светлое 2,0 л в пластике'
+            return BEER_YANTAR_SVITLE_2_L
         elif np.argmax(result) == 120:
-            return 'Пиво Tuborg Green 4 банки х 0,5 л'
+            return BEER_TUBORG_GREEN_4_X_05_L
         elif np.argmax(result) == 121:
-            return 'Пиво ППБ Закарпатське 4 банки х 0,5 л'
+            return BEER_PPB_ZAKARPATSKE_4_X_05_L
         elif np.argmax(result) == 122:
-            return 'Пиво ППБ Бочкове 4 банки х 0,5 л'
+            return BEER_PPB_BOCHKOVE_4_X_05_L
         elif np.argmax(result) == 123:
-            return 'Пиво Budweiser Budvar светлое 0,5 л в стекле'
+            return BEER_BUDWEISER_BUDVAR_SVITLE_05_L_GLASS
         elif np.argmax(result) == 124:
-            return 'Пиво Pilsner Urquell светлое 0,5 л в стекле'
+            return BEER_PILSNER_URQUELL_SVITLE_05_L_GLASS
         elif np.argmax(result) == 125:
-            return 'Пиво Robert Doms бельгийский светлое нефильтрованное 0,5 л в стекле'
+            return BEER_ROBERT_DOMS_BELGIYSKIY_SVITLE_NEFILTER_05_L_GLASS
         elif np.argmax(result) == 126:
-            return 'Пиво 0,5 л Чернігівське світле жб'
+            return BEER_CHERNIGOVSKOE_SVITLE_05_L_JB
         elif np.argmax(result) == 127:
-            return 'Пивo 0,5 л Чepнігівськe Білe жб'
+            return BEER_CHERNIGOVSKOE_BELOE_05_L_JB
         elif np.argmax(result) == 128:
-            return 'Пиво 0,5л Velkopopovicky Kozel темне жб'
+            return BEER_VELKOPOPOVICKY_KOZEL_TEMNE_05_L_JB
         elif np.argmax(result) == 129:
-            return 'Пиво 0,5 л Edelmeister Pilsner світле фільтроване жб'
+            return BEER_EDELMEISTER_PILSNER_SVITLE_05_L_JB
         elif np.argmax(result) == 130:
-            return 'Пиво 0,5 л Faxe світле фільтроване жб'
+            return BEER_FAXE_SVITLE_05_L_JB
         elif np.argmax(result) == 131:
-            return 'Пиво 0,5л Livu Pilzenes світле фільтроване жб'
+            return BEER_LIVU_PILZENES_SVITLE_05_L_JB
         elif np.argmax(result) == 132:
-            return 'Пиво 0,5л Velkopopovicky Kozel світле жб'
+            return BEER_VELKOPOPOVICKY_KOZEL_SVITLE_05_L_JB
         elif np.argmax(result) == 133:
-            return 'Пиво 0,5л Оболонь BeerMix Лимон жб'
+            return BEER_OBOLON_BEERMIX_LIMON_05_L_JB
         elif np.argmax(result) == 134:
-            return 'Пиво 0,5 л Edelmeister Weizenbier світле нефільтроване жб'
+            return BEER_EDELMEISTER_WEIZENBIER_SVITLE_NEFILTER_05_L_JB
         elif np.argmax(result) == 135:
-            return 'Пиво 0,5 л Edelmeister Schwarzbier темне фільтроване жб'
+            return BEER_EDELMEISTER_SCHWARZBIER_TEMNE_05_L_JB
         elif np.argmax(result) == 136:
-            return 'Пивo 0,5л Hike Blanche світлe нeфільтpoвaнe жб'
+            return BEER_HIKE_BLANCHE_SVITLE_NEFILTER_05_L_JB
         elif np.argmax(result) == 137:
-            return 'Пиво 0,5л Zlata Praha світле жб'
+            return BEER_ZLATA_PRAHA_SVITLE_05_L_JB
         elif np.argmax(result) == 138:
-            return 'Пиво 0,5л Thuringer Premium Beer світле фільтроване жб'
+            return BEER_THURINGER_PREMIUM_BEER_SVITLE_05_L_JB
         elif np.argmax(result) == 139:
-            return 'Пиво 0,5л Livu Sencu світле фільтроване жб'
+            return BEER_LIVU_SENCU_SVITLE_05_L_JB
         elif np.argmax(result) == 140:
-            return 'Пиво 0,5 л Germanarich светлое жб'
+            return BEER_GERMANARICH_SVITLE_05_L_JB
         elif np.argmax(result) == 141:
-            return 'Пиво 0,5л Hike Преміум світле жб'
+            return BEER_HIKE_PREMIUM_SVITLE_05_L_JB
         elif np.argmax(result) == 142:
-            return 'Пивo бeзaлкoгoльнe 0,5л Обoлoнь 0 світлe нефільтроване пaстepизoвaнe жб'
+            return BEER_OBOLON_0_NONALCO_NEFILTER_SVITLE_05_L_JB
         elif np.argmax(result) == 143:
-            return 'Пивo Zibert Баварское светлое 0,5 л жб'
+            return BEER_ZIBERT_BAVARSKOE_SVITLE_05_L_JB
         elif np.argmax(result) == 144:
-            return 'Пивo Bavaria Liquid Apple безалкогольное светлое 0,5 л жб'
+            return BEER_BAVARIYA_LIQUID_APPLE_NONALCO_SVITLE_05_L_JB
         elif np.argmax(result) == 145:
-            return 'Пивo Heineken светлое 0,5 л жб'
+            return BEER_HEINEKEN_SVITLE_05_L_JB
         elif np.argmax(result) == 146:
-            return 'Пивo Rychtar Grant 11 светлое 0,5 л жб'
+            return BEER_RYCHTAR_GRANT_11_SVITLE_05_L_JB
         elif np.argmax(result) == 147:
-            return 'Пивo Amstel светлое 0,5 л жб'
+            return BEER_AMSTEL_SVITLE_05_L_JB
         elif np.argmax(result) == 148:
-            return 'Пивo Bavaria светлое 0,5 л жб'
+            return BEER_BAVARIA_SVITLE_05_L_JB
         elif np.argmax(result) == 149:
-            return 'Пивo Bavaria светлое безалкогольное 0,5 л жб'
+            return BEER_BAVARIA_SVITLE_NONALCO_05_L_JB
         elif np.argmax(result) == 150:
-            return 'Пиво Edelburg Lager світле 5,2% 0,5л жб'
+            return BEER_EDELBURG_LAGER_SVITLE_05_L_JB
         elif np.argmax(result) == 151:
-            return 'Пиво Donner Pils світле 3,5% 0,5л жб'
+            return BEER_DONNER_PILS_SVITLE_05_L_JB
         elif np.argmax(result) == 152:
-            return 'Пиво Dutch Windmill світле 4,6% 0,5л жб'
+            return BEER_DUTCH_WINDMILL_SVITLE_05_L_JB
         elif np.argmax(result) == 153:
-            return 'Пиво Edelburg Hefeweizen світле нефільтроване 5,1% 0,5л жб'
+            return BEER_EDELBURG_HEFEWEIZEN_SVITLE_NEFILTER_05_L_JB
         elif np.argmax(result) == 154:
-            return 'Пиво Edelmeister Unfiltered світле нефільтроване 5,7% 0,5л жб'
+            return BEER_EDELMEISTER_UNFILTERED_SVITLE_NEFILTER_05_L_JB
         elif np.argmax(result) == 155:
-            return 'Пиво Estrella Damm Barcelona світле 4,6% 0,5л жб'
+            return BEER_ESTRELLA_DAMM_BARCELONA_SVITLE_05_L_JB
         elif np.argmax(result) == 156:
-            return 'Пиво Halne Jasne Pelne з/б 6% 0,5л жб'
+            return BEER_HALNE_JASNE_PELNE_05_L_JB
         elif np.argmax(result) == 157:
-            return 'Пиво Eurotour Hefeweissbier світле 5% 0,5л жб'
+            return BEER_EUROTOUR_HEFEWEISSBIER_SVITLE_05_L_JB
         elif np.argmax(result) == 158:
-            return 'Пиво Hollandia Strong світле 7,5% 0,5л жб'
+            return BEER_HOLLANDIA_STRONG_SVITLE_05_L_JB
         elif np.argmax(result) == 159:
-            return 'Пиво Lander Brau Premium світле 4,9% 0,5л жб'
+            return BEER_LANDER_BRAU_PREMIUM_SVITLE_05_L_JB
         elif np.argmax(result) == 160:
-            return 'Пиво Saku Kuld 5,2% 0,5л жб'
+            return BEER_SAKU_KULD_05_L_JB
         elif np.argmax(result) == 161:
-            return 'Пиво Saku Originaal 4,7% 0,5л л жб'
+            return BEER_SAKU_ORIGINAAL_05_L_JB
         elif np.argmax(result) == 162:
-            return 'Пиво Stangen Lager світле 5,4% 0,5л л жб'
+            return BEER_STANGEN_LAGER_SVITLE_05_L_JB
         elif np.argmax(result) == 163:
-            return 'Пиво Van Pur Premium світле 5% 0,5л жб'
+            return BEER_VAN_PUR_PREMIUM_SVITLE_05_L_JB
         elif np.argmax(result) == 164:
-            return 'Пиво Bavaria манго-маракуйя світле безалкогольне 0,5л жб'
+            return BEER_BAVARIA_MANGO_MARAKUYA_SVITLE_NONALCO_05_L_JB
         elif np.argmax(result) == 165:
-            return 'Пиво Bavaria Гранат безалкогольне 0,5л жб'
+            return BEER_BAVARIA_GRANAT_NONALCO_05_L_JB
         elif np.argmax(result) == 166:
-            return 'Пиво Оболонь Beermix Малина світле 2,5% 0,5л жб'
+            return BEER_OBOLON_BEERMIX_MALINA_SVITLE_05_L_JB
         elif np.argmax(result) == 167:
-            return 'Пиво Оболонь Beermix Вишня спеціальне світле 2,5% 0,5л жб'
+            return BEER_OBOLON_BEERMIX_VISHNYA_SPECIALNE_SVITLE_05_L_JB
         elif np.argmax(result) == 168:
-            return 'Пиво Lomza світле 5,7% 0,5л жб'
+            return BEER_LOMZA_SVITLE_05_L_JB
         elif np.argmax(result) == 169:
-            return 'Пиво Paderborner Pilsener світле 4,8% 0,5л жб'
+            return BEER_PADERBORNER_PILSENER_SVITLE_05_L_JB
         elif np.argmax(result) == 170:
-            return 'Пиво Paderborner Export світле 5,5% 0,5л жб'
+            return BEER_PADERBORNER_EXPORT_SVITLE_05_L_JB
         elif np.argmax(result) == 171:
-            return 'Пиво Clausthaler Grapefruit безалкогольне 0,5л жб'
+            return BEER_CLAUSTHALER_GRAPEFRUIT_NONALCO_05_L_JB
         elif np.argmax(result) == 172:
-            return 'Пиво Clausthaler Original безалкогольне 0,5л жб'
+            return BEER_CLAUSTHALER_ORIGINAL_NONALCO_05_L_JB
         elif np.argmax(result) == 173:
-            return 'Пиво Clausthaler Lemon безалкогольне 0,5л жб'
+            return BEER_CLAUSTHALER_LEMON_NONALCO_05_L_JB
         elif np.argmax(result) == 174:
-            return 'Пиво Forever Rock & Roll світле нефільтроване 7,5% 0,5л жб'
+            return BEER_FOREVER_ROCK_N_ROLL_SVITLE_NEFILTER_05_L_JB
         elif np.argmax(result) == 175:
-            return 'Пиво Forever Black Queen темне нефільтроване 5,5% 0,5л жб'
+            return BEER_FOREVER_BLACK_QUEEN_TEMNE_NEFILTER_05_L_JB
         elif np.argmax(result) == 176:
-            return 'Пиво Forever Kite Safari світле нефільтроване 7% 0,5л жб'
+            return BEER_FOREVER_KITE_SAFARI_SVITLE_NEFILTER_05_L_JB
         elif np.argmax(result) == 177:
-            return 'Пиво Forever Crazy світле нефільтроване 6,5% 0,5л жб'
+            return BEER_FOREVER_CRAZY_SVITLE_NEFILTER_05_L_JB
         elif np.argmax(result) == 178:
-            return 'Пиво Hike Light світле 3,5% 0,5л жб'
+            return BEER_HIKE_LIGHT_SVITLE_05_L_JB
         elif np.argmax(result) == 179:
-            return 'Пиво Hike Zero безалкогольне 0,5л жб'
+            return BEER_HIKE_ZERO_NONALCO_05_L_JB
         elif np.argmax(result) == 180:
-            return 'Пиво Horn Disel Ice Pilsner світле 4,7% 0,568л жб'
+            return BEER_HORN_DISEL_ICE_PILSNER_SVITLE_0568_L_JB
         elif np.argmax(result) == 181:
-            return 'Пиво Horn Disel Original 5,3% 0,568л жб'
+            return BEER_HORN_DISEL_ORIGINAL_0568_L_JB
         elif np.argmax(result) == 182:
-            return 'Пиво Horn Disel Traditional світле 6% 0,568л жб'
+            return BEER_HORN_DISEL_TRADITIONAL_SVITLE_0568_L_JB
         elif np.argmax(result) == 183:
-            return 'Пиво Horn Diesel Premium світле 5% 0,5л жб'
+            return BEER_HORN_PREMIUM_DIESEL_SVITLE_05_L_JB
         elif np.argmax(result) == 184:
-            return 'Пиво Krusovice Cerne темне 3,8% 0,5л жб'
+            return BEER_KRUSOVICE_CERNE_TEMNE_05_L_JB
         elif np.argmax(result) == 185:
-            return 'Пиво Lander Brau міцне 4,9% 0,5л жб'
+            return BEER_LANDER_BRAU_MICNE_05_L_JB
         elif np.argmax(result) == 186:
-            return 'Пиво Lander Brau світле нефільтроване 4,7% 0,5л жб'
+            return BEER_LANDER_BRAU_SVITLE_NEFILTER_05_L_JB
         elif np.argmax(result) == 187:
-            return 'Пиво Paderborner Pilger світле нефільтроване пастеризоване 5% 0,5л жб'
+            return BEER_PADERBORNER_PILGER_SVITLE_NEFILTER_05_L_JB
         elif np.argmax(result) == 188:
-            return 'Пиво Platan Jedenactka 11 світле 4,6% 0,5л жб'
+            return BEER_PLATAN_JEDENACTKA_11_SVITLE_05_L_JB
         elif np.argmax(result) == 189:
-            return 'Пиво Praga світле фільтроване 4,7% 0,5л жб'
+            return BEER_PRAGA_SVITLE_05_L_JB
         elif np.argmax(result) == 190:
-            return 'Пиво Saku Rock світле 5,3% 0,568л жб'
+            return BEER_SAKU_ROCK_SVITLE_0568_L_JB
         elif np.argmax(result) == 191:
-            return 'Пиво Sitnan світле 5% 0,5л жб'
+            return BEER_SITNAN_SVITLE_05_L_JB
         elif np.argmax(result) == 192:
-            return 'Пиво Vienas Premium Golden світле 5% 0,568л жб'
+            return BEER_VIENAS_PREMIUM_GOLDEN_SVITLE_0568_L_JB
         elif np.argmax(result) == 193:
-            return 'Пиво Vienas Premium Traditional світле 5,8% 0,568л жб'
+            return BEER_VIENAS_PREMIUM_TRADITIONAL_SVITLE_0568_L_JB
         elif np.argmax(result) == 194:
-            return 'Пиво Volynski Browar Forever Sweet Wit пшеничне світле нефільтроване 4,5% 0,5л жб'
+            return BEER_VLYNSKI_BROWAR_FOREVER_SWEET_WIT_SVITLE_NEFILTER_05_L_JB
         elif np.argmax(result) == 195:
-            return 'Пиво Zahringer Преміум світле 0,5л жб'
+            return BEER_ZAHRINGER_PREMIUM_SVITLE_05_L_JB
         elif np.argmax(result) == 196:
-            return 'Пиво Zahringer Hefeweizen світле 0,5л жб'
+            return BEER_ZAHRINGER_HEFEWEIZEN_SVITLE_05_L_JB
         elif np.argmax(result) == 197:
-            return 'Пиво Жашківське світле нефільтроване 4,5% 0,5л жб'
+            return BEER_JASHKOVSKOE_SVITLE_NEFILTER_05_L_JB
         elif np.argmax(result) == 198:
-            return 'Пиво Оболонь світле 4,5% 0,5л жб'
+            return BEER_OBOLON_SVITLE_05_L_JB
         elif np.argmax(result) == 199:
-            return 'Пиво Pubster світле 5% 0,5л жб'
+            return BEER_PUBSTER_SVITLE_05_L_JB
         elif np.argmax(result) == 200:
-            return 'Пиво ППБ Чайка Чорноморська 4,5% 0,5л жб'
+            return BEER_CHAYKA_CHERNOMORSKAYA_SVITLE_05_L_JB
         elif np.argmax(result) == 201:
-            return 'Пиво ППБ Закарпатське Оригінальне світле 4,4% 0,5л'
+            return BEER_PPB_ZAKARPATSKE_ORIGINALNE_SVITLE_05_L_JB
         elif np.argmax(result) == 202:
-            return 'Пиво ППБ Бочкове Нефільтроване з/б 4,8% 0,5л'
+            return BEER_PPB_BOCHKOVE_NEFILTER_05_L_JB
         elif np.argmax(result) == 203:
-            return 'Пиво ППБ Нефільтроване світле безалкогольне 0,5л'
+            return BEER_PPB_NEFILTROVANE_SVITLE_NONALCO_05_L_JB
         elif np.argmax(result) == 204:
-            return 'Пиво ППБ Лимон-Лайм безалкогольне нефільтроване 0,5л'
+            return BEER_PPB_LIMON_LIME_NONALCO_NEFILTER_05_L_JB
         elif np.argmax(result) == 205:
-            return 'Пиво Чайка Дніпровська світле фільтроване 4,8% 0,5л'
+            return BEER_CHAYKA_DNIPROVSKAYA_05_L_JB
         elif np.argmax(result) == 206:
-            return 'Пиво Brok Export світле 5,2% 0,5л'
+            return BEER_BROK_EXPORT_SVITLE_05_L_JB
         elif np.argmax(result) == 207:
-            return 'Пиво Carling світле фільроване з/б 4% 0.5 л'
+            return BEER_CARLING_SVITLE_05_L_JB
         elif np.argmax(result) == 208:
-            return 'Пиво Keten Brug Blanche Elegant 4.8% 0.5 л'
+            return BEER_KETEN_BRUG_BLANCHE_ELEGANT_05_L_JB
         elif np.argmax(result) == 209:
-            return 'Пиво Budweiser безалкогольне 0.5 л'
+            return BEER_BUDWEISER_NONALCO_05_L_JB
         elif np.argmax(result) == 210:
-            return 'Пиво Feldschlosschen Wheat Beer світле нефільтроване 5% 0.5 л'
+            return BEER_FELDSCHLOSSCHEN_WHEAT_BEER_SVITLE_NEFILTER_05_L_JB
         elif np.argmax(result) == 211:
-            return 'Пиво Тетерів Хмільна Вишня напівтемне фільтроване з/б 8% 0.5 л'
+            return BEER_TETERIV_HMILNA_VISHNYA_NAPIVTEMNE_05_L_JB
         elif np.argmax(result) == 212:
-            return 'Пиво Grotwerg світле пастеризоване фільтроване безалкогольне 0.5 л'
+            return BEER_GROTWERG_SVITLE_NONALCO_05_L_JB
         elif np.argmax(result) == 213:
-            return 'Пиво Holland Import світле фільтроване 4.8% 0.5 л'
+            return BEER_HOLLAND_IMPORT_SVITLE_05_L_JB
         elif np.argmax(result) == 214:
-            return 'Пиво Golden Castle Export світле 4.8% 0.5 л'
+            return BEER_GOLDEN_CASTLE_EXPORT_SVITLE_05_L_JB
         elif np.argmax(result) == 215:
-            return 'Пиво 5.0 Original Craft Beer сітле нефільтроване 4.1% 0.5 л'
+            return BEER_5_0_ORIGINAL_CRAFT_BEER_SVITLE_NEFILTER_05_L_JB
         elif np.argmax(result) == 216:
-            return 'Пиво Guinness Draught темне фільтроване 4.1% 0.44 л'
+            return BEER_GUINESS_DRAUGHT_TEMNE_044_L_JB
         elif np.argmax(result) == 217:
-            return 'Пиво Grimbergen Double Ambree напівтемне фільтроване 6.5% 0.5 л'
+            return BEER_GRIMBERGEN_DOUBLE_AMBREE_NAPIVTEMNE_05_L_JB
         elif np.argmax(result) == 218:
-            return 'Пиво Warsteiner Premium Verum світле фільтроване 4.8% 0.5 л'
+            return BEER_WARSTEINER_PREMIUM_VERUM_SVITLE_05_L_JB
         elif np.argmax(result) == 219:
-            return 'Пиво DAB темне фільтроване 4.9% 0.5 л'
+            return BEER_DAB_TEMNE_05_L_JB
         elif np.argmax(result) == 220:
-            return 'Пиво спеціальне Grimbergen Blanche світле пастеризоване 6% 0.5 л'
+            return BEER_GRIMBERGEN_BLANCHE_SVITLE_05_L_JB
         elif np.argmax(result) == 221:
-            return 'Пиво Klosterkeller Weissbier China світле нефільтроване 5.4% 0.5 л'
+            return BEER_KLOSTERKELLER_WEISSBIER_CHINA_SVITLE_NEFILTER_05_L_JB
         elif np.argmax(result) == 222:
-            return 'Пиво Karpackie Pils світле фільтроване 4% 0.5 л'
+            return BEER_KARPACKIE_PILS_SVITLE_05_L_JB
         elif np.argmax(result) == 223:
-            return 'Пиво 5,0 Original Pills світле фільтроване 5% 0.5 л'
+            return BEER_5_0_ORIGINAL_PILLS_SVITLE_05_L_JB
         elif np.argmax(result) == 224:
-            return 'Пиво 5,0 Original Lager світле фільтроване 5.4% 0.5 л'
+            return BEER_5_0_ORIGINAL_LAGER_SVITLE_05_L_JB
         elif np.argmax(result) == 225:
-            return 'Пиво 5,0 Original Weiss Beer світле нефільтроване 5% 0.5 л'
+            return BEER_5_0_ORIGINAL_WEISS_BEER_SVITLE__NEFILTER_05_L_JB
         elif np.argmax(result) == 226:
-            return 'Пиво Fahnen Brau світле фільтроване 4.7% 0.5 л'
+            return BEER_FAHNEN_BRAU_SVITLE_05_L_JB
         elif np.argmax(result) == 227:
-            return 'Пиво Gosser Light світле фільтроване 5.2% 0.5 л'
+            return BEER_GOSSER_LIGHT_SVITLE_05_L_JB
         elif np.argmax(result) == 228:
-            return 'Пиво Hollandia Import світле фільтроване 4.8% 0.33 л'
+            return BEER_HOLLANDIA_IMPORT_SVITLE_033_L_JB
         elif np.argmax(result) == 229:
-            return 'Пиво Holsten Pilsener 4.7% 0.48 л'
+            return BEER_HOLSTEN_PILSENER_048_L_JB
         elif np.argmax(result) == 230:
-            return 'Пиво Оболонь Premium Extra Brew світле фільтроване з/б 4.6% 0.5 л'
+            return BEER_OBOLON_PREMIUM_EXTRA_BREW_SVITLE_05_L_JB
         elif np.argmax(result) == 231:
-            return 'Пиво Львівське світле 4,3% 0,48 л'
+            return BEER_LVIVSKE_SVITLE_048_L_JB
         elif np.argmax(result) == 232:
-            return 'Пиво Carlsberg Premium Pilsner світле фільтроване з/б 5% 0.5 л'
+            return BEER_CARLSBERG_PREMIUM_PILSNER_SVITLE_05_L_JB
         elif np.argmax(result) == 233:
-            return 'Пиво Carlsberg Pilsner 0.5 л'
+            return BEER_CARLSBERG_PILSNER_05_L_JB
 
 
