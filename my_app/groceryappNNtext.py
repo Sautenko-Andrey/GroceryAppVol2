@@ -880,24 +880,15 @@ class GroceryAppText:
             self.upload_data()[211]+ make_list(items, 211) *self.upload_data()[212]+ make_list(items, 212) *
             self.upload_data()[213]+ make_list(items, 213) *self.upload_data()[214]+ make_list(items, 214) *
             self.upload_data()[215]+ make_list(items, 215) *self.upload_data()[216]+ make_list(items, 216) *
-            self.upload_data()[217]+ make_list(items, 217) *
-            self.upload_data()[218]+ make_list(items, 218) *
-            self.upload_data()[219]+ make_list(items, 219) *
-            self.upload_data()[220]+ make_list(items, 220) *
-            self.upload_data()[221]+ make_list(items, 221) *
-            self.upload_data()[222]+ make_list(items, 222) *
-            self.upload_data()[223]+ make_list(items, 223) *
-            self.upload_data()[224]+ make_list(items, 224) *
-            self.upload_data()[225]+ make_list(items, 225) *
-            self.upload_data()[226]+ make_list(items, 226) *
-            self.upload_data()[227]+ make_list(items, 227) *
-            self.upload_data()[228]+ make_list(items, 228) *
-            self.upload_data()[229]+ make_list(items, 229) *
-            self.upload_data()[230]+ make_list(items, 230) *
-            self.upload_data()[231]+ make_list(items, 231) *
-            self.upload_data()[232]+ make_list(items, 232) *
-            self.upload_data()[233]+ make_list(items, 233) *
-            self.upload_data()[234])
+            self.upload_data()[217]+ make_list(items, 217) *self.upload_data()[218]+ make_list(items, 218) *
+            self.upload_data()[219]+ make_list(items, 219) *self.upload_data()[220]+ make_list(items, 220) *
+            self.upload_data()[221]+ make_list(items, 221) *self.upload_data()[222]+ make_list(items, 222) *
+            self.upload_data()[223]+ make_list(items, 223) *self.upload_data()[224]+ make_list(items, 224) *
+            self.upload_data()[225]+ make_list(items, 225) *self.upload_data()[226]+ make_list(items, 226) *
+            self.upload_data()[227]+ make_list(items, 227) *self.upload_data()[228]+ make_list(items, 228) *
+            self.upload_data()[229]+ make_list(items, 229) *self.upload_data()[230]+ make_list(items, 230) *
+            self.upload_data()[231]+ make_list(items, 231) *self.upload_data()[232]+ make_list(items, 232) *
+            self.upload_data()[233]+ make_list(items, 233) *self.upload_data()[234])
 
         # перемешиваем обучающую выборку для лучшей тренированности НС:
         # создаем рандомные индексы:
@@ -941,10 +932,7 @@ class GroceryAppText:
 
         result = self.model.predict(data_pad)
         print(result, np.argmax(result), sep='\n')
-        # if np.argmax(result) == 0:
-        #     print('Пиво "Оболонь Премиум Экстра 1,1 л"')
-        # else:
-        #     print('Водка "Гетьман Сагайдачный 0,7 л"')
+
 
 
 user = GroceryAppText()

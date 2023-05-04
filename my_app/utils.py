@@ -2,27 +2,38 @@ import json
 from .templatetags.my_app_tags import *
 from .items_full_names import *
 
-with open('/home/andrey/GroceryAppVol2/FBApp/my_app/prices_store.json') as f:
-    store = json.load(f)
+try:
+    with open('/home/andrey/GroceryAppVol2/FBApp/my_app/prices_store.json') as f:
+        store = json.load(f)
+except Exception:
+    print("I can't open data base with prices. Check path:"
+          " '/home/andrey/GroceryAppVol2/FBApp/my_app/prices_store.json'")
 
 
 class MutualContext:
-
-
-    def get_user_context(self, **kwargs):
+    def get_user_context(self, **kwargs)->dict:
         context = kwargs
         return context
 
 
-
-def make_list(count, pos):
+def make_list(count:int, pos:int) -> list:
     '''Метод для создания вложенного списка для обучающей выборки в тестовой НС'''
+    #проверяем аргументы на принадлежность к типу int:
+    if type(count) != int or type(pos) != int:
+        raise TypeError("Arguments count and pos for function 'make_list' must be int!")
+    #создаем вложенный список:
     res = [[0 for x in range(count)]]
     res[0][pos] = 1
     return res
 
 
-def price_updating_data(price):
+def price_updating_data(price:float) -> float:
+    '''Функция для корректировки отображения нестандартных записей цен на сайтах'''
+
+    #делаем проверку, что аргумент price является вещественным числом
+    if type(price) != float:
+        raise TypeError("Argument price for function 'price_updating_data' must be float")
+
     price = price[:5]
     try:
         price = float(price.replace(',', '.'))
@@ -31,9 +42,15 @@ def price_updating_data(price):
         price = float(price[:2])
     return price
 
-def best_price_identify(prices_array:list):
+
+def best_price_identify(prices_array:list) -> str:
     '''В prices_array нам поступают все цены из БД.А нам надо определить
     минимальную из тех маркетов, которые выбрал пользователь.'''
+
+    #проверяем, что на вход функция получает список:
+    if type(prices_array) != list:
+        raise TypeError("Argument for function 'best_price_identify' must be list!")
+
     #очищаем от цен, которых нет в магазине
     clear_list = tuple(x for x in prices_array if type(x[1]) == float)
     # определяем лучшую цену
@@ -124,11 +141,13 @@ def get_products_prices(respond:str):
     return atb_price,eko_price,varus_price,silpo_price,ashan_price,\
            novus_price,metro_price,nash_kray_price,fozzy_price,picture
 
-class ContextSupervisor:
 
+
+class ContextSupervisor:
     '''Класс, благодаря которму убирается дублирование кода в context_dict
     для отвтеов по фото и тексту.'''
 
+    #сообщения об отсутствии цены в БД.
     ATB_WARNING_MESSAGE = 'Цена в АТБ отсутствует в БД.'
     EKO_WARNING_MESSAGE = 'Цена в EKO отсутствует в БД.'
     VARUS_WARNING_MESSAGE = 'Цена в Varus отсутствует в БД.'
@@ -139,18 +158,39 @@ class ContextSupervisor:
     NK_WARNING_MESSAGE = 'Цена в Наш Край отсутствует в БД.'
     FOZZY_WARNING_MESSAGE = 'Цена в Fozzy отсутствует в БД.'
 
-    #флаг, означающий, что для товара нет парсеров и цен в БД
-    NO_PRICES = 0
+    #переменные-ключи для маркетов
+    __ATB_KEY = 'atb'
+    __EKO_KEY = 'eko'
+    __VARUS_KEY = 'varus'
+    __SILPO_KEY = 'silpo'
+    __ASHAN_KEY = 'ashan'
+    __NOVUS_KEY = 'novus'
+    __METRO_KEY = 'metro'
+    __NK_KEY = 'nash_kray'
+    __FOZZY_KEY = 'fozzy'
 
+    #флаг, означающий, что для товара нет парсеров и цен в БД
+    NO_PRICES = 'absent'
+
+    #минимальная длина строки метки из БД
     __MIN_SAMPLE_LENGTH = 3
+
+    #флаг для проверки существования тэга
+    __NO_TAG = True
+
     @classmethod
     def __verify_sample(cls, sample):
         """Метод, выполняющий проверку корректности метки продукта в БД."""
-
         if type(sample) != str:
             raise TypeError("Sample has to be str type!")
         if len(sample) < cls.__MIN_SAMPLE_LENGTH:
             raise TypeError("Product's sample length is suspicious short!")
+
+    @classmethod
+    def __verify_tag(cls, tag):
+        '''Метод проверяющий корректность тэга (его существование)'''
+        if not cls.__NO_TAG:
+            raise AttributeError("Tag absents!")
 
     def getting_prices(self,item_sample_DB, item_tag):
         '''Метод, который пытается взять цену из БД.
@@ -158,8 +198,11 @@ class ContextSupervisor:
         Возвращаемые значения уже передаются в метод
         products_context_maker для дальнейшей обработки.'''
 
-        #совершаем проверку тэга как аргумента
+        #совершаем проверку метки из БД как аргумента
         self.__verify_sample(item_sample_DB)
+
+        #сделаем проверку существования тэга
+        self.__verify_tag(item_tag)
 
         # делаем проверку, что если цены отсутствуют(не имееются парсеры на цены),то мы возвращаем нули
         if item_sample_DB == self.NO_PRICES:
@@ -172,55 +215,55 @@ class ContextSupervisor:
             metro_price, nk_price, fozzy_price = 0, 0, 0, 0, 0, 0, 0, 0, 0
             #пробуем вытянуть цену в АТБ из БД
             try:
-                atb_price = store[item_sample_DB]['atb']
+                atb_price = store[item_sample_DB][self.__ATB_KEY]
             except Exception:
                 print(self.ATB_WARNING_MESSAGE)
 
             # пробуем вытянуть цену в ЭКО из БД
             try:
-                eko_price = store[item_sample_DB]['eko']
+                eko_price = store[item_sample_DB][self.__EKO_KEY]
             except Exception:
                 print(self.EKO_WARNING_MESSAGE)
 
             # пробуем вытянуть цену в Варусе из БД
             try:
-                varus_price = store[item_sample_DB]['varus']
+                varus_price = store[item_sample_DB][self.__VARUS_KEY]
             except Exception:
                 print(self.VARUS_WARNING_MESSAGE)
 
             # пробуем вытянуть цену в Сильпо из БД
             try:
-                silpo_price = store[item_sample_DB]['silpo']
+                silpo_price = store[item_sample_DB][self.__SILPO_KEY]
             except Exception:
                 print(self.SILPO_WARNING_MESSAGE)
 
             # пробуем вытянуть цену в Ашане из БД
             try:
-                ashan_price = store[item_sample_DB]['ashan']
+                ashan_price = store[item_sample_DB][self.__ASHAN_KEY]
             except Exception:
                 print(self.ASHAN_WARNING_MESSAGE)
 
             # пробуем вытянуть цену в Novus из БД
             try:
-                novus_price = store[item_sample_DB]['novus']
+                novus_price = store[item_sample_DB][self.__NOVUS_KEY]
             except Exception:
                 print(self.NOVUS_WARNING_MESSAGE)
 
             # пробуем вытянуть цену в Metro из БД
             try:
-                metro_price = store[item_sample_DB]['metro']
+                metro_price = store[item_sample_DB][self.__METRO_KEY]
             except Exception:
                 print(self.METRO_WARNING_MESSAGE)
 
             # пробуем вытянуть цену в Нашем Крае из БД
             try:
-                nk_price = store[item_sample_DB]['nash_kray']
+                nk_price = store[item_sample_DB][self.__NK_KEY]
             except Exception:
                 print(self.NK_WARNING_MESSAGE)
 
             # пробуем вытянуть цену в Fozzy из БД
             try:
-                fozzy_price = store[item_sample_DB]['fozzy']
+                fozzy_price = store[item_sample_DB][self.__FOZZY_KEY]
             except Exception:
                 print(self.FOZZY_WARNING_MESSAGE)
 
@@ -243,6 +286,9 @@ class ContextSupervisor:
         в зависимости от ответа НС(ответ НС является аргументом этого метода).
         Для продуктов, у которых пока что нет цены, результат возвращается
         в виде кортежа с нулями для всех магазинов.'''
+
+        #проверяем на корректность ответ НС
+        self.__verify_sample(nn_respond)
 
         if nn_respond == BEER_OBOLON_PREMIUM_EXTRA_1_1_L:
             result = self.getting_prices('obolon_premium_1.1_l',get_obolon_premium)

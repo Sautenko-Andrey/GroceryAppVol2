@@ -20,11 +20,12 @@ class SimpleTagMakerOneItem:
 tag = SimpleTagMakerOneItem()
 
 # создадим тэги:
-'''Тэг, возвращающий информацию о пиве "Пиво "Оболонь Премиум Экстра 1,1 л""'''
-get_obolon_premium = tag.create_tag(ItemsPicsFromNet, 2)
 
 '''Тэг, возвращающий информацию о кофе "Aroma Gold Classic 100 g"'''
 get_hetman_ICE = tag.create_tag(ItemsPicsFromNet, 1)
+
+'''Тэг, возвращающий информацию о пиве "Пиво "Оболонь Премиум Экстра 1,1 л""'''
+get_obolon_premium = tag.create_tag(ItemsPicsFromNet, 2)
 
 '''Тэг, возвращающий информацию о кофе "Aroma Gold Classic 100 g"'''
 coffe_aroma_gold_classic_100gr = tag.create_tag(ItemsPicsFromNet, 3)
@@ -751,11 +752,11 @@ class SimpleTagMakerAllItems:
 mul_tag = SimpleTagMakerAllItems()
 
 '''Возьмем все продукты,что есть в наборе пользователя'''
-get_product_set_from_data_base = mul_tag.create_tag(SetOfProducts)
-# @register.simple_tag()
-# def get_product_set_from_data_base():
-#     '''Возьмем все продукты,что есть в наборе пользователя'''
-#     return SetOfProducts.objects.all()
+#get_product_set_from_data_base = mul_tag.create_tag(SetOfProducts)
+@register.simple_tag()
+def get_product_set_from_data_base():
+    '''Возьмем все продукты,что есть в наборе пользователя'''
+    return SetOfProducts.objects.all()
 
 
 # ТЕГ ДЛЯ ДОСУТПА КО ВСЕМ СУПЕРМАРКЕТАМ
