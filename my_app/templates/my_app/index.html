@@ -21,9 +21,6 @@
     <br>
     <br>
     <br>
-    <br>
-    <br>
-    <br>
     <div class="container">
         <div class="row">
             <div class="col-xl-12 col-md-12 col-sm-12" align="center">
@@ -35,18 +32,32 @@
             </div>
         </div>
     </div>
-    <br>
     <div class="container">
         <div class="row">
             <div class="col-xl-4 col-md-12 col-sm-12" align="center">
             </div>
             <div class="col-xl-4 col-md-12 col-sm-12" align="center">
-                <h4><a class="btn btn-outline-info" href="{% url 'search_by_photo' %}" role="button">ПО ФОТО</a>
+                <!--<h4><a class="btn btn-outline-info" href="{% url 'search_by_photo' %}" role="button">ПО ФОТО</a>
                     &emsp;&emsp;<a class="btn btn-outline-info" href="{% url 'get_item_name' %}" role="button">ПО
-                        НАЗВАНИЮ</a></h4>
+                        НАЗВАНИЮ</a>
+                </h4>-->
 
                 <!--здесь вставляем новую крутую кнопку-->
-
+                <h4><a class="btn_neon_style_for_button" href="{% url 'search_by_photo' %}">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    по фото
+                </a>
+                    <a class="btn_neon_style_for_button" href="{% url 'get_item_name' %}">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        по названию
+                    </a>
+                </h4>
 
                 <!--здесь конец новой кнопки-->
 
@@ -141,7 +152,6 @@
 <br>
 <br>
 <br>
-
 
 
 <!--<script src="{% static 'my_app/js/script.js' %}"></script>-->

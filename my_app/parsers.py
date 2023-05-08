@@ -1,5 +1,3 @@
-# import requests
-# from bs4 import BeautifulSoup
 import undetected_chromedriver
 from selenium.webdriver.common.by import By
 from my_app.utils import price_updating_data

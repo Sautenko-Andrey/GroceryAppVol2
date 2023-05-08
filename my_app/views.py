@@ -11,7 +11,7 @@ from django.http import HttpResponseNotFound
 from django.urls import reverse_lazy
 from rest_framework import generics
 
-from my_app.utils import MutualContext, get_products_prices, best_price_identify
+from my_app.utils import MutualContext, best_price_identify
 from django.views.generic import ListView, CreateView
 
 from .forms import *
@@ -217,8 +217,12 @@ class Thanksfull(MutualContext, ListView):
         пользователем изображения из БД и самого проекта.'''
 
         # вот тут можно удалить фото из папки
-        for file in glob.glob("/home/andrey/GroceryAppVol2/FBApp/media/photos/user/*"):
-            os.remove(file)
+        try:
+            for file in glob.glob("/home/andrey/GroceryAppVol2/FBApp/media/photos/user/*"):
+                os.remove(file)
+        except Exception:
+            print("Can't remove users pic from, using this path:"
+                  " '/home/andrey/GroceryAppVol2/FBApp/media/photos/user/*'")
 
         # тут удаляем загруженное фото из БД
         user_pic = UserPhotoUploadModel_2.objects.latest('time_create')
@@ -338,6 +342,9 @@ class ProductsSet(MutualContext, CreateView):
     success_url = reverse_lazy('items_set')
 
     def compile_all_user_requests(self):
+        """Собираем с помощбю тэга get_product_set_from_data_base
+        описание и иозображения для товаров, попавших в продуктовый набор
+        пользователя"""
         self.product_order_info = get_product_set_from_data_base
         return self.product_order_info
 
@@ -372,6 +379,20 @@ class SetResults(MutualContext, ListView):
     model = SetOfProducts
     context_object_name = 'user_orders'
 
+    #флаг, означающий, что маркет выбран пользователем для формирования цен
+    MARKER = 1
+
+    #имена доступных супермаркетов
+    __ATB_MARKET = "ATB"
+    __EKO_MARKET = "EKO"
+    __VARUS_MARKET = "Varus"
+    __SILPO_MARKET = "Сильпо"
+    __ASHAN_MARKET = "Ашан"
+    __NOVUS_MARKET = "Novus"
+    __METRO_MARKET = "Metro"
+    __NK_MARKET = "Наш Край"
+    __FOZZY_MARKET = "Fozzy"
+
     def NN_works(self):
         '''Подключение НС для текста, которая определяет, какой
         конкретно продукт пользователь добавил в список (название продукта)'''
@@ -382,12 +403,6 @@ class SetResults(MutualContext, ListView):
         for order in user_orders:
             result = pred.identify_item(order.product_name)
             # добавим цены из БД цен
-
-            #ЭТО СТАРЫЙ ВАРИАНТ
-            # atb_price, eko_price, varus_price, silpo_price,ashan_price,\
-            # novus_price,metro_price,nash_kray_price,fozzy_price,picture=get_products_prices(result)
-
-            #НОВЫЙ ВАРИАНТ
             # подключение класса, который формирует контекст (цены + инфо о товаре)
             item_context = ContextSupervisor(result)
             atb_price = item_context.atb_price
@@ -400,30 +415,29 @@ class SetResults(MutualContext, ListView):
             nash_kray_price = item_context.nk_price
             fozzy_price = item_context.fozzy_price
             picture = item_context.info
-            #КОНЕЦ НОВОГО ВАРИАНТА
-
 
             #отфильтруем цены. оставим только те цены , которые соответствуют выбранным супермаркетам!
             filtered_prices=[]
-            marker=1
-            if order.atb_choice==marker:               #тут какой-то баг!
-                filtered_prices.append(("ATB",atb_price))
-            if order.eko_choice==marker:
-                 filtered_prices.append(("EKO",eko_price))
-            if order.varus_choice==marker:
-                 filtered_prices.append(("Varus",varus_price))
-            if order.silpo_choice==marker:
-                 filtered_prices.append(("Сильпо",silpo_price))
-            if order.ashan_choice==marker:
-                 filtered_prices.append(("Ашан",ashan_price))
-            if order.novus_choice==marker:
-                 filtered_prices.append(("Novus",novus_price))
-            if order.metro_choice==marker:
-                 filtered_prices.append(("Metro",metro_price))
-            if order.nash_kray_choice==marker:
-                 filtered_prices.append(("Наш Край",nash_kray_price))
-            if order.fozzy_choice==marker:
-                 filtered_prices.append(("Fozzy",fozzy_price))
+
+            if order.atb_choice==self.MARKER:
+                filtered_prices.append((self.__ATB_MARKET,atb_price))
+            if order.eko_choice==self.MARKER:
+                 filtered_prices.append((self.__EKO_MARKET,eko_price))
+            if order.varus_choice==self.MARKER:
+                 filtered_prices.append((self.__VARUS_MARKET,varus_price))
+            if order.silpo_choice==self.MARKER:
+                 filtered_prices.append((self.__SILPO_MARKET,silpo_price))
+            if order.ashan_choice==self.MARKER:
+                 filtered_prices.append((self.__ASHAN_MARKET,ashan_price))
+            if order.novus_choice==self.MARKER:
+                 filtered_prices.append((self.__NOVUS_MARKET,novus_price))
+            if order.metro_choice==self.MARKER:
+                 filtered_prices.append((self.__METRO_MARKET,metro_price))
+            if order.nash_kray_choice==self.MARKER:
+                 filtered_prices.append((self.__NK_MARKET,nash_kray_price))
+            if order.fozzy_choice==self.MARKER:
+                 filtered_prices.append((self.__FOZZY_MARKET,fozzy_price))
+
             print('Отфильтрованный список цен',filtered_prices)
 
             #определяем лучшую цену:
